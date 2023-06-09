@@ -1,0 +1,29 @@
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$python\
+$line_break\
+$character"""
+
+[directory]
+style = "blue"
+
+[character]
+success_symbol = "[❯](purple)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](green)"
+
+[cmd_duration]
+format = "[$duration]($style)"
+style = "yellow"
+
+[python]
+format = "[$virtualenv]($style)"
+style = "bright-black"
+
+
+# $cmd_duration\
