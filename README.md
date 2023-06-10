@@ -19,4 +19,3 @@ cd ~/.dotfiles
 stow fish kitty lazygit nvim starship tmux 
 ````
 
-
