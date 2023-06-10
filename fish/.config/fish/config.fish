@@ -20,6 +20,10 @@ abbr -a py python
 abbr -a tt 'watson report -dcG | grep "Total: " | sed "s/Total: //"'
 abbr -a cls clear
 
+set -x PYENV_ROOT $HOME/.pyenv
+set -x PATH $PYENV_ROOT/bin $PATH
+status --is-interactive; and . (pyenv init -|psub)
+
 # Load Environment Variables
 source ~/.config/fish/env.fish
 
