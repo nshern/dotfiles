@@ -26,6 +26,6 @@ set -x PATH $PYENV_ROOT/bin $PATH
 status --is-interactive; and . (pyenv init -|psub)
 
 # Load Environment Variables
-source ~/.config/fish/env.fish
+source ~/.config/fish/env_vars.fish
 
 starship init fish | source
