@@ -28,6 +28,8 @@ set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin $PATH
 status --is-interactive; and . (pyenv init -|psub)
 
+set fish_color_valid_path
+
 # Load Environment Variables
 source ~/.config/fish/env_vars.fish
 
