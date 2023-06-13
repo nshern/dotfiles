@@ -15,7 +15,6 @@ brew bundle
 
 # Symlink dotfiles
 ````
-cd ~/.dotfiles
-stow fish kitty lazygit nvim starship tmux 
+cd ~/.dotfiles && stow fish kitty lazygit nvim starship tmux 
 ````
 
