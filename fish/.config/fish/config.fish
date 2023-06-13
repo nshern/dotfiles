@@ -21,6 +21,8 @@ abbr -a tt 'watson report -dcG | grep "Total: " | sed "s/Total: //"'
 abbr -a cls clear
 abbr -a notes 'cd "/Users/nshern/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault"'
 abbr -a nn '~/.scripts/create-new-note.fish'
+abbr -a capture '~/.scripts/open-capture-note.fish'
+abbr -a todo '~/.scripts/open-todo-note.fish'
 
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin $PATH
