@@ -7,7 +7,6 @@ end
 # Keybindings
 bind -M insert \cf accept-autosuggestion
 bind -M insert \cr forward-word
-# bind -M insert \cg forward-char 
 
 # Abbreviations
 abbr -a gs 'git status'
