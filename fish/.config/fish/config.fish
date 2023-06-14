@@ -23,6 +23,9 @@ abbr -a notes 'cd "/Users/nshern/Library/Mobile Documents/iCloud~md~obsidian/Doc
 abbr -a nn '~/.scripts/create-new-note.fish'
 abbr -a capture '~/.scripts/open-capture-note.fish'
 abbr -a todo '~/.scripts/open-todo-note.fish'
+abbr -a projects '~/.scripts/open-projects.fish'
+abbr -a someday '~/.scripts/open-some-day-maybe-note.fish'
+abbr -a waiting '~/.scripts/open-waiting-for.fish'
 
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin $PATH
