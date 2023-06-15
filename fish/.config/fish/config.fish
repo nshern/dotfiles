@@ -25,7 +25,7 @@ abbr -a todo '~/.scripts/open-todo-note.fish'
 abbr -a projects '~/.scripts/open-projects.fish'
 abbr -a someday '~/.scripts/open-some-day-maybe-note.fish'
 abbr -a waiting '~/.scripts/open-waiting-for.fish'
-
+abbr -a ls exa
 
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin $PATH
