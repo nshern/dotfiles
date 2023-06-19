@@ -12,7 +12,6 @@ bind -M insert \cr forward-word
 abbr -a gs 'git status'
 abbr -a vim nvim
 abbr -a venv 'source .venv/bin/activate.fish'
-abbr -a lg lazygit
 abbr -a clx 'clx -n'
 abbr -a ddgr "ddgr --reg "da-dk" --reverse"
 abbr -a py python
@@ -20,12 +19,12 @@ abbr -a tt 'watson report -dcG | grep "Total: " | sed "s/Total: //"'
 abbr -a cls clear
 abbr -a notes 'cd "/Users/nshern/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault"'
 abbr -a nn '~/.scripts/create-new-note.fish'
-abbr -a capture '~/.scripts/open-capture-note.fish'
 abbr -a todo '~/.scripts/open-todo-note.fish'
-abbr -a projects '~/.scripts/open-projects.fish'
-abbr -a someday '~/.scripts/open-some-day-maybe-note.fish'
-abbr -a waiting '~/.scripts/open-waiting-for.fish'
 abbr -a ls exa
+abbr -a dev '~/.scripts/create-tmux-env.fish'
+abbr -a gg lazygit
+
+alias work="timer 5 && osascript -e 'display notification \"This is the message\" with title \"This is the title\" subtitle \"This is the subtitle\"'"
 
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin $PATH
