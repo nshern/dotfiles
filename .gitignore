@@ -1,2 +1,3 @@
 env_vars.fish
 client.yml
+spotify-tui/.config/spotify-tui/.spotify_token_cache.json
