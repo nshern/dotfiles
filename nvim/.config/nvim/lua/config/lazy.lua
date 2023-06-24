@@ -13,6 +13,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.dap.core" },
     { import = "lazyvim.plugins.extras.coding.copilot" },
     { import = "lazyvim.plugins.extras.editor.flash" },
+    { import = "lazyvim.plugins.extras.util.project" },
     -- import any extras modules here
     -- { import = "lazyvim.plugins.extras.lang.typescript" },
     -- { import = "lazyvim.plugins.extras.lang.json" },
