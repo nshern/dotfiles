@@ -13,20 +13,21 @@ bind -M insert \cf accept-autosuggestion
 bind -M insert \cr forward-word
 
 # Abbreviations
-abbr -a gs 'git status'
-abbr -a vim nvim
-abbr -a venv 'source .venv/bin/activate.fish'
+abbr -a cls clear
 abbr -a clx 'clx -n'
 abbr -a ddgr "ddgr --reg "da-dk" --reverse"
-abbr -a py python
-abbr -a tt 'watson report -dcG | grep "Total: " | sed "s/Total: //"'
-abbr -a cls clear
-abbr -a notes 'cd "/Users/nshern/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault"'
-abbr -a nn '~/.scripts/create-new-note.fish'
-abbr -a todo '~/.scripts/open-todo-note.fish'
-abbr -a ls exa
 abbr -a dev '~/.scripts/create-tmux-env.fish'
 abbr -a gg lazygit
+abbr -a gs 'git status'
+abbr -a ls exa
+abbr -a nn '~/.scripts/create-new-note.fish'
+abbr -a notes 'cd "/Users/nshern/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault"'
+abbr -a nvim-plugins '~/.scripts/update-nvim-plugins.fish'
+abbr -a py python
+abbr -a todo '~/.scripts/open-todo-note.fish'
+abbr -a tt 'watson report -dcG | grep "Total: " | sed "s/Total: //"'
+abbr -a venv 'source .venv/bin/activate.fish'
+abbr -a vim nvim
 
 alias work="timer 5 && osascript -e 'display notification \"This is the message\" with title \"This is the title\" subtitle \"This is the subtitle\"'"
 
