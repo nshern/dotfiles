@@ -11,3 +11,6 @@ git commit -m "build: updated plugins"
 
 # push the commit to the default branch of the remote repository
 git push
+
+# Go to last active directory
+cd -
