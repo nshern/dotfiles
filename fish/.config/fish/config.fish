@@ -22,7 +22,7 @@ abbr -a gs 'git status'
 abbr -a ls exa
 abbr -a nn '~/.scripts/create-new-note.fish'
 abbr -a notes 'cd "/Users/nshern/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault"'
-abbr -a nvim-plugins '~/.scripts/update-nvim-plugins.fish'
+abbr -a nvim-update-plugins '~/.scripts/update-nvim-plugins.fish'
 abbr -a py python
 abbr -a todo '~/.scripts/open-todo-note.fish'
 abbr -a tt 'watson report -dcG | grep "Total: " | sed "s/Total: //"'
