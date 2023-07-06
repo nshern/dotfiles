@@ -1,8 +1,8 @@
 set -g fish_greeting
 
-if not set -q TMUX
-    neofetch
-end
+# if not set -q TMUX
+#     neofetch
+# end
 
 if status is-interactive
     fish_vi_key_bindings
