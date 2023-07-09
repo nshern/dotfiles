@@ -28,6 +28,7 @@ abbr -a todo '~/.scripts/open-todo-note.fish'
 abbr -a tt 'watson report -dcG | grep "Total: " | sed "s/Total: //"'
 abbr -a venv 'source .venv/bin/activate.fish'
 abbr -a vim nvim
+abbr -a cb 'chatblade -l -s'
 
 alias work="timer 5 && osascript -e 'display notification \"This is the message\" with title \"This is the title\" subtitle \"This is the subtitle\"'"
 
