@@ -21,14 +21,14 @@ abbr -a gg lazygit
 abbr -a gs 'git status'
 abbr -a ls exa
 abbr -a nn '~/.scripts/create-new-note.fish'
-abbr -a notes 'cd "/Users/nshern/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault"'
+abbr -a notes "/Users/nshern/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault"
 abbr -a nvim-update-plugins '~/.scripts/update-nvim-plugins.fish'
 abbr -a py python
 abbr -a todo '~/.scripts/open-todo-note.fish'
 abbr -a tt 'watson report -dcG | grep "Total: " | sed "s/Total: //"'
 abbr -a venv 'source .venv/bin/activate.fish'
 abbr -a vim nvim
-abbr -a cb 'chatblade -l -s'
+abbr -a cb 'chatblade -l -s -n'
 
 alias work="timer 5 && osascript -e 'display notification \"This is the message\" with title \"This is the title\" subtitle \"This is the subtitle\"'"
 
