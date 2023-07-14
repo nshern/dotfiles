@@ -43,7 +43,7 @@ SETUVAR fish_pager_color_selected_background:\x1d
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/Users/nshern/\x2ecargo/bin\x1e/opt/homebrew/bin
+SETUVAR fish_user_paths:/Users/nshern/ltex\x2dls\x2d16\x2e0\x2e0/bin\x1e/Users/nshern/Misc/ltex\x2dls/16\x2e0\x2e0/bin/ltex\x2dls\x1e/Users/nshern/Misc/ltex\x2dls\x2d16\x2e0\x2e0/bin/ltex\x2dls\x1e/Users/nshern/\x2ecargo/bin\x1e/opt/homebrew/bin
 SETUVAR pure_begin_prompt_with_current_directory:true
 SETUVAR pure_check_for_new_release:false
 SETUVAR pure_color_at_sign:pure_color_mute
