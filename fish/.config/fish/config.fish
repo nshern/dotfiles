@@ -14,6 +14,7 @@ bind -M insert \cr forward-word
 
 # Abbreviations
 abbr -a cb 'chatblade -s'
+abbr -a tree 'exa --tree'
 abbr -a cbl 'chatblade -s -l'
 abbr -a cls clear
 abbr -a clx 'clx -n'
