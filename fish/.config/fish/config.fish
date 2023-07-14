@@ -19,7 +19,7 @@ abbr -a cls clear
 abbr -a clx 'clx -n'
 abbr -a ddgr "ddgr --reg "da-dk" --reverse"
 abbr -a dev '~/.scripts/create-tmux-env.fish'
-abbr -a gg lazygit
+abbr -a lg lazygit
 abbr -a gs 'git status'
 abbr -a ll 'exa -alh --sort modified --reverse'
 abbr -a ls exa
