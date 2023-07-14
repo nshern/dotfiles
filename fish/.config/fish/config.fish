@@ -13,11 +13,13 @@ bind -M insert \cf accept-autosuggestion
 bind -M insert \cr forward-word
 
 # Abbreviations
+abbr -a gg lazygit
+abbr -a cb 'chatblade -s'
+abbr -a cbl 'chatblade -s -l'
 abbr -a cls clear
 abbr -a clx 'clx -n'
 abbr -a ddgr "ddgr --reg "da-dk" --reverse"
 abbr -a dev '~/.scripts/create-tmux-env.fish'
-abbr -a gg lazygit
 abbr -a gs 'git status'
 abbr -a ls exa
 abbr -a nn '~/.scripts/create-new-note.fish'
@@ -28,7 +30,8 @@ abbr -a todo '~/.scripts/open-todo-note.fish'
 abbr -a tt 'watson report -dcG | grep "Total: " | sed "s/Total: //"'
 abbr -a venv 'source .venv/bin/activate.fish'
 abbr -a vim nvim
-abbr -a cb 'chatblade -l -s'
+
+
 
 alias work="timer 5 && osascript -e 'display notification \"This is the message\" with title \"This is the title\" subtitle \"This is the subtitle\"'"
 
