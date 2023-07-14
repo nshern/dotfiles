@@ -14,4 +14,4 @@ tags:
 ---
 " > $current_date_and_time.md
 
-hx $current_date_and_time.md
+hx ~/notes/$current_date_and_time.md
