@@ -18,6 +18,7 @@ abbr -a tree 'exa --tree'
 abbr -a cbl 'chatblade -s -l'
 abbr -a cls clear
 abbr -a clx 'clx -n'
+abbr -a gg 'gitui -t mocha.ron'
 abbr -a ddgr "ddgr --reg "da-dk" --reverse"
 abbr -a dev '~/.scripts/create-tmux-env.fish'
 abbr -a lg lazygit
