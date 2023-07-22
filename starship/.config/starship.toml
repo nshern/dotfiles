@@ -1,3 +1,5 @@
+
+
 format = """
 $username\
 $hostname\
@@ -27,3 +29,4 @@ style = "bright-black"
 
 
 # $cmd_duration\
+
