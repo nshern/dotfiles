@@ -17,6 +17,7 @@ bind -M insert \cr forward-word
 abbr -a cb 'chatblade -s'
 abbr -a tree 'exa --tree'
 abbr -a cbl 'chatblade -s -l'
+abbr -a cbli 'chatblade -s -l -i'
 abbr -a cls clear
 abbr -a clx 'clx -n'
 abbr -a gg 'gitui -t mocha.ron'
