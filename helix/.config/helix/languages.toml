@@ -55,6 +55,11 @@ name = "yaml"
 formatter = { command = "prettier" }
 auto-format = true
 
+[[language]]
+name = 'fish'
+formatter = { command = "prettier" }
+auto-format = true
+
 
 [[language]]
 name = "dockerfile"
