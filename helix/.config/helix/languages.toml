@@ -1,0 +1,86 @@
+[[language]]
+name = "python"
+scope = "source.python"
+injection-regex = "python"
+file-types = [
+  "py",
+  "pyi",
+  "py3",
+  "pyw",
+  "ptl",
+  ".pythonstartup",
+  ".pythonrc",
+  "SConstruct",
+]
+shebangs = ["python"]
+roots = ["setup.py", "setup.cfg", "pyproject.toml"]
+comment-token = "#"
+language-server = { command = "pyright-langserver", args = ["--stdio"] }
+formatter = { command = "black", args = ["--quiet", "-"] }
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+# will get "Async jobs timed out" errors if this empty config is not added
+config = {}
+rulers = [80]
+
+
+[[language]]
+name = "rust"
+
+[language.config.check]
+command = "clippy"
+
+
+[[language]]
+name = "svelte"
+formatter = { command = "prettier" }
+auto-format = true
+
+
+[[language]]
+name = "typescript"
+formatter = { command = "prettier" }
+auto-format = true
+
+
+[[language]]
+name = "toml"
+formatter = { command = "prettier" }
+auto-format = true
+config = {}
+
+
+[[language]]
+name = "yaml"
+formatter = { command = "prettier" }
+auto-format = true
+
+
+[[language]]
+name = "dockerfile"
+file-types = ["Dockerfile", "Dockerfile.lambda"]
+auto-format = true
+
+[[language]]
+name = "markdown"
+language-server = { command = "ltex-ls" }
+file-types = ["md", "txt"]
+scope = "source.markdown"
+roots = []
+config = { ltex.disabledRules = { "en-US" = [
+  "PROFANITY",
+], "en-GB" = [
+  "PROFANITY",
+] }, ltex.dictionary = { "en-US" = [
+  "madeupword",
+  "watchamacallit",
+], "en-GB" = [
+  "madeupword",
+] } }
+
+# [[language]]
+# name = "markdown"
+# language-server = { command = "marksman"}
+# file-types = ["md", "txt"]
+# scope = "source.markdown"
+# roots = []
