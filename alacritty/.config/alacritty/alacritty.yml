@@ -99,7 +99,7 @@ window:
 
   opacity: 1.0
 
-  option_as_alt: OnlyRight
+  option_as_alt: OnlyLeft
 
 #scrolling:
   # Maximum number of lines in the scrollback buffer.
