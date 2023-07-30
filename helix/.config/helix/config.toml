@@ -45,7 +45,7 @@ render = true
 
 [keys.normal]
 # Use system clipboard
-# y = "yank_main_selection_to_clipboard"
+y = "yank_main_selection_to_clipboard"
 # p = "paste_clipboard_before"
 C-p = ['move_line_up', "scroll_up"]
 C-n = ["move_line_down", "scroll_down"]
