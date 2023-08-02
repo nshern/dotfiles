@@ -1,28 +1,35 @@
+# [[language]]
+# name = "python"
+# scope = "source.python"
+# injection-regex = "python"
+# file-types = [
+#   "py",
+#   "pyi",
+#   "py3",
+#   "pyw",
+#   "ptl",
+#   ".pythonstartup",
+#   ".pythonrc",
+#   "SConstruct",
+# ]
+# shebangs = ["python"]
+# roots = ["setup.py", "setup.cfg", "pyproject.toml"]
+# comment-token = "#"
+# language-server = { command = "pyright-langserver", args = ["--stdio"] }
+# formatter = { command = "black", args = ["--quiet", "-"] }
+# auto-format = true
+# text-width = 78
+# indent = { tab-width = 4, unit = "    " }
+# # will get "Async jobs timed out" errors if this empty config is not added
+# config = {}
+# rulers = [79]
+
 [[language]]
 name = "python"
-scope = "source.python"
-injection-regex = "python"
-file-types = [
-  "py",
-  "pyi",
-  "py3",
-  "pyw",
-  "ptl",
-  ".pythonstartup",
-  ".pythonrc",
-  "SConstruct",
-]
-shebangs = ["python"]
-roots = ["setup.py", "setup.cfg", "pyproject.toml"]
-comment-token = "#"
-language-server = { command = "pyright-langserver", args = ["--stdio"] }
+config = { pylsp = { plugins = { pycodestyle = { enabled = false }, flake8 = { enabled = true, maxLineLength = 120 }, pyflakes = { enabled = false } } } }
 formatter = { command = "black", args = ["--quiet", "-"] }
 auto-format = true
-indent = { tab-width = 4, unit = "    " }
-# will get "Async jobs timed out" errors if this empty config is not added
-config = {}
-rulers = [80]
-
+text-width = 120
 
 [[language]]
 name = "rust"

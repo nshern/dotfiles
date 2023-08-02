@@ -41,6 +41,7 @@ alias work="timer 5 && osascript -e 'display notification \"This is the message\
 
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin $PATH
+set -u EDITOR hx
 status --is-interactive; and . (pyenv init -|psub)
 
 set fish_color_valid_path
