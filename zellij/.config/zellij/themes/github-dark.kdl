@@ -1,0 +1,15 @@
+themes {
+    github-dark {
+        fg "#24292e"
+        bg "#24292e"
+        black "#586069"
+        red "#ea4a5a"
+        green "#34d058"
+        yellow "#ffea7f"
+        blue "#2188ff"
+        magenta "#b392f0"
+        cyan "#b392f0"
+        white "#d1d5da"
+        orange "#ffea7f"
+    }
+}

@@ -1,4 +1,5 @@
 theme = "catppuccin_mocha"
+# theme = "tokyonight-no-italics"
 
 [editor]
 true-color = true
@@ -6,7 +7,7 @@ shell = ['fish']
 line-number = "relative"
 bufferline = 'always'
 mouse = true
-text-width = 80
+text-width = 120
 color-modes = true
 cursorline = true
 
@@ -44,9 +45,7 @@ display-signature-help-docs = false
 render = true
 
 [keys.normal]
-# Use system clipboard
-# y = "yank_main_selection_to_clipboard"
-# p = "paste_clipboard_before"
+Y = ":clipboard-yank"
 C-p = ['move_line_up', "scroll_up"]
 C-n = ["move_line_down", "scroll_down"]
 esc = ["collapse_selection", "keep_primary_selection"]

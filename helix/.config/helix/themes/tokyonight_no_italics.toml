@@ -1,0 +1,5 @@
+inherits = "tokyonight"
+"function" = { fg = "blue" }
+"keyword" = { fg = "cyan" }
+"keyword.function" = { fg = "magenta" }
+"variable.parameter" = { fg = "yellow" }

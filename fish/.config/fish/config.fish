@@ -1,6 +1,9 @@
 set -g fish_greeting
 fish_config theme choose "Catppuccin Mocha"
-
+# fish_config theme choose "Catppuccin Frappe"
+# fish_config theme choose "tokyonight_night"
+# fish_config theme choose "Rose Pine Dawn"
+# fish_config theme choose "Rosé Pine Dawn"
 # if not set -q TMUX
 #     neofetch
 # end
@@ -41,7 +44,7 @@ alias work="timer 5 && osascript -e 'display notification \"This is the message\
 
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin $PATH
-set -u EDITOR hx
+set -gx EDITOR hx
 status --is-interactive; and . (pyenv init -|psub)
 
 set fish_color_valid_path
