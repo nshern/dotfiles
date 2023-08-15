@@ -49,6 +49,10 @@ name = "typescript"
 formatter = { command = "prettier" }
 auto-format = true
 
+[[language]]
+name = "json"
+formatter = { command = "prettier" }
+auto-format = true
 
 [[language]]
 name = "toml"

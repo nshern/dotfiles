@@ -1,7 +1,7 @@
 theme = "catppuccin_mocha"
-# theme = "tokyonight-no-italics"
 
 [editor]
+auto-save = true
 true-color = true
 shell = ['fish']
 line-number = "relative"
@@ -29,23 +29,30 @@ display-inlay-hints = true
 auto-signature-help = true
 display-signature-help-docs = false
 
-# [editor.statusline]
-# left = ["mode", "file-name"]
-# center = ['spinner']
-# right = [
-#   "diagnostics",
-#   "version-control",
-#   "position-percentage",
-#   "file-encoding",
-#   "file-line-ending",
-#   "file-type",
-# ]
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = [
+  "version-control",
+  "diagnostics",
+  "selections",
+  "position",
+  "file-encoding",
+  "file-line-ending",
+  "file-type",
+]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
 
 [editor.indent-guides]
 render = true
 
 [keys.normal]
 Y = ":clipboard-yank"
+C-r = ":reload"
 C-p = ['move_line_up', "scroll_up"]
 C-n = ["move_line_down", "scroll_down"]
 esc = ["collapse_selection", "keep_primary_selection"]

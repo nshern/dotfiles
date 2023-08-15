@@ -53,3 +53,4 @@ set fish_color_valid_path
 source ~/.config/fish/env_vars.fish
 
 starship init fish | source
+fish_add_path /Users/nshern/.spicetify
