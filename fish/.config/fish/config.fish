@@ -36,7 +36,6 @@ abbr -a nvim-update-plugins '~/.scripts/update-nvim-plugins.fish'
 abbr -a py python
 abbr -a todo '~/.scripts/open-todo-note.fish'
 abbr -a tt 'watson report -dcG | grep "Total: " | sed "s/Total: //"'
-abbr -a venv 'source .venv/bin/activate.fish'
 abbr -a vim nvim
 
 
