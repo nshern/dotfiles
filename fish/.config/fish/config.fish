@@ -1,8 +1,4 @@
 set -g fish_greeting
-fish_config theme choose "Catppuccin Mocha"
-# fish_config theme choose "Catppuccin Frappe"
-# fish_config theme choose "tokyonight_night"
-# fish_config theme choose "Rose Pine Dawn"
 # fish_config theme choose "Rosé Pine Dawn"
 # if not set -q TMUX
 #     neofetch
@@ -28,7 +24,7 @@ abbr -a ddgr "ddgr --reg "da-dk" --reverse"
 abbr -a dev '~/.scripts/create-tmux-env.fish'
 abbr -a lg lazygit
 abbr -a gs 'git status'
-abbr -a ll 'exa -alh --sort modified --reverse'
+abbr -a ll 'exa -alh --sort modified'
 abbr -a ls exa
 abbr -a nn '~/.scripts/create-new-note.fish'
 abbr -a notes "/Users/nshern/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault"

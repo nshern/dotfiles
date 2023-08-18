@@ -1,6 +1,6 @@
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
-theme "catppuccin-mocha" // or latte, frappe and macchiato
-// theme "catppuccin-latte"
+// theme "catppuccin-mocha" // or latte, frappe and macchiato
+theme "solarized-dark"
 default_layout "compact"
 
 keybinds {

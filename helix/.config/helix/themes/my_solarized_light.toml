@@ -1,0 +1,18 @@
+inherits = "solarized_light"
+
+"ui.statusline" = { fg = "base0", bg = "base02" }
+"ui.statusline.normal" = { fg = "base03",bg = "blue" }
+"ui.statusline.insert" = { fg = "base03",bg = "green" }
+"ui.statusline.select" = { fg = "base03",bg = "yellow" }
+
+"ui.statusline.active" = { fg = "magenta", bg = "base02" }
+"ui.statusline.inactive" = { fg = "base1", bg = "base02" }
+
+"ui.linenr" = { fg = "base0", bg = "base03" }
+
+"comment" = { fg = "base01", modifiers = ["italic"] }
+
+"warning" =  { fg = "orange"}
+"error" = { fg = "red"}
+"info" = { fg = "blue"}
+"hint" = { fg = "base01"}

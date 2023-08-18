@@ -1,4 +1,4 @@
-theme = "catppuccin_mocha"
+theme = "my_solarized_light"
 
 [editor]
 auto-save = true
@@ -31,9 +31,8 @@ display-signature-help-docs = false
 
 [editor.statusline]
 left = ["mode", "spinner"]
-center = ["file-name"]
+center = ["version-control"]
 right = [
-  "version-control",
   "diagnostics",
   "selections",
   "position",
