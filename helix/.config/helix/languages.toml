@@ -54,25 +54,24 @@ name = "markdown"
 scope = "source.markdown"
 injection-regex = "markdown"
 file-types = ["md"]
-language-servers = ["marksman" ,"ltex-ls"]
+language-servers = ["ltex-ls" ,"marksman"]
 
 [language-server.marksman]
 command = "marksman"
-args = ["--stdio"]
 
-# [language-server.ltex-ls]
-# name = "markdown"
-# command = "ltex-ls"
-# file-types = ["md", "txt"]
-# scope = "source.markdown"
-# roots = []
-# config = { ltex.disabledRules = { "en-US" = [
-#   "PROFANITY",
-# ], "en-GB" = [
-#   "PROFANITY",
-# ] }, ltex.dictionary = { "en-US" = [
-#   "madeupword",
-#   "watchamacallit",
-# ], "en-GB" = [
-#   "madeupword",
-# ] } }
+[language-server.ltex-ls]
+name = "markdown"
+command = "ltex-ls"
+file-types = ["md", "txt"]
+scope = "source.markdown"
+roots = []
+config = { ltex.disabledRules = { "en-US" = [
+  "PROFANITY",
+], "en-GB" = [
+  "PROFANITY",
+] }, ltex.dictionary = { "en-US" = [
+  "madeupword",
+  "watchamacallit",
+], "en-GB" = [
+  "madeupword",
+] } }
