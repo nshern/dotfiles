@@ -14,6 +14,7 @@ bind -M insert \cr forward-word
 
 # Abbreviations
 abbr -a cb 'chatblade -s'
+abbr -a fetch 'neofetch'
 abbr -a tree 'exa --tree'
 abbr -a cbl 'chatblade -s -l'
 abbr -a cbli 'chatblade -s -l -i'
