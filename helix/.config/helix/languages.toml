@@ -1,83 +1,78 @@
-# [[language]]
-# name = "python"
-# # language-server = { command = "ruff-lsp" }
-
-# # In case you'd like to use ruff alongside black for code formatting:
-# formatter = { command = "black", args = ["--quiet", "-"] }
-# auto-format = true
-
+# Python
 [[language]]
-text-width = 120
 name = "python"
-config = { pylsp = { plugins = { pycodestyle = { enabled = false }, flake8 = { enabled = true, maxLineLength = 120 }, pyflakes = { enabled = false } } } }
-formatter = { command = "black", args = ["--quiet", "-"] }
-auto-format = true
-[[language]]
-name = "rust"
-
-[language.config.check]
-command = "clippy"
-
-
-[[language]]
-name = "svelte"
-formatter = { command = "prettier" }
+scope = "source.python"
+injection-regex = "python"
+file-types = ["py","pyi","py3","pyw",".pythonstartup",".pythonrc"]
+shebangs = ["python"]
+roots = [".", "pyproject.toml", "pyrightconfig.json"]
+comment-token = "#"
+language-servers = ["pyright", "ruff"]
+formatter = { command = "black" , args = ["-", "--quiet", "--line-length=88"] }
+indent = { tab-width = 4, unit = "    " }
 auto-format = true
 
+# [language.formatter]
+# command = "black"
+# args = [
+#   "-",
+#   "--quiet",
+#   "--line-length=88"
+# ]
 
-[[language]]
-name = "typescript"
-formatter = { command = "prettier" }
-auto-format = true
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
 
-[[language]]
-name = "json"
-formatter = { command = "prettier" }
-auto-format = true
+[language-server.pyright.config]
+reportMissingTypeStubs = false
 
+[language-server.pyright.config.python.analysis]
+typeCheckingMode = "basic"
+autoImportCompletions = true
+
+[language-server.ruff]
+command = "ruff-lsp"
+
+[language-server.ruff.config]
+settings = {args = []}
+
+#TOML
 [[language]]
 name = "toml"
+scope = "source.toml"
+injection-regex = "toml"
+file-types = ["toml"]
 formatter = { command = "prettier" }
-auto-format = true
-config = {}
-
-
-[[language]]
-name = "yaml"
-formatter = { command = "prettier" }
-auto-format = true
-
-[[language]]
-name = 'fish'
-formatter = { command = "prettier" }
+language-servers = ["taplo"]
 auto-format = true
 
 
-[[language]]
-name = "dockerfile"
-file-types = ["Dockerfile", "Dockerfile.lambda"]
-auto-format = true
-
+# Markdown
 [[language]]
 name = "markdown"
-language-server = { command = "ltex-ls" }
-file-types = ["md", "txt"]
 scope = "source.markdown"
-roots = []
-config = { ltex.disabledRules = { "en-US" = [
-  "PROFANITY",
-], "en-GB" = [
-  "PROFANITY",
-] }, ltex.dictionary = { "en-US" = [
-  "madeupword",
-  "watchamacallit",
-], "en-GB" = [
-  "madeupword",
-] } }
+injection-regex = "markdown"
+file-types = ["md"]
+language-servers = ["marksman" ,"ltex-ls"]
 
-# [[language]]
+[language-server.marksman]
+command = "marksman"
+args = ["--stdio"]
+
+# [language-server.ltex-ls]
 # name = "markdown"
-# language-server = { command = "marksman"}
+# command = "ltex-ls"
 # file-types = ["md", "txt"]
 # scope = "source.markdown"
 # roots = []
+# config = { ltex.disabledRules = { "en-US" = [
+#   "PROFANITY",
+# ], "en-GB" = [
+#   "PROFANITY",
+# ] }, ltex.dictionary = { "en-US" = [
+#   "madeupword",
+#   "watchamacallit",
+# ], "en-GB" = [
+#   "madeupword",
+# ] } }
