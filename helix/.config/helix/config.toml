@@ -1,10 +1,11 @@
-theme = "my_solarized_light"
+# theme = "my_solarized_light"
+theme = "my_solarized_dark"
 
 [editor]
 auto-save = true
 true-color = true
 shell = ['fish']
-line-number = "relative"
+line-number = "absolute"
 bufferline = 'always'
 mouse = true
 text-width = 120
