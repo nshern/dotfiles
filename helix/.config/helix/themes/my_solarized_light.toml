@@ -16,3 +16,6 @@ inherits = "solarized_light"
 "error" = { fg = "red"}
 "info" = { fg = "blue"}
 "hint" = { fg = "base01"}
+
+"markup.bold" = { fg = "yellow", modifiers = ["bold"] }
+"markup.italic" = { fg = "yellow", modifiers = ["italic"] }
