@@ -1,5 +1,5 @@
-theme = "my_solarized_light"
-# theme = "my_solarized_dark"
+# theme = "my_solarized_light"
+theme = "my_solarized_dark"
 
 [editor]
 auto-save = true

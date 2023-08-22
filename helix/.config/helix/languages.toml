@@ -12,6 +12,12 @@ formatter = { command = "black" , args = ["-", "--quiet", "--line-length=88"] }
 indent = { tab-width = 4, unit = "    " }
 auto-format = true
 
+[language-server.ruff]
+command = "ruff-lsp"
+
+[language-server.pyright]
+command = "pyright"
+
 # [language.formatter]
 # command = "black"
 # args = [
@@ -20,22 +26,20 @@ auto-format = true
 #   "--line-length=88"
 # ]
 
-[language-server.pyright]
-command = "pyright-langserver"
-args = ["--stdio"]
+# [language-server.pyright]
+# command = "pyright-langserver"
+# args = ["--stdio"]
 
-[language-server.pyright.config]
-reportMissingTypeStubs = false
+# [language-server.pyright.config]
+# reportMissingTypeStubs = false
 
-[language-server.pyright.config.python.analysis]
-typeCheckingMode = "basic"
-autoImportCompletions = true
+# [language-server.pyright.config.python.analysis]
+# typeCheckingMode = "basic"
+# autoImportCompletions = true
 
-[language-server.ruff]
-command = "ruff-lsp"
 
-[language-server.ruff.config]
-settings = {args = []}
+# [language-server.ruff.config]
+# settings = {args = []}
 
 #TOML
 [[language]]
