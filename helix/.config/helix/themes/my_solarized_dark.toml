@@ -7,7 +7,7 @@ inherits = "solarized_dark"
 
 "ui.statusline.active" = { fg = "magenta", bg = "base02" }
 "ui.statusline.inactive" = { fg = "base1", bg = "base02" }
-
+"ui.virtual.ruler" = { bg = "base02" }
 "ui.linenr" = { fg = "base0", bg = "base03" }
 
 "comment" = { fg = "base01", modifiers = ["italic"] }

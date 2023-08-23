@@ -10,15 +10,15 @@ comment-token = "#"
 language-servers = ["pylsp", "ruff"]
 indent = { tab-width = 4, unit = "    " }
 auto-format = true
+rulers = [79]
 
 [language.formatter]
 command = "black"
 args = [
   "-",
   "--quiet",
-  "--line-length=88"
+  "--line-length=79"
 ]
-
 
 [language-server.ruff]
 command = "ruff-lsp"
