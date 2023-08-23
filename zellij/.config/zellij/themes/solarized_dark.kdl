@@ -1,7 +1,7 @@
 themes {
 	solarized-dark {
-		bg "#839496"
-		fg "#002b36"
+		bg "#dc322f"
+		fg "#839496"
 		red "#dc322f"
 		green "#859900"
 		blue "#268bd2"
