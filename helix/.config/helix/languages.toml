@@ -6,16 +6,17 @@ file-types = ["py","pyi","py3","pyw",".pythonstartup",".pythonrc"]
 shebangs = ["python"]
 roots = [".", "pyproject.toml", "pyrightconfig.json"]
 comment-token = "#"
-language-servers = ["pyright", "ruff"]
+language-servers = ["pylsp", "pyright", "ruff"]
 indent = { tab-width = 4, unit = "    " }
 auto-format = true
+rulers = [80]
 
 [language.formatter]
 command = "black"
 args = [
   "-",
   "--quiet",
-  "--line-length=88"
+  "--line-length=79"
 ]
 
 [language-server.pyright]
