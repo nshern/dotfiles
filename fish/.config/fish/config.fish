@@ -4,6 +4,7 @@ set -g fish_greeting
 #     neofetch
 # end
 
+
 # Words to live by?
  printf "1. Make it \033[3;31mwork\033[0m\n"
  printf "2. Make it \033[3;33mright\033[0m\n"
@@ -19,17 +20,17 @@ bind -M insert \cr forward-word
 
 # Abbreviations
 abbr -a cb 'chatblade -s'
-abbr -a fetch 'neofetch'
-abbr -a tree 'exa --tree'
 abbr -a cbl 'chatblade -s -l'
 abbr -a cbli 'chatblade -s -l -i'
 abbr -a cls clear
 abbr -a clx 'clx -n'
-abbr -a gg 'gitui -t mocha.ron'
 abbr -a ddgr "ddgr --reg "da-dk" --reverse"
 abbr -a dev '~/.scripts/create-tmux-env.fish'
-abbr -a lg lazygit
+abbr -a fetch 'neofetch'
+abbr -a gg 'gitui -t mocha.ron'
 abbr -a gs 'git status'
+abbr -a lf 'lfcd'
+abbr -a lg lazygit
 abbr -a ll 'exa -alh --sort modified'
 abbr -a ls exa
 abbr -a nn '~/.scripts/create-new-note.fish'
@@ -37,6 +38,7 @@ abbr -a notes "/Users/nshern/Library/Mobile Documents/iCloud~md~obsidian/Documen
 abbr -a nvim-update-plugins '~/.scripts/update-nvim-plugins.fish'
 abbr -a py python
 abbr -a todo '~/.scripts/open-todo-note.fish'
+abbr -a tree 'exa --tree'
 abbr -a tt 'watson report -dcG | grep "Total: " | sed "s/Total: //"'
 abbr -a vim nvim
 
