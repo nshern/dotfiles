@@ -2,3 +2,4 @@ env_vars.fish
 client.yml
 spotify-tui/.config/spotify-tui/.spotify_token_cache.json
 .DS_STORE
+alacritty/.config/alacritty/.DS_Store

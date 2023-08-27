@@ -8,14 +8,14 @@
 #
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
-#import:
-#  - /path/to/alacritty.yml
-#  https://github.com/aarowill/base16-alacritty
 import:
-  # uncomment the flavour you want below:
-   - ~/.config/alacritty/themes/catppuccin-mocha.yml
-  # - ~/.config/alacritty/themes/dracula-pro.yml
-  # - ~/.config/alacritty/themes/dracula-pro-van-helsing.yml
+ - ~/.config/alacritty/themes/my_solarized_dark.yaml
+
+ # - ~/.config/alacritty/themes/dracula.yaml
+
+# import:
+#   # uncomment the flavour you want below:
+  # - ~/.config/alacritty/themes/rose-pine.toml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -52,8 +52,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    y: 2
-    x: 8
+    y: 0
+    x: 0
 
   # Spread additional padding evenly around the terminal content.
   # dynamic_padding: false
@@ -99,7 +99,7 @@ window:
   # and `light`. Set this to `None` to use the default theme variant.
   #gtk_theme_variant: None
 
-  opacity: 1.0
+  opacity: 1.00
 
   option_as_alt: OnlyLeft
 
