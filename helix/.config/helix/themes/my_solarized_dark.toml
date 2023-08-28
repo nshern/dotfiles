@@ -27,3 +27,8 @@ inherits = "solarized_dark"
 "markup.heading.3" = "violet"
 "markup.heading.4" = "blue"
 "markup.list" = "orange"
+
+"diagnostic.error" = { fg = "red", modifiers = ["bold"] }
+"diagnostic.warning" = { fg = "orange", modifiers = ["bold"] }
+"diagnostic.hint" = { fg = "base01", modifiers = ["bold"] }
+"diagnostic.info" = { fg = "violet", modifiers = ["bold"] }
