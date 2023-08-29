@@ -31,4 +31,4 @@ inherits = "solarized_dark"
 "diagnostic.error" = { fg = "red", modifiers = ["bold"] }
 "diagnostic.warning" = { fg = "orange", modifiers = ["bold"] }
 "diagnostic.hint" = { fg = "base01", modifiers = ["bold"] }
-"diagnostic.info" = { fg = "violet", modifiers = ["bold"] }
+"diagnostic.info" = { fg = "blue", modifiers = ["bold"] }
