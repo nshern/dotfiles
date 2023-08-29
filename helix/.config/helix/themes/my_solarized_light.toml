@@ -7,7 +7,7 @@ inherits = "solarized_light"
 
 "ui.statusline.active" = { fg = "magenta", bg = "base02" }
 "ui.statusline.inactive" = { fg = "base1", bg = "base02" }
-
+"ui.virtual.ruler" = { bg = "base02" }
 "ui.linenr" = { fg = "base0", bg = "base03" }
 
 "comment" = { fg = "base01", modifiers = ["italic"] }
@@ -17,6 +17,7 @@ inherits = "solarized_light"
 "info" = { fg = "blue"}
 "hint" = { fg = "base01"}
 
+# Markup
 "markup.bold" = { fg = "blue", modifiers = ["bold"] }
 "markup.italic" = { fg = "blue", modifiers = ["italic"] }
 "markup.link.text" = "violet"
@@ -26,3 +27,8 @@ inherits = "solarized_light"
 "markup.heading.3" = "violet"
 "markup.heading.4" = "blue"
 "markup.list" = "orange"
+
+"diagnostic.error" = { fg = "red", modifiers = ["bold"] }
+"diagnostic.warning" = { fg = "orange", modifiers = ["bold"] }
+"diagnostic.hint" = { fg = "base01", modifiers = ["bold"] }
+"diagnostic.info" = { fg = "blue", modifiers = ["bold"] }
