@@ -10,6 +10,9 @@
 # to the user's home directory starting with `~/`.
 import:
  - ~/.config/alacritty/themes/my_solarized_dark.yaml
+ # - ~/.config/alacritty/themes/helix.yaml
+ # - ~/.config/alacritty/themes/doomsayer.yaml
+ # - ~/.config/alacritty/themes/my_solarized_light.yaml
 
  # - ~/.config/alacritty/themes/dracula.yaml
 
