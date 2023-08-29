@@ -18,8 +18,8 @@ inherits = "solarized_dark"
 "hint" = { fg = "base01"}
 
 # Markup
-"markup.bold" = { fg = "base0", modifiers = ["bold"] }
-"markup.italic" = { fg = "base0", modifiers = ["italic"] }
+"markup.bold" = { fg = "base2", modifiers = ["bold"] }
+"markup.italic" = { fg = "base2", modifiers = ["italic"] }
 "markup.link.text" = "violet"
 "markup.link.url" = { fg = "blue", modifiers = ["underlined"] }
 "markup.heading.1" = "yellow"
