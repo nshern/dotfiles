@@ -261,7 +261,7 @@ plugins {
 // On certain configurations, or terminals this could
 // potentially interfere with copying text.
 // Options:
-//   - true (default)
+  // - true (default)
 //   - false
 //
 // mouse_mode false
