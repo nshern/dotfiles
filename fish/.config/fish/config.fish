@@ -6,9 +6,9 @@ set -g fish_greeting
 
 
 # Words to live by?
- printf "1. Make it \033[3;31mwork\033[0m\n"
- printf "2. Make it \033[3;33mright\033[0m\n"
- printf "3. Make it \033[3;32mfast\033[0m (optional)\n"
+ # printf "1. Make it \033[3;31mwork\033[0m\n"
+ # printf "2. Make it \033[3;33mright\033[0m\n"
+ # printf "3. Make it \033[3;32mfast\033[0m (optional)\n"
 
 if status is-interactive
     fish_vi_key_bindings
