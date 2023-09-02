@@ -28,7 +28,7 @@ inherits = "solarized_light"
 "markup.heading.4" = "blue"
 "markup.list" = "orange"
 
-"diagnostic.error" = { fg = "red", modifiers = ["bold"] }
-"diagnostic.warning" = { fg = "orange", modifiers = ["bold"] }
-"diagnostic.hint" = { fg = "base01", modifiers = ["bold"] }
-"diagnostic.info" = { fg = "blue", modifiers = ["bold"] }
+# "diagnostic.error" = { fg = "red", modifiers = ["bold"] }
+# "diagnostic.warning" = { fg = "orange", modifiers = ["bold"] }
+# "diagnostic.hint" = { fg = "base01", modifiers = ["bold"] }
+# "diagnostic.info" = { fg = "blue", modifiers = ["bold"] }

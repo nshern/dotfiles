@@ -10,7 +10,7 @@ inherits = "solarized_dark"
 "ui.virtual.ruler" = { bg = "base02" }
 "ui.linenr" = { fg = "base0", bg = "base03" }
 
-"comment" = { fg = "base01", modifiers = ["italic"] }
+"comment" = { fg = "base00", modifiers = ["italic"] }
 
 "warning" =  { fg = "orange"}
 "error" = { fg = "red"}
