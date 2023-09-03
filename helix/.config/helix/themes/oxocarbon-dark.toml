@@ -8,11 +8,11 @@
 
 # GENERAL ==============================
 
-warning = { } # Editor warnings.
+warning = {fg = "base0G" } # Editor warnings.
 error = {fg = "base0A" } # Editor errors, like mis-typing a command.
-info = { } # Contextual info in diagnostic messages (LSP).
-hint = { } # Code diagnostics hints (LSP).
-diagnostic = { } # Code diagnostics in editing area (LSP).
+info = {fg = "base0B" } # Contextual info in diagnostic messages (LSP).
+hint = {fg = "base03" } # Code diagnostics hints (LSP).
+diagnostic = {fg = "base0E" } # Code diagnostics in editing area (LSP).
 
 # UI ==============================
 # For styling helix itself.
@@ -22,40 +22,42 @@ diagnostic = { } # Code diagnostics in editing area (LSP).
 'ui.gutter' = { } # Left gutter for diagnostics and breakpoints.
 
 'ui.text' = {fg="base04" } # Default text color.
-'ui.text.focus' = { } # Selection highlight in buffer-picker or file-picker.
-'ui.text.info' = { } # Info popup contents (space mode menu).
+'ui.text.focus' = {fg="base09" } # Selection highlight in buffer-picker or file-picker.
+'ui.text.info' = {bg="base04", fg="base00" } # Info popup contents (space mode menu).
 
-'ui.cursor' = { } # Fallback cursor colour, non-primary cursors when there are multiple (shift-c).
-'ui.cursor.primary' = { } # The primary cursor when there are multiple (shift-c).
-'ui.cursor.insert' = { } # The cursor in insert mode (i).
-'ui.cursor.select' = { } # The cursor in select mode (v).
-'ui.cursor.match' = { } # The matching parentheses of that under the cursor.
+'ui.cursor' = {fg="base00", bg="base06" } # Fallback cursor colour, non-primary cursors when there are multiple (shift-c).
+'ui.cursor.primary' = {fg="base00", bg="base06" } # The primary cursor when there are multiple (shift-c).
+'ui.cursor.insert' = {fg="base00", bg="base06" } # The cursor in insert mode (i).
+'ui.cursor.select' = {fg="base00", bg="base06" } # The cursor in select mode (v).
+'ui.cursor.match' = {fg="base00", bg="base0F" } # The matching parentheses of that under the cursor.
 
-'ui.selection' = { } # All currently selected text.
-'ui.selection.primary' = { } # The primary selection when there are multiple.
+'ui.selection' = {fg="base00", bg="base06" } # All currently selected text.
+'ui.selection.primary' = {fg="base00", bg="base06" } # The primary selection when there are multiple.
 
 'ui.linenr' = {fg = "base03" } # Line numbers.
-'ui.linenr.selected' = { } # Current line number.
+'ui.linenr.selected' = {fg = "base04" } # Current line number.
 
-'ui.virtual' = { } # Namespace for additions to the editing area.
-'ui.virtual.ruler' = { } # Vertical rulers (colored columns in editing area).
+# 'ui.virtual' = { } # Namespace for additions to the editing area.
+'ui.virtual.ruler' = {bg="base02" } # Vertical rulers (colored columns in editing area).
 'ui.virtual.whitespace' = { } # Whitespace markers in editing area.
 
 'ui.statusline' = { } # Status line.
-'ui.statusline.inactive' = { } # Status line in unfocused windows.
-"ui.statusline.normal" = { } # Statusline mode during normal mode (only if editor.color-modes is enabled)
-"ui.statusline.insert" = { } # Statusline mode during insert mode (only if editor.color-modes is enabled)
-"ui.statusline.select" = { } # Statusline mode during select mode (only if editor.color-modes is enabled)
+'ui.statusline.active' = {fg="base0C"}
+'ui.statusline.inactive' = {fg="base03" } # Status line in unfocused windows.
+
+"ui.statusline.normal" = {bg="base09", fg="base00"  } # Statusline mode during normal mode (only if editor.color-modes is enabled)
+"ui.statusline.insert" = {bg="base0D", fg="base00" } # Statusline mode during insert mode (only if editor.color-modes is enabled)
+"ui.statusline.select" = {bg="base0G", fg="base00" } # Statusline mode during select mode (only if editor.color-modes is enabled)
 
 'ui.help' = { } # `:command` descriptions above the command line.
 
 'ui.highlight' = { } # selected contents of symbol pickers (spc-s, spc-S) and current line in buffer picker (spc-b).
 
-'ui.menu' = { } # Autocomplete menu.
-'ui.menu.selected' = { } # Selected autocomplete item.
+'ui.menu' = {bg="base01" } # Autocomplete menu.
+'ui.menu.selected' = {bg="base04", fg="base00" } # Selected autocomplete item.
 
-'ui.popup' = { } # Documentation popups (space-k).
-'ui.popup.info' = { } # Info popups box (space mode menu).
+'ui.popup' = {bg="base01" } # Documentation popups (space-k).
+'ui.popup.info' = {bg="base04",fg="base00" } # Info popups box (space mode menu).
 
 
 # SYNTAX HIGHLIGHTING ==============================
@@ -67,11 +69,11 @@ diagnostic = { } # Code diagnostics in editing area (LSP).
 
 'type' = {fg = "base09" } # Variable type, like integer or string, including program defined classes, structs etc..
 'type.builtin' = {fg = "base09" } # Primitive types of the language (string, int, float).
-'type.enum.variant' = { } # A variant of an enum.
+'type.enum.variant' = {fg="base04", modifiers = ["italics"] } # A variant of an enum.
 
 'constructor' = {fg = "base09", modifiers = ["bold"] } # Constructor method for a class or struct.
 
-'constant' = { } # Constant value
+'constant' = {fg="base0E" } # Constant value
 'constant.builtin' = {fg = "base07" } # Special constants like `true`, `false`, `none`, etc.
 'constant.builtin.boolean' = {fg = "base09" } # True or False.
 'constant.character' = {fg = "base09" } # Constant of character type.
@@ -81,11 +83,11 @@ diagnostic = { } # Code diagnostics in editing area (LSP).
 'constant.numeric.float' = {fg = "base0f" } # constant float value.
 
 'string' = {fg="base0E" } # String literal.
-'string.regexp' = { } # Regular expression literal.
-'string.special' = { } # Strings containing a path, URL, etc.
-'string.special.path' = { } # String containing a file path.
-'string.special.url' = { } # String containing a web URL.
-'string.special.symbol' = { } # Erlang/Elixir atoms, Ruby symbols, Clojure keywords.
+'string.regexp' = {fg="base0A" } # Regular expression literal.
+'string.special' = {fg="base0C" } # Strings containing a path, URL, etc.
+# 'string.special.path' = { } # String containing a file path.
+# 'string.special.url' = { } # String containing a web URL.
+# 'string.special.symbol' = { } # Erlang/Elixir atoms, Ruby symbols, Clojure keywords.
 
 'comment' = {fg = "base03", modifiers = ["italic"] } # This is a comment.
 'comment.line' = {fg = "base03", modifiers = ["italic"] } # Line comments, like this.
@@ -103,26 +105,26 @@ diagnostic = { } # Code diagnostics in editing area (LSP).
 'punctuation.delimiter' = {fg = "base08" } # Commas, colons or other delimiter depending on the language.
 'punctuation.bracket' = {fg = "base08" } # Parentheses, angle brackets, etc.
 
-'keyword' = { } # Language reserved keywords.
-'keyword.control' = { } # Control keywords.
-'keyword.control.conditional' = {fg = "base09" } # `if`, `else`, `elif`.
-'keyword.control.repeat' = {fg = "base09" } # `for`, `while`, `loop`.
-'keyword.control.import' = {fg = "base09" } # `import`, `export` `use`.
-'keyword.control.return' = {fg = "base09" } # `return` in most languages.
+'keyword' = {fg="base09" } # Language reserved keywords.
+# 'keyword.control' = { } # Control keywords.
+# 'keyword.control.conditional' = {fg = "base09" } # `if`, `else`, `elif`.
+# 'keyword.control.repeat' = {fg = "base09" } # `for`, `while`, `loop`.
+# 'keyword.control.import' = {fg = "base09" } # `import`, `export` `use`.
+# 'keyword.control.return' = {fg = "base09" } # `return` in most languages.
 
 # TODO: This one does not work?
 'keyword.control.exception' = {fg = "base0B" } # `try`, `catch`, `raise`/`throw` and related.
 'keyword.operator' = {fg = "base08" } # `or`, `and`, `in`.
-'keyword.directive' = { } # Preprocessor directives (#if in C...).
+'keyword.directive' = {fg="base09" } # Preprocessor directives (#if in C...).
 'keyword.function' = {fg="base08" } # The keyword to define a function: 'def', 'fun', 'fn'.
 
-'operator' = { } # Logical, mathematical, and other operators.
+'operator' = {fg="base09" } # Logical, mathematical, and other operators.
 
 'function' = {fg = "base08", modifiers = ["bold"] }
 'function.builtin' = {fg = "base0C", modifiers = ["bold"] }
 'function.method' = {fg = "base07" } # Class / Struct methods.
 'function.macro' = { }
-'function.special' = { } # Preprocessor function in C.
+'function.special' = {fg="base0C" } # Preprocessor function in C.
 
 'tag' = { } # As in <body> for html, css tags.
 'tag.error' = { } # Erroneous closing html tags.
@@ -133,20 +135,20 @@ diagnostic = { } # Code diagnostics in editing area (LSP).
 # Markup ==============================
 # Colors for markup languages, like Markdown or XML.
 
-'markup.heading.1' = { } # Markdown heading 1 color.
-'markup.heading.2' = { } # Markdown heading 2 color.
-'markup.heading.3' = { } # Markdown heading 3 color.
-'markup.heading.4' = { } # Markdown heading 4 color.
-'markup.heading.5' = { } # Markdown heading 5 color.
-'markup.heading.6' = { } # Markdown heading 6 color.
-'markup.heading.marker' = { } # Hashtag color on Markdown headings.
+'markup.heading.1' = {fg="base0A" } # Markdown heading 1 color.
+'markup.heading.2' = {fg="base0A" } # Markdown heading 2 color.
+'markup.heading.3' = {fg="base0A" } # Markdown heading 3 color.
+'markup.heading.4' = {fg="base0A" } # Markdown heading 4 color.
+'markup.heading.5' = {fg="base0A" } # Markdown heading 5 color.
+'markup.heading.6' = {fg="base0A" } # Markdown heading 6 color.
+'markup.heading.marker' = {fg="base0A" } # Hashtag color on Markdown headings.
 
-'markup.list' = { }
-'markup.list.numbered' = { } # Numbered list.
-'markup.list.unnumbered' = { } # Bullet point list.
+'markup.list' = {fg="base08" }
+'markup.list.numbered' = {fg="base08"} # Numbered list.
+'markup.list.unnumbered' = {fg="base08" } # Bullet point list.
 
-'markup.bold' = { } # Bold text.
-'markup.italic' = { } # Italicised text.
+'markup.bold' = {fg="base0A", modifiers = ["bold"] } # Bold text.
+'markup.italic' = {fg="base0A", modifiers = ["italic"] } # Italicised text.
 
 'markup.link' = { }
 'markup.link.url' = { } # Urls pointed to by links.
@@ -175,10 +177,10 @@ diagnostic = { } # Code diagnostics in editing area (LSP).
 # Diff ==============================
 # Version control changes.
 
-'diff.plus' = { } # Additions.
-'diff.minus' = { } # Deletions.
-'diff.delta' = { } # Modifications.
-'diff.delta.moved' = { } # Renamed or moved files.
+'diff.plus' = {fg="base0D" } # Additions.
+'diff.minus' = {fg="base0A" } # Deletions.
+'diff.delta' = {fg="base0G" } # Modifications.
+'diff.delta.moved' = {fg="base0F" } # Renamed or moved files.
 
 
 [palette] # Define your custom colors here.
@@ -198,3 +200,4 @@ base0C = "#ff7eb6"
 base0D = "#42be65"
 base0E = "#be95ff"
 base0F = "#82cfff"
+base0G = "#ffe97b"
