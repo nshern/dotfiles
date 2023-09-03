@@ -1,6 +1,4 @@
-# theme = "my_solarized_dark"
-# theme = "my_solarized_light"
-theme = "oxocarbon-dark"
+theme = "catppuccin_mocha"
 
 [editor]
 auto-save = true
