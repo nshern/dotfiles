@@ -9,12 +9,13 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
- # - ~/.config/alacritty/themes/my_solarized_dark.yaml
+ - ~/.config/alacritty/themes/my_solarized_dark.yaml
  # - ~/.config/alacritty/themes/oxocarbon-dark.yml
  # - ~/.config/alacritty/themes/dracula-pro.yml
  # - ~/.config/alacritty/themes/helix.yaml
- # - ~/.config/alacritty/themes/github_dark.yaml
-  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+ # - ~/.config/alacritty/themes/ubuntu.yaml
+ # - ~/.config/alacritty/themes/everforest_dark.yaml
+  # - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
  # - ~/.config/alacritty/themes/doomsayer.yaml
  # - ~/.config/alacritty/themes/my_solarized_light.yaml
 

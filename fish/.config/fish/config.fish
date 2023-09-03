@@ -1,6 +1,6 @@
 set -g fish_greeting
 # fish_config theme choose "Rosé Pine Dawn"
-fish_config theme choose "Catppuccin Mocha"
+# fish_config theme choose "Catppuccin Mocha"
 # if not set -q TMUX
 #     neofetch
 # end
