@@ -12,7 +12,7 @@ import:
  - ~/.config/alacritty/themes/my_solarized_dark.yaml
  # - ~/.config/alacritty/themes/oxocarbon-dark.yml
  # - ~/.config/alacritty/themes/dracula-pro.yml
- # - ~/.config/alacritty/themes/helix.yaml
+ # - ~/.config/alacritty/themes/nord.yaml
  # - ~/.config/alacritty/themes/ubuntu.yaml
  # - ~/.config/alacritty/themes/everforest_dark.yaml
   # - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
