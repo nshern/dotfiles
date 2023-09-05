@@ -42,8 +42,6 @@ abbr -a py python
 abbr -a todo '~/.scripts/open-todo-note.fish'
 abbr -a tree 'exa --tree'
 abbr -a tt 'watson report -dcG | grep "Total: " | sed "s/Total: //"'
-abbr -a vim nvim
-
 
 alias work="timer 5 && osascript -e 'display notification \"This is the message\" with title \"This is the title\" subtitle \"This is the subtitle\"'"
 

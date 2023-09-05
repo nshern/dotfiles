@@ -21,7 +21,7 @@ diagnostic = {fg = "base0E" } # Code diagnostics in editing area (LSP).
 'ui.window' = {bg = "base00" } # Window border between splits.
 'ui.gutter' = { } # Left gutter for diagnostics and breakpoints.
 
-'ui.text' = {fg="base04" } # Default text color.
+'ui.text' = {fg="base06" } # Default text color.
 'ui.text.focus' = {fg="base09" } # Selection highlight in buffer-picker or file-picker.
 'ui.text.info' = {bg="base04", fg="base00" } # Info popup contents (space mode menu).
 
@@ -89,9 +89,9 @@ diagnostic = {fg = "base0E" } # Code diagnostics in editing area (LSP).
 # 'string.special.url' = { } # String containing a web URL.
 # 'string.special.symbol' = { } # Erlang/Elixir atoms, Ruby symbols, Clojure keywords.
 
-'comment' = {fg = "base03", modifiers = ["italic"] } # This is a comment.
-'comment.line' = {fg = "base03", modifiers = ["italic"] } # Line comments, like this.
-'comment.block' = {fg = "base03", modifiers = ["italic"] } # Block comments, like /* this */ in some languages.
+'comment' = {fg = "base0F", modifiers = ["italic"] } # This is a comment.
+# 'comment.line' = {fg = "base0D", modifiers = ["italic"] } # Line comments, like this.
+# 'comment.block' = {fg = "base0D", modifiers = ["italic"] } # Block comments, like /* this */ in some languages.
 'comment.block.documentation' = {fg = "base03", modifiers = ["italic"] } # Doc comments, e.g '///' in rust.
 
 'variable' = {fg = "base04" } # Variable names.
