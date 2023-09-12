@@ -1,0 +1,10 @@
+inherits = "catppuccin_mocha"
+
+"variable.parameter" = { fg = "maroon"}
+"keyword.control.conditional" = { fg = "mauve"}
+"namespace" = { fg = "blue"}
+
+[palette]
+base = "#1e1e1e"
+mantle = "#282825"
+crust = "#1e1e1e"

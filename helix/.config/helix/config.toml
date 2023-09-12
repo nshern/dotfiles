@@ -1,5 +1,4 @@
-# theme = "catppuccin_mocha"
-theme = "my_solarized_dark"
+theme = "catppuccin_americano"
 
 [editor]
 auto-save = true
@@ -8,7 +7,7 @@ shell = ['fish']
 line-number = "relative"
 bufferline = 'always'
 mouse = true
-text-width = 120
+# text-width = 120
 color-modes = true
 cursorline = true
 

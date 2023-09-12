@@ -51,6 +51,7 @@ auto-format = true
 [[language]]
 name = "markdown"
 scope = "source.markdown"
+text-width = 300
 injection-regex = "markdown"
 file-types = ["md"]
 language-servers = ["ltex-ls" ,"marksman"]

@@ -16,8 +16,8 @@
 "comment" = { fg = "overlay1", modifiers = ["italic"] }
 
 "variable" = "text"
-"variable.parameter" = { fg = "maroon"}
-"variable.builtin" = "red"
+"variable.parameter" = { fg = "lavender"}
+"variable.builtin" = "pink"
 "variable.other.member" = "teal"
 
 "label" = "sapphire" # used for lifetimes
@@ -78,7 +78,7 @@
 "ui.help" = { fg = "overlay2", bg = "surface0" }
 
 "ui.bufferline" = { fg = "subtext0", bg = "mantle" }
-"ui.bufferline.active" = { fg = "mauve", bg = "base", underline = { color = "mauve", style = "line" } }
+"ui.bufferline.active" = { fg = "mauve", bg = "base"}
 "ui.bufferline.background" = { bg = "crust" }
 
 "ui.text" = "text"
@@ -111,10 +111,10 @@
 "ui.menu" = { fg = "overlay2", bg = "surface0" }
 "ui.menu.selected" = { fg = "text", bg = "surface1", modifiers = ["bold"] }
 
-"diagnostic.error" = { underline = { color = "red", style = "curl" } }
-"diagnostic.warning" = { underline = { color = "yellow", style = "curl" } }
-"diagnostic.info" = { underline = { color = "sky", style = "curl" } }
-"diagnostic.hint" = { underline = { color = "teal", style = "curl" } }
+"diagnostic.error" = {underline = { color = "red", style = "curl" } }
+"diagnostic.warning" = {underline = { color = "yellow", style = "curl" } }
+"diagnostic.info" = {underline = { color = "sky", style = "curl" } }
+"diagnostic.hint" = {underline = { color = "teal", style = "curl" } }
 
 error = "red"
 warning = "yellow"
