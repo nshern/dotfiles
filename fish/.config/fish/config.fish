@@ -47,7 +47,8 @@ alias work="timer 5 && osascript -e 'display notification \"This is the message\
 
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin $PATH
-set -gx EDITOR hx
+set -x EDITOR hx
+set -Ux PATH ~/.lsp/omnisharp_net6/ $PATH
 status --is-interactive; and . (pyenv init -|psub)
 
 set fish_color_valid_path
