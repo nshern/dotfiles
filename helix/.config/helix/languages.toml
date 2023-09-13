@@ -46,6 +46,18 @@ formatter = { command = "prettier" }
 language-servers = ["taplo"]
 auto-format = true
 
+[[language]]
+name = "c-sharp"
+language-servers = ["omnisharp"]
+auto-format = true
+
+[language-server.omnisharp]
+command = "dotnet"
+args = [
+  "/Users/nshern/Downloads/omnisharp-osx-arm64-net6.0/OmniSharp.dll",
+  "--languageserver"
+  ]
+
 
 # Markdown
 [[language]]
