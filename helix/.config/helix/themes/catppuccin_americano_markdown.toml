@@ -1,0 +1,17 @@
+inherits = "catppuccin_mocha"
+
+"variable.builtin" = "maroon"
+"variable.parameter" = "pink"
+"keyword.control.conditional" = { fg = "mauve"}
+"namespace" = { fg = "blue"}
+"ui.bufferline.active" = { fg = "mauve", bg = "base"}
+
+"diagnostic.error" = "red" 
+"diagnostic.warning" = "yellow" 
+"diagnostic.info" = "sky"
+"diagnostic.hint" = "teal"
+
+[palette]
+base = "#1e1e1e"
+mantle = "#282825"
+crust = "#1e1e1e"
