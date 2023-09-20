@@ -11,8 +11,6 @@
 import:
   - ~/.config/alacritty/catppuccin/catppuccin-americano.yml
 
- # - ~/.config/alacritty/themes/dracula.yaml
-
 # import:
 #   # uncomment the flavour you want below:
   # - ~/.config/alacritty/themes/rose-pine.toml
