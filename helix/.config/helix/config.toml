@@ -1,4 +1,5 @@
 theme = "catppuccin_americano"
+# theme = "catppuccin_americano_markdown"
 
 [editor]
 auto-save = true
