@@ -67,6 +67,8 @@ text-width = 300
 injection-regex = "markdown"
 file-types = ["md"]
 language-servers = ["ltex-ls" ,"marksman"]
+formatter = {command = "prettier"}
+auto-format = true
 
 [language-server.marksman]
 command = "marksman"
