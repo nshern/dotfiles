@@ -1,14 +1,14 @@
 themes {
-	solarized-dark {
-		bg "#dc322f"
-		fg "#839496"
-		red "#dc322f"
-		green "#859900"
+	dracula_pro {
+		bg "#000000"
+		fg "#000000"
+		red "#FF9580"
+		green "#8AFF80"
 		blue "#268bd2"
-		yellow "#b58900"
-		magenta "#d33682"
-		orange "#b58900"
-		cyan "#2aa198"
+		yellow "#FFFF80"
+		magenta "#FF80BF"
+		orange "#FFCA80"
+		cyan "#80FFEA"
 		black "#073642"
 		white "#eee8d5"
 	}

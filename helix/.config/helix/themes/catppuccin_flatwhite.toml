@@ -1,0 +1,4 @@
+inherits = "catppuccin_latte"
+
+[palette]
+base = "#faf4ed"

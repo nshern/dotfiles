@@ -10,7 +10,6 @@
 # to the user's home directory starting with `~/`.
 import:
   - ~/.config/alacritty/catppuccin/catppuccin-americano.yml
-  # - ~/.config/alacritty/themes/dracula-pro.yml
 
 # import:
 #   # uncomment the flavour you want below:
