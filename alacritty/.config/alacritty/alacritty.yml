@@ -9,11 +9,8 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-  - ~/.config/alacritty/catppuccin/catppuccin-americano.yml
-
-# import:
-#   # uncomment the flavour you want below:
-  # - ~/.config/alacritty/themes/rose-pine.toml
+- ~/.config/alacritty/catppuccin/catppuccin-americano.yml
+# - ~/.config/alacritty/catppuccin/catppuccin-espresso.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables

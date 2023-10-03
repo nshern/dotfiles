@@ -19,9 +19,9 @@ bind -M insert \cf accept-autosuggestion
 bind -M insert \cr forward-word
 
 # Abbreviations
-abbr -a cb 'chatblade -s'
+abbr -a cb 'chatblade -s -r'
 abbr -a cat bat
-abbr -a cbl 'chatblade -s -l'
+abbr -a cbl 'chatblade -s -l -r'
 abbr -a cbli 'chatblade -s -l -i'
 abbr -a cls clear
 abbr -a clx 'clx -n'

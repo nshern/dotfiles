@@ -7,7 +7,7 @@ shebangs = ["python"]
 roots = [".", "pyproject.toml", "pyrightconfig.json"]
 comment-token = "#"
 # language-servers = ["pylsp", "pyright", "ruff"]
-language-servers = ["pylsp", "ruff"]
+language-servers = ["pylsp", "ruff", "pyright"]
 indent = { tab-width = 4, unit = "    " }
 auto-format = true
 rulers = [80]
@@ -20,9 +20,9 @@ args = [
   "--line-length=79"
 ]
 
-# [language-server.pyright]
-# command = "pyright-langserver"
-# args = ["--stdio"]
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
 
 [language-server.pyright.config]
 reportMissingTypeStubs = false
