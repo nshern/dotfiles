@@ -64,12 +64,13 @@ args = [
 [[language]]
 name = "markdown"
 scope = "source.markdown"
-text-width = 300
+text-width = 120
 injection-regex = "markdown"
 file-types = ["md"]
 language-servers = ["ltex-ls" ,"marksman"]
 formatter = {command = "prettier"}
 auto-format = true
+rulers = [120]
 
 [language-server.marksman]
 command = "marksman"
