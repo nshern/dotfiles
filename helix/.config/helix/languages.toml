@@ -6,7 +6,6 @@ file-types = ["py","pyi","py3","pyw",".pythonstartup",".pythonrc"]
 shebangs = ["python"]
 roots = [".", "pyproject.toml", "pyrightconfig.json"]
 comment-token = "#"
-# language-servers = ["pylsp", "pyright", "ruff"]
 language-servers = ["pylsp", "ruff", "pyright"]
 indent = { tab-width = 4, unit = "    " }
 auto-format = true
@@ -51,6 +50,11 @@ auto-format = true
 name = "c-sharp"
 language-servers = ["omnisharp"]
 auto-format = true
+text-width = 300
+
+[language.formatter]
+command = "dotnet"
+args = ["csharpier"]
 
 [language-server.omnisharp]
 command = "dotnet"
@@ -58,6 +62,7 @@ args = [
   "/Users/nshern/Downloads/omnisharp-osx-arm64-net6.0/OmniSharp.dll",
   "--languageserver"
   ]
+  
 
 
 # Markdown

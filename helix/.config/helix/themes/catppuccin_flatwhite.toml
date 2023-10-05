@@ -1,4 +1,11 @@
 inherits = "catppuccin_latte"
+"variable.builtin" = "maroon"
+"variable.parameter" = "red"
+"keyword.control.conditional" = { fg = "mauve"}
+# "namespace" = { fg = "blue"}
+"ui.bufferline.active" = { fg = "mauve", bg = "base"}
+
 
 [palette]
-base = "#faf4ed"
+# base = "#faf4ed"
+base = "#fdf6e3"
