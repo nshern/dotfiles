@@ -36,7 +36,6 @@ command = "ruff-lsp"
 [language-server.ruff.config]
 settings = {args = []}
 
-#TOML
 [[language]]
 name = "toml"
 scope = "source.toml"
