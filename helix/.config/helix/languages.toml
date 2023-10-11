@@ -2,7 +2,7 @@
 name = "python"
 scope = "source.python"
 injection-regex = "python"
-file-types = ["py","pyi","py3","pyw",".pythonstartup",".pythonrc"]
+file-types = ["py", "pyi", "py3", "pyw", ".pythonstartup", ".pythonrc"]
 shebangs = ["python"]
 roots = [".", "pyproject.toml", "pyrightconfig.json"]
 comment-token = "#"
@@ -13,11 +13,7 @@ rulers = [80]
 
 [language.formatter]
 command = "black"
-args = [
-  "-",
-  "--quiet",
-  "--line-length=79"
-]
+args = ["-", "--quiet", "--line-length=79"]
 
 [language-server.pyright]
 command = "pyright-langserver"
@@ -34,16 +30,19 @@ autoImportCompletions = true
 command = "ruff-lsp"
 
 [language-server.ruff.config]
-settings = {args = []}
+settings = { args = [] }
 
 [[language]]
 name = "toml"
 scope = "source.toml"
 injection-regex = "toml"
 file-types = ["toml"]
-formatter = { command = "prettier" }
 language-servers = ["taplo"]
 auto-format = true
+
+# [language.formatter]
+# command = "taplo"
+# args = ["format"]
 
 [[language]]
 name = "c-sharp"
@@ -59,9 +58,8 @@ args = ["csharpier"]
 command = "dotnet"
 args = [
   "/Users/nshern/Downloads/omnisharp-osx-arm64-net6.0/OmniSharp.dll",
-  "--languageserver"
-  ]
-  
+  "--languageserver",
+]
 
 
 # Markdown
@@ -71,8 +69,8 @@ scope = "source.markdown"
 text-width = 120
 injection-regex = "markdown"
 file-types = ["md"]
-language-servers = ["ltex-ls" ,"marksman"]
-formatter = {command = "prettier"}
+language-servers = ["ltex-ls", "marksman"]
+formatter = { command = "prettier" }
 auto-format = true
 rulers = [120]
 

@@ -1,6 +1,4 @@
-theme = "catppuccin_americano_transparent"
-# theme = "catppuccin_americano_markdown"
-# theme = "catppuccin_flatwhite"
+theme = "night"
 
 [editor]
 auto-save = true
@@ -11,6 +9,7 @@ bufferline = 'always'
 mouse = true
 color-modes = true
 cursorline = true
+idle-timeout = 0
 
 
 [editor.cursor-shape]
@@ -20,7 +19,7 @@ select = "underline"
 
 [editor.soft-wrap]
 enable = true
-max-wrap = 25             
+max-wrap = 25
 max-indent-retain = 0
 wrap-indicator = ""
 wrap-at-text-width = true
@@ -57,4 +56,3 @@ C-n = ["move_line_down", "scroll_down"]
 esc = ["collapse_selection", "keep_primary_selection"]
 "{" = ["goto_prev_paragraph", "collapse_selection"]
 "}" = ["goto_next_paragraph", "collapse_selection"]
-c = { r = [":config-reload"], o = [":config-open"] }

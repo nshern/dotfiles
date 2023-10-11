@@ -1,14 +1,6 @@
 set -g fish_greeting
-fish_config theme choose "Catppuccin Mocha"
-# if not set -q TMUX
-#     neofetch
-# end
-
-
-# Words to live by?
- # printf "1. Make it \033[3;31mwork\033[0m\n"
- # printf "2. Make it \033[3;33mright\033[0m\n"
- # printf "3. Make it \033[3;32mfast\033[0m (optional)\n"
+# fish_config theme choose "Catppuccin Frappe"
+# fish_config theme choose "Rosé Pine Dawn"
 
 if status is-interactive
     fish_vi_key_bindings

@@ -1,4 +1,4 @@
-inherits = "my_solarized_dark"
+inherits = "better_solarized_dark"
 
 [palette]
 red = '#dc322f'

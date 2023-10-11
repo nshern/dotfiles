@@ -1,2 +1,2 @@
 inherits = "meliora"
-"ui.background" = { fg = "light_grey"}
+"ui.background" = { fg = "light_grey" }

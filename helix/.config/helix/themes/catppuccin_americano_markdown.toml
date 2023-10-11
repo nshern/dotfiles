@@ -2,12 +2,12 @@ inherits = "catppuccin_mocha"
 
 "variable.builtin" = "maroon"
 "variable.parameter" = "pink"
-"keyword.control.conditional" = { fg = "mauve"}
-"namespace" = { fg = "blue"}
-"ui.bufferline.active" = { fg = "mauve", bg = "base"}
+"keyword.control.conditional" = { fg = "mauve" }
+"namespace" = { fg = "blue" }
+"ui.bufferline.active" = { fg = "mauve", bg = "base" }
 
-"diagnostic.error" = "red" 
-"diagnostic.warning" = "yellow" 
+"diagnostic.error" = "red"
+"diagnostic.warning" = "yellow"
 "diagnostic.info" = "sky"
 "diagnostic.hint" = "teal"
 

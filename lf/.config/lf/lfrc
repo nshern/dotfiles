@@ -2,7 +2,7 @@
 set shell sh
 
 # Basic settings
-set hidden true
+set hidden false
 # set ignorecare true
 set icons true
 

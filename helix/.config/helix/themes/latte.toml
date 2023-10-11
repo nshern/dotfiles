@@ -1,5 +1,4 @@
-inherits = "catppuccin_mocha"
-
+inherits = "catppuccin_latte"
 
 "type.builtin" = { fg = "yellow", modifiers = ["italic"] }
 "function.builtion" = { fg = "blue", modifiers = ["italic"] }
@@ -8,10 +7,4 @@ inherits = "catppuccin_mocha"
 "keyword.control.conditional" = { fg = "mauve" }
 "namespace" = { fg = "blue" }
 "ui.bufferline.active" = { fg = "mauve", bg = "base" }
-"comment" = { fg = "#40a02b", modifiers = ["italic"] }
 "keyword.storage.modifier" = { fg = "teal" }
-
-[palette]
-base = "#1e1e1e"
-mantle = "#282825"
-crust = "#1e1e1e"
