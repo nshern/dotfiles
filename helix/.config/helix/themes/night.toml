@@ -1,6 +1,0 @@
-inherits = "dark_plus"
-
-"ui.statusline" = { fg = "white", bg = "dark_gray3" }
-"ui.bufferline.active" = { fg = "text", bg = "dark_gray3" }
-"ui.bufferline" = { fg = "dark_gray5", bg = "dark_gray3" }
-"comment" = { fg = "dark_green", modifiers = ["italic"] }

@@ -1,3 +1,0 @@
-inherits = "catppuccin_americano"
-
-"ui.background" = { fg = "text" }
