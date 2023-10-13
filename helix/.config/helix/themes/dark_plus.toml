@@ -2,7 +2,8 @@
 "module" = { fg = "type" }
 
 "type" = { fg = "type" }
-"type.builtin" = { fg = "type" }
+# "type.builtin" = { fg = "type" }
+"type.builtin" = { fg = "blue2" }
 "type.enum.variant" = { fg = "constant" }
 "constructor" = { fg = "type" }
 "variable.other.member" = { fg = "variable" }
@@ -74,8 +75,8 @@
 "ui.cursorline.primary" = { bg = "dark_gray3" }
 "ui.statusline" = { fg = "white", bg = "dark_gray3" }
 "ui.statusline.inactive" = { fg = "white", bg = "blue" }
-"ui.statusline.insert" = { fg = "white", bg = "yellow" }
-"ui.statusline.select" = { fg = "white", bg = "magenta" }
+"ui.statusline.insert" = { fg = "dark_gray2", bg = "yellow" }
+"ui.statusline.select" = { fg = "dark_gray2", bg = "magenta" }
 
 "ui.bufferline" = { fg = "dark_gray5", bg = "dark_gray3" }
 "ui.bufferline.active" = { fg = "text", bg = "dark_gray3" }
