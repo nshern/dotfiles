@@ -9,11 +9,6 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-# - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
-# - ~/.config/alacritty/catppuccin/catppuccin-latte.yml
-# - ~/.config/alacritty/themes/everforest_dark.yaml
-# - ~/.config/alacritty/themes/gruvbox_dark.yaml
-# - ~/.config/alacritty/themes/rose-pine-dawn.yaml
 - ~/.config/alacritty/themes/nord_night.yaml
 
 
