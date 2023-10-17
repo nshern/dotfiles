@@ -1,0 +1,33 @@
+themes {
+	colibri {
+		bg "#281733"
+		fg "#9a9a9a"
+		red "#f47868"
+		green "#A4A0E8"
+		blue "#a4a0e8"
+		yellow "#efba5d"
+		magenta "#dbbfef"
+		orange "#f47868"
+		cyan "#6acdca"
+		black "#281733"
+		white "#ebeafa"
+	}
+}
+
+
+// themes {
+// 	colibri {
+// 		bg "#3b224c"
+// 		fg "#9a9a9a"
+// 		red "#f47868"
+// 		green "#9ff28f"
+// 		blue "#a4a0e8"
+// 		yellow "#efba5d"
+// 		magenta "#dbbfef"
+// 		orange "#f47868"
+// 		cyan "#6acdca"
+// 		black "#3b224c"
+// 		white "#ebeafa"
+// 	}
+// }
+

@@ -1,0 +1,2 @@
+inherits = "default"
+comment = { fg = "sirocco", modifiers = ["italic"] }
