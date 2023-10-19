@@ -12,7 +12,7 @@ bind -M insert \cr forward-word
 
 # Abbreviations
 abbr -a cb 'chatblade -s -r'
-abbr -a cat bat
+# abbr -a cat bat
 abbr -a cbl 'chatblade -s -l -r'
 abbr -a cbli 'chatblade -s -l -i'
 abbr -a cls clear
