@@ -6,7 +6,8 @@ file-types = ["py", "pyi", "py3", "pyw", ".pythonstartup", ".pythonrc"]
 shebangs = ["python"]
 roots = [".", "pyproject.toml", "pyrightconfig.json"]
 comment-token = "#"
-language-servers = ["pylsp", "ruff", "pyright"]
+# language-servers = ["pylsp", "ruff", "pyright"]
+language-servers = ["ruff", "pyright"]
 indent = { tab-width = 4, unit = "    " }
 auto-format = true
 rulers = [80]
