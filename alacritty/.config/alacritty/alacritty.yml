@@ -10,8 +10,6 @@
 # to the user's home directory starting with `~/`.
 # import:
 # - ~/.config/alacritty/themes/nord_night.yaml
-# - ~/.config/alacritty/themes/rasmus.yaml
-  # - ~/.config/alacritty/catppuccin/catppuccin-latte.yml
 
 
 
