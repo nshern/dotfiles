@@ -13,8 +13,8 @@ auto-format = true
 rulers = [80]
 
 [language.formatter]
-command = "black"
-args = ["-", "--quiet", "--line-length=79"]
+command = "bash"
+args = ["-c", "isort - | black - --line-length=79"]
 
 [language-server.pyright]
 command = "pyright-langserver"
