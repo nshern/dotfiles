@@ -40,6 +40,7 @@ set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin $PATH
 set -x EDITOR hx
 set -Ux PATH ~/.lsp/omnisharp_net6/ $PATH
+set -U fish_user_paths /Users/nshern/.scripts/ $fish_user_paths
 status --is-interactive; and . (pyenv init -|psub)
 
 set fish_color_valid_path
