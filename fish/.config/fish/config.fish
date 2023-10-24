@@ -30,9 +30,9 @@ abbr -a nn '~/.scripts/create-new-note.fish'
 abbr -a notes "/Users/nshern/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault"
 abbr -a nvim-update-plugins '~/.scripts/update-nvim-plugins.fish'
 abbr -a py python
-abbr -a todo '~/.scripts/open-todo-note.fish'
 abbr -a tree 'exa --tree'
 abbr -a tt 'watson report -dcG | grep "Total: " | sed "s/Total: //"'
+abbr -a todo 'cd ~/notes && hx todo.md'
 
 alias work="timer 5 && osascript -e 'display notification \"This is the message\" with title \"This is the title\" subtitle \"This is the subtitle\"'"
 
