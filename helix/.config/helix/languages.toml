@@ -70,7 +70,7 @@ scope = "source.markdown"
 text-width = 120
 injection-regex = "markdown"
 file-types = ["md"]
-language-servers = ["ltex-ls", "marksman"]
+language-servers = ["mdpls", "ltex-ls", "marksman"]
 formatter = { command = "prettier" }
 auto-format = true
 rulers = [120]
@@ -94,3 +94,11 @@ config = { ltex.disabledRules = { "en-US" = [
 ], "en-GB" = [
   "madeupword",
 ] } }
+
+[language-server.mdpls]
+name = "markdown"
+command = "mdpls"
+file-types = ["md", "txt"]
+scope = "source.markdown"
+roots = []
+config = { markdown.preview.auto = false, markdown.preview.browser = "firefox" }
