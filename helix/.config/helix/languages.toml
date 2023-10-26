@@ -62,8 +62,6 @@ args = [
   "--languageserver",
 ]
 
-
-# Markdown
 [[language]]
 name = "markdown"
 scope = "source.markdown"
@@ -93,6 +91,8 @@ config = { ltex.disabledRules = { "en-US" = [
   "watchamacallit",
 ], "en-GB" = [
   "madeupword",
+], "da-DK" = [
+  "GDPR",
 ] } }
 
 [language-server.mdpls]
