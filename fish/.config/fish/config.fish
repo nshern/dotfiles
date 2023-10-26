@@ -22,7 +22,6 @@ abbr -a dev '~/.scripts/create-tmux-env.fish'
 abbr -a fetch 'neofetch'
 abbr -a gg 'gitui -t mocha.ron'
 abbr -a gs 'git status'
-abbr -a lf 'lfcd'
 abbr -a lg lazygit
 abbr -a ll 'exa -alh --sort modified'
 abbr -a ls exa
