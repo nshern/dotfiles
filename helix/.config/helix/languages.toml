@@ -6,8 +6,7 @@ file-types = ["py", "pyi", "py3", "pyw", ".pythonstartup", ".pythonrc"]
 shebangs = ["python"]
 roots = [".", "pyproject.toml", "pyrightconfig.json"]
 comment-token = "#"
-language-servers = ["pylsp", "ruff", "pyright"]
-# language-servers = ["ruff", "pyright"]
+language-servers = ["pyright", "ruff", "pylsp"]
 indent = { tab-width = 4, unit = "    " }
 auto-format = true
 rulers = [80]
@@ -41,10 +40,6 @@ file-types = ["toml"]
 language-servers = ["taplo"]
 auto-format = true
 
-# [language.formatter]
-# command = "taplo"
-# args = ["format"]
-
 [[language]]
 name = "c-sharp"
 language-servers = ["omnisharp"]
@@ -68,7 +63,7 @@ scope = "source.markdown"
 text-width = 120
 injection-regex = "markdown"
 file-types = ["md"]
-language-servers = ["mdpls", "ltex-ls", "marksman"]
+language-servers = ["marksman", "ltex-ls"]
 formatter = { command = "prettier" }
 auto-format = true
 rulers = [120]
@@ -94,11 +89,3 @@ config = { ltex.disabledRules = { "en-US" = [
 ], "da-DK" = [
   "GDPR",
 ] } }
-
-[language-server.mdpls]
-name = "markdown"
-command = "mdpls"
-file-types = ["md", "txt"]
-scope = "source.markdown"
-roots = []
-config = { markdown.preview.auto = false, markdown.preview.browser = "firefox" }
