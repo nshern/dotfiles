@@ -11,9 +11,19 @@ indent = { tab-width = 4, unit = "    " }
 auto-format = true
 rulers = [80]
 
+# [language.formatter]
+# command = "ruff format"
+
+# [language.formatter.sort]
+# command = "ruff --fix --extend-select 'I'"
+
+# [language.formatter]
+# args = ['extend-selection ["I"]']
+
 [language.formatter]
 command = "bash"
 args = ["-c", "isort - | black - --line-length=79"]
+
 
 [language-server.pyright]
 command = "pyright-langserver"
