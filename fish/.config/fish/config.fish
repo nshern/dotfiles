@@ -1,6 +1,6 @@
 set -g fish_greeting
 # fish_config theme choose "Catppuccin Latte"
-# fish_config theme choose "Rosé Pine Dawn"
+fish_config theme choose "Rosé Pine Moon"
 
 if status is-interactive
     fish_vi_key_bindings
