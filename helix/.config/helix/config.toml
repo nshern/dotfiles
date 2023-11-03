@@ -1,4 +1,4 @@
-theme = "custom"
+theme = "everforest_dark"
 
 [editor]
 auto-save = true
@@ -56,35 +56,5 @@ C-n = ["move_line_down", "scroll_down"]
 "{" = ["goto_prev_paragraph", "collapse_selection"]
 "}" = ["goto_next_paragraph", "collapse_selection"]
 
-[keys.normal."'"]
-"." = "repeat_last_motion"
-"`" = "switch_to_uppercase"
-"d" = "delete_selection_noyank"
-"c" = "change_selection_noyank"
-"C" = "copy_selection_on_prev_line"
-"s" = "split_selection_on_newline"
-"minus" = "merge_selections"
-"_" = "merge_consecutive_selections"
-";" = "flip_selections"
-"e" = "move_parent_node_end"
-"b" = "move_parent_node_start"
-"x" = "shrink_to_line_bounds"
-"u" = "earlier"
-"U" = "later"
-"J" = "join_selections_space"
-"K" = "remove_selections"
-"," = "remove_primary_selection"
-"(" = "rotate_selection_contents_backward"
-")" = "rotate_selection_contents_forward"
-":" = "ensure_selections_forward"
-"|" = "shell_pipe_to"
-"!" = "shell_append_output"
-
-"o" = "expand_selection"
-"up" = "expand_selection"
-"i" = "shrink_selection"
-"down" = "shrink_selection"
-"p" = "select_prev_sibling"
-"right" = "select_next_sibling"
-"n" = "select_next_sibling"
-"left" = "select_prev_sibling"
+[keys.normal.space]
+y = ":primary-clipboard-yank"

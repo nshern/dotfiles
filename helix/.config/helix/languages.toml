@@ -11,14 +11,6 @@ indent = { tab-width = 4, unit = "    " }
 auto-format = true
 rulers = [80]
 
-# [language.formatter]
-# command = "ruff format"
-
-# [language.formatter.sort]
-# command = "ruff --fix --extend-select 'I'"
-
-# [language.formatter]
-# args = ['extend-selection ["I"]']
 
 [language.formatter]
 command = "bash"
@@ -70,15 +62,21 @@ args = [
 [[language]]
 name = "markdown"
 scope = "source.markdown"
-text-width = 120
+text-width = 200
 injection-regex = "markdown"
 file-types = ["md"]
-language-servers = ["marksman", "ltex-ls"]
+language-servers = ["mdpls", "marksman", "ltex-ls"]
 formatter = { command = "prettier" }
 auto-format = true
-rulers = [120]
+
+[language-server.mdpls]
+name = "markdown"
+command = "mdpls"
+config = { markdown.preview.auto = false, markdown.preview.browser = "firefox" }
+
 
 [language-server.marksman]
+name = "markdown"
 command = "marksman"
 
 [language-server.ltex-ls]
