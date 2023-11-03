@@ -15,7 +15,10 @@ config.color_scheme = 'Everforest Dark (Gogh)'
 
 -- For example, changing the color scheme:
 config.adjust_window_size_when_changing_font_size = false
--- config.window_decorations = "RESIZE"
+config.tab_bar_at_bottom = false
+config.use_fancy_tab_bar = false
+config.enable_tab_bar = false
+config.window_decorations = "RESIZE"
 config.font = wezterm.font { family = 'Hack Nerd Font' }
 config.font_rules = {
   {
