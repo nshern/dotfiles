@@ -14,10 +14,12 @@ end
 config.color_scheme = 'Everforest Dark (Gogh)'
 
 -- For example, changing the color scheme:
+config.native_macos_fullscreen_mode = true
 config.adjust_window_size_when_changing_font_size = false
-config.tab_bar_at_bottom = false
+config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
-config.enable_tab_bar = false
+config.enable_tab_bar = true
+config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = "RESIZE"
 config.font = wezterm.font { family = 'Hack Nerd Font' }
 config.font_rules = {
@@ -52,6 +54,7 @@ config.font_rules = {
 config.font_size = 17.0
 
 config.keys = {
+  { key = 'N', mods = 'CMD|SHIFT', action = wezterm.action.ToggleFullScreen },  
   {
     key = 'H',
     mods = 'CTRL|SHIFT',
