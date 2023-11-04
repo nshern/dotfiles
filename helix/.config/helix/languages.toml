@@ -60,6 +60,15 @@ args = [
 ]
 
 [[language]]
+name = "lua"
+scope = "source.lua"
+file-types = ["lua"]
+auto-format = true
+
+[language.formatter]
+command = "stylua"
+
+[[language]]
 name = "markdown"
 scope = "source.markdown"
 text-width = 200
