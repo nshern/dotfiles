@@ -55,22 +55,22 @@ config.keys = {
 	{ key = "N", mods = "CMD|SHIFT", action = wezterm.action.ToggleFullScreen },
 	{
 		key = "H",
-		mods = "CTRL|SHIFT",
+		mods = "SHIFT|CMD",
 		action = wezterm.action.ActivatePaneDirection("Left"),
 	},
 	{
 		key = "L",
-		mods = "CTRL|SHIFT",
+		mods = "SHIFT|CMD",
 		action = wezterm.action.ActivatePaneDirection("Right"),
 	},
 	{
 		key = "K",
-		mods = "CTRL|SHIFT",
+		mods = "SHIFT|CMD",
 		action = wezterm.action.ActivatePaneDirection("Up"),
 	},
 	{
 		key = "J",
-		mods = "CTRL|SHIFT",
+		mods = "SHIFT|CMD",
 		action = wezterm.action.ActivatePaneDirection("Down"),
 	},
 	{
