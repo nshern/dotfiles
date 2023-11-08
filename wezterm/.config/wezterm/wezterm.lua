@@ -8,13 +8,12 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
--- Use Rose Pine Moon Theme
 config.colors = colors
 config.window_frame = window_frame
-
+config.color_scheme = "Catppuccin Frappe"
 config.native_macos_fullscreen_mode = true
 config.adjust_window_size_when_changing_font_size = false
-config.tab_bar_at_bottom = false
+config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
 config.enable_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = false
