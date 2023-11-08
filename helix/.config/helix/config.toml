@@ -55,6 +55,12 @@ C-p = ['move_line_up', "scroll_up"]
 C-n = ["move_line_down", "scroll_down"]
 "{" = ["goto_prev_paragraph", "collapse_selection"]
 "}" = ["goto_next_paragraph", "collapse_selection"]
+X = ["extend_line_up", "extend_to_line_bounds"]
+A-x = "extend_to_line_bounds"
+
+[keys.select]
+X = ["extend_line_up", "extend_to_line_bounds"]
+A-x = "extend_to_line_bounds"
 
 [keys.normal.space]
 y = ":primary-clipboard-yank"
