@@ -105,4 +105,8 @@ config = { ltex.disabledRules = { "en-US" = [
   "madeupword",
 ], "da-DK" = [
   "GDPR",
+  "microservice",
+  "Microservice",
+  "microservices",
+  "LLM",
 ] } }
