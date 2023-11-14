@@ -1,4 +1,0 @@
-inherits = "default"
-"comment" = { fg = "sirocco", modifiers = ["italic"] }
-"ui.virtual.ruler" = { bg = "revolver" }
-"ui.background" = {}
