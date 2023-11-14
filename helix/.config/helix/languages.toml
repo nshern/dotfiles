@@ -69,6 +69,15 @@ auto-format = true
 command = "stylua"
 
 [[language]]
+name = "xml"
+text-width = 200
+auto-format = true
+
+[language.formatter]
+command = "xmlformat"
+args = ["-i"]
+
+[[language]]
 name = "markdown"
 scope = "source.markdown"
 text-width = 200
