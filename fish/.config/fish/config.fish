@@ -11,7 +11,6 @@ bind -M insert \cr forward-word
 
 # Abbreviations
 abbr -a cb 'chatblade -s -r'
-# abbr -a cat bat
 abbr -a cbl 'chatblade -s -l -r'
 abbr -a cbli 'chatblade -s -l -i'
 abbr -a cls clear
@@ -27,10 +26,11 @@ abbr -a ls exa
 abbr -a nn '~/.scripts/create-new-note.fish'
 abbr -a notes "/Users/nshern/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault"
 abbr -a nvim-update-plugins '~/.scripts/update-nvim-plugins.fish'
+abbr -a posh 'poetry shell'
 abbr -a py python
+abbr -a todo 'cd ~/notes && hx todo.md'
 abbr -a tree 'exa --tree'
 abbr -a tt 'watson report -dcG | grep "Total: " | sed "s/Total: //"'
-abbr -a todo 'cd ~/notes && hx todo.md'
 
 alias work="timer 5 && osascript -e 'display notification \"This is the message\" with title \"This is the title\" subtitle \"This is the subtitle\"'"
 
