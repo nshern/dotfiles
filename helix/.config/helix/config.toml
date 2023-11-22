@@ -34,7 +34,7 @@ left = ["mode", "spinner"]
 center = ["version-control"]
 right = [
   "diagnostics",
-  "selections",
+  "primary-selection-length",
   "position",
   "file-encoding",
   "file-line-ending",
