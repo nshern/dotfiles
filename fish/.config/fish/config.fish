@@ -10,9 +10,6 @@ bind -M insert \cf accept-autosuggestion
 bind -M insert \cr forward-word
 
 # Abbreviations
-abbr -a cb 'chatblade -s -r'
-abbr -a cbl 'chatblade -s -l -r'
-abbr -a cbli 'chatblade -s -l -i'
 abbr -a cls clear
 abbr -a clx 'clx -n'
 abbr -a ddgr "ddgr --reg "da-dk" --reverse"
@@ -32,7 +29,8 @@ abbr -a todo 'cd ~/notes && hx todo.md'
 abbr -a tree 'exa --tree'
 abbr -a tt 'watson report -dcG | grep "Total: " | sed "s/Total: //"'
 
-alias work="timer 5 && osascript -e 'display notification \"This is the message\" with title \"This is the title\" subtitle \"This is the subtitle\"'"
+alias cb 'chatblade -s --theme "github-dark"'
+alias cbl 'chatblade -s -l --theme "github-dark"'
 
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin $PATH

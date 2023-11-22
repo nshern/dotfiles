@@ -26,9 +26,9 @@ config.inactive_pane_hsb = {
 config.hide_tab_bar_if_only_one_tab = false
 config.window_decorations = "RESIZE"
 config.font = wezterm.font({
-	-- family = "Hack Nerd Font",
+	family = "Hack Nerd Font",
 	-- family = "VictorMono Nerd Font",
-	family = "Inconsolata Nerd Font",
+	-- family = "Inconsolata Nerd Font",
 	weight = "Regular",
 	harfbuzz_features = { "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "calt", "dlig" },
 })
@@ -37,8 +37,8 @@ config.font_rules = {
 		intensity = "Normal",
 		italic = true,
 		font = wezterm.font({
-			-- family = "VictorMono Nerd Font",
-			family = "Inconsolata Nerd Font",
+			family = "VictorMono Nerd Font",
+			-- family = "Inconsolata Nerd Font",
 			weight = "Medium",
 			stretch = "Normal",
 			style = "Italic",
@@ -49,8 +49,8 @@ config.font_rules = {
 		intensity = "Bold",
 		italic = false,
 		font = wezterm.font({
-			family = "Inconsolata Nerd Font",
-			-- family = "Hack Nerd Font",
+			-- family = "Inconsolata Nerd Font",
+			family = "Hack Nerd Font",
 			weight = "Bold",
 			stretch = "Normal",
 			style = "Normal",
@@ -59,7 +59,7 @@ config.font_rules = {
 	},
 }
 
-config.font_size = 17.0
+config.font_size = 15.0
 
 config.keys = {
 	{ key = "N", mods = "CMD|SHIFT", action = wezterm.action.ToggleFullScreen },
