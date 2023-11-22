@@ -19,7 +19,7 @@ style = "blue"
 
 success_symbol = "[ζ](purple)"
 error_symbol = "[ξ](red)"
-vimcmd_symbol = "[Ξ](green)"
+vimcmd_symbol = "[V](green)"
 
 [cmd_duration]
 format = "[$duration]($style)"
