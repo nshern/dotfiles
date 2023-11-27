@@ -80,7 +80,7 @@ args = ["-i"]
 [[language]]
 name = "markdown"
 scope = "source.markdown"
-text-width = 200
+text-width = 100
 injection-regex = "markdown"
 file-types = ["md"]
 language-servers = ["mdpls", "marksman", "ltex-ls"]
@@ -118,4 +118,5 @@ config = { ltex.disabledRules = { "en-US" = [
   "Microservice",
   "microservices",
   "LLM",
+  "GDPR-",
 ] } }

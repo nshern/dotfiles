@@ -11,7 +11,7 @@ end
 
 config.colors = colors
 config.window_frame = window_frame
-config.window_background_opacity = 0.85
+config.window_background_opacity = 1.0
 config.cursor_blink_rate = 400
 config.macos_window_background_blur = 30
 config.native_macos_fullscreen_mode = true
