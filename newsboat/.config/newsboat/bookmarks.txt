@@ -1,3 +1,12 @@
 https://jacobbartlett.substack.com/p/my-toddler-loves-planes-so-i-built	My toddler loves planes, so I built her a radar	
 https://www.theverge.com/2023/11/27/23943563/destiny-2-the-final-shape-delay-release-date-june-2024	Bungie confirms Destiny 2’s The Final Shape expansion is delayed until June 2024	
 https://www.theverge.com/2023/11/21/23969948/apple-airtag-bluetooth-tracker-black-friday-deal-sale	Apple’s AirTags are still receiving a rare discount ahead of Cyber Monday	
+https://www.youtube.com/watch?v=y9k-U9AuDeM	Should You Use Open Source Large Language Models?	
+https://aws.amazon.com/blogs/aws/join-the-preview-amazon-aurora-limitless-database/	Amazon Aurora Limitless Database	
+https://aws.amazon.com/blogs/developer/announcing-general-availability-of-the-aws-sdk-for-rust/	General Availability of the AWS SDK for Rust	
+https://medium.com/@yuhongsun96/using-gpts-as-team-members-357a8d7c86ac	Combine GPTs with private knowledge for actually useful AIs	
+https://weightythoughts.com/p/most-ai-startups-are-doomed	Most AI startups are doomed	
+https://www.youtube.com/watch?v=usJDUSrcwqI	The Rust Survival Guide	
+https://python-type-challenges.zeabur.app/	Show HN: Python-Type-Challenges, master Python typing with online exercises	
+https://github.com/Mozilla-Ocho/llamafile	Llamafile lets you distribute and run LLMs with a single file	
+https://www.youtube.com/watch?v=IQn3W8EedvA	6 Observability Myths in AIOps Uncovered	

@@ -40,7 +40,7 @@ scope = "source.toml"
 injection-regex = "toml"
 file-types = ["toml"]
 language-servers = ["taplo"]
-auto-format = true
+auto-format = false
 
 [[language]]
 name = "c-sharp"
@@ -80,9 +80,9 @@ args = ["-i"]
 [[language]]
 name = "markdown"
 scope = "source.markdown"
-text-width = 100
+text-width = 300
 injection-regex = "markdown"
-file-types = ["md"]
+file-types = ["md", "txt"]
 language-servers = ["mdpls", "marksman", "ltex-ls"]
 formatter = { command = "prettier" }
 auto-format = true

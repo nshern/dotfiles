@@ -1,0 +1,7 @@
+inherits = "base16_default"
+
+"ui.statusline" = { fg = "black", bg = "gray" }
+"variable" = "white"
+"ui.cursorcolumn.primary" = "gray"
+"ui.virtual.ruler" = {fg= "gray", bg="gray"}
+

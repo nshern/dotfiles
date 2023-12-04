@@ -1,0 +1,61 @@
+[colors]
+ansi = [
+    '#24272b',
+    '#ca736c',
+    '#47a477',
+    '#8d9741',
+    '#5794d0',
+    '#bc73a4',
+    '#00a2af',
+    '#fffdfb',
+]
+background = '#303338'
+brights = [
+    '#9481cc',
+    '#ca736c',
+    '#47a477',
+    '#8d9741',
+    '#5794D0',
+    '#bc73a4',
+    '#00a2af',
+    '#fffdfb',
+]
+cursor_bg = '#47a477'
+cursor_border = '47a477'
+cursor_fg = '#24272b'
+foreground = '#bebebe'
+selection_bg = '#636363'
+selection_fg = '#24272b'
+
+[colors.indexed]
+
+[colors.tab_bar]
+background = '#24272b'
+
+[colors.tab_bar.active_tab]
+bg_color = '#303338'
+fg_color = '#bebebe'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab]
+bg_color = '#24272b'
+fg_color = '#636363'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab]
+bg_color = '#24272b'
+fg_color = '#636363'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[metadata]
+name = 'penumbra'
+origin_url = 'https://github.com/casperstorm/ferra'
