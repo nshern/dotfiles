@@ -8,7 +8,7 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-config.color_scheme = "penumbra"
+config.color_scheme = "penumbreon_dark+"
 config.default_cursor_style = "SteadyBlock"
 config.cursor_blink_rate = 400
 config.macos_window_background_blur = 50

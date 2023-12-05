@@ -1,0 +1,60 @@
+[colors]
+ansi = [
+    '#181b1f',
+    '#df7f78',
+    '#50b584',
+    '#9ca748',
+    '#61a3e6',
+    '#d080b6',
+    '#00b3c2',
+    '#fffdfb',
+]
+background = '#24272B'
+brights = [
+    '#a48fe1',
+    '#df7f78',
+    '#50b584',
+    '#9ca748',
+    '#61a3e6',
+    '#d080b6',
+    '#00b3c2',
+    '#fffdfb',
+]
+cursor_bg = '#50B584'
+cursor_border = '#50B584'
+cursor_fg = '#181B1F'
+foreground = '#CECECE'
+selection_bg = '#636363'
+selection_fg = '#181B1F'
+
+[colors.indexed]
+
+[colors.tab_bar]
+background = '#181B1F'
+
+[colors.tab_bar.active_tab]
+bg_color = '#24272B'
+fg_color = '#CECECE'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab]
+bg_color = '#181B1F'
+fg_color = '#636363'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab]
+bg_color = '#181B1F'
+fg_color = '#636363'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[metadata]
+name = 'penumbreon_dark+'

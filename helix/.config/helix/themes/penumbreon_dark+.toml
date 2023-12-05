@@ -1,0 +1,22 @@
+inherits = "penumbreon_dark"
+
+[palette]
+red = "#DF7F78"
+orange = "#CE9042"
+yellow = "#9CA748"
+green = "#50B584"
+cyan = "#00B3C2"
+blue = "#61A3E6"
+purple = "#A48FE1"
+magenta = "#D080B6"
+
+# Base Colours
+"sun+" = "#FFFDFB"
+"sun" = "#FFF7ED"
+"sun-" = "#F2E6D4"
+"sky+" = "#CECECE"
+"sky" = "#9E9E9E"
+"sky-" = "#636363"
+"shade+" = "#3E4044"
+"shade" = "#24272B"
+"shade-" = "#181B1F"

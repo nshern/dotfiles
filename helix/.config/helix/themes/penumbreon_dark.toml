@@ -14,8 +14,8 @@
 # "constant.builtin" = {}
 "constant.builtin.boolean" = "orange"
 # "constant.character" = "purple"
-# "constant.character.escape" = {}
-"constant.numeric" = "yellow"
+"constant.character.escape" = "cyan"
+"constant.numeric" = "orange"
 # "constant.numeric.integer" = {}
 # "constant.numeric.float" = {}
 
@@ -32,11 +32,11 @@
 "string.special.symbol" = "cyan"
 
 
-"variable" = "sky"
-# "variable.builtin" = "red"
+"variable" = "sky+"
+"variable.builtin" = "orange"
 # "variable.parameter" = {fg = "magenta", modifiers = ['italic']}
 # "variable.other" = "orange"
-# "variable.other.member" = "red"
+# "variable.other.member" = "orange"
 
 "label" = "blue"
 
@@ -49,7 +49,7 @@
 # "keyword.control" = "yellow"
 "keyword.control.conditional" = { fg = "purple", modifiers = ["italic"] }
 # "keyword.control.repeat" = {fg = "purple", modifiers = ['italic']}
-"keyword.control.import" = { fg = 'purple', modifiers = ['italic'] }
+"keyword.control.import" = { fg = 'red', modifiers = ['italic'] }
 # "keyword.operator" = "sky"
 # "keyword.directive" = {}
 "keyword.control.return" = { fg = 'purple', modifiers = ['italic'] }
@@ -59,10 +59,10 @@
 # "keyword.storage.type" = {}
 # "keyword.storage.modifier" = {}
 
-"operator" = "sky"
+"operator" = "cyan"
 
 "function" = "blue"
-"function.builtin" = "cyan"
+"function.builtin" = "blue"
 "function.method" = "blue"
 "function.macro" = "purple"
 # "function.special" = {}
@@ -76,14 +76,14 @@
 
 # "markup" = {}
 "markup.heading" = { fg = "sky+", modifiers = ["bold"] }
-# "markup.heading.marker" = {}
-# "markup.heading.1" = {}
-# "markup.heading.2" = {}
-# "markup.heading.3" = {}
-# "markup.heading.4" = {}
-# "markup.heading.5" = {}
-# "markup.heading.6" = {}
-"markup.list" = "sky"
+"markup.heading.marker" = "sky-"
+"markup.heading.1" = "red"
+"markup.heading.2" = "orange"
+"markup.heading.3" = "yellow"
+"markup.heading.4" = "green"
+"markup.heading.5" = "cyan"
+"markup.heading.6" = "blue"
+"markup.list" = "sky+"
 # "markup.list.unnumbered" = {}
 # "markup.list.numbered" = {}
 # "markup.list.checked" = {}
@@ -182,7 +182,6 @@
 "diagnostic.error".underline = { color = "red", style = "curl" }
 
 [palette]
-
 # Accent Colour Pallettes
 ## 8 Balanced
 red = "#CA736C"
@@ -193,29 +192,6 @@ cyan = "#00A2AF"
 blue = "#5794D0"
 purple = "#9481CC"
 magenta = "#BC73A4"
-
-## 7 Balanced
-# red = '#CA7081'
-# orange = '#C27D40'
-# yellow = '#92963A'
-# green = '#3EA57B'
-# cyan = '#00A0BA'
-# blue = '#6E8DD5'
-# purple = '#AC78BD'
-
-## 6 Balanced
-# red = "#CB7459"
-# yellow = "#A38F2D"
-# green = "#46A473"
-# cyan = "#00A0BE"
-# blue = "#7E87D6"
-# magenta = "#BD72A8"
-
-
-## 6 Balanced
-
-# Bright colors
-bright_yellow = '#ffcc00'
 
 # Base Colours
 "sun+" = "#FFFDFB"
