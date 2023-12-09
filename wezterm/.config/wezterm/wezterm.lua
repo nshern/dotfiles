@@ -8,7 +8,20 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-config.color_scheme = "penumbreon_dark+"
+config.ssh_domains = {
+  {
+    -- This name identifies the domain
+    name = 'my.server',
+    -- The hostname or address to connect to. Will be used to match settings
+    -- from your ssh config file
+    remote_address = '',
+    -- The username to use on the remote host
+    username = 'wez',
+  },
+}
+
+
+config.color_scheme = "Halloween_III"
 config.default_cursor_style = "SteadyBlock"
 config.cursor_blink_rate = 400
 config.macos_window_background_blur = 50
@@ -24,31 +37,31 @@ config.inactive_pane_hsb = {
 config.hide_tab_bar_if_only_one_tab = false
 config.window_decorations = "RESIZE"
 config.font = wezterm.font({
-	family = "Comic Code Ligatures",
-	weight = "Medium",
-	harfbuzz_features = { "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "calt", "dlig" },
+	family = "Comic Code",
+	weight = "Regular",
+	-- harfbuzz_features = { "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "calt", "dlig" },
 })
 config.font_rules = {
 	{
 		intensity = "Normal",
 		italic = true,
 		font = wezterm.font({
-			family = "Comic Code Ligatures",
+			family = "Comic Code",
 			weight = "Regular",
 			stretch = "Normal",
 			style = "Italic",
-			harfbuzz_features={ 'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08' },
+			-- harfbuzz_features={ 'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08' },
 		}),
 	},
 	{
 		intensity = "Bold",
 		italic = false,
 		font = wezterm.font({
-			family = "Comic Code Ligatures",
+			family = "Comic Code",
 			weight = "Bold",
 			stretch = "Normal",
 			style = "Normal",
-			harfbuzz_features={ 'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08' },
+			-- harfbuzz_features={ 'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08' },
 		}),
 	},
 }

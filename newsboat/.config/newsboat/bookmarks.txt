@@ -10,3 +10,6 @@ https://www.youtube.com/watch?v=usJDUSrcwqI	The Rust Survival Guide
 https://python-type-challenges.zeabur.app/	Show HN: Python-Type-Challenges, master Python typing with online exercises	
 https://github.com/Mozilla-Ocho/llamafile	Llamafile lets you distribute and run LLMs with a single file	
 https://www.youtube.com/watch?v=IQn3W8EedvA	6 Observability Myths in AIOps Uncovered	
+https://generallyintelligent.substack.com/p/fine-tuning-mistral-7b-on-magic-the	Fine Tuning Mistral 7B on Magic the Gathering Draft	
+https://deepmind.google/technologies/gemini/	Gemini	
+https://www.dedp.online/	Data Engineering Design Patterns	

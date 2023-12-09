@@ -1,4 +1,4 @@
-theme = "penumbreon_dark+"
+theme = "Halloween_III"
 
 [editor]
 auto-save = true
@@ -11,11 +11,11 @@ color-modes = true
 cursorline = true
 idle-timeout = 0
 
-
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 select = "underline"
+
 
 [editor.soft-wrap]
 enable = true
@@ -57,6 +57,10 @@ C-p = ['move_line_up', "scroll_up"]
 C-n = ["move_line_down", "scroll_down"]
 X = ["extend_line_up", "extend_to_line_bounds"]
 A-x = "extend_to_line_bounds"
+A-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+A-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+A-h = ["delete_selection", "move_char_left", "paste_before"]
+A-l = ["delete_selection", "move_char_right", "paste_after"]
 
 [keys.select]
 X = ["extend_line_up", "extend_to_line_bounds"]
