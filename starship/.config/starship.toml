@@ -13,8 +13,8 @@ $character"""
 style = "blue"
 
 [character]
-success_symbol = "[ζ](purple)"
-error_symbol = "[ξ](red)"
+success_symbol = "[λ](purple)"
+error_symbol = "[X](red)"
 vimcmd_symbol = "[V](green)"
 
 [cmd_duration]

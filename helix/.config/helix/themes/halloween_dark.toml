@@ -34,7 +34,7 @@
 
 "variable" = "sky+"
 "variable.builtin" = "orange"
-# "variable.parameter" = {fg = "magenta", modifiers = ['italic']}
+"variable.parameter" = {fg = "sky", modifiers = ["italic"]}
 # "variable.other" = "orange"
 # "variable.other.member" = "orange"
 

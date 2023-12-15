@@ -8,20 +8,8 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-config.ssh_domains = {
-  {
-    -- This name identifies the domain
-    name = 'my.server',
-    -- The hostname or address to connect to. Will be used to match settings
-    -- from your ssh config file
-    remote_address = '',
-    -- The username to use on the remote host
-    username = 'wez',
-  },
-}
 
-
-config.color_scheme = "Halloween_III"
+config.color_scheme = "halloween_darkest"
 config.default_cursor_style = "SteadyBlock"
 config.cursor_blink_rate = 400
 config.macos_window_background_blur = 50
