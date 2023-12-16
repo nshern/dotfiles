@@ -1,15 +1,13 @@
 local wezterm = require("wezterm")
 
 local config = {}
--- local colors = require("lua/rose-pine-moon").colors()
--- local window_frame = require("lua/rose-pine-moon").window_frame()
 
 if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
 
-config.color_scheme = "halloween_darkest"
+config.color_scheme = "halloween_dark_hard"
 config.default_cursor_style = "SteadyBlock"
 config.cursor_blink_rate = 400
 config.macos_window_background_blur = 50

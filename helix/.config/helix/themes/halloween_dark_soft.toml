@@ -15,7 +15,7 @@
 "constant.builtin.boolean" = "orange"
 # "constant.character" = "purple"
 "constant.character.escape" = "cyan"
-"constant.numeric" = "orange"
+"constant.numeric" = "magenta"
 # "constant.numeric.integer" = {}
 # "constant.numeric.float" = {}
 
@@ -34,9 +34,9 @@
 
 "variable" = "sky+"
 "variable.builtin" = "orange"
-"variable.parameter" = {fg = "sky", modifiers = ["italic"]}
+"variable.parameter" = {fg = "cyan", modifiers = ["italic"]}
 # "variable.other" = "orange"
-# "variable.other.member" = "orange"
+"variable.other.member" = "cyan"
 
 "label" = "blue"
 

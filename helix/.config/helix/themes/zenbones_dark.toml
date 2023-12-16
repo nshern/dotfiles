@@ -1,0 +1,81 @@
+"ui.text" = { fg = "color_7", modifiers = ['italic'] }
+"ui.background" = { bg = "DarkBackground" }
+
+"type"= "type"
+"constant"= "constant"
+"constant.numeric" = "Number"
+"comment" = {fg = "comment", modifiers = ["italic"] }
+"keyword" = {modifiers = ["bold"]}
+"string" = {modifiers = ["italic"]}
+
+# test test
+"ui.linenr" = ""
+"ui.linenr.selected" = "color_7"
+"ui.selection" = {bg = "selection"}
+"ui.cursor" = {bg="cursor_bg", fg="color_0"}
+"ui.cursorline.primary" = { bg = "#25211F" }
+
+
+[palette]
+# Background Colors
+"DarkBackground"= "#1C1917"
+"LightBackground"= "#F0EDEC"
+
+# Primary UI Colors
+"Foreground"= "#B4BDC3"
+"CursorLineBackground"= "#25211F"
+"FloatBackground"= "#302B29"
+
+# Terminal Colors
+"TerminalBlack"= "#1C1917"
+"TerminalRed"= "#DE6E7C"
+"TerminalGreen"= "#819B69"
+"TerminalYellow"= "#B77E64"
+"TerminalBlue"= "#6099C0"
+"TerminalMagenta"= "#B279A7"
+"TerminalCyan"= "#66A5AD"
+"TerminalWhite"= "#B4BDC3"
+"TerminalBrightBlack"= "#403833"
+"TerminalBrightRed"= "#E8838F"
+"TerminalBrightGreen"= "#8BAE68"
+"TerminalBrightYellow"= "#D68C67"
+"TerminalBrightBlue"= "#61ABDA"
+"TerminalBrightMagenta"= "#CF86C1"
+"TerminalBrightCyan"= "#65B8C1"
+"TerminalBrightWhite"= "#888F94"
+
+# Syntax Highlighting Colors:
+"Comment"= "#6E6763"
+"Constant"= "#868C91"
+"Cursor"= "#C4CACF"
+"Delimiter"= "#867A74"
+"DiagnosticHint"= "#B279A7"
+"DiagnosticInfo"= "#6099C0"
+"Error"= "#DE6E7C"
+"Folded"= "#AFA099"
+"Function"= "#B4BDC3"
+"Identifier"= "#979FA4"
+"LineNr"= "#685F5A"
+"Number"= "#B4BDC3"
+"Special"= "#8D9499"
+"SpecialComment"= "#6E6763"
+"SpecialKey"= "#5C534F"
+"Statement"= "#B4BDC3"
+"Title"= "#B4BDC3"
+"Type"= "#A1938C"
+"WarningMsg"= "#B77E64"
+
+# Additional UI Colors:
+"ColorColumnBackground"= "#55392C"
+"CursorLineNr"= "#B4BDC3"
+"DiagnosticVirtualTextErrorBackground"= "#272020"
+"DiagnosticVirtualTextInfoBackground"= "#202223"
+"DiffAddBackground"= "#232D1A"
+"DiffChangeBackground"= "#1D2C36"
+"DiffDeleteBackground"= "#3E2225"
+"DiffTextBackground"= "#324757"
+"IncSearch"= "#BF8FB5"
+"Search"= "#65435E"
+"StatusLineBackground"= "#352F2D"
+"StatusLineNCBackground"= "#272321"
+"VisualBackground"= "#3D4042"
