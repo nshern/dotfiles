@@ -6,7 +6,6 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-
 config.color_scheme = "halloween_dark_hard"
 config.default_cursor_style = "SteadyBlock"
 config.cursor_blink_rate = 400
@@ -17,8 +16,8 @@ config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
 config.enable_tab_bar = true
 config.inactive_pane_hsb = {
-  saturation = 1.0,
-  brightness = 1.0,
+	saturation = 1.0,
+	brightness = 1.0,
 }
 config.hide_tab_bar_if_only_one_tab = false
 config.window_decorations = "RESIZE"

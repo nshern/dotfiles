@@ -1,6 +1,7 @@
 set -g fish_greeting
 # fish_config theme choose "Rosé Pine Moon"
 # fish_config theme choose "tokyonight_night"
+# fish_config theme choose "Catppuccin Mocha"
 
 if status is-interactive
     fish_vi_key_bindings
@@ -30,8 +31,7 @@ abbr -a todo 'cd ~/notes && hx todo.md'
 abbr -a tree 'exa --tree'
 abbr -a tt 'watson report -dcG | grep "Total: " | sed "s/Total: //"'
 
-alias cb 'chatblade -s --theme "github-dark"'
-alias cbl 'chatblade -s -l --theme "github-dark"'
+alias vim 'nvim'
 
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin $PATH

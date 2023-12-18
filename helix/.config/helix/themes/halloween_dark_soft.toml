@@ -8,7 +8,7 @@
 # "type.enum" = {}
 # "type.enum.variant" = {}
 
-# "constructor" = {}
+"constructor" = "magenta"
 
 "constant" = "yellow"
 # "constant.builtin" = {}
@@ -34,7 +34,7 @@
 
 "variable" = "sky+"
 "variable.builtin" = "orange"
-"variable.parameter" = {fg = "cyan", modifiers = ["italic"]}
+"variable.parameter" = {fg = "sky+"}
 # "variable.other" = "orange"
 "variable.other.member" = "cyan"
 
@@ -42,8 +42,8 @@
 
 "punctuation" = "sky"
 # "punctuation.delimiter" = {}
-# "punctuation.bracket" = {fg = "bright_yellow" }
-# "punctuation.special" = {}
+# "punctuation.bracket" = {}
+"punctuation.special" = "yellow"
 
 "keyword" = "purple"
 # "keyword.control" = "yellow"
@@ -153,7 +153,7 @@
 "ui.text" = "sky"
 "ui.text.focus" = "blue"
 # "ui.text.inactive" = {}
-"ui.text.info" = "sky"
+"ui.text.info" = "sky+"
 "ui.virtual.ruler" = { bg = "shade-" }
 "ui.virtual.whitespace" = "sky-"
 "ui.virtual.indent-guide" = "shade+"
