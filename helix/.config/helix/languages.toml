@@ -7,6 +7,8 @@ shebangs = ["python"]
 roots = [".", "pyproject.toml", "pyrightconfig.json"]
 comment-token = "#"
 language-servers = ["pyright", "ruff", "pylsp"]
+# language-servers = ["pyright", "ruff"]
+# language-servers = ["pylsp", "ruff"]
 indent = { tab-width = 4, unit = "    " }
 auto-format = true
 rulers = [80]

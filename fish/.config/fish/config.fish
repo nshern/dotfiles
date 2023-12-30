@@ -1,7 +1,6 @@
 set -g fish_greeting
+fish_config theme choose "Catppuccin Mocha"
 # fish_config theme choose "Rosé Pine Moon"
-# fish_config theme choose "tokyonight_night"
-# fish_config theme choose "Catppuccin Mocha"
 
 if status is-interactive
     fish_vi_key_bindings
@@ -14,9 +13,10 @@ bind -M insert \cr forward-word
 # Abbreviations
 abbr -a cls clear
 abbr -a clx 'clx -n'
+abbr -a ai 'chatblade -s -l'
 abbr -a ddgr "ddgr --reg "da-dk" --reverse"
 abbr -a dev '~/.scripts/create-tmux-env.fish'
-abbr -a fetch 'neofetch'
+abbr -a fetch neofetch
 abbr -a gg 'gitui -t mocha.ron'
 abbr -a gs 'git status'
 abbr -a lg lazygit
@@ -31,7 +31,8 @@ abbr -a todo 'cd ~/notes && hx todo.md'
 abbr -a tree 'exa --tree'
 abbr -a tt 'watson report -dcG | grep "Total: " | sed "s/Total: //"'
 
-alias vim 'nvim'
+alias vim nvim
+
 
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin $PATH

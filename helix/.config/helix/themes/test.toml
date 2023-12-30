@@ -1,0 +1,22 @@
+inherits = "halloween_dark_soft"
+
+[palette]
+red = "#F58C81"
+orange = "#E09F47"
+yellow = "#A9B852"
+green = "#54C794"
+cyan = "#00C4D7"
+blue = "#6EB2FD"
+purple = "#B69CF6"
+magenta = "#E58CC5"
+
+# Base Colours
+"sun+" = "#FFFDFB"
+"sun" = "#FFF7ED"
+"sun-" = "#F2E6D4"
+"sky+" = "#DEDEDE"
+"sky" = "#AEAEAE"
+"sky-" = "#636363"
+"shade+" = "#3E4044"
+"shade" = "#181B1F"
+"shade-" = "#0D0F13"

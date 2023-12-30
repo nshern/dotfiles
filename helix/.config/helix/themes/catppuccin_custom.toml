@@ -1,0 +1,6 @@
+inherits = "catppuccin_mocha"
+
+"variable.parameter" = "lavender"
+"namespace" = ""
+"ui.bufferline.active" = { bg = "mauve", fg = "base"}
+"function.builtin" = "peach"

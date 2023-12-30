@@ -7,8 +7,7 @@ bookmark-autopilot yes
 bookmark-cmd ~/.config/newsboat/bookmark.sh
 
 # externel browser
-#browser "firefox %u"
-browser "qutebrowser %u"
+browser "firefox %u"
 macro m set browser "/usr/local/bin/mpv %u"; open-in-browser ; set browser "/usr/local/bin/w3m %u"
 macro l set browser "/usr/local/bin/firefox %u"; open-in-browser ; set browser "/usr/local/bin/w3m %u"
 
@@ -42,7 +41,7 @@ bind-key S rev-sort
 color background         default   default
 color listnormal         default   default
 color listnormal_unread  default   default
-color listfocus          white     black
-color listfocus_unread   white     black
+color listfocus          black     blue
+color listfocus_unread   black     blue
 color info               default   black
 color article            default   default

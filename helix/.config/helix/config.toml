@@ -1,6 +1,7 @@
-theme = "halloween_dark_hard"
+theme = 'custom'
 
 [editor]
+auto-pairs = true
 auto-save = true
 true-color = true
 shell = ["fish", "-c"]
@@ -25,9 +26,11 @@ wrap-indicator = ""
 wrap-at-text-width = true
 
 [editor.lsp]
+# display-messages = true
 display-inlay-hints = true
 auto-signature-help = true
 display-signature-help-docs = false
+
 
 [editor.statusline]
 left = ["mode", "spinner"]
@@ -61,6 +64,8 @@ A-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 A-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 A-h = ["delete_selection", "move_char_left", "paste_before"]
 A-l = ["delete_selection", "move_char_right", "paste_after"]
+tab = ":buffer-next"
+S-tab = ":buffer-previous"
 
 [keys.select]
 X = ["extend_line_up", "extend_to_line_bounds"]
