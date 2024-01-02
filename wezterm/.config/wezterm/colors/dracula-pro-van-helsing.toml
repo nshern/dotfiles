@@ -1,0 +1,69 @@
+[colors]
+ansi = [
+    "#708CA9",
+    "#FF9580",
+    "#8AFF80",
+    "#FFFF80",
+    "#9580FF",
+    "#FF80BF",
+    "#80FFEA",
+    "#F8F8F2",
+]
+brights = [
+"#708CA9",
+"#FFAA99",
+"#A2FF99",
+"#FFFF99",
+"#AA99FF",
+"#FF99CC",
+"#99FFEE",
+"#FFFFFF",
+
+]
+background = '#0B0D0F'
+foreground = '#F8F8F2'
+cursor_bg = "#F8F8F2"
+cursor_border = "#F8f8f2"
+cursor_fg = '#0B0D0F'
+selection_bg = '#414D58'
+
+[colors.indexed]
+
+[colors.tab_bar]
+background = '#0D0F13'
+
+[colors.tab_bar.active_tab]
+bg_color = '#0D0F13'
+fg_color = '#DEDEDE'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab]
+bg_color = '#0D0F13'
+fg_color = '#636363'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab]
+bg_color = '#0D0F13'
+fg_color = '#636363'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab_hover]
+bg_color = "#E09F47"
+fg_color = "#636363"
+intensity = 'Normal'
+italic = true
+strikethrough = false
+underline = 'None'
+
+
+[metadata]
+name = 'dracula pro van helsing'

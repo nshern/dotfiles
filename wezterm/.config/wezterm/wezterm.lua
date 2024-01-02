@@ -6,22 +6,9 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
--- local colors = require('lua/rose-pine-moon').colors()
--- local window_frame = require('lua/rose-pine').window_frame()
-local custom = wezterm.color.get_builtin_schemes()["Catppuccin Mocha"]
--- custom.background = "#000000"
-custom.tab_bar.background = "#1e1e2e"
-custom.tab_bar.inactive_tab.bg_color = "#1e1e2e"
-custom.tab_bar.inactive_tab.fg_color = "#7f849c"
-custom.tab_bar.new_tab.bg_color = "#1e1e2e"
-custom.tab_bar.active_tab.bg_color = "#45475a"
-custom.tab_bar.active_tab.fg_color = "#cdd6f4"
-
-
--- config.colors = colors
--- config.window_frame = window_frame
-config.color_schemes = {["catcustom"] = custom,}
-config.color_scheme = "catcustom"
+config.color_scheme = "custom"
+-- config.color_scheme = "dracula pro"
+-- config.color_scheme = "dracula pro van helsing"
 config.default_cursor_style = "SteadyBlock"
 config.cursor_blink_rate = 400
 config.macos_window_background_blur = 50
@@ -34,8 +21,6 @@ config.inactive_pane_hsb = {
 	saturation = 1.0,
 	brightness = 1.0,
 }
-
-
 
 config.hide_tab_bar_if_only_one_tab = false
 config.window_decorations = "RESIZE"
@@ -72,6 +57,11 @@ config.font_rules = {
 config.font_size = 15.0
 
 config.keys = {
+	{
+		key = "g",
+		mods = "CMD",
+		action = wezterm.action({ SendString = "fg\n" }),
+	},
 	{ key = "N", mods = "CMD|SHIFT", action = wezterm.action.ToggleFullScreen },
 	{
 		key = "H",

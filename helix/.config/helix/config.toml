@@ -66,6 +66,7 @@ A-h = ["delete_selection", "move_char_left", "paste_before"]
 A-l = ["delete_selection", "move_char_right", "paste_after"]
 tab = ":buffer-next"
 S-tab = ":buffer-previous"
+C-g = ["suspend"]
 
 [keys.select]
 X = ["extend_line_up", "extend_to_line_bounds"]

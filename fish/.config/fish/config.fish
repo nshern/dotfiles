@@ -1,5 +1,5 @@
 set -g fish_greeting
-fish_config theme choose "Catppuccin Mocha"
+# fish_config theme choose "Catppuccin Mocha"
 # fish_config theme choose "Rosé Pine Moon"
 
 if status is-interactive
