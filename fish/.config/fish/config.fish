@@ -1,6 +1,7 @@
 set -g fish_greeting
-# fish_config theme choose "Catppuccin Mocha"
+fish_config theme choose "Catppuccin Mocha"
 # fish_config theme choose "Rosé Pine Moon"
+# fish_config theme choose tokyonight_night
 
 if status is-interactive
     fish_vi_key_bindings
@@ -27,16 +28,13 @@ abbr -a notes "/Users/nshern/Library/Mobile Documents/iCloud~md~obsidian/Documen
 abbr -a nvim-update-plugins '~/.scripts/update-nvim-plugins.fish'
 abbr -a posh 'poetry shell'
 abbr -a py python
-abbr -a todo 'cd ~/notes && hx todo.md'
+abbr -a todo 'cd ~/notes && nvim todo.md'
 abbr -a tree 'exa --tree'
 abbr -a tt 'watson report -dcG | grep "Total: " | sed "s/Total: //"'
 
-alias vim nvim
-
-
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin $PATH
-set -x EDITOR hx
+set -x EDITOR nvim
 set -Ux PATH ~/.lsp/omnisharp_net6/ $PATH
 set -U fish_user_paths /Users/nshern/.scripts/ $fish_user_paths
 status --is-interactive; and . (pyenv init -|psub)

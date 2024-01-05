@@ -1,4 +1,4 @@
-theme = 'custom'
+theme = "catppuccin_custom"
 
 [editor]
 auto-pairs = true

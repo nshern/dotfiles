@@ -6,9 +6,15 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-config.color_scheme = "custom"
--- config.color_scheme = "dracula pro"
--- config.color_scheme = "dracula pro van helsing"
+local colors = require("lua/rose-pine").colors()
+local window_frame = require("lua/rose-pine").window_frame()
+
+-- config.colors = colors
+-- config.window_frame = window_frame
+config.color_scheme = "Catppuccin Custom"
+-- config.color_scheme = "Oxocarbon Dark"
+-- config.color_scheme = "tokyonight_night"
+-- config.color_scheme = "neobones_custom"
 config.default_cursor_style = "SteadyBlock"
 config.cursor_blink_rate = 400
 config.macos_window_background_blur = 50
@@ -92,6 +98,12 @@ config.keys = {
 		key = "l",
 		mods = "CTRL|SHIFT|CMD",
 		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+
+	{
+		key = "j",
+		mods = "CTRL|SHIFT|CMD",
+		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
 	},
 
 	{

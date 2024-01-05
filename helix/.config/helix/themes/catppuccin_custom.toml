@@ -1,6 +1,10 @@
 inherits = "catppuccin_mocha"
 
-"variable.parameter" = "lavender"
+"variable.parameter" = "maroon"
+"punctuation.special" = "flamingo"
+"variable.other.member" = "lavender"
+# "keyword.control.conditional" = { fg = "mauve"}
 "namespace" = ""
-"ui.bufferline.active" = { bg = "mauve", fg = "base"}
+"ui.bufferline.active" = { bg = "base", fg = "text"}
+"ui.bufferline" = { bg = "crust", fg = "overlay0"}
 "function.builtin" = "peach"

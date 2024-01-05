@@ -11,7 +11,7 @@
 "constant.character" = { fg = "cyan" }
 "constant.character.escape" = { fg = "pink" }
 "constant.macro" = { fg = "purple" }
-"constructor" = { fg = "cyan", modifiers = ['bold'] }
+"constructor" = { fg = "cyan"}
 "function" = { fg = "green" }
 "function.builtin" = { fg = "green" }
 "function.method" = { fg = "green" }
@@ -44,11 +44,11 @@
 "string.symbol" = { fg = "yellow" }
 "string.regexp" = { fg = "red" }
 "type.builtin" = { fg = "cyan" }
-"type" = { fg = "cyan", modifiers = ["italic"] }
+"type" = { fg = "cyan"}
 "type.enum.variant" = { fg = "foreground", modifiers = ["italic"] }
 "variable" = { fg = "foreground" }
-"variable.builtin" = { fg = "purple", modifiers = ["italic"] }
-"variable.parameter" = { fg = "orange", modifiers = ["italic"] }
+"variable.builtin" = { fg = "purple"}
+"variable.parameter" = { fg = "orange"}
 "variable.other" = { fg = "foreground" }
 "variable.other.member" = { fg = "foreground" }
 

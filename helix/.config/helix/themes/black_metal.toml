@@ -1,14 +1,44 @@
-"ui.cursor" = {bg="base05", fg="base00"}
-"ui.selection" = {bg="#FFFFFF",fg="#000000"}
+"attribute" = "base0A"
 "string" = 'base0B'
 "variable" = 'base08'
 "constructor" = "base0A"
-"comment" = "base03"
+"comment" = {fg="base03", modifiers = ['bold']}
 "ui.text" = "base05"
+"constant.builtin.boolean" = "base09"
+"constant.builtin.numeric" = "base09"
+"keyword.import" = "base0D"
+"constant.character" = "base08"
+"special" = "base0C"
 "operator" = "base05"
 "keyword" = "base0E"
+"keyword.storage" = "base0A"
+"keyword.control.conditional" = "base0E"
+"keyword.control.repeat" = "base0A"
+"punctuation.delimiter" = "base0F"
 "function" = "base0D"
+"label" = "base0A"
 "type" = "base0A"
+
+"ui.cursor" = {bg="base05", fg="base00"}
+"ui.cursorline.primary" = {bg="base01"}
+"ui.selection" = {bg="base02"}
+"ui.virtual.ruler" = {bg="base01"}
+"ui.linenr" = "base03"
+"ui.linenr.selected" = "base05"
+
+"diff.plus" = "base0B"
+"diff.delta" = "base0D"
+"diff.minus" = "base08"
+
+"diagnostic.hint" = { underline = { color = "green", style = "curl" } }
+"diagnostic.info" = { underline = { color = "blue", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "yellow", style = "curl" } }
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+
+warning = "yellow"
+error = "red"
+info = "blue"
+hint = "green"
 
 [palette]
 base00= "#000000"
@@ -21,9 +51,15 @@ base06= "#999999"
 base07= "#c1c1c1"
 base08= "#5f8787"
 base09= "#aaaaaa"
-base0A= "#a06666"
-base0B= "#dd9999"
+base0A= "#99bbaa"
+base0B= "#ddeecc"
 base0C= "#aaaaaa"
 base0D= "#888888"
 base0E= "#999999"
 base0F= "#444444"
+
+red = "#ff0000"
+orange = "#ff5722"
+blue = "#0000ff"
+yellow = "#ffff00"
+green = "#00ff00"
