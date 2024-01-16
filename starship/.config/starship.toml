@@ -13,7 +13,7 @@ $character"""
 style = "blue"
 
 [character]
-success_symbol = "[λ](purple)"
+success_symbol = "[λ](cyan)"
 error_symbol = "[X](red)"
 vimcmd_symbol = "[V](green)"
 
@@ -24,5 +24,3 @@ style = "yellow"
 [python]
 format = "[$virtualenv]($style)"
 style = "bright-black"
-
-
