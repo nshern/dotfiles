@@ -1,22 +1,27 @@
 News
 https://www.dr.dk/nyheder/service/feeds/senestenyt "~DR Seneste nyt" News
+https://www.berlingske.dk/content/3/rss "~Berlingske Nyheder" News
+https://feeds.jp.dk/jp/topnyheder "~Jyllands-Posten Topnyheder" News
+https://borsen.dk/rss "~Børsen frontpage" News
+https://www.berlingske.dk/content/66/rss "~Berlingske Business" News
+https://www.version2.dk/rss "~V2 Articles" News
+https://hnrss.org/best "~HN Best" News
+https://hnrss.org/active "~HN Active" News
 
-Tech
-https://hnrss.org/best "~HN Best" Tech
-https://hnrss.org/active "~HN Active" Tech
-https://hnrss.org/newest?q=Neovim "~HN Neovim" Tech
-https://hnrss.org/newest?q=Helix "~HN Helix" Tech
-https://hnrss.org/newest?q=Vim "~HN Vim" Tech
-https://hnrss.org/newest?q=ai "~HN AI" Tech
-https://hnrss.org/newest?q=openai "~HN openai" Tech
-https://www.version2.dk/rss "~V2 Articles" Tech
+Rust 
+https://hnrss.org/newest?q=rust "~Hacker News Rust" Rust
+https://www.reddit.com/r/rust.rss "~Rust Reddit" Rust
+https://www.reddit.com/r/learnrust.rss "~Learn Rust Reddit" Rust
+https://youtube.com/feeds/videos.xml?channel_id=UCUMwY9iS8oMyWDYIe6_RmoA Rust
+https://youtube.com/feeds/videos.xml?channel_id=UCSp-OaMpsO8K0KkOqyBl7_w Rust
 
-Finance
-https://borsen.dk/rss "~Børsen frontpage" Finance
-https://www.berlingske.dk/content/66/rss "~Berlingske Business" Finance
-https://www.berlingske.dk/content/191/rss "~Berlingske Privatøkonomi" Finance
-https://borsen.dk/rss/ejendomme "~Børsen ejendomme" Finance
-https://www.dr.dk/nyheder/service/feeds/penge "~DR Finance" Finance
+AI
+https://hnrss.org/newest?q=openai "~HN openai" HN
+https://hnrss.org/newest?q=ai "~HN AI" HN
+
+
+Python
+https://hnrss.org/newest?q=python "~HN python" HN
 
 Music
 https://pitchfork.com/rss/reviews/best/albums/ "~P4k Best New Album" Music
@@ -24,10 +29,8 @@ https://pitchfork.com/feed/feed-album-reviews/rss "~P4k Album Reviews" Music
 https://pitchfork.com/feed/feed-news/rss "~P4k News" Music
 
 Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UCUMwY9iS8oMyWDYIe6_RmoA Youtube
 https://youtube.com/feeds/videos.xml?channel_id=UCWQaM7SpSECp9FELz-cHzuQ Youtube
 https://youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UCSp-OaMpsO8K0KkOqyBl7_w Youtube
 https://youtube.com/feeds/videos.xml?channel_id=UC9BP2AYavbZkP0tAvTaPa2A Youtube
 https://youtube.com/feeds/videos.xml?channel_id=UCKPSmMfDsXTKrCZApukcJ7A Youtube
 https://youtube.com/feeds/videos.xml?channel_id=UCaiL2GDNpLYH6Wokkk1VNcg Youtube
