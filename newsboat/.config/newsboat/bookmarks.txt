@@ -18,3 +18,4 @@ https://github.com/bakks/butterfish.nvim	A Neovim plugin for fluent coding using
 https://www.rabbit.tech/	Rabbit: LLM-First Mobile Phone	
 https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/	Using Netrw, Vim%27s builtin file explorer	
 https://medium.com/@Erik_Krieg/free-and-open-source-grammar-correction-in-neovim-using-ltex-and-n-grams-dea9d10bc964	Free and Open-Source Grammar Correction in Neovim Using LTeX and N-Grams	
+https://www.berlingske.dk/oekonomi/konsulenthus-finder-enormt-potentiale-i-den-offentlige-sektor-kunstig	Konsulenthus finder enormt potentiale i den offentlige sektor: Kunstig intelligens kan på ti år frigive 104 milliarder	
