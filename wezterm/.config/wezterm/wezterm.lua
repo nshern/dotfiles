@@ -6,18 +6,8 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-local colors = require("lua/rose-pine-dawn").colors()
-local window_frame = require("lua/rose-pine").window_frame()
-
--- config.colors = colors
--- config.color_scheme = "Batppuccin"
--- config.color_scheme = "carbonfox"
-config.color_scheme = "customfox"
--- config.color_scheme = "dayfox"
--- config.color_scheme = "Catppuccin Mocha"
--- config.color_scheme = "Gruvbox dark, hard (base16)"
--- config.window_background_opacity = 1.0
-config.window_background_opacity = 1.0
+config.color_scheme = "tokyonight_night"
+config.window_background_opacity = 0.8
 config.default_cursor_style = "SteadyBlock"
 config.cursor_blink_rate = 400
 -- config.macos_window_background_blur = 5

@@ -7,8 +7,7 @@ bookmark-autopilot yes
 bookmark-cmd ~/.config/newsboat/bookmark.sh
 
 # externel browser
-# browser "firefox %u"
-browser "qutebrowser %u"
+browser "firefox %u"
 
 # unbind keys
 unbind-key ENTER
@@ -28,8 +27,8 @@ unbind-key b
 color background         default   default
 color listnormal         default   default
 color listnormal_unread  default   default    
-color listfocus          green       default    bold 
-color listfocus_unread   green       default    bold
+color listfocus          green      default    bold  
+color listfocus_unread   green       default    bold  
 color info               default   black
 color article            default   default
 

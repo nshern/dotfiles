@@ -1,12 +1,12 @@
 News
 https://www.dr.dk/nyheder/service/feeds/senestenyt "~DR Seneste nyt" News
 https://www.berlingske.dk/content/3/rss "~Berlingske Nyheder" News
-https://feeds.jp.dk/jp/topnyheder "~Jyllands-Posten Topnyheder" News
-https://borsen.dk/rss "~Børsen frontpage" News
 https://www.berlingske.dk/content/66/rss "~Berlingske Business" News
 https://www.version2.dk/rss "~V2 Articles" News
+https://borsen.dk/rss "~Børsen frontpage" News
 https://hnrss.org/best "~HN Best" News
 https://hnrss.org/active "~HN Active" News
+http://ftr.fivefilters.net/makefulltextfeed.php?url=https%3A%2F%2Frss.nytimes.com%2Fservices%2Fxml%2Frss%2Fnyt%2FBusiness.xml&max=3 "~testest" News
 
 Rust 
 https://hnrss.org/newest?q=rust "~Hacker News Rust" Rust
