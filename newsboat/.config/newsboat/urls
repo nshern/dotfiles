@@ -7,9 +7,7 @@ https://borsen.dk/rss "~Børsen frontpage" News
 https://hnrss.org/best "~HN Best" News
 
 Rust 
-https://hnrss.org/newest?q=rust "~Hacker News Rust" Rust
-https://www.reddit.com/r/rust.rss "~Rust Reddit" Rust
-https://www.reddit.com/r/learnrust.rss "~Learn Rust Reddit" Rust
+https://hnrss.org/newest?q=rust&count=100&points=20&comments=20 "~HN Rust" Rust
 https://youtube.com/feeds/videos.xml?channel_id=UCUMwY9iS8oMyWDYIe6_RmoA Rust
 https://youtube.com/feeds/videos.xml?channel_id=UCSp-OaMpsO8K0KkOqyBl7_w Rust
 

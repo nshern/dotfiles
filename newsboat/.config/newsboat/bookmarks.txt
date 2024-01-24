@@ -21,3 +21,4 @@ https://medium.com/@Erik_Krieg/free-and-open-source-grammar-correction-in-neovim
 https://www.berlingske.dk/oekonomi/konsulenthus-finder-enormt-potentiale-i-den-offentlige-sektor-kunstig	Konsulenthus finder enormt potentiale i den offentlige sektor: Kunstig intelligens kan på ti år frigive 104 milliarder	
 https://www.berlingske.dk/kommentar/marie-bjerre-er-en-staerk-minister-i-et-amputeret-og-impotent	Marie Bjerre er en stærk minister – i et amputeret og impotent ministerium	
 https://www.berlingske.dk/samfund/han-har-opfundet-en-algoritme-der-kan-forudsige-hvornaar-vi-bliver-syge-og	Han har opfundet en algoritme, der kan forudsige, hvornår vi bliver syge og dør	
+https://www.version2.dk/artikel/marie-bjerre-vil-saette-nye-retningslinjer-brug-af-ai	Marie Bjerre vil sætte nye retningslinjer for brug af AI	
