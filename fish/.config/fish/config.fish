@@ -36,6 +36,8 @@ abbr -a tree 'exa --tree'
 abbr -a tt 'watson report -dcG | grep "Total: " | sed "s/Total: //"'
 
 alias vim=nvim
+alias blur='python ~/.scripts/wezterm-blur.py'
+alias transparent='python ~/.scripts/wezterm-transparent.py'
 
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin $PATH
