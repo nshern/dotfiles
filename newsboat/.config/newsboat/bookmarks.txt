@@ -22,3 +22,5 @@ https://www.berlingske.dk/oekonomi/konsulenthus-finder-enormt-potentiale-i-den-o
 https://www.berlingske.dk/kommentar/marie-bjerre-er-en-staerk-minister-i-et-amputeret-og-impotent	Marie Bjerre er en stærk minister – i et amputeret og impotent ministerium	
 https://www.berlingske.dk/samfund/han-har-opfundet-en-algoritme-der-kan-forudsige-hvornaar-vi-bliver-syge-og	Han har opfundet en algoritme, der kan forudsige, hvornår vi bliver syge og dør	
 https://www.version2.dk/artikel/marie-bjerre-vil-saette-nye-retningslinjer-brug-af-ai	Marie Bjerre vil sætte nye retningslinjer for brug af AI	
+https://ollama.ai/blog/python-javascript-libraries	Ollama releases Python and JavaScript Libraries	
+https://www.berlingske.dk/samfund/hun-har-fundet-ni-konkrete-biomarkoerer-der-viser-vores-biologiske-alder-0	Hun har fundet ni konkrete biomarkører, der viser vores biologiske alder. Flere af dem kan du måle selv	
