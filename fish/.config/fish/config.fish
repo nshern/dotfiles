@@ -1,7 +1,7 @@
 set -g fish_greeting
-# fish_config theme choose "Catppuccin Mocha"
+fish_config theme choose "Catppuccin Mocha"
 # fish_config theme choose "Rosé Pine"
-fish_config theme choose tokyonight_night
+# fish_config theme choose tokyonight_night
 # source ~/.config/fish/themes/carbonfox.fish
 # source ~/.config/fish/themes/dayfox.fish
 # source ~/.config/fish/themes/dayfox.fish
@@ -38,6 +38,7 @@ abbr -a tt 'watson report -dcG | grep "Total: " | sed "s/Total: //"'
 alias vim=nvim
 alias blur='python ~/.scripts/wezterm-blur.py'
 alias transparent='python ~/.scripts/wezterm-transparent.py'
+alias blacken='python ~/.scripts/wezterm-blacken.py'
 
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin $PATH

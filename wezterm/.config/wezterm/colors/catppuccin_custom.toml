@@ -36,8 +36,8 @@ visual_bell = '#313244'
 17 = '#f5e0dc'
 
 [colors.tab_bar]
-background = '#1e1e1e'
-inactive_tab_edge = '#1e1e1e'
+background = '#1e1e2e'
+inactive_tab_edge = '#1e1e2e'
 
 [colors.tab_bar.active_tab]
 bg_color = '#1e1e2e'

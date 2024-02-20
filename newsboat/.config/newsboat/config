@@ -27,8 +27,8 @@ unbind-key b
 color background         default   default
 color listnormal         default   default
 color listnormal_unread  default   default    
-color listfocus          green      default    bold  
-color listfocus_unread   green       default    bold  
+color listfocus          magenta      default    bold  
+color listfocus_unread   magenta       default    bold  
 color info               default   black
 color article            default   default
 
@@ -54,8 +54,8 @@ highlight article "\\[[0-9][0-9]*\\]" color66 default bold
 highlight article "\\[image [0-9][0-9]*\\]" color109 default bold
 highlight article "\\[embedded flash: [0-9][0-9]*\\]" color66 default bold
 
-highlight feedlist "[║│]" magenta default bold
-highlight feedlist "╠═.*" magenta default bold
+highlight feedlist "[║│]" green default bold
+highlight feedlist "╠═.*" green default bold
 
 
 feedlist-format "%?T?║%4i %n %8u (%T) %t &╠═════════════════════════════════════════════════════%t?"

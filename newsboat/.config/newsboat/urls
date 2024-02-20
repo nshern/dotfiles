@@ -1,52 +1,64 @@
-News
-https://www.dr.dk/nyheder/service/feeds/senestenyt "~DR Seneste nyt" News
-https://www.berlingske.dk/content/3/rss "~Berlingske Nyheder" News
-https://www.berlingske.dk/content/66/rss "~Berlingske Business" News
-https://www.version2.dk/rss "~V2 Articles" News
-https://borsen.dk/rss "~Børsen frontpage" News
-https://hnrss.org/best "~HN Best" News
+Pinned
+https://www.berlingske.dk/content/3/rss "~Berlingske Nyheder" 📰 
+https://www.dr.dk/nyheder/service/feeds/senestenyt "~DR Seneste nyt" 📰
+https://hnrss.org/best "~HN Best" 🤖
+https://medium.com/feed/@llama_index "~Llamaindex Blog" 📖
+https://hnrss.org/newest?q=llamaindex "~HN Llamaindex" 🤖
+https://youtube.com/feeds/videos.xml?channel_id=UCeRjipR4_SsCddq9VZ2AeKg "~Llamaindex" 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuUPtn21xtRbbw "~AI Explained" 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UCKLQ5lOLdDMKNMeMauSObow "~Verbos Podcast" 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UCLKPca3kwwd-B59HNr-_lvA "~AI Engineer" 🎥
+https://changelog.com/practicalai/feed "~Practical AI" 🎧
+https://changelog.com/podcast/feed "~Changelog" 🎧
+https://changelog.com/shipit/feed "~Ship it" 🎧
+https://youtube.com/feeds/videos.xml?channel_id=UCBKNuaxVlSNvIN139KplUKw "~Vhyrro" 🎥
+https://www.version2.dk/rss "~V2 Articles" 📰
 
-Rust 
-https://hnrss.org/newest?q=rust&count=100&points=20&comments=20 "~HN Rust" Rust
-https://youtube.com/feeds/videos.xml?channel_id=UCUMwY9iS8oMyWDYIe6_RmoA Rust
-https://youtube.com/feeds/videos.xml?channel_id=UCSp-OaMpsO8K0KkOqyBl7_w Rust
+Bookmarked
+https://youtube.com/feeds/videos.xml?playlist_id=PLPiA3sec6llZDwZa58aHTKZw4tOa2X4lQ&si=L6d2QejrONWJm5Re 🎥
+
+News
+https://www.berlingske.dk/content/66/rss "~Berlingske Business" 📰
+https://borsen.dk/rss "~Børsen frontpage" 📰
 
 AI
-https://hnrss.org/newest?q=openai "~HN openai" HN
-https://hnrss.org/newest?q=ai "~HN AI" HN
+http://rss.arxiv.org/rss/cs.AI "~Arxiv AI" 📖 
+https://youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ "~Andrej Karparthy" 🎥
 
+SWE
+https://changelog.com/gotime/feed "~Go Time" 🎧
+https://youtube.com/feeds/videos.xml?channel_id=UCWQaM7SpSECp9FELz-cHzuQ "~Dreams of code" 🎥 
+https://youtube.com/feeds/videos.xml?channel_id=UCaSCt8s_4nfkRglWCvNSDrg "~Code Aesthethic" 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA "~Fireship" 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UC2Xd-TjJByJyK2w1zNwY0zQ "~Beyond Fireship" 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UC9BP2AYavbZkP0tAvTaPa2A "~If coding Were Natural" 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UCaiL2GDNpLYH6Wokkk1VNcg "~mCoding" 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UC9H0HzpKf5JlazkADWnW1Jw "~Bashbunni" 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UCkbwOi_U5CBkevtlVhuzWnA "~Backend banter" 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UCjREVt2ZJU8ql-NC9Gu-TJw "~Code to the moon" 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UC8ENHE5xdFSwx71u3fDH5Xw "~The Primagen" 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ "~The Prime Time" 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UCKWaEZ-_VweaEx1j62do_vQ "~IBM Technology" 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UC3ts8coMP645hZw9JSD3pqQ "~Andreas Kling" 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA "~Computerphile" 🎥
 
 Python
-https://hnrss.org/newest?q=python "~HN python" HN
+https://youtube.com/feeds/videos.xml?channel_id=UCKPSmMfDsXTKrCZApukcJ7A "~Talk Python" 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UC46xhU1EH7aywEgvA9syS3w "~anthonywritescode" 🎥
+
+Rust 
+https://hnrss.org/newest?q=rust&count=100&points=20&comments=20 "~HN Rust" 🤖
+https://youtube.com/feeds/videos.xml?channel_id=UCUMwY9iS8oMyWDYIe6_RmoA 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UCSp-OaMpsO8K0KkOqyBl7_w 🎥
+
+Vim
+https://youtube.com/feeds/videos.xml?channel_id=UC_zBdZ0_H_jn41FDRG7q4Tw 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UCVk4b-svNJoeytrrlOixebQ 🎥
+
+Linux
+https://youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA 🎥
 
 Music
-https://pitchfork.com/rss/reviews/best/albums/ "~P4k Best New Album" Music
-https://pitchfork.com/feed/feed-album-reviews/rss "~P4k Album Reviews" Music
-
-Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UCWQaM7SpSECp9FELz-cHzuQ Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UC9BP2AYavbZkP0tAvTaPa2A Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UCKPSmMfDsXTKrCZApukcJ7A Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UCaiL2GDNpLYH6Wokkk1VNcg Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UC46xhU1EH7aywEgvA9syS3w Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UCkbwOi_U5CBkevtlVhuzWnA Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UC9H0HzpKf5JlazkADWnW1Jw Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UC2Xd-TjJByJyK2w1zNwY0zQ Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UCjREVt2ZJU8ql-NC9Gu-TJw Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UCaSCt8s_4nfkRglWCvNSDrg Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UCKLQ5lOLdDMKNMeMauSObow Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UC8ENHE5xdFSwx71u3fDH5Xw Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UCLKPca3kwwd-B59HNr-_lvA Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UCKWaEZ-_VweaEx1j62do_vQ Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UC3ts8coMP645hZw9JSD3pqQ Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UCVk4b-svNJoeytrrlOixebQ Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UCZHmQk67mSJgfCCTn7xBfew Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuUPtn21xtRbbw Youtube
-https://youtube.com/feeds/videos.xml?channel_id=UC_zBdZ0_H_jn41FDRG7q4Tw Youtube
+https://pitchfork.com/rss/reviews/best/albums/ "~P4k Best New Album" 📖
+https://pitchfork.com/feed/feed-album-reviews/rss "~P4k Album Reviews" 📖
 

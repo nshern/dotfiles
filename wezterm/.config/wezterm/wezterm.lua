@@ -6,7 +6,12 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-config.color_scheme = "tokyonight_night"
+-- local colors = require("lua/rose-pine-midnight").colors()
+-- local window_frame = require('lua/rose-pine').window_frame()
+
+-- config.colors = colors
+config.check_for_updates = false
+config.color_scheme = "Batppuccin" 
 -- config.window_background_opacity = 0.8
 config.default_cursor_style = "SteadyBlock"
 config.cursor_blink_rate = 400
@@ -24,8 +29,8 @@ config.inactive_pane_hsb = {
 config.hide_tab_bar_if_only_one_tab = false
 config.window_decorations = "RESIZE"
 config.font = wezterm.font({
+	--	 family = "Comic Code",
 	family = "Comic Code",
-	--	 family = "Hack Nerd Font",
 	weight = "Regular",
 	-- harfbuzz_features = { "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "calt", "dlig" },
 })
@@ -35,7 +40,6 @@ config.font_rules = {
 		italic = true,
 		font = wezterm.font({
 			family = "Comic Code",
-			--			 family = "Hack Nerd Font",
 			weight = "Regular",
 			stretch = "Normal",
 			style = "Italic",
@@ -47,7 +51,6 @@ config.font_rules = {
 		italic = false,
 		font = wezterm.font({
 			family = "Comic Code",
-			--			 family = "Hack Nerd Font",
 			weight = "Bold",
 			stretch = "Normal",
 			style = "Normal",

@@ -24,3 +24,5 @@ https://www.berlingske.dk/samfund/han-har-opfundet-en-algoritme-der-kan-forudsig
 https://www.version2.dk/artikel/marie-bjerre-vil-saette-nye-retningslinjer-brug-af-ai	Marie Bjerre vil sætte nye retningslinjer for brug af AI	
 https://ollama.ai/blog/python-javascript-libraries	Ollama releases Python and JavaScript Libraries	
 https://www.berlingske.dk/samfund/hun-har-fundet-ni-konkrete-biomarkoerer-der-viser-vores-biologiske-alder-0	Hun har fundet ni konkrete biomarkører, der viser vores biologiske alder. Flere af dem kan du måle selv	
+https://www.youtube.com/watch?v=tWP6z0hvw1M	OpenAI shocks the world yet again… Sora first look	
+https://www.youtube.com/watch?v=oSCRZkSQ1CE	Jeff Dean: Trends in Machine Learning [video]	
