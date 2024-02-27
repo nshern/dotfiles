@@ -46,3 +46,6 @@ https://towardsdatascience.com/openai-vs-open-source-multilingual-embedding-mode
 https://www.youtube.com/watch?v=EBpT_cscTis	LlamaIndex Sessions: 12 RAG Pain Points and Solutions	
 https://www.youtube.com/watch?v=Ml179HQoy9o	Ollama 0.1.26 Makes Embedding 100x Better	
 https://www.youtube.com/watch?v=EvhCy-qbet4	Embedding Now Rocks in Ollama 0.1.26	
+https://kk.org/thetechnium/you-are-not-late/	You are not late (2014)	
+https://www.version2.dk/artikel/marie-bjerre-afviser-statsligt-udviklet-sprogmodel	Marie Bjerre afviser statsligt udviklet sprogmodel	
+https://blog.llamaindex.ai/llamaindex-newsletter-2024-02-27-4b9102a0f824?source=rss-b2cb71b98e5b------2	LlamaIndex Newsletter 2024–02–27	

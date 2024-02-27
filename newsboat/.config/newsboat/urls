@@ -1,6 +1,5 @@
 Pinned
 https://www.berlingske.dk/content/3/rss "~Berlingske Nyheder" 📰 
-https://www.dr.dk/nyheder/service/feeds/senestenyt "~DR Seneste nyt" 📰
 https://www.version2.dk/rss "~V2 Articles" 📰
 https://medium.com/feed/@llama_index "~Llamaindex Blog" 📖
 https://medium.com/feed/@iamleonie "~Leonie Monigatti" 📖
@@ -16,9 +15,7 @@ https://youtube.com/feeds/videos.xml?channel_id=UCKLQ5lOLdDMKNMeMauSObow "~Verbo
 https://youtube.com/feeds/videos.xml?channel_id=UCDq7SjbgRKty5TgGafW8Clg "~Prompt Engineering" 📺
 https://youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ "~Karparthy" 📺
 https://youtube.com/feeds/videos.xml?channel_id=UCBKNuaxVlSNvIN139KplUKw "~Vhyrro" 📺
-https://changelog.com/practicalai/feed "~Practical AI" 🎧
-https://changelog.com/podcast/feed "~Changelog" 🎧
-https://changelog.com/shipit/feed "~Ship it" 🎧
+https://changelog.com/master/feed "~Changelog Master Feed" 🎧
 
 Bookmarked
 https://youtube.com/feeds/videos.xml?playlist_id=PLPiA3sec6llZDwZa58aHTKZw4tOa2X4lQ&si=L6d2QejrONWJm5Re 📺
@@ -26,12 +23,12 @@ https://youtube.com/feeds/videos.xml?playlist_id=PLPiA3sec6llZDwZa58aHTKZw4tOa2X
 News
 https://www.berlingske.dk/content/66/rss "~Berlingske Business" 📰
 https://borsen.dk/rss "~Børsen frontpage" 📰
+https://www.dr.dk/nyheder/service/feeds/senestenyt "~DR Seneste nyt" 📰
 
 AI
 http://rss.arxiv.org/rss/cs.AI "~Arxiv AI" 📖 
 
 SWE
-https://changelog.com/gotime/feed "~Go Time" 🎧
 https://youtube.com/feeds/videos.xml?channel_id=UCWQaM7SpSECp9FELz-cHzuQ "~Dreams of code" 📺 
 https://youtube.com/feeds/videos.xml?channel_id=UCaSCt8s_4nfkRglWCvNSDrg "~Code Aesthethic" 📺
 https://youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA "~Fireship" 📺
