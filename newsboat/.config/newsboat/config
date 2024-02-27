@@ -7,7 +7,9 @@ bookmark-autopilot yes
 bookmark-cmd ~/.config/newsboat/bookmark.sh
 
 # externel browser
-browser "firefox %u"
+# browser "brave %u"
+browser "open -a 'brave browser' '%u'"
+# browser "/Applications/Brave Browser.app/Contents/MacOS/brave '%u' &>/dev/null &"
 
 # unbind keys
 unbind-key ENTER

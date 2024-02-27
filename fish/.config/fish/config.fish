@@ -39,6 +39,8 @@ alias vim=nvim
 alias blur='python ~/.scripts/wezterm-blur.py'
 alias transparent='python ~/.scripts/wezterm-transparent.py'
 alias blacken='python ~/.scripts/wezterm-blacken.py'
+alias bm='python ~/.scripts/bookmark.py'
+alias brave='/Applications/Brave\ Browser.app/Contents/MacOS/Brave\ Browser'
 
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin $PATH

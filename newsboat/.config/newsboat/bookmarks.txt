@@ -26,3 +26,23 @@ https://ollama.ai/blog/python-javascript-libraries	Ollama releases Python and Ja
 https://www.berlingske.dk/samfund/hun-har-fundet-ni-konkrete-biomarkoerer-der-viser-vores-biologiske-alder-0	Hun har fundet ni konkrete biomarkører, der viser vores biologiske alder. Flere af dem kan du måle selv	
 https://www.youtube.com/watch?v=tWP6z0hvw1M	OpenAI shocks the world yet again… Sora first look	
 https://www.youtube.com/watch?v=oSCRZkSQ1CE	Jeff Dean: Trends in Machine Learning [video]	
+https://uptrain.ai/
+https://github.com/sunnweiwei/RankGPT
+https://proxiesapi.com/articles/web-scraping-in-python-the-complete-guide	Web Scraping in Python – The Complete Guide	
+https://www.schneier.com/blog/archives/2024/02/microsoft-is-spying-on-users-of-its-ai-tools.html	Microsoft is spying on users of its AI tools	
+https://towardsdatascience.com/retrieval-augmented-generation-rag-from-theory-to-langchain-implementation-4e9bd5f6a4f2
+https://blog.google/technology/developers/gemma-open-models/	Gemma: New Open Models	
+https://www.linkedin.com/posts/kasper-juunge_juungedanske-talemaader-qa-datasets-at-activity-7164936350155186176-lFor?utm_source=share&utm_medium=member_desktop
+https://medium.com/@iamleonie
+https://towardsdatascience.com/generative-ai-design-patterns-a-comprehensive-guide-41425a40d7d0
+https://medium.com/towards-data-science/advanced-retrieval-augmented-generation-from-theory-to-llamaindex-implementation-4de1464a9930
+https://towardsdatascience.com/a-guide-on-12-tuning-strategies-for-production-ready-rag-applications-7ca646833439
+https://towardsdatascience.com/advanced-rag-01-small-to-big-retrieval-172181b396d4
+https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/?source=post_page-----4de1464a9930--------------------------------
+https://arxiv.org/pdf/2309.03409.pdf
+https://towardsdatascience.com/12-rag-pain-points-and-proposed-solutions-43709939a28c
+https://towardsdatascience.com/an-introduction-to-prompting-for-llms-61d36aec2048?source=rss----7f60cf5620c9---4	An Introduction to Prompting for LLMs	
+https://towardsdatascience.com/openai-vs-open-source-multilingual-embedding-models-e5ccb7c90f05?source=rss----7f60cf5620c9---4	OpenAI vs Open-Source Multilingual Embedding Models	
+https://www.youtube.com/watch?v=EBpT_cscTis	LlamaIndex Sessions: 12 RAG Pain Points and Solutions	
+https://www.youtube.com/watch?v=Ml179HQoy9o	Ollama 0.1.26 Makes Embedding 100x Better	
+https://www.youtube.com/watch?v=EvhCy-qbet4	Embedding Now Rocks in Ollama 0.1.26	

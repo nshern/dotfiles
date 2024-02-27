@@ -1,7 +1,6 @@
 local wezterm = require("wezterm")
 
 local config = {}
-
 if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
@@ -11,7 +10,7 @@ end
 
 -- config.colors = colors
 config.check_for_updates = false
-config.color_scheme = "Batppuccin" 
+config.color_scheme = "Batppuccin"
 -- config.window_background_opacity = 0.8
 config.default_cursor_style = "SteadyBlock"
 config.cursor_blink_rate = 400
@@ -29,32 +28,31 @@ config.inactive_pane_hsb = {
 config.hide_tab_bar_if_only_one_tab = false
 config.window_decorations = "RESIZE"
 config.font = wezterm.font({
-	--	 family = "Comic Code",
-	family = "Comic Code",
+	family = "Jetbrains Mono",
 	weight = "Regular",
-	-- harfbuzz_features = { "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "calt", "dlig" },
+	harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 })
 config.font_rules = {
 	{
 		intensity = "Normal",
 		italic = true,
 		font = wezterm.font({
-			family = "Comic Code",
+			family = "Jetbrains Mono",
 			weight = "Regular",
 			stretch = "Normal",
 			style = "Italic",
-			-- harfbuzz_features={ 'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08' },
+			harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 		}),
 	},
 	{
 		intensity = "Bold",
 		italic = false,
 		font = wezterm.font({
-			family = "Comic Code",
+			family = "Jetbrains Mono",
 			weight = "Bold",
 			stretch = "Normal",
 			style = "Normal",
-			-- harfbuzz_features={ 'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08' },
+			harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 		}),
 	},
 }

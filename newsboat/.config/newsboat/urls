@@ -1,21 +1,27 @@
 Pinned
 https://www.berlingske.dk/content/3/rss "~Berlingske Nyheder" 📰 
 https://www.dr.dk/nyheder/service/feeds/senestenyt "~DR Seneste nyt" 📰
-https://hnrss.org/best "~HN Best" 🤖
+https://www.version2.dk/rss "~V2 Articles" 📰
 https://medium.com/feed/@llama_index "~Llamaindex Blog" 📖
+https://medium.com/feed/@iamleonie "~Leonie Monigatti" 📖
+https://towardsdatascience.com/feed "~Towards Data Science" 📖
+https://hnrss.org/best "~HN Best" 🤖
 https://hnrss.org/newest?q=llamaindex "~HN Llamaindex" 🤖
-https://youtube.com/feeds/videos.xml?channel_id=UCeRjipR4_SsCddq9VZ2AeKg "~Llamaindex" 🎥
-https://youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuUPtn21xtRbbw "~AI Explained" 🎥
-https://youtube.com/feeds/videos.xml?channel_id=UCKLQ5lOLdDMKNMeMauSObow "~Verbos Podcast" 🎥
-https://youtube.com/feeds/videos.xml?channel_id=UCLKPca3kwwd-B59HNr-_lvA "~AI Engineer" 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UCeRjipR4_SsCddq9VZ2AeKg "~Llamaindex" 📺
+https://youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuUPtn21xtRbbw "~AI Explained" 📺
+https://youtube.com/feeds/videos.xml?channel_id=UCLKPca3kwwd-B59HNr-_lvA "~AI Engineer" 📺
+https://youtube.com/feeds/videos.xml?channel_id=UCBp3w4DCEC64FZr4k9ROxig "~Weights & Biases" 📺
+https://youtube.com/feeds/videos.xml?channel_id=UCHaF9kM2wn8C3CLRwLkC2GQ "~Matt Williams" 📺
+https://youtube.com/feeds/videos.xml?channel_id=UCKLQ5lOLdDMKNMeMauSObow "~Verbos Podcast" 📺
+https://youtube.com/feeds/videos.xml?channel_id=UCDq7SjbgRKty5TgGafW8Clg "~Prompt Engineering" 📺
+https://youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ "~Karparthy" 📺
+https://youtube.com/feeds/videos.xml?channel_id=UCBKNuaxVlSNvIN139KplUKw "~Vhyrro" 📺
 https://changelog.com/practicalai/feed "~Practical AI" 🎧
 https://changelog.com/podcast/feed "~Changelog" 🎧
 https://changelog.com/shipit/feed "~Ship it" 🎧
-https://youtube.com/feeds/videos.xml?channel_id=UCBKNuaxVlSNvIN139KplUKw "~Vhyrro" 🎥
-https://www.version2.dk/rss "~V2 Articles" 📰
 
 Bookmarked
-https://youtube.com/feeds/videos.xml?playlist_id=PLPiA3sec6llZDwZa58aHTKZw4tOa2X4lQ&si=L6d2QejrONWJm5Re 🎥
+https://youtube.com/feeds/videos.xml?playlist_id=PLPiA3sec6llZDwZa58aHTKZw4tOa2X4lQ&si=L6d2QejrONWJm5Re 📺
 
 News
 https://www.berlingske.dk/content/66/rss "~Berlingske Business" 📰
@@ -23,40 +29,39 @@ https://borsen.dk/rss "~Børsen frontpage" 📰
 
 AI
 http://rss.arxiv.org/rss/cs.AI "~Arxiv AI" 📖 
-https://youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ "~Andrej Karparthy" 🎥
 
 SWE
 https://changelog.com/gotime/feed "~Go Time" 🎧
-https://youtube.com/feeds/videos.xml?channel_id=UCWQaM7SpSECp9FELz-cHzuQ "~Dreams of code" 🎥 
-https://youtube.com/feeds/videos.xml?channel_id=UCaSCt8s_4nfkRglWCvNSDrg "~Code Aesthethic" 🎥
-https://youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA "~Fireship" 🎥
-https://youtube.com/feeds/videos.xml?channel_id=UC2Xd-TjJByJyK2w1zNwY0zQ "~Beyond Fireship" 🎥
-https://youtube.com/feeds/videos.xml?channel_id=UC9BP2AYavbZkP0tAvTaPa2A "~If coding Were Natural" 🎥
-https://youtube.com/feeds/videos.xml?channel_id=UCaiL2GDNpLYH6Wokkk1VNcg "~mCoding" 🎥
-https://youtube.com/feeds/videos.xml?channel_id=UC9H0HzpKf5JlazkADWnW1Jw "~Bashbunni" 🎥
-https://youtube.com/feeds/videos.xml?channel_id=UCkbwOi_U5CBkevtlVhuzWnA "~Backend banter" 🎥
-https://youtube.com/feeds/videos.xml?channel_id=UCjREVt2ZJU8ql-NC9Gu-TJw "~Code to the moon" 🎥
-https://youtube.com/feeds/videos.xml?channel_id=UC8ENHE5xdFSwx71u3fDH5Xw "~The Primagen" 🎥
-https://youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ "~The Prime Time" 🎥
-https://youtube.com/feeds/videos.xml?channel_id=UCKWaEZ-_VweaEx1j62do_vQ "~IBM Technology" 🎥
-https://youtube.com/feeds/videos.xml?channel_id=UC3ts8coMP645hZw9JSD3pqQ "~Andreas Kling" 🎥
-https://youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA "~Computerphile" 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UCWQaM7SpSECp9FELz-cHzuQ "~Dreams of code" 📺 
+https://youtube.com/feeds/videos.xml?channel_id=UCaSCt8s_4nfkRglWCvNSDrg "~Code Aesthethic" 📺
+https://youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA "~Fireship" 📺
+https://youtube.com/feeds/videos.xml?channel_id=UC2Xd-TjJByJyK2w1zNwY0zQ "~Beyond Fireship" 📺
+https://youtube.com/feeds/videos.xml?channel_id=UC9BP2AYavbZkP0tAvTaPa2A "~If coding Were Natural" 📺
+https://youtube.com/feeds/videos.xml?channel_id=UCaiL2GDNpLYH6Wokkk1VNcg "~mCoding" 📺
+https://youtube.com/feeds/videos.xml?channel_id=UC9H0HzpKf5JlazkADWnW1Jw "~Bashbunni" 📺
+https://youtube.com/feeds/videos.xml?channel_id=UCkbwOi_U5CBkevtlVhuzWnA "~Backend banter" 📺
+https://youtube.com/feeds/videos.xml?channel_id=UCjREVt2ZJU8ql-NC9Gu-TJw "~Code to the moon" 📺
+https://youtube.com/feeds/videos.xml?channel_id=UC8ENHE5xdFSwx71u3fDH5Xw "~The Primagen" 📺
+https://youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ "~The Prime Time" 📺
+https://youtube.com/feeds/videos.xml?channel_id=UCKWaEZ-_VweaEx1j62do_vQ "~IBM Technology" 📺
+https://youtube.com/feeds/videos.xml?channel_id=UC3ts8coMP645hZw9JSD3pqQ "~Andreas Kling" 📺
+https://youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA "~Computerphile" 📺
 
 Python
-https://youtube.com/feeds/videos.xml?channel_id=UCKPSmMfDsXTKrCZApukcJ7A "~Talk Python" 🎥
-https://youtube.com/feeds/videos.xml?channel_id=UC46xhU1EH7aywEgvA9syS3w "~anthonywritescode" 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UCKPSmMfDsXTKrCZApukcJ7A "~Talk Python" 📺
+https://youtube.com/feeds/videos.xml?channel_id=UC46xhU1EH7aywEgvA9syS3w "~anthonywritescode" 📺
 
 Rust 
 https://hnrss.org/newest?q=rust&count=100&points=20&comments=20 "~HN Rust" 🤖
-https://youtube.com/feeds/videos.xml?channel_id=UCUMwY9iS8oMyWDYIe6_RmoA 🎥
-https://youtube.com/feeds/videos.xml?channel_id=UCSp-OaMpsO8K0KkOqyBl7_w 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UCUMwY9iS8oMyWDYIe6_RmoA 📺
+https://youtube.com/feeds/videos.xml?channel_id=UCSp-OaMpsO8K0KkOqyBl7_w 📺
 
 Vim
-https://youtube.com/feeds/videos.xml?channel_id=UC_zBdZ0_H_jn41FDRG7q4Tw 🎥
-https://youtube.com/feeds/videos.xml?channel_id=UCVk4b-svNJoeytrrlOixebQ 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UC_zBdZ0_H_jn41FDRG7q4Tw 📺
+https://youtube.com/feeds/videos.xml?channel_id=UCVk4b-svNJoeytrrlOixebQ 📺
 
 Linux
-https://youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA 🎥
+https://youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA 📺
 
 Music
 https://pitchfork.com/rss/reviews/best/albums/ "~P4k Best New Album" 📖
