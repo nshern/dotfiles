@@ -5,7 +5,7 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
--- local colors = require("lua/rose-pine-midnight").colors()
+-- local colors = require("lua/rose-pine-dawn").colors()
 -- local window_frame = require('lua/rose-pine').window_frame()
 
 -- config.colors = colors

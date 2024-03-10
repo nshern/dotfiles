@@ -49,3 +49,17 @@ https://www.youtube.com/watch?v=EvhCy-qbet4	Embedding Now Rocks in Ollama 0.1.26
 https://kk.org/thetechnium/you-are-not-late/	You are not late (2014)	
 https://www.version2.dk/artikel/marie-bjerre-afviser-statsligt-udviklet-sprogmodel	Marie Bjerre afviser statsligt udviklet sprogmodel	
 https://blog.llamaindex.ai/llamaindex-newsletter-2024-02-27-4b9102a0f824?source=rss-b2cb71b98e5b------2	LlamaIndex Newsletter 2024–02–27	
+https://vgel.me/posts/representation-engineering/
+https://freedium.cfd/https://towardsdatascience.com/can-you-even-init-py-a682d1adf4e8
+https://clickhouse.com/blog/building-hackernews-stackoverflow-chatbot-with-llamaindex-and-clickhouse
+https://www.afterbabel.com/p/why-children-need-risk-fear-and-excitement	Children need risk, fear, and excitement in play	
+https://towardsdatascience.com/better-visualizations-advanced-etl-techniques-rag-pain-points-and-other-february-must-reads-d99f4a35ff4?source=rss----7f60cf5620c9---4	Better Visualizations, Advanced ETL Techniques, RAG Pain Points, and Other February Must-Reads	
+https://towardsdatascience.com/advanced-etl-techniques-for-beginners-03c404f0f0ac
+https://towardsdatascience.com/top-evaluation-metrics-for-rag-failures-acb27d2a5485
+https://towardsdatascience.com/pythons-most-powerful-decorator-6bc39e6a8dd8
+https://blog.streamlit.io/using-time-based-rag-llm-apps-with-timescale-vector/
+https://blog.dagworks.io/p/retrieval-augmented-generation-reference-arch
+https://learnxinyminutes.com/docs/lua/
+https://rich.grundy.io/blog/my-neovim-setup-2024/
+https://towardsdatascience.com/advanced-etl-techniques-for-beginners-03c404f0f0ac
+https://www.answer.ai/posts/2024-03-06-fsdp-qlora.html	Fine tune a 70B language model at home	

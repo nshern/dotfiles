@@ -1,10 +1,5 @@
 set -g fish_greeting
 fish_config theme choose "Catppuccin Mocha"
-# fish_config theme choose "Rosé Pine"
-# fish_config theme choose tokyonight_night
-# source ~/.config/fish/themes/carbonfox.fish
-# source ~/.config/fish/themes/dayfox.fish
-# source ~/.config/fish/themes/dayfox.fish
 
 if status is-interactive
     fish_vi_key_bindings
