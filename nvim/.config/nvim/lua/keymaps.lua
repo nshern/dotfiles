@@ -50,6 +50,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'markdown',
+  callback = function()
+    vim.opt_local.spell = true
+  end,
+})
+
 -- NOTE: Oil
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 vim.keymap.set('n', '<leader>e', '<CMD>Neotree toggle<CR>', { desc = 'Open parent directory' })
@@ -61,4 +68,8 @@ vim.keymap.set('n', '<S-h>', '<CMD>bp<CR>', { desc = 'Jump to previous buffer' }
 -- NOTE: Open links
 vim.api.nvim_set_keymap('n', 'gx', ':!open <cWORD><CR>', { noremap = true, silent = true })
 
+-- Shift the block right and keep selection
+vim.api.nvim_set_keymap('v', '>', '>gv', { noremap = true, silent = true })
+-- Shift the block left and keep selection
+vim.api.nvim_set_keymap('v', '<', '<gv', { noremap = true, silent = true })
 -- vim: ts=2 sts=2 sw=2 et

@@ -1,5 +1,5 @@
 set -g fish_greeting
-fish_config theme choose "Catppuccin Mocha"
+fish_config theme choose "Catppuccin Latte"
 
 if status is-interactive
     fish_vi_key_bindings

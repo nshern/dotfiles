@@ -29,13 +29,14 @@ require('lazy').setup {
   -- include a plugin definition from file lua/path/name.lua
 
   require 'nshern/plugins/gitsigns',
-  require 'nshern/plugins/batppuccin',
+  require 'nshern/plugins/highlight-colors',
+  require 'nshern/plugins/colorscheme',
   require 'nshern/plugins/flash',
   require 'nshern/plugins/big',
   require 'nshern/plugins/bufferline',
   -- require 'nshern/plugins/harpoon',
   require 'nshern/plugins/zen',
-  require 'nshern/plugins/markdown-preview',
+  require 'nshern/plugins/markdown',
   require 'nshern/plugins/which-key',
   require 'nshern/plugins/telescope',
   require 'nshern/plugins/lspconfig',

@@ -10,7 +10,8 @@ end
 
 -- config.colors = colors
 config.check_for_updates = false
-config.color_scheme = "Batppuccin"
+-- config.color_scheme = "Batppuccin"
+config.color_scheme = "Catppuccin Latte"
 -- config.window_background_opacity = 0.8
 config.default_cursor_style = "SteadyBlock"
 config.cursor_blink_rate = 400
@@ -29,7 +30,7 @@ config.hide_tab_bar_if_only_one_tab = false
 config.window_decorations = "RESIZE"
 config.font = wezterm.font({
 	family = "Jetbrains Mono",
-	weight = "Regular",
+	weight = "Medium",
 	harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 })
 config.font_rules = {
@@ -57,7 +58,7 @@ config.font_rules = {
 	},
 }
 
-config.font_size = 15.0
+config.font_size = 17.0
 
 config.keys = {
 	{

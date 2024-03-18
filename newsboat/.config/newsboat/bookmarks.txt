@@ -63,3 +63,14 @@ https://learnxinyminutes.com/docs/lua/
 https://rich.grundy.io/blog/my-neovim-setup-2024/
 https://towardsdatascience.com/advanced-etl-techniques-for-beginners-03c404f0f0ac
 https://www.answer.ai/posts/2024-03-06-fsdp-qlora.html	Fine tune a 70B language model at home	
+https://navyseals.com/nsw/physical-screening-tests/
+https://www.cognition-labs.com/blog	Devin: AI Software Engineer	
+https://engineering.fb.com/2024/03/12/data-center-engineering/building-metas-genai-infrastructure/	Building Meta’s GenAI Infrastructure	
+https://www.youtube.com/watch?v=z20lFR4BMws	How AI Impacts the Practice of Law	
+https://www.deeplearning.ai/courses/
+https://www.troyhunt.com/data-from-connected-cloudpets-teddy-bears-leaked-and-ransomed-exposing-kids-voice-messages/
+https://mambusskruj.github.io/posts/pub-neovim-for-markdown/
+https://towardsdatascience.com/designing-rags-dbb9a7c1d729?source=rss----7f60cf5620c9---4	Designing RAGs	
+https://heartbleed.com/
+https://en.wikipedia.org/wiki/Log4j#:~:text=Apache%20Log4j%20is%20a%20Java,Apache%20Log4j
+http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/
