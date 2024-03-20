@@ -1,0 +1,37 @@
+# 1 NvimDarkBlue: #004c73
+# 2 NvimDarkCyan: #007373
+# 3 NvimDarkGreen: #005523
+# 4 NvimDarkGrey1: #07080d
+# 5 NvimDarkGrey2: #14161b
+# 6 NvimDarkGrey3: #2c2e33
+# 7 NvimDarkGrey4: #4f5258
+# 8 NvimDarkMagenta: #470045
+# 9 NvimDarkRed: #590008
+# 10 NvimDarkYellow: #6b5300
+# 11 NvimLightBlue: #a6dbff
+# 12 NvimLightCyan: #8cf8f7
+# 13 NvimLightGreen: #b3f6c0
+# 14 NvimLightGrey1: #eef1f8
+# 15 NvimLightGrey2: #e0e2ea
+# 16 NvimLightGrey3: #c4c6cd
+# 17 NvimLightGrey4: #9b9ea4
+# 18 NvimLightMagenta: #ffcaff
+#   '#bcc0cc',
+#   '#d20f39',
+#   '#40a02b',
+#   '#df8e1d',
+#   '#1e66f5',
+#   '#ea76cb',
+#   '#179299',
+#   '#5c5f77',
+# ]
+# background = '#eff1f5'
+# brights = [
+#   '#acb0be',
+#   '#d20f39',
+#   '#40a02b',
+#   '#df8e1d',
+#   '#1e66f5',
+#   '#ea76cb',
+#   '#179299',
+#   '#6c6f85',

@@ -74,3 +74,5 @@ https://towardsdatascience.com/designing-rags-dbb9a7c1d729?source=rss----7f60cf5
 https://heartbleed.com/
 https://en.wikipedia.org/wiki/Log4j#:~:text=Apache%20Log4j%20is%20a%20Java,Apache%20Log4j
 http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer/
+https://www.youtube.com/watch?v=cYuesqIKf9A
+https://medium.com/@sudarshan-koirala/super-easy-way-to-parse-pdfs-a528fc9c2ea6
