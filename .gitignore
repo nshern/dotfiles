@@ -4,3 +4,4 @@ spotify-tui/.config/spotify-tui/.spotify_token_cache.json
 .DS_STORE
 alacritty/.config/alacritty/.DS_Store
 fish/.config/fish/fish_variables
+newsboat/.config/newsboat/bookmarks.txt

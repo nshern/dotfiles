@@ -50,12 +50,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = 'markdown',
-  callback = function()
-    vim.opt_local.spell = true
-  end,
-})
+-- Conceal level for markdown to hide formatting
+-- vim.api.nvim_create_autocmd('FileType', {
+--   pattern = 'markdown',
+--   callback = function()
+--     vim.opt_local.conceallevel = 2
+--   end,
+-- })
 
 -- NOTE: Oil
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })

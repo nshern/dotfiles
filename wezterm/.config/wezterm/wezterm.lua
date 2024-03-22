@@ -12,7 +12,7 @@ end
 config.check_for_updates = false
 config.color_scheme = "Batppuccin"
 -- config.color_scheme = "nvim"
-config.window_background_opacity = 0.8
+-- config.window_background_opacity = 0.8
 config.default_cursor_style = "SteadyBlock"
 config.cursor_blink_rate = 400
 -- config.macos_window_background_blur = 40
