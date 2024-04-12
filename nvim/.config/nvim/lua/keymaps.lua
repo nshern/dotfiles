@@ -1,6 +1,3 @@
--- [[ Basic Keymaps ]]
---  See `:help vim.keymap.set()`
-
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -50,13 +47,23 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'markdown',
+  callback = function()
+    vim.opt_local.wrap = true
+    vim.opt_local.linebreak = true
+    vim.api.nvim_buf_set_keymap(0, 'n', 'j', 'gj', { noremap = true })
+    vim.api.nvim_buf_set_keymap(0, 'n', 'k', 'gk', { noremap = true })
+  end,
+})
+
 -- Conceal level for markdown to hide formatting
--- vim.api.nvim_create_autocmd('FileType', {
---   pattern = 'markdown',
---   callback = function()
---     vim.opt_local.conceallevel = 2
---   end,
--- })
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'markdown',
+  callback = function()
+    vim.opt_local.conceallevel = 3
+  end,
+})
 
 -- NOTE: Oil
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
@@ -65,9 +72,6 @@ vim.keymap.set('n', '<leader>e', '<CMD>Neotree toggle<CR>', { desc = 'Open paren
 -- NOTE: Bufferline
 vim.keymap.set('n', '<S-l>', '<CMD>bn<CR>', { desc = 'Jump to next buffer' })
 vim.keymap.set('n', '<S-h>', '<CMD>bp<CR>', { desc = 'Jump to previous buffer' })
-
--- NOTE: Open links
-vim.api.nvim_set_keymap('n', 'gx', ':!open <cWORD><CR>', { noremap = true, silent = true })
 
 -- Shift the block right and keep selection
 vim.api.nvim_set_keymap('v', '>', '>gv', { noremap = true, silent = true })

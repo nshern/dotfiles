@@ -30,11 +30,11 @@ require('lazy').setup {
 
   require 'nshern/plugins/gitsigns',
   require 'nshern/plugins/highlight-colors',
-  require 'nshern/plugins/colorscheme',
+  require 'nshern/plugins/catppuccin',
   require 'nshern/plugins/flash',
+  require 'nshern/plugins/hardtime',
   require 'nshern/plugins/big',
   require 'nshern/plugins/bufferline',
-  -- require 'nshern/plugins/harpoon',
   require 'nshern/plugins/zen',
   require 'nshern/plugins/markdown',
   require 'nshern/plugins/which-key',
@@ -45,7 +45,6 @@ require('lazy').setup {
   require 'nshern/plugins/todo-comments',
   require 'nshern/plugins/mini',
   require 'nshern/plugins/treesitter',
-  require 'nshern/plugins/neotree',
   require 'nshern/plugins/oil',
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the

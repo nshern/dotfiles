@@ -5,7 +5,7 @@ return {
     priority = 1000,
     config = function()
       require('catppuccin').setup {
-        flavour = 'mocha', -- latte, frappe, macchiato, mocha
+        -- flavour = 'mocha', -- latte, frappe, macchiato, mocha
         background = { -- :h background
           light = 'latte',
           dark = 'mocha',
@@ -36,12 +36,25 @@ return {
           operators = {},
           -- miscs = {}, -- Uncomment to turn off hard-coded styles
         },
+        highlight_overrides = {
+
+          mocha = function(mocha)
+            return {
+              LineNr = { fg = mocha.teal },
+            }
+          end,
+          latte = function(latte)
+            return {
+              LineNr = { fg = latte.teal },
+            }
+          end,
+        },
         color_overrides = {
-          mocha = {
-            base = '#161616',
-            mantle = '#161616',
-            crust = '#161616',
-          },
+          -- mocha = {
+          --   base = '#161616',
+          --   mantle = '#161616',
+          --   crust = '#161616',
+          -- },
         },
         custom_highlights = {},
         integrations = {
@@ -49,7 +62,10 @@ return {
           gitsigns = true,
           nvimtree = true,
           treesitter = true,
-          notify = false,
+          notify = true,
+          fidget = true,
+          which_key = true,
+          flash = true,
           mini = {
             enabled = true,
             indentscope_color = '',

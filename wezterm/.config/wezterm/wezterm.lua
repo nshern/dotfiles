@@ -5,17 +5,16 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
--- local colors = require("lua/rose-pine-dawn").colors()
+-- local colors = require("lua/rose-pine-moon").colors()
 -- local window_frame = require('lua/rose-pine').window_frame()
 
 -- config.colors = colors
 config.check_for_updates = false
-config.color_scheme = "Batppuccin"
--- config.color_scheme = "nvim"
--- config.window_background_opacity = 0.8
+config.color_scheme = "Catppuccin Mocha"
+config.window_background_opacity = 0.8
 config.default_cursor_style = "SteadyBlock"
 config.cursor_blink_rate = 400
--- config.macos_window_background_blur = 40
+-- config.macos_window_background_blur = 5
 config.native_macos_fullscreen_mode = true
 config.adjust_window_size_when_changing_font_size = false
 config.tab_bar_at_bottom = true
@@ -30,6 +29,8 @@ config.hide_tab_bar_if_only_one_tab = false
 config.window_decorations = "RESIZE"
 config.font = wezterm.font({
 	family = "Jetbrains Mono",
+	-- family = "Comic Code",
+	-- weight = "Regular",
 	weight = "Regular",
 	harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 })

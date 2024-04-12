@@ -1,3 +1,4 @@
+
 [colors]
 ansi = [
   '#c4c6cd',
@@ -82,4 +83,4 @@ underline = 'None'
 
 [metadata]
 aliases = []
-name = 'nvim'
+name = 'nvim light'

@@ -50,12 +50,17 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
 
+vim.opt.termguicolors = true
+
 -- Show which line your cursor is on
 vim.opt.cursorline = false
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
-vim.opt.background = 'light'
+vim.opt.background = 'dark'
 
+vim.cmd [[highlight Comment cterm=italic gui=italic]]
+
+vim.g.zenbones = { transparent_background = true }
 -- vim: ts=2 sts=2 sw=2 et

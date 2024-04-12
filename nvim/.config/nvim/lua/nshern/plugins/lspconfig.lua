@@ -136,6 +136,7 @@ return {
         -- clangd = {},
         -- gopls = {},
         pyright = {},
+        -- basedpyright = {},
         marksman = {},
         prettier = {},
         xmlformatter = {},

@@ -1,5 +1,9 @@
 set -g fish_greeting
+# fish_config theme choose "Catppuccin Latte"
 fish_config theme choose "Catppuccin Mocha"
+# source ~/.config/fish/themes/dayfox.fish
+# source ~/.config/fish/themes/dawnfox.fish
+# source ~/.config/fish/themes/carbonfox.fish
 
 if status is-interactive
     fish_vi_key_bindings
