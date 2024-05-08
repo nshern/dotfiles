@@ -27,6 +27,9 @@ return {
         ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
         ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
         ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
+        ['<leader>b'] = { name = '[B]Buffer', _ = 'which_key_ignore' },
+        ['<leader>t'] = { name = '[T]heme', _ = 'which_key_ignore' },
+        ['<leader>l'] = { name = '[L]anguage', _ = 'which_key_ignore' },
       }
     end,
   },

@@ -135,7 +135,9 @@ return {
         ltex = {},
         -- clangd = {},
         -- gopls = {},
-        pyright = {},
+        pyright = {
+          capabilities = capabilities,
+        },
         -- basedpyright = {},
         marksman = {},
         prettier = {},

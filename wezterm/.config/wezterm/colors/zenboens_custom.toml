@@ -1,0 +1,79 @@
+# This file is auto-generated from lua/zenbones/template/wezterm.lua
+# Zenbones
+[colors]
+foreground = "#2C363C"
+background = "#FFFFFF"
+cursor_bg = "#2C363C"
+cursor_border = "#F0EDEC"
+cursor_fg = "#F0EDEC"
+selection_bg = "#CBD9E3"
+selection_fg = "#2C363C"
+
+ansi = [
+  "#F0EDEC",
+  "#A8334C",
+  "#4F6C31",
+  "#944927",
+  "#286486",
+  "#88507D",
+  "#3B8992",
+  "#2C363C",
+]
+brights = [
+  "#CFC1BA",
+  "#94253E",
+  "#3F5A22",
+  "#803D1C",
+  "#1D5573",
+  "#7B3B70",
+  "#2B747C",
+  "#4F5E68",
+]
+
+[colors.tab_bar]
+background = '#FFFFFF'
+inactive_tab_edge = '#FFFFFF'
+
+[colors.tab_bar.active_tab]
+fg_color = '#FFFFFF'
+bg_color = '#2b747c'
+intensity = 'Bold'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab]
+bg_color = '#FFFFFF'
+fg_color = '#2C363C'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = '#2b747c'
+fg_color = '#4F5E68'
+intensity = 'Bold'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab]
+bg_color = '#FFFFFF'
+fg_color = '#2c373c'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab_hover]
+bg_color = '#45475a'
+fg_color = '#cdd6f4'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[metadata]
+aliases = []
+name = 'Zenbones Custom'

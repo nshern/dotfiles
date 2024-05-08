@@ -45,7 +45,7 @@ vim.opt.splitbelow = true
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+-- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
@@ -58,9 +58,15 @@ vim.opt.cursorline = false
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
-vim.opt.background = 'dark'
-
-vim.cmd [[highlight Comment cterm=italic gui=italic]]
+vim.opt.background = 'light'
 
 vim.g.zenbones = { transparent_background = true }
+-- vim.cmd [[
+--  augroup MyColors
+--      autocmd!
+--      autocmd ColorScheme * highlight Comment cterm=italic gui=italic guifg=#9ca0b0
+--  augroup END
+--  ]]
+-- vim.cmd.colorscheme 'default'
+-- vim.cmd [[autocmd ColorScheme * highlight Comment cterm=italic gui=italic]]
 -- vim: ts=2 sts=2 sw=2 et

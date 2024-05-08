@@ -1,15 +1,15 @@
 [colors]
 ansi = [
   '#45475a',
-  '#f38ba8',
-  '#a6e3a1',
-  '#f9e2af',
-  '#89b4fa',
-  '#f5c2e7',
-  '#94e2d5',
+  '#c14a4a',
+  '#6c782e',
+  '#b47109',
+  '#45707a',
+  '#945e80',
+  '#4c7a5d',
   '#bac2de',
 ]
-background = '#161616'
+background = '#f9f5d7'
 brights = [
   '#585b70',
   '#f38ba8',

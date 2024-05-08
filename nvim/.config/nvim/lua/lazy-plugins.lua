@@ -27,25 +27,23 @@ require('lazy').setup {
 
   -- modular approach: using `require 'path/name'` will
   -- include a plugin definition from file lua/path/name.lua
-
+  require 'nshern/plugins/big',
+  require 'nshern/plugins/cmp',
+  require 'nshern/plugins/conform',
+  require 'nshern/plugins/flash',
   require 'nshern/plugins/gitsigns',
   require 'nshern/plugins/highlight-colors',
-  require 'nshern/plugins/catppuccin',
-  require 'nshern/plugins/flash',
-  require 'nshern/plugins/hardtime',
-  require 'nshern/plugins/big',
-  require 'nshern/plugins/bufferline',
-  require 'nshern/plugins/zen',
-  require 'nshern/plugins/markdown',
-  require 'nshern/plugins/which-key',
-  require 'nshern/plugins/telescope',
   require 'nshern/plugins/lspconfig',
-  require 'nshern/plugins/conform',
-  require 'nshern/plugins/cmp',
-  require 'nshern/plugins/todo-comments',
+  require 'nshern/plugins/markdown',
   require 'nshern/plugins/mini',
-  require 'nshern/plugins/treesitter',
   require 'nshern/plugins/oil',
+  require 'nshern/plugins/telescope',
+  require 'nshern/plugins/todo-comments',
+  require 'nshern/plugins/treesitter',
+  require 'nshern/plugins/which-key',
+  require 'nshern/plugins/zen',
+  require 'nshern/plugins/zenbones',
+  require 'nshern/plugins/lualine',
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and

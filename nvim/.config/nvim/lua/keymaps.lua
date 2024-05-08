@@ -9,6 +9,9 @@ vim.keymap.set('n', '<leader>[', vim.diagnostic.open_float, { desc = 'Show diagn
 vim.keymap.set('n', '<leader>]', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 vim.keymap.set('n', '<leader>bd', '<CMD>bd<CR>', { desc = 'Delete current buffer' })
+vim.keymap.set('n', '<leader>tl', '<CMD>set background=light<CR>', { desc = 'Set background to light' })
+vim.keymap.set('n', '<leader>td', '<CMD>set background=dark<CR>', { desc = 'Set background to dark' })
+vim.keymap.set('n', '<leader>tt', '<CMD>hi Normal guibg=NONE ctermbg=NONE<CR>', { desc = 'Set background to transparent' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -18,11 +21,10 @@ vim.keymap.set('n', '<leader>bd', '<CMD>bd<CR>', { desc = 'Delete current buffer
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
--- TIP: Disable arrow keys in normal mode
--- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
--- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
--- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
--- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
+vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move"<CR>')
+vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move"<CR>')
+vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move"<CR>')
+vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move"<CR>')
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
@@ -33,6 +35,9 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+--  Switch functioanlity of { and } in order to stay consistent with j and k
+-- vim.api.nvim_set_keymap('n', '{', '}', { noremap = true })
+-- vim.api.nvim_set_keymap('n', '}', '{', { noremap = true })
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -54,6 +59,10 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.opt_local.linebreak = true
     vim.api.nvim_buf_set_keymap(0, 'n', 'j', 'gj', { noremap = true })
     vim.api.nvim_buf_set_keymap(0, 'n', 'k', 'gk', { noremap = true })
+    -- vim.keymap.set('n', '<leader>ld', '<CMD>LTeXSetLanguage<CR>da-DK<CR>', { desc = 'Change language to da-DK' })
+    -- vim.keymap.set('n', '<leader>le', '<CMD>LTeXSetLanguage<CR>en-US<CR>', { desc = 'Change language to en-US' })
+    -- vim.api.nvim_buf_set_keymap(0, 'n', '<leader>le', '<CMD>LTeXSetLanguage<CR>en-US<CR>', { desc = 'Change language to en-US' })
+    -- vim.api.nvim_buf_set_keymap(0, 'n', '<leader>ld', '<CMD>LTeXSetLanguage<CR>da-DK<CR>', { desc = 'Change language to da-DK' })
   end,
 })
 
