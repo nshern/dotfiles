@@ -14,9 +14,9 @@ end
 
 function scheme_for_appearance(appearance)
 	if appearance:find("Dark") then
-		return "zenbones_dark"
+		return "Holybones Dark"
 	else
-		return "Zenbones Custom"
+		return "Holybones Light"
 	end
 end
 
@@ -58,7 +58,7 @@ config.font_rules = {
 		intensity = "Normal",
 		italic = true,
 		font = wezterm.font({
-			family = "Victor Mono",
+			family = "Jetbrains Mono",
 			weight = "Medium",
 			stretch = "Normal",
 			style = "Italic",

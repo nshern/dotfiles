@@ -61,6 +61,7 @@ vim.opt.scrolloff = 10
 vim.opt.background = 'dark'
 
 vim.g.zenbones = { transparent_background = true }
+
 -- vim.cmd [[
 --  augroup MyColors
 --      autocmd!

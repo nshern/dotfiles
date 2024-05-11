@@ -1,10 +1,26 @@
 return {
   'mcchrish/zenbones.nvim',
-  -- Optionally install Lush. Allows for more configuration or extending the colorscheme
-  -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
-  -- In Vim, compat mode is turned on as Lush only works in Neovim.
   dependencies = 'rktjmp/lush.nvim',
   config = function()
     vim.cmd.colorscheme 'zenbones'
+    vim.cmd [[
+      augroup MyColorSchemeTweaks
+        autocmd!
+        autocmd ColorScheme zenbones lua MyZenbonesTweaks()
+      augroup END
+    ]]
+
+    function MyZenbonesTweaks()
+      if vim.o.background == 'light' then
+        vim.api.nvim_set_hl(0, 'Constant', { fg = '#556570' })
+        vim.api.nvim_set_hl(0, 'Number', { fg = '#2c363c' })
+      else
+        vim.api.nvim_set_hl(0, 'Constant', { fg = '#868C91' })
+        vim.api.nvim_set_hl(0, 'Number', { fg = '#B4BDC3' })
+      end
+    end
+
+    -- Trigger the tweaks immediately in case the colorscheme is already set
+    MyZenbonesTweaks()
   end,
 }
