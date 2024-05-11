@@ -28,6 +28,7 @@ require('lazy').setup {
   -- modular approach: using `require 'path/name'` will
   -- include a plugin definition from file lua/path/name.lua
   require 'nshern/plugins/big',
+  require 'nshern/plugins/dark-notify',
   require 'nshern/plugins/cmp',
   require 'nshern/plugins/conform',
   require 'nshern/plugins/flash',

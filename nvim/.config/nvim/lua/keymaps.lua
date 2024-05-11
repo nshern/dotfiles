@@ -87,3 +87,4 @@ vim.api.nvim_set_keymap('v', '>', '>gv', { noremap = true, silent = true })
 -- Shift the block left and keep selection
 vim.api.nvim_set_keymap('v', '<', '<gv', { noremap = true, silent = true })
 -- vim: ts=2 sts=2 sw=2 et
+--

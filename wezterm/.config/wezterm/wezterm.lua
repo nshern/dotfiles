@@ -5,8 +5,29 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
+function get_appearance()
+	if wezterm.gui then
+		return wezterm.gui.get_appearance()
+	end
+	return "Dark"
+end
+
+function scheme_for_appearance(appearance)
+	if appearance:find("Dark") then
+		return "zenbones_dark"
+	else
+		return "Zenbones Custom"
+	end
+end
+
 config.check_for_updates = false
-config.color_scheme = "Zenbones Custom"
+config.color_scheme = scheme_for_appearance(get_appearance())
+-- config.color_scheme = "Catppuccin Latte"
+-- config.color_scheme = "Zenbones Custom"
+-- config.color_scheme = "zenbones_dark"
+-- config.color_scheme = "light"
+-- config.color_scheme = "Catppuccin Mocha"
+-- config.color_scheme = "Gruvbox Material (Gogh)"
 
 config.send_composed_key_when_left_alt_is_pressed = true
 config.send_composed_key_when_right_alt_is_pressed = true
@@ -14,6 +35,7 @@ config.send_composed_key_when_right_alt_is_pressed = true
 -- config.window_background_opacity = 0.8
 config.default_cursor_style = "SteadyBlock"
 config.cursor_blink_rate = 400
+-- config.macos_window_background_blur = 5
 config.native_macos_fullscreen_mode = true
 config.adjust_window_size_when_changing_font_size = false
 config.tab_bar_at_bottom = true
