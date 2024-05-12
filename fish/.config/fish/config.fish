@@ -17,7 +17,6 @@ bind -M insert \cr forward-word
 # Abbreviations
 abbr -a cls clear
 abbr -a clx 'clx -n'
-abbr -a ai 'chatblade -s -l'
 abbr -a ddgr "ddgr --reg "da-dk" --reverse"
 abbr -a dev '~/.scripts/create-tmux-env.fish'
 abbr -a fetch neofetch
