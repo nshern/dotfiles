@@ -14,20 +14,14 @@ end
 
 function scheme_for_appearance(appearance)
 	if appearance:find("Dark") then
-		return "Holybones Dark"
+		return "zenbones darker"
 	else
-		return "Holybones Light"
+		return "zenbones lighter"
 	end
 end
 
 config.check_for_updates = false
 config.color_scheme = scheme_for_appearance(get_appearance())
--- config.color_scheme = "Catppuccin Latte"
--- config.color_scheme = "Zenbones Custom"
--- config.color_scheme = "zenbones_dark"
--- config.color_scheme = "light"
--- config.color_scheme = "Catppuccin Mocha"
--- config.color_scheme = "Gruvbox Material (Gogh)"
 
 config.send_composed_key_when_left_alt_is_pressed = true
 config.send_composed_key_when_right_alt_is_pressed = true

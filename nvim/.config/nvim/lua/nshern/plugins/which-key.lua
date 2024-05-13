@@ -29,7 +29,8 @@ return {
         ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
         ['<leader>b'] = { name = '[B]Buffer', _ = 'which_key_ignore' },
         ['<leader>t'] = { name = '[T]heme', _ = 'which_key_ignore' },
-        ['<leader>l'] = { name = '[L]anguage', _ = 'which_key_ignore' },
+        ['<leader>m'] = { name = '[M]arkdown', _ = 'which_key_ignore' },
+        ['<leader>l'] = { name = '[L]azyGit', _ = 'which_key_ignore' },
       }
     end,
   },
