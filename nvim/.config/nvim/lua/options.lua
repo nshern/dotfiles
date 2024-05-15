@@ -58,9 +58,9 @@ vim.opt.cursorline = false
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
--- vim.opt.background = 'dark'
+vim.opt.list = false
 
-vim.g.zenbones = { transparent_background = true }
+-- vim.opt.background = 'dark'
 
 -- vim.cmd [[
 --  augroup MyColors

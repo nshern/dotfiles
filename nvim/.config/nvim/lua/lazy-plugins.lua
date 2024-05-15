@@ -29,7 +29,7 @@ require('lazy').setup {
   -- include a plugin definition from file lua/path/name.lua
   -- require 'nshern/plugins/auto-save',
   require 'nshern/plugins/big',
-  --  require 'nshern/plugins/customize_zenbones',
+  require 'nshern/plugins/quietus',
   require 'nshern/plugins/cmp',
   require 'nshern/plugins/lazygit',
   require 'nshern/plugins/conform',

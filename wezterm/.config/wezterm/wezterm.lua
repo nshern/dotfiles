@@ -14,9 +14,9 @@ end
 
 function scheme_for_appearance(appearance)
 	if appearance:find("Dark") then
-		return "zenbones darker"
+		return "zenwritten dark"
 	else
-		return "zenbones lighter"
+		return "zenwritten light"
 	end
 end
 
@@ -26,7 +26,7 @@ config.color_scheme = scheme_for_appearance(get_appearance())
 config.send_composed_key_when_left_alt_is_pressed = true
 config.send_composed_key_when_right_alt_is_pressed = true
 
--- config.window_background_opacity = 0.8
+config.window_background_opacity = 0.8
 config.default_cursor_style = "SteadyBlock"
 config.cursor_blink_rate = 400
 -- config.macos_window_background_blur = 5
@@ -75,8 +75,12 @@ config.font_rules = {
 config.font_size = 17.0
 
 config.keys = {
-	{ key = "PageUp", mods = "SHIFT", action = wezterm.action.ScrollByPage(-0.4) },
-	{ key = "PageDown", mods = "SHIFT", action = wezterm.action.ScrollByPage(0.4) },
+	-- { key = "PageUp", mods = "SHIFT", action = wezterm.action.ScrollByPage(-0.4) },
+	-- { key = "PageDown", mods = "SHIFT", action = wezterm.action.ScrollByPage(0.4) },
+	{ key = "k", mods = "CTRL", action = wezterm.action.ScrollByPage(-0.1) },
+	{ key = "j", mods = "CTRL", action = wezterm.action.ScrollByPage(0.1) },
+	{ key = "PageUp", mods = "CTRL", action = wezterm.action.ScrollByPage(-0.5) },
+	{ key = "PageDown", mods = "CTRL", action = wezterm.action.ScrollByPage(0.5) },
 	{
 		key = "g",
 		mods = "CMD",
