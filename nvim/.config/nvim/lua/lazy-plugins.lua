@@ -23,20 +23,20 @@ require('lazy').setup {
   --    require('Comment').setup({})
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
+  -- { 'numToStr/Comment.nvim', opts = {} },
 
   -- modular approach: using `require 'path/name'` will
   -- include a plugin definition from file lua/path/name.lua
   -- require 'nshern/plugins/auto-save',
+
   require 'nshern/plugins/big',
-  require 'nshern/plugins/quietus',
   require 'nshern/plugins/cmp',
-  require 'nshern/plugins/lazygit',
   require 'nshern/plugins/conform',
   require 'nshern/plugins/dark-notify',
   require 'nshern/plugins/flash',
   require 'nshern/plugins/gitsigns',
   require 'nshern/plugins/highlight-colors',
+  require 'nshern/plugins/lazygit',
   require 'nshern/plugins/lspconfig',
   require 'nshern/plugins/lualine',
   require 'nshern/plugins/markdown',
@@ -48,7 +48,6 @@ require('lazy').setup {
   require 'nshern/plugins/which-key',
   require 'nshern/plugins/zen',
   require 'nshern/plugins/zenbones',
-
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- put them in the right spots if you want.
