@@ -16,12 +16,14 @@ return {
         -- vim.api.nvim_set_hl(0, 'Number', { fg = '#2c363c' })
         vim.api.nvim_set_hl(0, 'Constant', { fg = '#3b8992' })
         vim.api.nvim_set_hl(0, 'Number', { fg = '#3b8992' })
+        vim.g.zenwritten = { transparent_background = true }
       else
         vim.g.zenwritten = { colorize_diagnostic_underline_text = true }
         -- vim.api.nvim_set_hl(0, 'Constant', { fg = '#868C91' })
         -- vim.api.nvim_set_hl(0, 'Number', { fg = '#B4BDC3' })
         vim.api.nvim_set_hl(0, 'Constant', { fg = '#66a5ad' })
         vim.api.nvim_set_hl(0, 'Number', { fg = '#66a5ad' })
+        vim.g.zenwritten = { transparent_background = true }
       end
     end
 
