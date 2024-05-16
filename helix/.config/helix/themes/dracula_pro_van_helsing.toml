@@ -1,6 +1,0 @@
-inherits = "dracula_pro"
-
-[palette]
-background="#0B0D0F"
-comment="#708CA9"
-selection="#414D58"
