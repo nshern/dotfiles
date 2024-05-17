@@ -33,9 +33,6 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
---  Switch functioanlity of { and } in order to stay consistent with j and k
--- vim.api.nvim_set_keymap('n', '{', '}', { noremap = true })
--- vim.api.nvim_set_keymap('n', '}', '{', { noremap = true })
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -74,7 +71,6 @@ vim.api.nvim_create_autocmd('FileType', {
 
 -- NOTE: Oil
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
-vim.keymap.set('n', '<leader>e', '<CMD>Neotree toggle<CR>', { desc = 'Open parent directory' })
 
 -- NOTE: Bufferline
 vim.keymap.set('n', '<S-l>', '<CMD>bn<CR>', { desc = 'Jump to next buffer' })
