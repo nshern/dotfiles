@@ -60,6 +60,10 @@ vim.opt.scrolloff = 10
 
 vim.opt.list = false
 
+vim.cmd.colorscheme 'default'
+vim.cmd [[highlight Normal guibg=NONE ctermbg=NONE]]
+vim.cmd [[highlight NonText guibg=NONE ctermbg=NONE]]
+
 -- vim.opt.background = 'dark'
 
 -- vim.cmd [[

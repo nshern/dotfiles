@@ -14,9 +14,9 @@ end
 
 function scheme_for_appearance(appearance)
 	if appearance:find("Dark") then
-		return "zenwritten dark"
+		return "nvim dark"
 	else
-		return "zenwritten light"
+		return "nvim light"
 	end
 end
 
