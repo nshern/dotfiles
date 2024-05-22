@@ -30,7 +30,6 @@ require('lazy').setup {
   -- require 'nshern/plugins/auto-save',
 
   require 'nshern/plugins/big',
-  -- require 'nshern/plugins/catppuccin',
   require 'nshern/plugins/cmp',
   require 'nshern/plugins/conform',
   require 'nshern/plugins/dark-notify',
