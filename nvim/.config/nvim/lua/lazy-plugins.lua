@@ -11,7 +11,7 @@
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup {
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
-  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  -- 'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
@@ -33,9 +33,9 @@ require('lazy').setup {
   require 'nshern/plugins/cmp',
   require 'nshern/plugins/conform',
   require 'nshern/plugins/dark-notify',
-  require 'nshern/plugins/flash',
+  -- require 'nshern/plugins/flash',
   require 'nshern/plugins/gitsigns',
-  require 'nshern/plugins/highlight-colors',
+  -- require 'nshern/plugins/highlight-colors',
   require 'nshern/plugins/lazygit',
   require 'nshern/plugins/lspconfig',
   require 'nshern/plugins/lualine',
@@ -43,7 +43,7 @@ require('lazy').setup {
   require 'nshern/plugins/mini',
   require 'nshern/plugins/oil',
   require 'nshern/plugins/telescope',
-  require 'nshern/plugins/todo-comments',
+  -- require 'nshern/plugins/todo-comments',
   require 'nshern/plugins/treesitter',
   require 'nshern/plugins/which-key',
   require 'nshern/plugins/zen',

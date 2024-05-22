@@ -62,6 +62,7 @@ vim.opt.scrolloff = 10
 vim.opt.list = false
 
 vim.g.zenwritten = { transparent_background = true }
+
 -- Define the autocommand
 -- vim.api.nvim_create_augroup('MyColorSchemeGroup', {})
 -- vim.api.nvim_create_autocmd('ColorScheme', {
