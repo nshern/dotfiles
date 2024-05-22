@@ -60,18 +60,19 @@ vim.opt.scrolloff = 10
 
 vim.opt.list = false
 
-vim.cmd.colorscheme 'default'
-vim.cmd [[highlight Normal guibg=NONE ctermbg=NONE]]
-vim.cmd [[highlight NonText guibg=NONE ctermbg=NONE]]
-
--- vim.opt.background = 'dark'
-
--- vim.cmd [[
---  augroup MyColors
---      autocmd!
---      autocmd ColorScheme * highlight Comment cterm=italic gui=italic guifg=#9ca0b0
---  augroup END
---  ]]
+vim.g.zenwritten = { transparent_background = true }
+-- Define the autocommand
+-- vim.api.nvim_create_augroup('MyColorSchemeGroup', {})
+-- vim.api.nvim_create_autocmd('ColorScheme', {
+--   group = 'MyColorSchemeGroup',
+--   callback = function()
+--     -- Set the desired highlights
+--     vim.cmd [[highlight Normal guibg=NONE ctermbg=NONE]]
+--     vim.cmd [[highlight NonText guibg=NONE ctermbg=NONE]]
+--   end,
+-- })
+--
+-- -- Set the colorscheme
 -- vim.cmd.colorscheme 'default'
--- vim.cmd [[autocmd ColorScheme * highlight Comment cterm=italic gui=italic]]
+
 -- vim: ts=2 sts=2 sw=2 et

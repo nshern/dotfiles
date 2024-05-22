@@ -4,14 +4,28 @@ https://www.berlingske.dk/content/3/rss "~Berlingske Nyheder" 📰
 https://www.computerworld.dk/rss/all "~Computer World" 📰 
 https://www.version2.dk/rss "~V2 Articles" 📰
 https://hnrss.org/best "~HN Best" 🤖
+https://www.theverge.com/rss/full.xml "~Verge" X
+https://techcrunch.com/feed/ "~TechCrunch" X
+https://www.techmeme.com/feed.xml "~TechMeme" X
 
 Blogs
-https://medium.com/feed/@llama_index "~Llamaindex Blog" 📖
+https://rss.app/feeds/QSjEGegkS9ULH74h.xml "~Llamaindex on Twitter" x
 https://medium.com/feed/@iamleonie "~Leonie Monigatti" 📖
 https://towardsdatascience.com/feed "~Towards Data Science" 📖
 https://world.hey.com/dhh/feed.atom "~DHH blog" 📖
 https://dotfyle.com/this-week-in-neovim/rss.xml "~This week in Neovim" 📖
 https://rajpatil.dev/index.xml "~Raj Patil" 📖
+https://jvns.ca/atom.xml "~Julia Evans" X
+
+Machine Learning
+https://blog.ml.cmu.edu/feed/ "~blog" X
+https://deepmind.com/blog/feed/basic/ "~deepmind" X
+https://jalammar.github.io/feed.xml "~jalammar" X
+https://lilianweng.github.io/lil-log/feed.xml "~lilianweng" X
+https://blog.openai.com/rss/ "~blog" X
+https://thegradient.pub/rss/ "~thegradient" X
+https://www.unite.ai/feed/ "~www" X
+https://evjang.com/feed "~evjang" X
 
 Podcasts
 https://changelog.com/master/feed "~Changelog Master Feed" 🎧

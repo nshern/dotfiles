@@ -64,6 +64,7 @@ return {
         --   },
         -- },
         -- pickers = {}
+        defaults = { find_command = { 'rg', '--files', '--hidden', '--glob', '!.git/*' } },
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
@@ -110,6 +111,12 @@ return {
       vim.keymap.set('n', '<leader>sn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim files' })
+
+      vim.keymap.set('n', '<leader>sh', function()
+        builtin.find_files {
+          find_command = { 'rg', '--files', '--hidden', '--glob', '!.git/*' },
+        }
+      end, { desc = '[S]earch [H]idden files' })
     end,
   },
 }
