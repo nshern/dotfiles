@@ -35,7 +35,7 @@ require('lazy').setup {
   require 'nshern/plugins/dark-notify',
   -- require 'nshern/plugins/flash',
   require 'nshern/plugins/gitsigns',
-  -- require 'nshern/plugins/highlight-colors',
+  require 'nshern/plugins/highlight-colors',
   require 'nshern/plugins/lazygit',
   require 'nshern/plugins/lspconfig',
   require 'nshern/plugins/lualine',
