@@ -18,6 +18,8 @@ return {
       require('mini.surround').setup()
 
       require('mini.pairs').setup()
+      require('mini.jump').setup()
+      require('mini.jump2d').setup()
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
