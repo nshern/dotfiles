@@ -43,6 +43,7 @@ return {
       -- TODO: Make it so that <esc> exists instead of 'q'
       require('mini.files').setup()
       require('mini.jump').setup()
+      require('mini.jump2d').setup()
       require('mini.pairs').setup()
       require('mini.statusline').setup { use_icons = false }
       require('mini.surround').setup()
