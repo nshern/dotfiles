@@ -21,7 +21,7 @@ return {
       require('mini.statusline').setup { use_icons = false }
       require('mini.jump').setup()
       require('mini.diff').setup()
-      -- require('mini.jump2d').setup()
+      require('mini.tabline').setup { show_icons = false }
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
