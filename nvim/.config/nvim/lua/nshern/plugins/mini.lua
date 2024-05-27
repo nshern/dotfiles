@@ -22,6 +22,7 @@ return {
       require('mini.jump').setup()
       require('mini.diff').setup()
       require('mini.tabline').setup { show_icons = false }
+      require('mini.files').setup()
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
