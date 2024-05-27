@@ -35,10 +35,10 @@ require('lazy').setup {
   require 'nshern/plugins/lspconfig',
   require 'nshern/plugins/markdown',
   require 'nshern/plugins/mini',
-  require 'nshern/plugins/telescope',
   require 'nshern/plugins/treesitter',
-  require 'nshern/plugins/which-key',
 
+  -- require 'nshern/plugins/which-key',
+  -- require 'nshern/plugins/telescope',
   -- require 'nshern/plugins/oil',
   -- require 'nshern/plugins/gitsigns',
   -- require 'nshern/plugins/dark-notify',
