@@ -20,4 +20,4 @@ vim.opt.scrolloff = 10
 vim.opt.list = false
 vim.opt.wrap = true
 vim.opt.textwidth = 79
-vim.cmd.colorscheme 'default'
+vim.o.colorcolumn = '80'

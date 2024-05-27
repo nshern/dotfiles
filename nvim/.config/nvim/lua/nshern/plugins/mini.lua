@@ -2,6 +2,7 @@ return {
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
     config = function()
+      vim.cmd.colorscheme 'minicyan'
       -- Better Around/Inside textobjects
       --
       -- Examples:
@@ -30,7 +31,12 @@ return {
 
       require('mini.ai').setup { n_lines = 500 }
       require('mini.pick').setup()
-      require('mini.animate').setup()
+      require('mini.animate').setup {
+        scroll = { enable = false },
+        resize = { enable = false },
+        open = { enable = false },
+        close = { enable = false },
+      }
       require('mini.bracketed').setup()
       require('mini.diff').setup()
 
