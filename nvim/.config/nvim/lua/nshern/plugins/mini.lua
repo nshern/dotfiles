@@ -31,6 +31,7 @@ return {
 
       require('mini.ai').setup { n_lines = 500 }
       require('mini.pick').setup()
+      require('mini.splitjoin').setup()
       require('mini.animate').setup {
         scroll = { enable = false },
         resize = { enable = false },

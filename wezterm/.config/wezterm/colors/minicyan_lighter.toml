@@ -1,0 +1,94 @@
+# Base16 reference
+# base00 = '#ffffff',
+# base01 = '#9badad',
+# base02 = '#778989',
+# base03 = '#546767',
+# base04 = '#353535',
+# base05 = '#262626',
+# base06 = '#181818',
+# base07 = '#040404',
+# base08 = '#402100',
+# base09 = '#855f00',
+# base0A = '#007d3c',
+# base0B = '#003d00',
+# base0C = '#b12985',
+# base0D = '#003fb6',
+# base0E = '#7e0052',
+# base0F = '#006cb4',
+
+[colors]
+background = "#ffffff"
+foreground = "#262626"
+cursor_fg = "#ffffff"
+cursor_bg = "#262626"
+cursor_border = "#ffffff"
+selection_bg = "#778989"
+
+ansi = [
+	"#9badad",
+	"#b12985",
+	"#003d00",
+	"#402100",
+	"#006cb4",
+	"#7e0052",
+	"#003fb6",
+	"#181818",
+]
+brights = [
+	"#778989",
+	"#b12985",
+	"#003d00",
+	"#402100",
+	"#006cb4",
+	"#7e0052",
+	"#003fb6",
+	"#262626",
+]
+
+[colors.tab_bar]
+background = '#ffffff'
+inactive_tab_edge = '#ffffff'
+
+[colors.tab_bar.active_tab]
+bg_color = '#778989'
+fg_color = '#262626'
+intensity = 'Bold'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab]
+bg_color = '#ffffff'
+fg_color = '#262626'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = '#262626'
+fg_color = '#C4c6cd'
+intensity = 'Bold'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab]
+bg_color = '#ffffff'
+fg_color = '#262626'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab_hover]
+bg_color = '#262626'
+fg_color = '#c4c6cd'
+intensity = 'Normal'
+italic = true
+strikethrough = false
+underline = 'None'
+
+[metadata]
+aliases = []
+name = 'minicyan lighter'
