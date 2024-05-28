@@ -1,6 +1,7 @@
 return {
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
+    dependencies = 'nvim-tree/nvim-web-devicons',
     config = function()
       vim.cmd.colorscheme 'minicyan'
       -- Better Around/Inside textobjects
@@ -41,8 +42,7 @@ return {
       require('mini.bracketed').setup()
       require('mini.diff').setup()
 
-      -- TODO: Make it so that <esc> exists instead of 'q'
-      require('mini.files').setup()
+      require('mini.files').setup { mappings = { close = '<ESC>' } }
       require('mini.jump').setup()
       require('mini.jump2d').setup()
       require('mini.pairs').setup()
