@@ -1,26 +1,20 @@
--- NOTE: For a dark theme:
---
--- Sun+		#FFFDFB Sun+ “white”, text in highlighted sections, emphasized borders
--- Sun		#FFF7ED Sun selections, light borders, strongly emphasized content
--- Sun-		#F2E6D4 Optional
--- Sky+		#BEBEBE Emphasized content and emphasized UI text
--- Sky		#8F8F8F Foreground, code, main content colour, text both in editors and UI elements
--- Sky-		#636363 Comments, de-emphasized content
--- Shade+	#3E4044 Foreground UI elements, rulers, indentation guides and similar
--- Shade	#303338 Main background colour
--- Shade-	#24272B “black”, de-emphasized/receded background elements, selections, dark UI elements
---
+-- 'Penumbra' color scheme
+-- Derived from penumbra theme (https://github.com/nealmckee/penumbra?tab=readme-ov-file) and
+-- Derived from base16 (https://github.com/chriskempson/base16) and
+-- mini_palette palette generator
+
 local use_cterm, palette
 
 if vim.o.background == 'dark' then
+  -- NOTE: Penumbra+ is used for dark theme, instead of the balanced dark version as I prefer the increased contrast
   palette = {
 
-    base00 = '#303338', -- Default Background
-    base01 = '#24272b', -- Lighter Background (Used for status bars, line number and folding marks)
+    base00 = '#24272b', -- Default Background
+    base01 = '#181b1f', -- Lighter Background (Used for status bars, line number and folding marks)
     base02 = '#3e4044', -- Selection Background
     base03 = '#636363', -- Comments, Invisibles, Line Highlighting
-    base04 = '#8f8f8f', -- Dark Foreground (Used for status bars)
-    base05 = '#bebebe', -- Default Foreground, Caret, Delimiters, Operators
+    base04 = '#9e9e9e', -- Dark Foreground (Used for status bars)
+    base05 = '#cecece', -- Default Foreground, Caret, Delimiters, Operators
     base06 = '#fff7ed', -- Light Foreground (Not often used)
     base07 = '#fffdfb', -- Light Background (Not often used)
     base08 = '#CA736C', -- Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
@@ -32,6 +26,8 @@ if vim.o.background == 'dark' then
     base0E = '#9481CC', -- Keywords, Storage, Selector, Markup Italic, Diff Changed
     base0F = '#BC73A4', -- Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
   }
+
+  --TODO: Fix cterm values
   use_cterm = {
     base00 = 235,
     base01 = 238,
@@ -52,18 +48,6 @@ if vim.o.background == 'dark' then
   }
 end
 
--- NOTE: For a light theme:
---
--- Shade- “white”, text in highlighted sections, emphasized borders
--- Shade selections, light borders, strongly emphasized content
--- Shade+ optional
--- Sky- emphasized content and emphasized UI text
--- Sky foreground, code, main content colour, text both in editors and UI elements
--- Sky+ comments, de-emphasized content
--- Sun- foreground UI elements, rulers, indentation guides and similar
--- Sun main background colour
--- Sun+ “black”, de-emphasized/receded background elements, selections, dark UI elements
---
 if vim.o.background == 'light' then
   palette = {
 
@@ -84,6 +68,8 @@ if vim.o.background == 'light' then
     base0E = '#9481CC', -- Keywords, Storage, Selector, Markup Italic, Diff Changed
     base0F = '#BC73A4', -- Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
   }
+
+  --TODO: Fix cterm values
   use_cterm = {
     base00 = 252,
     base01 = 248,
@@ -106,5 +92,5 @@ end
 
 if palette then
   require('mini.base16').setup { palette = palette, use_cterm = use_cterm }
-  vim.g.colors_name = 'penumbra'
+  vim.g.colors_name = 'penumbra+'
 end

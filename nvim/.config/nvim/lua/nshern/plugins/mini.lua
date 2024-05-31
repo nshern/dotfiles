@@ -3,7 +3,7 @@ return {
     'echasnovski/mini.nvim',
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = function()
-      vim.cmd.colorscheme 'penumbra+'
+      vim.cmd.colorscheme 'penumbra'
       -- Better Around/Inside textobjects
       --
       -- Examples:
