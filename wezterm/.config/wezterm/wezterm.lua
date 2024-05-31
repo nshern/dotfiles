@@ -14,12 +14,12 @@ end
 
 function scheme_for_appearance(appearance)
 	if appearance:find("Dark") then
-		return "minicyan dark"
+		return "penumbra dark+"
 	else
-		return "minicyan light"
+		return "penumbra light"
 	end
 end
-
+--
 config.check_for_updates = false
 config.color_scheme = scheme_for_appearance(get_appearance())
 
