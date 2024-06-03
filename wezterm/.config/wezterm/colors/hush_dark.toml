@@ -1,0 +1,32 @@
+[colors]
+background = "#000000"
+foreground = "#ffffff"
+cursor_fg = "#000000"
+cursor_bg = "#ffffff"
+cursor_border = "#000000"
+selection_bg = "#c6daff"
+
+ansi = [
+	"#1e1e1e",
+	"#ff5f59",
+	"#44bc44",
+	"#d0bc00",
+	"#2fafff",
+	"#feacd0",
+	"#00d4d0",
+	"#ffffff",
+]
+brights = [
+	"#9f9f9f",
+	"#ff5f59",
+	"#44bc44",
+	"#d0bc00",
+	"#2fafff",
+	"#feacd0",
+	"#00d4d0",
+	"#646464",
+]
+
+[metadata]
+aliases = []
+name = 'hush dark'

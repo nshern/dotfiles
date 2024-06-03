@@ -3,7 +3,6 @@ return {
     'echasnovski/mini.nvim',
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = function()
-      vim.cmd.colorscheme 'penumbra'
       -- Better Around/Inside textobjects
       --
       -- Examples:
@@ -32,6 +31,7 @@ return {
 
       require('mini.ai').setup { n_lines = 500 }
       require('mini.pick').setup()
+      require('mini.colors').setup()
       require('mini.splitjoin').setup()
       require('mini.animate').setup {
         scroll = { enable = false },

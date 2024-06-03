@@ -30,3 +30,5 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.opt.colorcolumn = '80'
   end,
 })
+
+vim.cmd.colorscheme 'hush_dark'
