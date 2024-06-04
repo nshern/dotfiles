@@ -13,6 +13,11 @@ if vim.o.background == 'dark' then
   hi(0, 'Special', { fg = '#e0e2ea' })
   hi(0, 'Statement', { fg = '#e0e2ea' })
   hi(0, 'String', { fg = '#e0e2ea' })
+  hi(0, 'MiniStatuslineModeCommand', { bg = '#e0e2ea', bold = true, fg = '#14161b' })
+  hi(0, 'MiniStatuslineModeInsert', { bg = '#e0e2ea', bold = true, fg = '#14161b' })
+  hi(0, 'MiniStatuslineModeNormal', { bg = '#e0e2ea', bold = true, fg = '#14161b' })
+  hi(0, 'MiniStatuslineModeReplace', { bg = '#e0e2ea', bold = true, fg = '#14161b' })
+  hi(0, 'MiniStatuslineModeVisual', { bg = '#e0e2ea', bold = true, fg = '#14161b' })
 end
 
 if vim.o.background == 'light' then
@@ -23,4 +28,9 @@ if vim.o.background == 'light' then
   hi(0, 'Special', { fg = '#14161b' })
   hi(0, 'Statement', { fg = '#14161b' })
   hi(0, 'String', { fg = '#14161b' })
+  hi(0, 'MiniStatuslineModeCommand', { bg = '#14161b', bold = true, fg = '#e0e2ea' })
+  hi(0, 'MiniStatuslineModeInsert', { bg = '#14161b', bold = true, fg = '#e0e2ea' })
+  hi(0, 'MiniStatuslineModeNormal', { bg = '#14161b', bold = true, fg = '#e0e2ea' })
+  hi(0, 'MiniStatuslineModeReplace', { bg = '#14161b', bold = true, fg = '#e0e2ea' })
+  hi(0, 'MiniStatuslineModeVisual', { bg = '#14161b', bold = true, fg = '#e0e2ea' })
 end
