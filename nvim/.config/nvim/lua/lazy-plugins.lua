@@ -36,6 +36,7 @@ require('lazy').setup {
   require 'nshern/plugins/markdown',
   require 'nshern/plugins/mini',
   require 'nshern/plugins/treesitter',
+  require 'nshern/plugins/catppuccin',
 
   -- require 'nshern/plugins/which-key',
   -- require 'nshern/plugins/telescope',

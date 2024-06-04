@@ -14,9 +14,9 @@ end
 
 function scheme_for_appearance(appearance)
 	if appearance:find("Dark") then
-		return "hush dark"
+		return "nvim dark"
 	else
-		return "hush light"
+		return "nvim light"
 	end
 end
 --
@@ -43,7 +43,7 @@ config.inactive_pane_hsb = {
 config.hide_tab_bar_if_only_one_tab = false
 config.window_decorations = "RESIZE"
 config.font = wezterm.font({
-	family = "Comic Code",
+	family = "Jetbrains Mono",
 	weight = "Medium",
 	harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 })
@@ -52,7 +52,7 @@ config.font_rules = {
 		intensity = "Normal",
 		italic = true,
 		font = wezterm.font({
-			family = "Comic Code",
+			family = "Jetbrains Mono",
 			weight = "Medium",
 			stretch = "Normal",
 			style = "Italic",
@@ -63,7 +63,7 @@ config.font_rules = {
 		intensity = "Bold",
 		italic = false,
 		font = wezterm.font({
-			family = "Comic Code",
+			family = "Jetbrains Mono",
 			weight = "Bold",
 			stretch = "Normal",
 			style = "Normal",

@@ -20,15 +20,15 @@ vim.opt.cursorline = false
 vim.opt.scrolloff = 10
 vim.opt.list = false
 
+vim.cmd.colorscheme 'hush'
+
 -- Options for Markdown
 vim.api.nvim_create_autocmd('FileType', {
   pattern = 'markdown',
   callback = function()
-    vim.opt_local.wrap = true
-    vim.opt_local.linebreak = true
-    vim.opt.textwidth = 79
-    vim.opt.colorcolumn = '80'
+    -- vim.opt_local.wrap = true
+    -- vim.opt_local.linebreak = true
+    -- vim.opt.textwidth = 79
+    -- vim.opt.colorcolumn = '80'
   end,
 })
-
-vim.cmd.colorscheme 'hush_dark'
