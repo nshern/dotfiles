@@ -37,18 +37,6 @@ require('lazy').setup {
   require 'nshern/plugins/mini',
   require 'nshern/plugins/treesitter',
 
-  -- require 'nshern/plugins/which-key',
-  -- require 'nshern/plugins/telescope',
-  -- require 'nshern/plugins/oil',
-  -- require 'nshern/plugins/gitsigns',
-  -- require 'nshern/plugins/dark-notify',
-  -- require 'nshern/plugins/big',
-  -- require 'nshern/plugins/zen',
-  -- require 'nshern/plugins/highlight-colors',
-  -- require 'nshern/plugins/zenbones',
-  -- require 'nshern/plugins/lualine',
-  -- require 'nshern/plugins/todo-comments',
-  -- require 'nshern/plugins/flash',
   --
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
