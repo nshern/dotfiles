@@ -23,8 +23,8 @@ abbr -a fetch fastfetch
 abbr -a gg 'gitui -t mocha.ron'
 abbr -a gs 'git status'
 abbr -a lg lazygit
-abbr -a ll 'exa -alh --sort modified'
-abbr -a ls exa
+#abbr -a ll 'exa -alh --sort modified'
+#abbr -a ls exa
 abbr -a nn '~/.scripts/create-new-note.fish'
 abbr -a notes "/Users/nshern/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault"
 abbr -a nvim-update-plugins '~/.scripts/update-nvim-plugins.fish'
