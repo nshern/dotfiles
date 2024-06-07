@@ -23,16 +23,10 @@ abbr -a fetch fastfetch
 abbr -a gg 'gitui -t mocha.ron'
 abbr -a gs 'git status'
 abbr -a lg lazygit
-#abbr -a ll 'exa -alh --sort modified'
-#abbr -a ls exa
-abbr -a nn '~/.scripts/create-new-note.fish'
 abbr -a notes "/Users/nshern/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault"
-abbr -a nvim-update-plugins '~/.scripts/update-nvim-plugins.fish'
 abbr -a posh 'poetry shell'
 abbr -a py python
 abbr -a todo 'cd ~/notes && nvim todo.md'
-abbr -a tree 'exa --tree'
-abbr -a tt 'watson report -dcG | grep "Total: " | sed "s/Total: //"'
 
 alias today='date +%Y-%m-%d'
 alias vim=nvim
