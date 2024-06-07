@@ -15,6 +15,9 @@ if vim.o.background == 'dark' then
   hi(0, 'Statement', { fg = '#e0e2ea' })
   hi(0, 'String', { fg = '#e0e2ea' })
 
+  -- UI
+  hi(0, 'LineNr', { fg = '#9b9ea4' })
+
   -- Plugins
   hi(0, 'MiniStatuslineModeCommand', { bg = '#e0e2ea', bold = true, fg = '#14161b' })
   hi(0, 'MiniStatuslineModeInsert', { bg = '#e0e2ea', bold = true, fg = '#14161b' })
