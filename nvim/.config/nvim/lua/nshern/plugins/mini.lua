@@ -32,6 +32,7 @@ return {
       require('mini.ai').setup { n_lines = 500 }
       require('mini.git').setup()
       require('mini.pick').setup()
+      require('mini.extra').setup()
       require('mini.notify').setup()
       require('mini.completion').setup()
       require('mini.starter').setup { header = '"Make it work, make it right, make it fast."', query_updaters = 'abcdefghijklmnopqrstuvwxyz0123456789_.' }
