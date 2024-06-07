@@ -26,6 +26,9 @@ vim.keymap.set('n', '<leader>sb', '<CMD>Pick buffers<CR>', { desc = 'Pick buffer
 vim.keymap.set('n', '<leader>sg', '<CMD>Pick grep live<CR>', { desc = 'Pick grep' })
 vim.keymap.set('n', '<leader>sg', '<CMD>Pick grep live<CR>', { desc = 'Pick grep' })
 
+-- Open Mini files for current file location
+vim.keymap.set('n', '<leader>-', '<CMD>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>')
+
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),

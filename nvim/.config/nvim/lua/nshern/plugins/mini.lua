@@ -32,7 +32,7 @@ return {
       require('mini.ai').setup { n_lines = 500 }
       require('mini.pick').setup()
       require('mini.completion').setup()
-      require('mini.starter').setup { header = '"Make it work, make it right, make it fast."' }
+      require('mini.starter').setup { header = '"Make it work, make it right, make it fast."', query_updaters = 'abcdefghijklmnopqrstuvwxyz0123456789_.' }
       require('mini.colors').setup()
       require('mini.splitjoin').setup()
       require('mini.animate').setup {
