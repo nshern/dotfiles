@@ -29,8 +29,8 @@ unbind-key b
 color background         default   default
 color listnormal         default   default
 color listnormal_unread  default   default    
-color listfocus          default   default    bold
-color listfocus_unread   default   default    bold 
+color listfocus          default   default    bold  	underline
+color listfocus_unread   default   default    bold	underline 
 color info               default   black
 color article            default   default
 

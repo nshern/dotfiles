@@ -33,6 +33,8 @@ vim.keymap.set('n', '<S-h>', '<CMD>bp<CR>', { desc = 'Jump to previous buffer' }
 vim.keymap.set('v', '>', '>gv', { noremap = true, silent = true })
 vim.keymap.set('v', '<', '<gv', { noremap = true, silent = true })
 
+vim.keymap.set('n', '<leader>os', '<CMD>lua MiniStarter.open()<CR>', { desc = 'Open starter' })
+
 -- lsp
 vim.keymap.set('n', 'gr', '<CMD>lua vim.lsp.buf.references()<CR>')
 vim.keymap.set('n', 'ca', '<CMD>lua vim.lsp.buf.code_action()<CR>')

@@ -6,6 +6,7 @@ return {
       lspconfig.pyright.setup {}
       lspconfig.lua_ls.setup {}
       lspconfig.marksman.setup {}
+      lspconfig.taplo.setup {}
     end,
   },
 }

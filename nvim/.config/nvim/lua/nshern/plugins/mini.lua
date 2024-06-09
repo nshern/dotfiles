@@ -18,8 +18,8 @@ return {
       local hipatterns = require 'mini.hipatterns'
       hipatterns.setup {
         highlighters = {
-          -- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
-          fixme = { pattern = '%f[%w]()FIXME()%f[%W]', group = 'MiniHipatternsFixme' },
+          -- Highlight standalone 'FIX', 'HACK', 'TODO', 'NOTE'
+          fixme = { pattern = '%f[%w]()FIX()%f[%W]', group = 'MiniHipatternsFixme' },
           hack = { pattern = '%f[%w]()HACK()%f[%W]', group = 'MiniHipatternsHack' },
           todo = { pattern = '%f[%w]()TODO()%f[%W]', group = 'MiniHipatternsTodo' },
           note = { pattern = '%f[%w]()NOTE()%f[%W]', group = 'MiniHipatternsNote' },
@@ -35,7 +35,24 @@ return {
       require('mini.extra').setup()
       require('mini.notify').setup()
       require('mini.completion').setup()
-      require('mini.starter').setup { header = '"Make it work, make it right, make it fast."', query_updaters = 'abcdefghijklmnopqrstuvwxyz0123456789_.' }
+
+      local starter = require 'mini.starter'
+      require('mini.starter').setup {
+        header = '"Make it work, make it right, make it fast."',
+        footer = '',
+        items = {
+          { name = 'Recent Files', action = 'Pick oldfiles', section = '' },
+          { name = 'Open File', action = 'Pick files', section = '' },
+          { name = 'Commits', action = 'Pick git_commits', section = '' },
+          { name = 'Keymaps', action = 'Pick keymaps', section = '' },
+          { name = 'Help', action = 'Pick help', section = '' },
+
+          { name = 'Quit', action = ':qa!', section = '' },
+        },
+
+        query_updaters = 'abcdefghijklmnopqrstuvwxyz0123456789_.',
+      }
+
       require('mini.colors').setup()
       require('mini.splitjoin').setup()
       require('mini.animate').setup {
