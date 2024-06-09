@@ -36,13 +36,12 @@ return {
       require('mini.notify').setup()
       require('mini.completion').setup()
 
-      local starter = require 'mini.starter'
       require('mini.starter').setup {
         header = '"Make it work, make it right, make it fast."',
         footer = '',
         items = {
-          { name = 'Recent Files', action = 'Pick oldfiles', section = '' },
           { name = 'Open File', action = 'Pick files', section = '' },
+          { name = 'Recent Files', action = 'Pick oldfiles', section = '' },
           { name = 'Commits', action = 'Pick git_commits', section = '' },
           { name = 'Keymaps', action = 'Pick keymaps', section = '' },
           { name = 'Help', action = 'Pick help', section = '' },
