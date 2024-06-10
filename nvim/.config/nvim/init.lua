@@ -1,0 +1,5 @@
+require("options")
+require("bootstrap")
+require("plugins")
+require("keymaps")
+require("autocommands")
