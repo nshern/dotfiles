@@ -15,13 +15,13 @@ if vim.o.background == 'dark' then
   hi(0, 'String', { fg = '#e0e2ea' })
 
   -- Plugins
-  hi(0, 'MiniStatuslineModeCommand', { bg = '#a6dbff', bold = true, fg = '#14161b' })
-  hi(0, 'MiniStatuslineModeInsert', { bg = '#b4f6c0', bold = true, fg = '#14161b' })
+  hi(0, 'MiniStatuslineModeCommand', { bg = '#e0e2ea', bold = true, fg = '#14161b' })
+  hi(0, 'MiniStatuslineModeInsert', { bg = '#e0e2ea', bold = true, fg = '#14161b' })
   hi(0, 'MiniStatuslineModeNormal', { bg = '#e0e2ea', bold = true, fg = '#14161b' })
-  hi(0, 'MiniStatuslineModeReplace', { bg = '#fce094', bold = true, fg = '#14161b' })
-  hi(0, 'MiniStatuslineModeVisual', { bg = '#ffcaff', bold = true, fg = '#14161b' })
+  hi(0, 'MiniStatuslineModeReplace', { bg = '#e0e2ea', bold = true, fg = '#14161b' })
+  hi(0, 'MiniStatuslineModeVisual', { bg = '#e0e2ea', bold = true, fg = '#14161b' })
   hi(0, 'MiniJump2dSpot', { bg = '#ffcaff', bold = true, fg = '#14161b' })
-  hi(0, 'MiniStarterItemPrefix', { fg = '#ffcaff', bold = true })
+  hi(0, 'MiniStarterItemPrefix', { fg = '#e0e2ea', bold = true })
 
   -- Markdown
   hi(0, '@markup.heading.1.markdown', { fg = '#a6dbff', bold = true })
@@ -48,7 +48,7 @@ if vim.o.background == 'light' then
   hi(0, 'MiniStatuslineModeReplace', { bg = '#6b5300', bold = true, fg = '#e0e2ea' })
   hi(0, 'MiniStatuslineModeVisual', { bg = '#470045', bold = true, fg = '#e0e2ea' })
   hi(0, 'MiniJump2dSpot', { bg = '#470045', bold = true, fg = '#e0e2ea' })
-  hi(0, 'MiniStarterItemPrefix', { fg = '#470045', bold = true })
+  hi(0, 'MiniStarterItemPrefix', { fg = '#14161b', bold = true })
 
   -- Markdown
   hi(0, '@markup.heading.1.markdown', { fg = '#004c63', bold = true })

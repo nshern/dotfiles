@@ -37,12 +37,12 @@ return {
       require('mini.completion').setup()
 
       require('mini.starter').setup {
-        header = '"Make it work, make it right, make it fast."',
+        header = '-. . --- ...- .. -- ',
         footer = '',
         items = {
           { name = 'Open File', action = 'Pick files', section = '' },
           { name = 'Recent Files', action = 'Pick oldfiles', section = '' },
-          { name = 'Commits', action = 'Pick git_commits', section = '' },
+          { name = 'Config', action = ':e ~/.config/nvim', section = '' },
           { name = 'Keymaps', action = 'Pick keymaps', section = '' },
           { name = 'Help', action = 'Pick help', section = '' },
 
