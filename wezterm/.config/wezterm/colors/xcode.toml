@@ -1,0 +1,34 @@
+[colors]
+foreground = "#d6d6dd"
+background = "#181818"
+cursor_fg = "#181818"
+cursor_bg = "#d6d6dd"
+cursor_border = "#181818"
+selection_bg = "#1F3661"
+
+
+ansi = [
+	'#414453',
+	'#ff8170',
+	'#78c2b3',
+	'#d9c97c',
+	'#4eb0cc',
+	'#ff7ab2',
+	'#b281eb',
+	'#dfdfe0',
+]
+brights = [
+	'#7f8c98',
+	'#ff8170',
+	'#acf2e4',
+	'#ffa14f',
+	'#6bdfff',
+	'#ff7ab2',
+	'#dabaff',
+	'#dfdfe0',
+]
+
+
+[metadata]
+aliases = []
+name = 'xcode'

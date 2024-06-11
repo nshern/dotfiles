@@ -14,7 +14,7 @@ end
 
 function scheme_for_appearance(appearance)
 	if appearance:find("Dark") then
-		return "dark"
+		return "fleet"
 	else
 		return "light"
 	end

@@ -58,6 +58,7 @@ now(function()
 		items = {
 			{ name = "Open File", action = "Pick files", section = "" },
 			{ name = "Recent Files", action = "Pick oldfiles", section = "" },
+			{ name = "Todo", action = ":e ~/notes/todo.md", section = "" },
 			{ name = "Config", action = ":e ~/.config/nvim", section = "" },
 			{ name = "Keymaps", action = "Pick keymaps", section = "" },
 			{ name = "Help", action = "Pick help", section = "" },
@@ -150,6 +151,7 @@ end)
 now(function()
 	add({ source = "stevearc/conform.nvim" })
 	require("conform").setup({
+		notify_on_error = false,
 		format_on_save = {
 			timeout_ms = 500,
 			lsp_fallback = true,
@@ -170,6 +172,8 @@ later(function()
 		source = "neovim/nvim-lspconfig",
 	})
 	require("lspconfig").pyright.setup({})
+	require("lspconfig").marksman.setup({})
+	require("lspconfig").taplo.setup({})
 	require("lspconfig").lua_ls.setup({
 		settings = {
 			Lua = {
