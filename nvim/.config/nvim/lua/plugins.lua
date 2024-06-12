@@ -59,6 +59,8 @@ now(function()
 			{ name = "Open File", action = "Pick files", section = "" },
 			{ name = "Recent Files", action = "Pick oldfiles", section = "" },
 			{ name = "Todo", action = ":e ~/notes/todo.md", section = "" },
+			{ name = "Notes", action = ":e ~/notes/notes.md", section = "" },
+			{ name = "Study", action = ":e ~/notes/study.md", section = "" },
 			{ name = "Config", action = ":e ~/.config/nvim", section = "" },
 			{ name = "Keymaps", action = "Pick keymaps", section = "" },
 			{ name = "Help", action = "Pick help", section = "" },
@@ -158,6 +160,7 @@ now(function()
 		},
 		formatters_by_ft = {
 			lua = { "stylua" },
+			markdown = { "prettier" },
 			python = { "isort", "black" },
 		},
 	})

@@ -14,16 +14,16 @@ end
 
 function scheme_for_appearance(appearance)
 	if appearance:find("Dark") then
-		return "fleet"
+		return "nvim_default_dark"
 	else
-		return "light"
+		return "nvim_default_light"
 	end
 end
 --
 config.check_for_updates = false
 config.color_scheme = scheme_for_appearance(get_appearance())
 
-config.send_composed_key_when_left_alt_is_pressed = true
+-- config.send_composed_key_when_left_alt_is_pressed = true
 config.send_composed_key_when_right_alt_is_pressed = true
 
 -- config.window_background_opacity = 0.8

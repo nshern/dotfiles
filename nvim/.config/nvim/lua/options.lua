@@ -20,4 +20,4 @@ vim.opt.cursorline = false
 vim.opt.scrolloff = 10
 vim.opt.list = false
 
-vim.cmd("colorscheme hush")
+vim.cmd("colorscheme custom")
