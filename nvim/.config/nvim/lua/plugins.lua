@@ -147,6 +147,13 @@ now(function()
 			{ mode = "n", keys = "z" },
 			{ mode = "x", keys = "z" },
 		},
+		clues = {
+			{ mode = "n", keys = "<Leader>b", desc = "+Buffers" },
+			{ mode = "n", keys = "<Leader>l", desc = "+LSP" },
+			{ mode = "n", keys = "<Leader>o", desc = "+Open" },
+			{ mode = "n", keys = "<Leader>s", desc = "+Search" },
+			{ mode = "n", keys = "<Leader>t", desc = "+Theme" },
+		},
 	})
 end)
 
@@ -170,7 +177,7 @@ now(function()
 	add({ source = "nvim-tree/nvim-web-devicons" })
 end)
 
-later(function()
+now(function()
 	add({
 		source = "neovim/nvim-lspconfig",
 	})

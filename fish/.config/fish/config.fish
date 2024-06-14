@@ -15,6 +15,7 @@ bind -M insert \cf accept-autosuggestion
 bind -M insert \cr forward-word
 
 # Abbreviations
+abbr !! --position anywhere --function last_history_item
 abbr -a cls clear
 abbr -a clx 'clx -n'
 abbr -a ddgr "ddgr --reg "da-dk" --reverse"

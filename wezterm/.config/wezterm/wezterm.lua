@@ -23,7 +23,7 @@ end
 config.check_for_updates = false
 config.color_scheme = scheme_for_appearance(get_appearance())
 
--- config.send_composed_key_when_left_alt_is_pressed = true
+config.send_composed_key_when_left_alt_is_pressed = true
 config.send_composed_key_when_right_alt_is_pressed = true
 
 -- config.window_background_opacity = 0.8
