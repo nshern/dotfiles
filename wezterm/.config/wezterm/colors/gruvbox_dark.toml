@@ -1,9 +1,9 @@
 [colors]
-foreground = "#ffffff"
-background = "#000000"
-cursor_fg = "#000000"
-cursor_bg = "#ffffff"
-cursor_border = "#000000"
+foreground = "#E0E2EA"
+background = "#14161b"
+cursor_fg = "#14161b"
+cursor_bg = "#E0E2EA"
+cursor_border = "#14161b"
 selection_bg = "#4f5258"
 
 ansi = [
@@ -28,19 +28,19 @@ brights = [
 ]
 
 [colors.tab_bar]
-background = '#000000'
-inactive_tab_edge = '#000000'
+background = '#14161b'
+inactive_tab_edge = '#14161b'
 
 [colors.tab_bar.active_tab]
-fg_color = '#000000'
-bg_color = '#ffffff'
+fg_color = '#14161b'
+bg_color = '#E0E2EA'
 intensity = 'Bold'
 italic = false
 strikethrough = false
 underline = 'None'
 
 [colors.tab_bar.inactive_tab]
-bg_color = '#000000'
+bg_color = '#14161b'
 fg_color = '#C4C6CD'
 intensity = 'Normal'
 italic = false
@@ -48,15 +48,15 @@ strikethrough = false
 underline = 'None'
 
 [colors.tab_bar.inactive_tab_hover]
-bg_color = '#ffffff'
-fg_color = '#000000'
+bg_color = '#E0E2EA'
+fg_color = '#14161b'
 intensity = 'Bold'
 italic = false
 strikethrough = false
 underline = 'None'
 
 [colors.tab_bar.new_tab]
-bg_color = '#000000'
+bg_color = '#14161b'
 fg_color = '#c4c6cd'
 intensity = 'Normal'
 italic = false
@@ -64,7 +64,7 @@ strikethrough = false
 underline = 'None'
 
 [colors.tab_bar.new_tab_hover]
-bg_color = '#000000'
+bg_color = '#14161b'
 fg_color = '#c4c6cd'
 intensity = 'Normal'
 italic = true
@@ -73,4 +73,4 @@ underline = 'None'
 
 [metadata]
 aliases = []
-name = 'dark'
+name = 'nvim_default_dark'

@@ -25,7 +25,6 @@ later(function()
 			todo = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
 			note = { pattern = "%f[%w]()NOTE()%f[%W]", group = "MiniHipatternsNote" },
 
-			-- Highlight hex color strings (`#rrggbb`) using that color
 			hex_color = hipatterns.gen_highlighter.hex_color(),
 		},
 	})
@@ -48,7 +47,17 @@ later(function()
 end)
 
 later(function()
-	require("mini.completion").setup()
+	require("mini.completion").setup({
+		mappings = {
+			force_twostep = "<C-t>", -- Force two-step completion
+			force_fallback = "<C-f>", -- Force fallback completion
+		},
+
+		window = {
+			info = { border = "rounded" },
+			signature = { border = "rounded" },
+		},
+	})
 end)
 
 now(function()
@@ -58,10 +67,8 @@ now(function()
 		items = {
 			{ name = "Open File", action = "Pick files", section = "" },
 			{ name = "Recent Files", action = "Pick oldfiles", section = "" },
-			{ name = "Todo", action = ":e ~/notes/todo.md", section = "" },
-			{ name = "Notes", action = ":e ~/notes/notes.md", section = "" },
-			{ name = "Study", action = ":e ~/notes/study.md", section = "" },
-			{ name = "Config", action = ":e ~/.config/nvim", section = "" },
+			{ name = "Config", action = ":cd ~/.config/nvim/ | e init.lua | Pick files", section = "" },
+			{ name = "Notes", action = ":cd ~/Dropbox/notes/ | e work.md", section = "" },
 			{ name = "Keymaps", action = "Pick keymaps", section = "" },
 			{ name = "Help", action = "Pick help", section = "" },
 
@@ -79,6 +86,10 @@ later(function()
 	require("mini.splitjoin").setup()
 end)
 
+now(function()
+	require("mini.icons").setup()
+end)
+
 later(function()
 	require("mini.bracketed").setup()
 end)
@@ -90,9 +101,10 @@ later(function()
 		},
 	})
 end)
-later(function()
+now(function()
 	require("mini.files").setup()
 end)
+
 later(function()
 	require("mini.jump").setup()
 end)
@@ -113,7 +125,8 @@ later(function()
 end)
 
 now(function()
-	require("mini.clue").setup({
+	local miniclue = require("mini.clue")
+	miniclue.setup({
 		triggers = {
 			-- Leader triggers
 			{ mode = "n", keys = "<Leader>" },
@@ -148,11 +161,18 @@ now(function()
 			{ mode = "x", keys = "z" },
 		},
 		clues = {
+			miniclue.gen_clues.builtin_completion(),
+			miniclue.gen_clues.g(),
+			miniclue.gen_clues.marks(),
+			miniclue.gen_clues.registers(),
+			miniclue.gen_clues.windows(),
+			miniclue.gen_clues.z(),
 			{ mode = "n", keys = "<Leader>b", desc = "+Buffers" },
 			{ mode = "n", keys = "<Leader>l", desc = "+LSP" },
 			{ mode = "n", keys = "<Leader>o", desc = "+Open" },
-			{ mode = "n", keys = "<Leader>s", desc = "+Search" },
+			{ mode = "n", keys = "<Leader>s", desc = "+Pick" },
 			{ mode = "n", keys = "<Leader>t", desc = "+Theme" },
+			{ mode = "n", keys = "<Leader>z", desc = "+Spell" },
 		},
 	})
 end)
@@ -174,13 +194,10 @@ now(function()
 end)
 
 now(function()
-	add({ source = "nvim-tree/nvim-web-devicons" })
-end)
-
-now(function()
 	add({
 		source = "neovim/nvim-lspconfig",
 	})
+	-- require("lspconfig").pyright.setup({})
 	require("lspconfig").pyright.setup({})
 	require("lspconfig").marksman.setup({})
 	require("lspconfig").taplo.setup({})
@@ -193,4 +210,24 @@ now(function()
 			},
 		},
 	})
+end)
+
+now(function()
+	add({ source = "nvim-treesitter/nvim-treesitter" })
+	require("nvim-treesitter.configs").setup({
+		ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
+		auto_install = true,
+		highlight = {
+			enable = true,
+		},
+	})
+end)
+now(function()
+	add({ source = "catppuccin/nvim" })
+
+	require("catppuccin").setup({
+
+		-- transparent_background = true,
+	})
+	-- vim.cmd.colorscheme("catppuccin")
 end)

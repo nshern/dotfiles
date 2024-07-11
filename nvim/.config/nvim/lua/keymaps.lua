@@ -41,3 +41,7 @@ vim.keymap.set("n", "ca", "<CMD>lua vim.lsp.buf.code_action()<CR>")
 vim.keymap.set("n", "re", "<CMD>lua vim.lsp.buf.rename()<CR>")
 vim.keymap.set("n", "gD", "<CMD>lua vim.lsp.buf.declaration()<CR>")
 vim.keymap.set("n", "gd", "<CMD>lua vim.lsp.buf.definition()<CR>")
+vim.keymap.set("n", "gl", "<CMDcd %p:h<CR>")
+
+-- spell
+-- vim.keymap.set("n", "<leader>ze", "<CMD>")

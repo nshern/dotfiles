@@ -3,9 +3,11 @@ News
 https://www.berlingske.dk/content/3/rss "~Berlingske Nyheder" 📰 
 https://www.version2.dk/rss "~V2 Articles" 📰
 https://hnrss.org/best "~HN Best" 🤖
+https://hnrss.org/frontpage "~HN Front Page" 🤖
 https://www.theverge.com/rss/full.xml "~Verge" X
 https://techcrunch.com/feed/ "~TechCrunch" X
 https://kill-the-newsletter.com/feeds/bw23s1ml9eiij5p704qo.xml "~The Batch" X
+https://hnrss.org/favorites?id=nshern "~Faves" X
 
 Blogs
 https://rss.app/feeds/QSjEGegkS9ULH74h.xml "~Llamaindex on Twitter" x
@@ -56,7 +58,6 @@ https://youtube.com/feeds/videos.xml?channel_id=UCkbwOi_U5CBkevtlVhuzWnA "~Backe
 https://youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA "~Fireship" 📺
 
 Bookmarked
-https://hnrss.org/favorites?id=nshern "~HN Faves" 🤖
 https://youtube.com/feeds/videos.xml?playlist_id=PLPiA3sec6llZDwZa58aHTKZw4tOa2X4lQ&si=L6d2QejrONWJm5Re "~Saved" 📺
 https://www.reddit.com/user/yes_rowntree/saved.rss?feed=d4db71e3669813a33e4c82312a203f7c76ab57a7&user=yes_rowntree "~Saved reddit posts" x
 
