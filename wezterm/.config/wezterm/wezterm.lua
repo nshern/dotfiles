@@ -28,7 +28,6 @@ config.send_composed_key_when_right_alt_is_pressed = true
 
 config.window_background_opacity = 0.8
 config.default_cursor_style = "SteadyBlock"
-config.cursor_blink_rate = 400
 -- config.macos_window_background_blur = 5
 config.native_macos_fullscreen_mode = true
 config.adjust_window_size_when_changing_font_size = false

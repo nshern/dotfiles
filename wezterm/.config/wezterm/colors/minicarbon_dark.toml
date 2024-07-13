@@ -1,0 +1,33 @@
+[colors]
+foreground = "#e5e0df"
+background = "#000000"
+cursor_fg = "#000000"
+cursor_bg = "#e5e0df"
+cursor_border = "#000000"
+selection_bg = "#3c3838"
+
+ansi = [
+    "#000000",
+    "#ff8389",
+    "#42be65",
+    "#d2a106",
+    "#78a9ff",
+    "#be95ff",
+    "#33b1ff",
+    "#e5e0df",
+]
+brights = [
+    "#8f8b8b",
+    "#ff8389",
+    "#42be65",
+    "#d2a106",
+    "#78a9ff",
+    "#be95ff",
+    "#33b1ff",
+    "#ffffff",
+]
+
+
+[metadata]
+aliases = []
+name = 'minicarbon_dark'

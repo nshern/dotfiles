@@ -222,12 +222,3 @@ now(function()
 		},
 	})
 end)
-now(function()
-	add({ source = "catppuccin/nvim" })
-
-	require("catppuccin").setup({
-
-		-- transparent_background = true,
-	})
-	-- vim.cmd.colorscheme("catppuccin")
-end)
