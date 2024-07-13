@@ -7,24 +7,24 @@ cursor_border = "#14161b"
 selection_bg = "#4f5258"
 
 ansi = [
-	"#2c2e33",
-	"#E5ADB9",
-	"#A2DFC0",
-	"#E3CA85",
-	"#95C5E5",
-	"#E5B6E6",
-	"#7EDFDE",
-	"#C4C6CD",
+    "#2c2e33",
+    "#E5ADB9",
+    "#A2DFC0",
+    "#E3CA85",
+    "#95C5E5",
+    "#E5B6E6",
+    "#7EDFDE",
+    "#C4C6CD",
 ]
 brights = [
-	"#4f5258",
-	"#FFC0B9",
-	"#B4F6C0",
-	"#FCE094",
-	"#A6DBFF",
-	"#FFCAFF",
-	"#8CF8F7",
-	"#9b9ea4",
+    "#4f5258",
+    "#FFC0B9",
+    "#B4F6C0",
+    "#FCE094",
+    "#A6DBFF",
+    "#FFCAFF",
+    "#8CF8F7",
+    "#9b9ea4",
 ]
 
 [colors.tab_bar]
@@ -73,4 +73,4 @@ underline = 'None'
 
 [metadata]
 aliases = []
-name = 'nvim_default_dark'
+name = 'dark'
