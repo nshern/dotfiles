@@ -42,7 +42,6 @@ if vim.o.background == "dark" then
 	hi(0, "MiniPickBorder", { fg = NvimLightGrey2 })
 	hi(0, "MiniPickMatchCurrent", { bg = NvimDarkGrey4 })
 	hi(0, "MiniPickNormal", { fg = NvimLightGrey2 })
-	hi(0, "MiniStarterItemPrefix", { fg = NvimLightGrey2, bold = true })
 	hi(0, "MiniStatuslineModeNormal", { bg = NvimLightGrey2, bold = true, fg = NvimDarkGrey2 })
 	hi(0, "Normal", { bg = NONE, fg = NvimLightGrey2 }) -- Make theme transparent
 end
@@ -62,7 +61,6 @@ if vim.o.background == "light" then
 	hi(0, "MiniPickBorder", { fg = "NvimDarkGrey2" })
 	hi(0, "MiniPickMatchCurrent", { bg = "NvimLightGrey4" })
 	hi(0, "MiniPickNormal", { fg = "NvimDarkGrey2" })
-	hi(0, "MiniStarterItemPrefix", { fg = "NvimDarkGrey2", bold = true })
 	hi(0, "MiniStatuslineModeNormal", { bg = "NvimDarkGrey2", bold = true, fg = "NvimLightGrey2" })
 	hi(0, "Normal", { bg = NONE, fg = "NvimDarkGrey2" }) -- Make theme transparent
 end

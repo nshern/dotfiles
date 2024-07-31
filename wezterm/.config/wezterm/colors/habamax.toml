@@ -1,0 +1,78 @@
+[colors]
+foreground = "#bcbcbc"
+background = "#1c1c1c"
+cursor_fg = "#1c1c1c"
+cursor_bg = "#bcbcbc"
+cursor_border = "#1c1c1c"
+selection_bg = "#87afaf"
+selection_fg = "#1c1c1c"
+
+ansi = [
+    "#1c1c1c",
+    "#d75f5f",
+    "#87af87",
+    "#afaf87",
+    "#5f87af",
+    "#af87af",
+    "#5f8787",
+    "#9e9e9e",
+]
+
+brights = [
+    "#767676",
+    "#d7875f",
+    "#afd7af",
+    "#d7d787",
+    "#87afd7",
+    "#d7afd7",
+    "#87afaf",
+    "#bcbcbc",
+]
+
+[colors.tab_bar]
+background = '#1c1c1c'
+inactive_tab_edge = '#1c1c1c'
+
+[colors.tab_bar.active_tab]
+fg_color = '#1c1c1c'
+bg_color = '#bcbcbc'
+intensity = 'Bold'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab]
+bg_color = '#1c1c1c'
+fg_color = '#C4C6CD'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = '#bcbcbc'
+fg_color = '#1c1c1c'
+intensity = 'Bold'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab]
+bg_color = '#1c1c1c'
+fg_color = '#c4c6cd'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab_hover]
+bg_color = '#1c1c1c'
+fg_color = '#c4c6cd'
+intensity = 'Normal'
+italic = true
+strikethrough = false
+underline = 'None'
+
+[metadata]
+aliases = []
+name = 'habamax'

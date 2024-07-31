@@ -62,18 +62,11 @@ end)
 
 now(function()
 	require("mini.starter").setup({
-		header = "-. . --- ...- .. -- ",
+		header = "",
 		footer = "",
-		items = {
-			{ name = "Open File", action = "Pick files", section = "" },
-			{ name = "Recent Files", action = "Pick oldfiles", section = "" },
-			{ name = "Config", action = ":cd ~/.config/nvim/ | e init.lua | Pick files", section = "" },
-			{ name = "Notes", action = ":cd ~/Dropbox/notes/ | e work.md", section = "" },
-			{ name = "Keymaps", action = "Pick keymaps", section = "" },
-			{ name = "Help", action = "Pick help", section = "" },
-
-			{ name = "Quit", action = ":qa!", section = "" },
-		},
+		-- items = {
+		-- 	{ name = "Quit", action = ":qa!", section = "" },
+		-- },
 
 		query_updaters = "abcdefghijklmnopqrstuvwxyz0123456789_.",
 	})
@@ -171,8 +164,8 @@ now(function()
 			{ mode = "n", keys = "<Leader>l", desc = "+LSP" },
 			{ mode = "n", keys = "<Leader>o", desc = "+Open" },
 			{ mode = "n", keys = "<Leader>s", desc = "+Pick" },
-			{ mode = "n", keys = "<Leader>t", desc = "+Theme" },
 			{ mode = "n", keys = "<Leader>z", desc = "+Spell" },
+			{ mode = "n", keys = "<Leader>d", desc = "+Deps" },
 		},
 	})
 end)
@@ -222,3 +215,6 @@ now(function()
 		},
 	})
 end)
+-- now(function()
+-- 	add({ source = "Mofiqul/vscode.nvim" })
+-- end)

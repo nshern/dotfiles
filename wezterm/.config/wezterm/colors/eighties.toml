@@ -1,0 +1,76 @@
+[colors]
+foreground = "#d3d0c8"
+background = "#2d2d2d"
+cursor_fg = "#2d2d2d"
+cursor_bg = "#d3d0c8"
+cursor_border = "#2d2d2d"
+selection_bg = "#515151"
+
+ansi = [
+    "#2d2d2d",
+    "#f2777a",
+    "#99cc99",
+    "#ffcc66",
+    "#6699cc",
+    "#cc99cc",
+    "#66cccc",
+    "#d3d0c8",
+]
+brights = [
+    "#747369",
+    "#f2777a",
+    "#99cc99",
+    "#ffcc66",
+    "#6699cc",
+    "#cc99cc",
+    "#66cccc",
+    "#f2f0ec",
+]
+
+[colors.tab_bar]
+background = '#2d2d2d'
+inactive_tab_edge = '#2d2d2d'
+
+[colors.tab_bar.active_tab]
+fg_color = '#2d2d2d'
+bg_color = '#d3d0c8'
+intensity = 'Bold'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab]
+bg_color = '#2d2d2d'
+fg_color = '#C4C6CD'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = '#d3d0c8'
+fg_color = '#2d2d2d'
+intensity = 'Bold'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab]
+bg_color = '#2d2d2d'
+fg_color = '#c4c6cd'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab_hover]
+bg_color = '#2d2d2d'
+fg_color = '#c4c6cd'
+intensity = 'Normal'
+italic = true
+strikethrough = false
+underline = 'None'
+
+[metadata]
+aliases = []
+name = 'eighties'

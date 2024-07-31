@@ -14,16 +14,18 @@ end
 
 function scheme_for_appearance(appearance)
 	if appearance:find("Dark") then
-		return "dark"
+		return "minicarbon_dark"
+		-- return "dark"
 	else
-		return "light"
+		-- return "light"
+		return "minicarbon_light"
 	end
 end
 --
 config.check_for_updates = false
 config.color_scheme = scheme_for_appearance(get_appearance())
 
-config.send_composed_key_when_left_alt_is_pressed = true
+-- config.send_composed_key_when_left_alt_is_pressed = true
 config.send_composed_key_when_right_alt_is_pressed = true
 
 -- config.window_background_opacity = 0.8
@@ -52,7 +54,7 @@ config.font_rules = {
 		italic = true,
 		font = wezterm.font({
 			family = "Berkeley Mono",
-			weight = "Medium",
+			weight = "Regular",
 			stretch = "Normal",
 			style = "Italic",
 			harfbuzz_features = { "calt=0", "clig=0", "liga=0" },

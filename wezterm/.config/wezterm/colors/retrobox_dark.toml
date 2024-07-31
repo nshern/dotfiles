@@ -1,0 +1,77 @@
+[colors]
+foreground = "#ebdbb2"
+background = "#1c1c1c"
+cursor_fg = "#1c1c1c"
+cursor_bg = "#ebdbb2"
+cursor_border = "#1c1c1c"
+selection_bg = "#83a598"
+
+ansi = [
+    "#1c1c1c",
+    "#cc241d",
+    "#98971a",
+    "#d79921",
+    "#458588",
+    "#b16286",
+    "#689d6a",
+    "#a89984",
+]
+
+brights = [
+    "#928374",
+    "#fb4934",
+    "#b8bb26",
+    "#fabd2f",
+    "#83a598",
+    "#d3869b",
+    "#8ec07c",
+    "#ebdbb2",
+]
+
+[colors.tab_bar]
+background = '#1c1c1c'
+inactive_tab_edge = '#1c1c1c'
+
+[colors.tab_bar.active_tab]
+fg_color = '#1c1c1c'
+bg_color = '#ebdbb2'
+intensity = 'Bold'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab]
+bg_color = '#1c1c1c'
+fg_color = '#C4C6CD'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = '#ebdbb2'
+fg_color = '#1c1c1c'
+intensity = 'Bold'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab]
+bg_color = '#1c1c1c'
+fg_color = '#c4c6cd'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab_hover]
+bg_color = '#1c1c1c'
+fg_color = '#c4c6cd'
+intensity = 'Normal'
+italic = true
+strikethrough = false
+underline = 'None'
+
+[metadata]
+aliases = []
+name = 'retrobox_dark'

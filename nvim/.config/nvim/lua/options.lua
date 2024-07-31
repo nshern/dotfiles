@@ -25,4 +25,4 @@ vim.opt.timeoutlen = 300
 vim.opt.undofile = true
 vim.opt.updatetime = 250
 
-vim.cmd.colorscheme("custom")
+vim.cmd.colorscheme("minicarbon")
