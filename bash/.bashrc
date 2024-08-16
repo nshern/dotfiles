@@ -11,6 +11,8 @@ export EDITOR='nvim'
 
 source "/Users/nshern/env.sh"
 
+alias todo='vim ~/dropbox/notes/todo.md'
+alias work='vim ~/dropbox/notes/work.md'
 alias bm='python ~/.scripts/bookmark.py'
 alias dev="cd ~/Developer/"
 alias lg="lazygit"
@@ -27,5 +29,7 @@ alias notes='cd ~/Dropbox/notes/'
 alias glol='git log --oneline'
 alias brewup='brew update && brew upgrade'
 
+eval "$(fzf --bash)"
 
 PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1='\[\e[94m\]\w\n\[\e[96m\]$\[\e[0m\] \[\e[95;1m\]${PS1_CMD1}\[\e[0m\] '
+# PS1='\[\e[94m\]\w\n\[\e[96m\]$\[\e[0m\] \[\e[95;1m\]${PS1_CMD1}\[\e[0m\] '

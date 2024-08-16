@@ -30,6 +30,10 @@ later(function()
 	})
 end)
 
+now(function()
+	require("mini.indentscope").setup()
+end)
+
 later(function()
 	require("mini.git").setup()
 end)
@@ -42,8 +46,9 @@ later(function()
 	require("mini.extra").setup()
 end)
 
-later(function()
+now(function()
 	require("mini.notify").setup()
+	vim.notify = require("mini.notify").make_notify()
 end)
 
 later(function()
@@ -166,6 +171,7 @@ now(function()
 			{ mode = "n", keys = "<Leader>s", desc = "+Pick" },
 			{ mode = "n", keys = "<Leader>z", desc = "+Spell" },
 			{ mode = "n", keys = "<Leader>d", desc = "+Deps" },
+			{ mode = "n", keys = "<Leader>r", desc = "+Rename" },
 		},
 	})
 end)
@@ -190,7 +196,6 @@ now(function()
 	add({
 		source = "neovim/nvim-lspconfig",
 	})
-	-- require("lspconfig").pyright.setup({})
 	require("lspconfig").pyright.setup({})
 	require("lspconfig").marksman.setup({})
 	require("lspconfig").taplo.setup({})
@@ -210,11 +215,18 @@ now(function()
 	require("nvim-treesitter.configs").setup({
 		ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
 		auto_install = true,
+		indent = {
+			-- enable = false,
+			disable = { "python" },
+		},
 		highlight = {
 			enable = true,
 		},
 	})
 end)
+--
 -- now(function()
--- 	add({ source = "Mofiqul/vscode.nvim" })
+-- 	add({ source = "nshern/carbonized.nvim" })
+-- 	vim.cmd.colorscheme("carbonized")
+-- 	vim.api.nvim_set_hl(0, "Identifier", { fg = "#82cfff" })
 -- end)

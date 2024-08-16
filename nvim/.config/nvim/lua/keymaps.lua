@@ -5,6 +5,7 @@ vim.keymap.set("n", "<leader>[", vim.diagnostic.open_float, { desc = "Show diagn
 vim.keymap.set("n", "<leader>]", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
 vim.keymap.set("n", "<leader>bd", "<CMD>bd<CR>", { desc = "Delete current buffer" })
+vim.keymap.set("n", "<leader>ba", "<CMD>bufdo bd<CR>", { desc = "Delete all buffers" })
 
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
@@ -43,12 +44,9 @@ vim.keymap.set("n", "gD", "<CMD>lua vim.lsp.buf.declaration()<CR>")
 vim.keymap.set("n", "gd", "<CMD>lua vim.lsp.buf.definition()<CR>")
 vim.keymap.set("n", "gl", "<CMDcd %p:h<CR>")
 
-vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Half page up" })
-vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Half page down" })
+-- vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Half page up" })
+-- vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Half page down" })
 
 vim.keymap.set("n", "<leader>du", "<CMD>DepsUpdate<CR>", { desc = "Deps update" })
 vim.keymap.set("n", "<leader>dc", "<CMD>DepsClean<CR>", { desc = "Deps clean" })
 vim.keymap.set("n", "<leader>da", "<CMD>DepsAdd<CR>", { desc = "Deps add" })
-
--- spell
--- vim.keymap.set("n", "<leader>ze", "<CMD>")
