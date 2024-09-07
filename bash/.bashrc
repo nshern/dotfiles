@@ -11,7 +11,12 @@ export EDITOR='nvim'
 
 source "/Users/nshern/env.sh"
 
+HISTSIZE=-1
+HISTFILESIZE=-1
+
+alias ghme='gh issue list --assignee @me'
 alias todo='vim ~/dropbox/notes/todo.md'
+alias cheatsheet='vim ~/dropbox/notes/study/cheatsheet.md'
 alias work='vim ~/dropbox/notes/work.md'
 alias bm='python ~/.scripts/bookmark.py'
 alias dev="cd ~/Developer/"

@@ -14,9 +14,9 @@ end
 
 function scheme_for_appearance(appearance)
 	if appearance:find("Dark") then
-		-- return "dark"
+		return "carbonized_dark"
 	else
-		-- return "light"
+		return "carbonized_light"
 	end
 end
 --
