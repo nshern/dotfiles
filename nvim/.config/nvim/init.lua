@@ -19,10 +19,6 @@ require("mini.deps").setup({ path = { package = path_package } })
 --PLUGINS--
 local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
 now(function()
-	-- add({ source = "catppuccin/nvim" })
-	-- require("catppuccin").setup()
-	-- vim.cmd.colorscheme("catppuccin")
-
 	require("mini.icons").setup()
 	require("mini.files").setup()
 	add({ source = "nvim-treesitter/nvim-treesitter" })
@@ -62,6 +58,9 @@ later(function()
 	add({ source = "nshern/carbonized.nvim" })
 	require("carbonized").setup({ transparent_background = false })
 	vim.cmd.colorscheme("carbonized")
+
+	-- add({ source = "williamboman/mason.nvim" })
+	-- require("mason").setup()
 
 	require("mini.extra").setup()
 	require("mini.surround").setup()
@@ -118,6 +117,7 @@ end)
 vim.g.mapleader = " "
 vim.opt.breakindent = true
 vim.opt.clipboard = "unnamedplus"
+vim.opt.foldmethod = "marker"
 vim.opt.hlsearch = true
 vim.opt.ignorecase = true
 vim.opt.inccommand = "split"
@@ -127,7 +127,7 @@ vim.opt.relativenumber = true
 vim.opt.scrolloff = 3
 vim.opt.showmode = false
 vim.opt.signcolumn = "yes"
-vim.opt.spell = true
+vim.opt.undofile = true
 vim.opt.updatetime = 200
 
 --KEYMAPS--
@@ -154,6 +154,7 @@ vim.keymap.set("n", "grr", "<CMD>lua vim.lsp.buf.references()<CR>")
 vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 
+-- FUNCTIONS
 function ToggleBackground()
 	if vim.opt.background == "light" then
 		vim.opt.background = "dark"
@@ -161,3 +162,11 @@ function ToggleBackground()
 		vim.opt.background = "light"
 	end
 end
+
+-- AUTOCOMMANDS
+vim.cmd([[
+augroup MarkdownSpell
+autocmd!                                                         
+autocmd FileType markdown setlocal spell                         
+augroup END
+]])
