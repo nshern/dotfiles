@@ -14,25 +14,24 @@ source "/Users/nshern/env.sh"
 HISTSIZE=-1
 HISTFILESIZE=-1
 
-alias ghme='gh issue list --assignee @me'
-alias todo='vim ~/dropbox/notes/todo.md'
-alias cheatsheet='vim ~/dropbox/notes/study/cheatsheet.md'
-alias work='vim ~/dropbox/notes/work.md'
 alias bm='python ~/.scripts/bookmark.py'
+alias brewup='brew update && brew upgrade'
+alias cheatsheet='vim ~/dropbox/notes/study/cheatsheet.md'
 alias dev="cd ~/Developer/"
+alias ff='firefox'
+alias ghme='gh issue list --assignee @me'
+alias glol='git log --oneline'
 alias lg="lazygit"
 alias ll="ls -l -t -r --color=auto"
 alias ls="ls --color=auto"
 alias nb="newsboat"
-alias nh='cd ~/Developer/nh_chatbot'
+alias notes='cd ~/Dropbox/notes/'
 alias py="python"
+alias todo='vim ~/dropbox/notes/todo.md'
 alias trans='python ~/.scripts/wezterm-transparent.py'
 alias venv='source .venv/bin/activate'
 alias vim='nvim'
-alias ff='fastfetch'
-alias notes='cd ~/Dropbox/notes/'
-alias glol='git log --oneline'
-alias brewup='brew update && brew upgrade'
+alias work='vim ~/dropbox/notes/work.md'
 
 eval "$(fzf --bash)"
 

@@ -129,6 +129,7 @@ vim.opt.showmode = false
 vim.opt.signcolumn = "yes"
 vim.opt.undofile = true
 vim.opt.updatetime = 200
+vim.opt.spelllang = { "en", "da" }
 
 --KEYMAPS--
 vim.keymap.set("n", "-", "<CMD>lua MiniFiles.open()<CR>", { desc = "Open parent directory" })
@@ -138,6 +139,7 @@ vim.keymap.set("n", "<S-l>", "<CMD>bn<CR>", { desc = "Jump to next buffer" })
 vim.keymap.set("n", "<leader>-", "<CMD>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>")
 vim.keymap.set("n", "<leader>ba", "<CMD>bufdo bd<CR>", { desc = "Delete all buffers" })
 vim.keymap.set("n", "<leader>bd", "<CMD>bd<CR>", { desc = "Delete current buffer" })
+vim.keymap.set("n", "<leader>d", "<CMD>lua vim.diagnostic.open_float()<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>dc", "<CMD>DepsClean<CR>", { desc = "Deps clean" })
 vim.keymap.set("n", "<leader>du", "<CMD>DepsUpdate<CR>", { desc = "Deps Update" })
 vim.keymap.set("n", "<leader>sd", "<CMD>Pick diagnostic<CR>", { desc = "Pick diagnostic" })
@@ -148,9 +150,9 @@ vim.keymap.set("n", "<leader>tb", [[:lua ToggleBackground()<CR>]], { noremap = t
 vim.keymap.set("n", "gD", "<CMD>lua vim.lsp.buf.declaration()<CR>")
 vim.keymap.set("n", "gd", "<CMD>lua vim.lsp.buf.definition()<CR>")
 vim.keymap.set("n", "gl", "<CMDcd %p:h<CR>")
+vim.keymap.set("n", "gr", "<CMD>lua vim.lsp.buf.references()<CR>")
 vim.keymap.set("n", "gra", "<CMD>lua vim.lsp.buf.code_action()<CR>")
 vim.keymap.set("n", "gre", "<CMD>lua vim.lsp.buf.rename()<CR>")
-vim.keymap.set("n", "grr", "<CMD>lua vim.lsp.buf.references()<CR>")
 vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 
@@ -166,7 +168,7 @@ end
 -- AUTOCOMMANDS
 vim.cmd([[
 augroup MarkdownSpell
-autocmd!                                                         
-autocmd FileType markdown setlocal spell                         
+autocmd!
+autocmd FileType markdown setlocal spell
 augroup END
 ]])
