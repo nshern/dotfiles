@@ -15,6 +15,8 @@ HISTSIZE=-1
 HISTFILESIZE=-1
 
 alias bm='python ~/.scripts/bookmark.py'
+alias c='clear'
+alias st='tmux source-file ~/.tmux.conf'
 alias brewup='brew update && brew upgrade'
 alias cheatsheet='vim ~/dropbox/notes/study/cheatsheet.md'
 alias dev="cd ~/Developer/"

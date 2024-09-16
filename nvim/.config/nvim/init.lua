@@ -56,6 +56,7 @@ now(function()
 end)
 later(function()
 	add({ source = "nshern/carbonized.nvim" })
+	add({ source = "catppuccin/nvim" })
 	require("carbonized").setup({ transparent_background = false })
 	vim.cmd.colorscheme("carbonized")
 

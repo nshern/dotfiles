@@ -23,7 +23,7 @@ end
 config.check_for_updates = false
 config.color_scheme = scheme_for_appearance(get_appearance())
 
-config.send_composed_key_when_left_alt_is_pressed = true
+-- config.send_composed_key_when_left_alt_is_pressed = true
 config.send_composed_key_when_right_alt_is_pressed = true
 
 -- config.window_background_opacity = 0.8
@@ -42,7 +42,7 @@ config.inactive_pane_hsb = {
 	brightness = 1.0,
 }
 
-config.hide_tab_bar_if_only_one_tab = false
+config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = "RESIZE"
 config.font = wezterm.font({
 	family = "Berkeley Mono",
