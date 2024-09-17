@@ -27,7 +27,7 @@ alias lg="lazygit"
 alias ll="ls -l -t -r --color=auto"
 alias ls="ls --color=auto"
 alias nb="newsboat"
-alias notes='cd ~/Dropbox/notes/'
+alias study='cd ~/Dropbox/notes/study; vim'
 alias py="python"
 alias todo='vim ~/dropbox/notes/todo.md'
 alias trans='python ~/.scripts/wezterm-transparent.py'

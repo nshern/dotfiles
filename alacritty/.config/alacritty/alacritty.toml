@@ -1,0 +1,12 @@
+[font.normal]
+family = "Berkeley Mono"
+
+[font]
+size = 18
+
+[window]
+decorations = "none"
+
+[window.padding]
+x = 7
+y = 0
