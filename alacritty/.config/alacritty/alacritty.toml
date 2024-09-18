@@ -1,12 +1,41 @@
-[font.normal]
-family = "Berkeley Mono"
-
 [font]
 size = 18
 
+[font.normal]
+family = "Berkeley Mono"
+
+# Default colors
+[colors.primary]
+background = '#262626'
+foreground = '#e0e0e0'
+
+# Normal colors
+[colors.normal]
+black = "#262626"
+red = "#ffb3b8"
+green = "#6fdc8c"
+yellow = "#f1c21b"
+blue = "#82cfff"
+magenta = "#d4bbff"
+cyan = "#3ddbd9"
+white = "#e0e0e0"
+
+# Bright colors
+[colors.bright]
+black = "#6f6f6f"
+red = "#ffb3b8"
+green = "#6fdc8c"
+yellow = "#f1c21b"
+blue = "#82cfff"
+magenta = "#d4bbff"
+cyan = "#3ddbd9"
+white = "#ffffff"
+
 [window]
 decorations = "none"
+startup_mode = "Maximized"
 
 [window.padding]
 x = 7
 y = 0
+# Colors (Gruvbox dark)
