@@ -20,7 +20,7 @@ require("mini.deps").setup({ path = { package = path_package } })
 local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
 now(function()
 	require("mini.icons").setup()
-	require("mini.files").setup()
+	-- require("mini.files").setup()
 	add({ source = "nvim-treesitter/nvim-treesitter" })
 	require("nvim-treesitter.configs").setup({
 		ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
@@ -116,6 +116,9 @@ end)
 
 --OPTIONS--
 vim.g.mapleader = " "
+vim.g.netrw_banner = 0
+vim.g.netrw_browse_split = 0
+vim.g.netrw_winsize = 25
 vim.opt.breakindent = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.foldmethod = "marker"
@@ -128,12 +131,13 @@ vim.opt.relativenumber = true
 vim.opt.scrolloff = 3
 vim.opt.showmode = false
 vim.opt.signcolumn = "yes"
+vim.opt.spelllang = { "en", "da" }
 vim.opt.undofile = true
 vim.opt.updatetime = 200
-vim.opt.spelllang = { "en", "da" }
 
 --KEYMAPS--
-vim.keymap.set("n", "-", "<CMD>lua MiniFiles.open()<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "-", vim.cmd.Ex)
+-- vim.keymap.set("n", "-", "<CMD>lua MiniFiles.open()<CR>", { desc = "Open parent directory" })
 vim.keymap.set("n", "<Esc>", "<CMD>nohlsearch<CR>")
 vim.keymap.set("n", "<S-h>", "<CMD>bp<CR>", { desc = "Jump to previous buffer" })
 vim.keymap.set("n", "<S-l>", "<CMD>bn<CR>", { desc = "Jump to next buffer" })
