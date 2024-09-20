@@ -15,10 +15,9 @@ HISTSIZE=-1
 HISTFILESIZE=-1
 
 alias bm='python ~/.scripts/bookmark.py'
-alias c='clear'
-alias st='tmux source-file ~/.tmux.conf'
 alias brewup='brew update && brew upgrade'
-alias cheatsheet='vim ~/dropbox/notes/study/cheatsheet.md'
+alias c='clear'
+alias cheatsheet='v ~/dropbox/notes/study/cheatsheet.md'
 alias dev="cd ~/Developer/"
 alias ff='firefox'
 alias ghme='gh issue list --assignee @me'
@@ -27,13 +26,16 @@ alias lg="lazygit"
 alias ll="ls -l -t -r --color=auto"
 alias ls="ls --color=auto"
 alias nb="newsboat"
-alias study='cd ~/Dropbox/notes/study; vim'
+alias pause='asciiquarium'
 alias py="python"
-alias todo='vim ~/dropbox/notes/todo.md'
+alias st='tmux source-file ~/.tmux.conf'
+alias study='cd ~/Dropbox/notes/study; v'
+alias todo='v ~/dropbox/notes/todo.md'
 alias trans='python ~/.scripts/wezterm-transparent.py'
+alias v="nvim"
 alias venv='source .venv/bin/activate'
-alias vim='nvim'
-alias work='vim ~/dropbox/notes/work.md'
+alias vim="nvim"
+alias work='v ~/dropbox/notes/work.md'
 
 eval "$(fzf --bash)"
 

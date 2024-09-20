@@ -19,7 +19,6 @@ require("mini.deps").setup({ path = { package = path_package } })
 --PLUGINS--
 local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
 now(function()
-	require("mini.icons").setup()
 	-- require("mini.files").setup()
 	add({ source = "nvim-treesitter/nvim-treesitter" })
 	require("nvim-treesitter.configs").setup({
@@ -33,15 +32,11 @@ now(function()
 		},
 	})
 
-	require("mini.starter").setup({
-		header = "",
-		footer = "",
-		query_updaters = "abcdefghijklmnopqrstuvwxyz0123456789_.",
-	})
 	add({
 		source = "neovim/nvim-lspconfig",
 	})
-	require("lspconfig").basedpyright.setup({})
+	-- require("lspconfig").basedpyright.setup({})
+	require("lspconfig").pyright.setup({})
 	-- require("lspconfig").marksman.setup({})
 	require("lspconfig").taplo.setup({})
 	require("lspconfig").lua_ls.setup({
@@ -56,15 +51,15 @@ now(function()
 end)
 later(function()
 	add({ source = "nshern/carbonized.nvim" })
-	add({ source = "catppuccin/nvim" })
 	require("carbonized").setup({ transparent_background = false })
 	vim.cmd.colorscheme("carbonized")
 
 	-- add({ source = "williamboman/mason.nvim" })
 	-- require("mason").setup()
 
-	require("mini.extra").setup()
-	require("mini.surround").setup()
+	-- require("mini.extra").setup()
+	-- require("mini.icons").setup()
+	-- require("mini.surround").setup()
 	add({ source = "stevearc/conform.nvim" })
 	require("conform").setup({
 		notify_on_error = false,
@@ -74,7 +69,6 @@ later(function()
 		},
 		formatters_by_ft = {
 			lua = { "stylua" },
-			-- markdown = { "prettier" },
 			python = { "isort", "black" },
 		},
 	})
@@ -98,7 +92,7 @@ later(function()
 	require("mini.diff").setup({
 		view = {
 			style = "sign",
-			signs = { add = "█", change = "▒", delete = "" },
+			signs = { add = "█", change = "▒", delete = "X" },
 		},
 	})
 	local hipatterns = require("mini.hipatterns")
@@ -137,7 +131,6 @@ vim.opt.updatetime = 200
 
 --KEYMAPS--
 vim.keymap.set("n", "-", vim.cmd.Ex)
--- vim.keymap.set("n", "-", "<CMD>lua MiniFiles.open()<CR>", { desc = "Open parent directory" })
 vim.keymap.set("n", "<Esc>", "<CMD>nohlsearch<CR>")
 vim.keymap.set("n", "<S-h>", "<CMD>bp<CR>", { desc = "Jump to previous buffer" })
 vim.keymap.set("n", "<S-l>", "<CMD>bn<CR>", { desc = "Jump to next buffer" })
