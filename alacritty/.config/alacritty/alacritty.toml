@@ -1,3 +1,6 @@
+[env]
+TERM = "xterm-256color"
+
 [font]
 size = 18
 
@@ -5,31 +8,37 @@ size = 18
 family = "Berkeley Mono"
 
 # Default colors
-[colors.primary]
-background = '#262626'
-foreground = '#e0e0e0'
-
-# Normal colors
-[colors.normal]
-black = "#262626"
-red = "#ffb3b8"
-green = "#6fdc8c"
-yellow = "#f1c21b"
-blue = "#82cfff"
-magenta = "#d4bbff"
-cyan = "#3ddbd9"
-white = "#e0e0e0"
-
-# Bright colors
 [colors.bright]
-black = "#6f6f6f"
-red = "#ffb3b8"
-green = "#6fdc8c"
-yellow = "#f1c21b"
-blue = "#82cfff"
-magenta = "#d4bbff"
-cyan = "#3ddbd9"
-white = "#ffffff"
+black = '#4f5258'
+blue = '#a6dbff'
+cyan = '#8cf8f7'
+green = '#b3f6c0'
+magenta = '#ffcaff'
+red = '#ffc0b9'
+white = '#eef1f8'
+yellow = '#fce094'
+
+[colors.cursor]
+cursor = '#9b9ea4'
+text = '#e0e2ea'
+
+[colors.normal]
+black = '#07080d'
+blue = '#a6dbff'
+cyan = '#8cf8f7'
+green = '#b3f6c0'
+magenta = '#ffcaff'
+red = '#ffc0b9'
+white = '#eef1f8'
+yellow = '#fce094'
+
+[colors.primary]
+background = '#14161b'
+foreground = '#e0e2ea'
+
+[colors.selection]
+background = '#4f5258'
+text = '#e0e2ea'
 
 [window]
 decorations = "none"

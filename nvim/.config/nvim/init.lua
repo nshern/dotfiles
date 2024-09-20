@@ -19,19 +19,6 @@ require("mini.deps").setup({ path = { package = path_package } })
 --PLUGINS--
 local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
 now(function()
-	-- require("mini.files").setup()
-	add({ source = "nvim-treesitter/nvim-treesitter" })
-	require("nvim-treesitter.configs").setup({
-		ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
-		auto_install = true,
-		indent = {
-			enable = true,
-		},
-		highlight = {
-			enable = true,
-		},
-	})
-
 	add({
 		source = "neovim/nvim-lspconfig",
 	})
@@ -50,16 +37,6 @@ now(function()
 	})
 end)
 later(function()
-	add({ source = "nshern/carbonized.nvim" })
-	require("carbonized").setup({ transparent_background = false })
-	vim.cmd.colorscheme("carbonized")
-
-	-- add({ source = "williamboman/mason.nvim" })
-	-- require("mason").setup()
-
-	-- require("mini.extra").setup()
-	-- require("mini.icons").setup()
-	-- require("mini.surround").setup()
 	add({ source = "stevearc/conform.nvim" })
 	require("conform").setup({
 		notify_on_error = false,
@@ -87,14 +64,14 @@ later(function()
 	require("mini.jump").setup()
 	require("mini.jump2d").setup()
 	require("mini.pick").setup()
-	require("mini.statusline").setup({ use_icons = false })
+	-- require("mini.statusline").setup({ use_icons = false })
 	require("mini.tabline").setup({ show_icons = false })
-	require("mini.diff").setup({
-		view = {
-			style = "sign",
-			signs = { add = "█", change = "▒", delete = "X" },
-		},
-	})
+	-- require("mini.diff").setup({
+	-- 	view = {
+	-- 		style = "sign",
+	-- 		signs = { add = "█", change = "▒", delete = "X" },
+	-- 	},
+	-- })
 	local hipatterns = require("mini.hipatterns")
 	hipatterns.setup({
 		highlighters = {
@@ -109,10 +86,12 @@ later(function()
 end)
 
 --OPTIONS--
+vim.g.termguicolors = true
 vim.g.mapleader = " "
 vim.g.netrw_banner = 0
 vim.g.netrw_browse_split = 0
 vim.g.netrw_winsize = 25
+vim.cmd.colorscheme = "default"
 vim.opt.breakindent = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.foldmethod = "marker"
