@@ -18,7 +18,19 @@ require("mini.deps").setup({ path = { package = path_package } })
 
 --PLUGINS--
 local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
+
 now(function()
+	add({ source = "nvim-treesitter/nvim-treesitter" })
+		require("nvim-treesitter.configs").setup({
+			ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
+			auto_install = true,
+			indent = {
+				enable = true,
+			},
+			highlight = {
+				enable = true,
+			},
+		})
 	add({
 		source = "neovim/nvim-lspconfig",
 	})
@@ -79,11 +91,11 @@ vim.opt.updatetime = 200
 
 -- FUNCTIONS --
 function toggle_background()
-  if vim.o.background == "dark" then
-    vim.o.background = "light"
-  else
-    vim.o.background = "dark"
-  end
+	if vim.o.background == "dark" then
+		vim.o.background = "light"
+	else
+		vim.o.background = "dark"
+	end
 end
 
 --KEYMAPS--
@@ -110,8 +122,7 @@ vim.keymap.set("n", "gra", "<CMD>lua vim.lsp.buf.code_action()<CR>")
 vim.keymap.set("n", "gre", "<CMD>lua vim.lsp.buf.rename()<CR>")
 vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>tb', ':lua toggle_background()<CR>', {noremap = true, silent = true })
-
+vim.keymap.set("n", "<leader>tb", ":lua toggle_background()<CR>", { noremap = true, silent = true })
 
 -- AUTOCOMMANDS
 vim.cmd([[
