@@ -18,10 +18,6 @@ red = '#ffc0b9'
 white = '#eef1f8'
 yellow = '#fce094'
 
-[colors.cursor]
-cursor = '#9b9ea4'
-text = '#e0e2ea'
-
 [colors.normal]
 black = '#07080d'
 blue = '#a6dbff'

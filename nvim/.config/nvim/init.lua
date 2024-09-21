@@ -24,7 +24,6 @@ now(function()
 	})
 	-- require("lspconfig").basedpyright.setup({})
 	require("lspconfig").pyright.setup({})
-	-- require("lspconfig").marksman.setup({})
 	require("lspconfig").taplo.setup({})
 	require("lspconfig").lua_ls.setup({
 		settings = {
@@ -37,18 +36,6 @@ now(function()
 	})
 end)
 later(function()
-	add({ source = "stevearc/conform.nvim" })
-	require("conform").setup({
-		notify_on_error = false,
-		format_on_save = {
-			timeout_ms = 500,
-			lsp_fallback = true,
-		},
-		formatters_by_ft = {
-			lua = { "stylua" },
-			python = { "isort", "black" },
-		},
-	})
 	require("mini.completion").setup({
 		mappings = {
 			force_twostep = "<C-t>",
@@ -64,25 +51,7 @@ later(function()
 	require("mini.jump").setup()
 	require("mini.jump2d").setup()
 	require("mini.pick").setup()
-	-- require("mini.statusline").setup({ use_icons = false })
 	require("mini.tabline").setup({ show_icons = false })
-	-- require("mini.diff").setup({
-	-- 	view = {
-	-- 		style = "sign",
-	-- 		signs = { add = "█", change = "▒", delete = "X" },
-	-- 	},
-	-- })
-	local hipatterns = require("mini.hipatterns")
-	hipatterns.setup({
-		highlighters = {
-			-- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
-			fixme = { pattern = "%f[%w]()FIXME()%f[%W]", group = "MiniHipatternsFixme" },
-			hack = { pattern = "%f[%w]()HACK()%f[%W]", group = "MiniHipatternsHack" },
-			todo = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
-			note = { pattern = "%f[%w]()NOTE()%f[%W]", group = "MiniHipatternsNote" },
-			hex_color = hipatterns.gen_highlighter.hex_color(),
-		},
-	})
 end)
 
 --OPTIONS--
@@ -108,6 +77,15 @@ vim.opt.spelllang = { "en", "da" }
 vim.opt.undofile = true
 vim.opt.updatetime = 200
 
+-- FUNCTIONS --
+function toggle_background()
+  if vim.o.background == "dark" then
+    vim.o.background = "light"
+  else
+    vim.o.background = "dark"
+  end
+end
+
 --KEYMAPS--
 vim.keymap.set("n", "-", vim.cmd.Ex)
 vim.keymap.set("n", "<Esc>", "<CMD>nohlsearch<CR>")
@@ -132,15 +110,8 @@ vim.keymap.set("n", "gra", "<CMD>lua vim.lsp.buf.code_action()<CR>")
 vim.keymap.set("n", "gre", "<CMD>lua vim.lsp.buf.rename()<CR>")
 vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>tb', ':lua toggle_background()<CR>', {noremap = true, silent = true })
 
--- FUNCTIONS
-function ToggleBackground()
-	if vim.opt.background == "light" then
-		vim.opt.background = "dark"
-	else
-		vim.opt.background = "light"
-	end
-end
 
 -- AUTOCOMMANDS
 vim.cmd([[
