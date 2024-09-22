@@ -21,21 +21,20 @@ local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
 
 now(function()
 	add({ source = "nvim-treesitter/nvim-treesitter" })
-		require("nvim-treesitter.configs").setup({
-			ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
-			auto_install = true,
-			indent = {
-				enable = true,
-			},
-			highlight = {
-				enable = true,
-			},
-		})
+	require("nvim-treesitter.configs").setup({
+		ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
+		auto_install = true,
+		indent = {
+			enable = true,
+		},
+		highlight = {
+			enable = true,
+		},
+	})
 	add({
 		source = "neovim/nvim-lspconfig",
 	})
-	-- require("lspconfig").basedpyright.setup({})
-	require("lspconfig").pyright.setup({})
+	require("lspconfig").basedpyright.setup({})
 	require("lspconfig").taplo.setup({})
 	require("lspconfig").lua_ls.setup({
 		settings = {
@@ -58,12 +57,14 @@ later(function()
 			signature = { border = "rounded" },
 		},
 	})
-	require("mini.colors").setup()
-	require("mini.git").setup()
+	-- require("mini.colors").setup()
+	-- require("mini.git").setup()
 	require("mini.jump").setup()
-	require("mini.jump2d").setup()
-	require("mini.pick").setup()
-	require("mini.tabline").setup({ show_icons = false })
+	-- require("mini.jump2d").setup()
+	-- require("mini.pick").setup()
+	add({ source = "ibhagwan/fzf-lua" })
+	require("fzf-lua").setup({ defaults = { file_icons = false } })
+	-- require("mini.tabline").setup({ show_icons = false })
 end)
 
 --OPTIONS--
@@ -110,9 +111,13 @@ vim.keymap.set("n", "<leader>d", "<CMD>lua vim.diagnostic.open_float()<CR>", { n
 vim.keymap.set("n", "<leader>dc", "<CMD>DepsClean<CR>", { desc = "Deps clean" })
 vim.keymap.set("n", "<leader>du", "<CMD>DepsUpdate<CR>", { desc = "Deps Update" })
 vim.keymap.set("n", "<leader>sd", "<CMD>Pick diagnostic<CR>", { desc = "Pick diagnostic" })
-vim.keymap.set("n", "<leader>sf", "<CMD>Pick files<CR>", { desc = "Pick files" })
-vim.keymap.set("n", "<leader>sg", "<CMD>Pick grep live<CR>", { desc = "Pick grep" })
-vim.keymap.set("n", "<leader>ss", "<CMD>Pick spellsuggest<CR>", { desc = "Pick spellsuggest" })
+-- vim.keymap.set("n", "<leader>sf", "<CMD>Pick files<CR>", { desc = "Pick files" })
+vim.keymap.set("n", "<leader>sf", "<CMD>FzfLua files<CR>", { desc = "Pick files" })
+vim.keymap.set("n", "<leader>sb", "<CMD>FzfLua buffers<CR>", { desc = "Pick files" })
+-- vim.keymap.set("n", "<leader>sg", "<CMD>Pick grep live<CR>", { desc = "Pick grep" })
+vim.keymap.set("n", "<leader>sg", "<CMD>FzfLua grep<CR>", { desc = "Pick grep" })
+-- vim.keymap.set("n", "<leader>ss", "<CMD>Pick spellsuggest<CR>", { desc = "Pick spellsuggest" })
+vim.keymap.set("n", "<leader>ss", "<CMD>FzfLua spell_suggest<CR>", { desc = "Pick spellsuggest" })
 vim.keymap.set("n", "<leader>tb", [[:lua ToggleBackground()<CR>]], { noremap = true, silent = true })
 vim.keymap.set("n", "gD", "<CMD>lua vim.lsp.buf.declaration()<CR>")
 vim.keymap.set("n", "gd", "<CMD>lua vim.lsp.buf.definition()<CR>")

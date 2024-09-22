@@ -22,6 +22,7 @@ alias dev="cd ~/Developer/"
 alias ff='firefox'
 alias ghme='gh issue list --assignee @me'
 alias glol='git log --oneline'
+alias gs='git status'
 alias lg="lazygit"
 alias ll="ls -l -t -r --color=auto"
 alias ls="ls --color=auto"
@@ -32,7 +33,6 @@ alias st='tmux source-file ~/.tmux.conf'
 alias study='cd ~/Dropbox/notes/study; v'
 alias todo='v ~/dropbox/notes/todo.md'
 alias trans='python ~/.scripts/wezterm-transparent.py'
-alias v="nvim"
 alias venv='source .venv/bin/activate'
 alias vim="nvim"
 alias work='v ~/dropbox/notes/work.md'
