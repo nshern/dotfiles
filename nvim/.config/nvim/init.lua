@@ -20,7 +20,6 @@ require("mini.deps").setup({ path = { package = path_package } })
 --PLUGINS--
 local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
 
-
 now(function()
 	-- add({ source = "nvim-treesitter/nvim-treesitter" })
 	-- 	require("nvim-treesitter.configs").setup({
@@ -51,7 +50,6 @@ now(function()
 end)
 
 later(function()
-
 	add({ source = "stevearc/oil.nvim" })
 	require("oil").setup({ skip_confirm_for_simple_edits = true, delete_to_trash = true })
 	require("mini.tabline").setup()
@@ -102,7 +100,7 @@ end
 
 function grayscale()
 	if vim.o.background == "dark" then
-		vim.api.nvim_set_hl(0, "Normal", {bg="#000000",fg="#e0e0e0" })
+		vim.api.nvim_set_hl(0, "Normal", { bg = "#000000", fg = "#e0e0e0" })
 	end
 
 	vim.api.nvim_set_hl(0, "Identifier", { link = Normal })
@@ -110,7 +108,6 @@ function grayscale()
 	vim.api.nvim_set_hl(0, "String", { link = Normal })
 	vim.api.nvim_set_hl(0, "Special", { link = Normal })
 end
-
 
 --KEYMAPS--
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
