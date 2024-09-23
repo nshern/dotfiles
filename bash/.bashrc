@@ -17,7 +17,7 @@ HISTFILESIZE=-1
 alias bm='python ~/.scripts/bookmark.py'
 alias brewup='brew update && brew upgrade'
 alias c='clear'
-alias cheatsheet='v ~/dropbox/notes/study/cheatsheet.md'
+alias cheatsheet='vim ~/dropbox/notes/study/cheatsheet.md'
 alias dev="cd ~/Developer/"
 alias ff='firefox'
 alias ghme='gh issue list --assignee @me'
@@ -30,14 +30,13 @@ alias nb="newsboat"
 alias pause='asciiquarium'
 alias py="python"
 alias st='tmux source-file ~/.tmux.conf'
-alias study='cd ~/Dropbox/notes/study; v'
-alias todo='v ~/dropbox/notes/todo.md'
+alias study='cd ~/Dropbox/notes/study; vim'
+alias todo='vim ~/dropbox/notes/todo.md'
 alias trans='python ~/.scripts/wezterm-transparent.py'
 alias venv='source .venv/bin/activate'
 alias vim="nvim"
-alias work='v ~/dropbox/notes/work.md'
+alias work='vim ~/dropbox/notes/work.md'
 
 eval "$(fzf --bash)"
 
 PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1='\[\e[94m\]\w\n\[\e[96m\]$\[\e[0m\] \[\e[95;1m\]${PS1_CMD1}\[\e[0m\] '
-# PS1='\[\e[94m\]\w\n\[\e[96m\]$\[\e[0m\] \[\e[95;1m\]${PS1_CMD1}\[\e[0m\] '
