@@ -15,6 +15,7 @@ HISTSIZE=-1
 HISTFILESIZE=-1
 
 alias bm='python ~/.scripts/bookmark.py'
+alias tf='terraform'
 alias brewup='brew update && brew upgrade'
 alias c='clear'
 alias cheatsheet='vim ~/dropbox/notes/study/cheatsheet.md'
