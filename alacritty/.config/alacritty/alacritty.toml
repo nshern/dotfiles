@@ -7,7 +7,6 @@ size = 18
 [font.normal]
 family = "Berkeley Mono"
 
-# Default colors
 [colors.bright]
 black = '#4f5258'
 blue = '#a6dbff'
@@ -29,8 +28,7 @@ white = '#eef1f8'
 yellow = '#fce094'
 
 [colors.primary]
-# background = '#000000'
-background = '#161616'
+background = '#14161b'
 foreground = '#e0e2ea'
 
 [colors.selection]
@@ -40,8 +38,8 @@ text = '#e0e2ea'
 [window]
 decorations = "none"
 startup_mode = "Maximized"
+# opacity = 0.8
 
 [window.padding]
 x = 7
 y = 0
-# Colors (Gruvbox dark)
