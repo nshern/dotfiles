@@ -4,7 +4,6 @@ local mini_path = path_package .. "pack/deps/start/mini.nvim"
 if not vim.loop.fs_stat(mini_path) then
 	vim.cmd('echo "Installing `mini.nvim`" | redraw')
 
-
 	local clone_cmd = {
 		"git",
 		"clone",
@@ -22,42 +21,29 @@ require("mini.deps").setup({ path = { package = path_package } })
 local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
 
 now(function()
-	-- add({ source = "nvim-treesitter/nvim-treesitter" })
-	-- 	require("nvim-treesitter.configs").setup({
-	-- 		ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
-	-- 		auto_install = true,
-	-- 		indent = {
-	-- 			enable = true,
-	-- 		},
-	-- 		highlight = {
-	-- 			enable = true,
-	-- 		},
-	-- 	})
-	add({
-		source = "neovim/nvim-lspconfig",
-	})
+	add({ source = "williamboman/mason.nvim" })
+	add({ source = "neovim/nvim-lspconfig" })
+	add({ source = "williamboman/mason-lspconfig.nvim" })
+	require("mason").setup()
+	require("mason-lspconfig").setup({ ensure_installed = { "pyright", "csharp_ls", "lua_ls", "marksman", "ruff" } })
+end)
 
+later(function()
+
+	--PYTHON--
 	require("lspconfig").pyright.setup({})
 	require("lspconfig").ruff.setup({})
 
+	--C#--
+	require("lspconfig").csharp_ls.setup({})
+
+	--MARKDOWN--
 	require("lspconfig").marksman.setup({})
 
+	--TOML--
 	require("lspconfig").taplo.setup({})
 
-	require("lspconfig").terraformls.setup({})
-	vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-		pattern = { "*.tf", "*.tfvars" },
-		callback = function()
-			vim.lsp.buf.format()
-		end,
-	})
-	-- override file detection https://github.com/neovim/neovim/blob/a064ed622927b4c5e30165abbe54db841359c71f/runtime/lua/vim/filetype/detect.lua#L1473
-	vim.filetype.add({
-		extension = {
-			tf = "terraform",
-		},
-	})
-
+	--LUA--
 	require("lspconfig").lua_ls.setup({
 		settings = {
 			Lua = {
@@ -67,9 +53,24 @@ now(function()
 			},
 		},
 	})
-end)
 
-later(function()
+	--TERRAFORM--
+	require("lspconfig").terraformls.setup({})
+
+	vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+		pattern = { "*.tf", "*.tfvars" },
+		callback = function()
+			vim.lsp.buf.format()
+		end,
+	})
+
+	-- override file detection https://github.com/neovim/neovim/blob/a064ed622927b4c5e30165abbe54db841359c71f/runtime/lua/vim/filetype/detect.lua#L1473
+	vim.filetype.add({
+		extension = {
+			tf = "terraform",
+		},
+	})
+
 	add({ source = "stevearc/oil.nvim" })
 	require("oil").setup({ skip_confirm_for_simple_edits = true, delete_to_trash = true })
 	require("mini.tabline").setup()
@@ -134,7 +135,6 @@ function colorscheme()
 	end
 
 	if vim.o.background == "light" then
-		-- vim.api.nvim_set_hl(0, "Normal", { bg = "#FFFFFF", fg = "#000000" })
 		vim.api.nvim_set_hl(0, "Visual", { bg = "#a6c8ff", fg = "#000000" })
 		vim.api.nvim_set_hl(0, "markdownH1", { fg = "#004c63", bold = true })
 		vim.api.nvim_set_hl(0, "markdownH1delimiter", { fg = "#004c63", bold = true })
@@ -171,7 +171,7 @@ vim.keymap.set("n", "<leader>sf", "<CMD>FzfLua files<CR>", { desc = "Pick files"
 vim.keymap.set("n", "<leader>sb", "<CMD>FzfLua buffers<CR>", { desc = "Pick files" })
 vim.keymap.set("n", "<leader>w", "<CMD>write<CR>", { desc = "Pick files" })
 vim.keymap.set("n", "<leader>sg", "<CMD>FzfLua grep<CR>", { desc = "Pick grep" })
-vim.keymap.set("n", "<leader>ss", "<CMD>FzfLua spell_suggest<CR>", { desc = "Pick spellsuggest" })
+vim.keymap.set("n", "<leader>ss", "<CMD>setlocal spell<CR>", { desc = "Set spell" })
 vim.keymap.set("n", "<leader>tb", [[:lua ToggleBackground()<CR>]], { noremap = true, silent = true })
 vim.keymap.set("n", "gD", "<CMD>lua vim.lsp.buf.declaration()<CR>")
 vim.keymap.set("n", "gd", "<CMD>lua vim.lsp.buf.definition()<CR>")
@@ -182,13 +182,5 @@ vim.keymap.set("n", "gre", "<CMD>lua vim.lsp.buf.rename()<CR>")
 vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>tb", ":lua toggle_background()<CR>", { noremap = true, silent = true })
-
--- AUTOCOMMANDS
-vim.cmd([[
-augroup MarkdownSpell
-autocmd!
-autocmd FileType markdown setlocal spell
-augroup END
-]])
 
 colorscheme()
