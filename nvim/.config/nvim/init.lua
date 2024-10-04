@@ -21,21 +21,10 @@ require("mini.deps").setup({ path = { package = path_package } })
 local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
 
 now(function()
-	add({ source = "williamboman/mason.nvim" })
 	add({ source = "neovim/nvim-lspconfig" })
-	add({ source = "williamboman/mason-lspconfig.nvim" })
-	require("mason").setup()
-	require("mason-lspconfig").setup({ ensure_installed = { "pyright", "csharp_ls", "lua_ls", "marksman", "ruff" } })
-end)
-
-later(function()
-
 	--PYTHON--
 	require("lspconfig").pyright.setup({})
 	require("lspconfig").ruff.setup({})
-
-	--C#--
-	require("lspconfig").csharp_ls.setup({})
 
 	--MARKDOWN--
 	require("lspconfig").marksman.setup({})
@@ -68,6 +57,22 @@ later(function()
 	vim.filetype.add({
 		extension = {
 			tf = "terraform",
+		},
+	})
+
+end)
+
+
+later(function()
+	add({ source = "nvim-treesitter/nvim-treesitter" })
+	require("nvim-treesitter.configs").setup({
+		ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
+		auto_install = true,
+		indent = {
+			enable = true,
+		},
+		highlight = {
+			enable = true,
 		},
 	})
 
@@ -107,6 +112,10 @@ vim.opt.signcolumn = "yes"
 vim.opt.spelllang = { "en", "da" }
 vim.opt.undofile = true
 vim.opt.updatetime = 200
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 
 -- FUNCTIONS --
 function toggle_background()
@@ -184,3 +193,12 @@ vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>tb", ":lua toggle_background()<CR>", { noremap = true, silent = true })
 
 colorscheme()
+
+vim.api.nvim_create_autocmd("LspAttach", {
+	callback = function(args)
+		local client = vim.lsp.get_client_by_id(args.data.client_id)
+		if client then
+			client.server_capabilities.semanticTokensProvider = nil
+		end
+	end,
+})
