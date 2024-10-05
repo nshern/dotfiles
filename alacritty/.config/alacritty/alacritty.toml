@@ -7,29 +7,49 @@ size = 18
 [font.normal]
 family = "Berkeley Mono"
 
-[colors.bright]
-black = '#4f5258'
-blue = '#a6dbff'
-cyan = '#8cf8f7'
-green = '#b3f6c0'
-magenta = '#ffcaff'
-red = '#ffc0b9'
-white = '#eef1f8'
-yellow = '#fce094'
-
 [colors.normal]
-black = '#07080d'
-blue = '#a6dbff'
-cyan = '#8cf8f7'
-green = '#b3f6c0'
-magenta = '#ffcaff'
-red = '#ffc0b9'
-white = '#eef1f8'
-yellow = '#fce094'
+black = '#000000'
+red = '#d7005f'
+green = '#00af5f'
+yellow = '#d78700'
+blue = '#0087d7'
+magenta = '#d787d7'
+cyan = '#00afaf'
+white = '#dadada'
+
+[colors.bright]
+black = '#707070'
+red = '#ff005f'
+green = '#00d75f'
+yellow = '#ffaf00'
+blue = '#5fafff'
+magenta = '#ff87ff'
+cyan = '#00d7d7'
+white = '#ffffff'
+
+# [colors.bright]
+# black = '#4f5258'
+# blue = '#a6dbff'
+# cyan = '#8cf8f7'
+# green = '#b3f6c0'
+# magenta = '#ffcaff'
+# red = '#ffc0b9'
+# white = '#eef1f8'
+# yellow = '#fce094'
+#
+# [colors.normal]
+# black = '#07080d'
+# blue = '#a6dbff'
+# cyan = '#8cf8f7'
+# green = '#b3f6c0'
+# magenta = '#ffcaff'
+# red = '#ffc0b9'
+# white = '#eef1f8'
+# yellow = '#fce094'
 
 [colors.primary]
-background = '#14161b'
-foreground = '#e0e2ea'
+background = '#000000'
+foreground = '#dadada'
 
 [colors.selection]
 background = '#4f5258'

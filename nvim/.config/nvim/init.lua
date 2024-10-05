@@ -95,6 +95,7 @@ later(function()
 end)
 
 --OPTIONS--
+vim.cmd.colorscheme("quiet")
 vim.g.termguicolors = true
 vim.g.mapleader = " "
 vim.opt.breakindent = true
@@ -121,47 +122,9 @@ vim.opt.expandtab = true
 function toggle_background()
 	if vim.o.background == "dark" then
 		vim.o.background = "light"
-		colorscheme()
 	else
 		vim.o.background = "dark"
-		colorscheme()
 	end
-end
-
-function colorscheme()
-	if vim.o.background == "dark" then
-		vim.api.nvim_set_hl(0, "Visual", { bg = "#FCE094", fg = "#000000" })
-		vim.api.nvim_set_hl(0, "markdownH1", { fg = "#A6DBFF", bold = true })
-		vim.api.nvim_set_hl(0, "markdownH1delimiter", { fg = "#A6DBFF", bold = true })
-		vim.api.nvim_set_hl(0, "markdownH2", { fg = "#8cf8f7", bold = true })
-		vim.api.nvim_set_hl(0, "markdownH2delimiter", { fg = "#8cf8f7", bold = true })
-		vim.api.nvim_set_hl(0, "markdownH3", { fg = "#b4f6c0", bold = true })
-		vim.api.nvim_set_hl(0, "markdownH3delimiter", { fg = "#b4f6c0", bold = true })
-		vim.api.nvim_set_hl(0, "markdownH4", { fg = "#FFCAFF", bold = true })
-		vim.api.nvim_set_hl(0, "markdownH4delimiter", { fg = "#FFCAFF", bold = true })
-		vim.api.nvim_set_hl(0, "markdownH5", { fg = "#FCE094", bold = true })
-		vim.api.nvim_set_hl(0, "markdownH5delimiter", { fg = "#FCE094", bold = true })
-	end
-
-	if vim.o.background == "light" then
-		vim.api.nvim_set_hl(0, "Visual", { bg = "#a6c8ff", fg = "#000000" })
-		vim.api.nvim_set_hl(0, "markdownH1", { fg = "#004c63", bold = true })
-		vim.api.nvim_set_hl(0, "markdownH1delimiter", { fg = "#004c63", bold = true })
-		vim.api.nvim_set_hl(0, "markdownH2", { fg = "#007373", bold = true })
-		vim.api.nvim_set_hl(0, "markdownH2delimiter", { fg = "#007373", bold = true })
-		vim.api.nvim_set_hl(0, "markdownH3", { fg = "#005523", bold = true })
-		vim.api.nvim_set_hl(0, "markdownH3delimiter", { fg = "#005523", bold = true })
-		vim.api.nvim_set_hl(0, "markdownH4", { fg = "#470045", bold = true })
-		vim.api.nvim_set_hl(0, "markdownH4delimiter", { fg = "#470045", bold = true })
-		vim.api.nvim_set_hl(0, "markdownH5", { fg = "#6b5300", bold = true })
-		vim.api.nvim_set_hl(0, "markdownH5delimiter", { fg = "#6b5300", bold = true })
-	end
-
-	vim.api.nvim_set_hl(0, "Identifier", { link = Normal })
-	vim.api.nvim_set_hl(0, "Function", { link = Normal })
-	vim.api.nvim_set_hl(0, "String", { link = Normal })
-	vim.api.nvim_set_hl(0, "Statement", { link = Normal })
-	vim.api.nvim_set_hl(0, "Special", { link = Normal })
 end
 
 --KEYMAPS--
@@ -191,8 +154,6 @@ vim.keymap.set("n", "gre", "<CMD>lua vim.lsp.buf.rename()<CR>")
 vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>tb", ":lua toggle_background()<CR>", { noremap = true, silent = true })
-
-colorscheme()
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)

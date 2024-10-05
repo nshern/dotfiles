@@ -31,7 +31,6 @@ alias nb="newsboat"
 alias pause='asciiquarium'
 alias py="python"
 alias st='tmux source-file ~/.tmux.conf'
-alias study='cd ~/Dropbox/notes/study; vim'
 alias tf='terraform'
 alias todo='vim ~/dropbox/notes/todo.md'
 alias trans='python ~/.scripts/wezterm-transparent.py'
