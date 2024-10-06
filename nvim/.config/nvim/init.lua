@@ -21,7 +21,9 @@ require("mini.deps").setup({ path = { package = path_package } })
 local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
 
 now(function()
+
 	add({ source = "neovim/nvim-lspconfig" })
+
 	--PYTHON--
 	require("lspconfig").pyright.setup({})
 	require("lspconfig").ruff.setup({})
@@ -78,7 +80,7 @@ later(function()
 
 	add({ source = "stevearc/oil.nvim" })
 	require("oil").setup({ skip_confirm_for_simple_edits = true, delete_to_trash = true })
-	require("mini.tabline").setup()
+	-- require("mini.tabline").setup()
 	require("mini.completion").setup({
 		mappings = {
 			force_twostep = "<C-t>",
@@ -96,10 +98,11 @@ end)
 
 --OPTIONS--
 vim.cmd.colorscheme("quiet")
-vim.g.termguicolors = true
 vim.g.mapleader = " "
+vim.g.termguicolors = true
 vim.opt.breakindent = true
 vim.opt.clipboard = "unnamedplus"
+vim.opt.expandtab = true
 vim.opt.foldmethod = "marker"
 vim.opt.hlsearch = true
 vim.opt.ignorecase = true
@@ -108,15 +111,14 @@ vim.opt.linebreak = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 3
+vim.opt.shiftwidth = 4
 vim.opt.showmode = false
 vim.opt.signcolumn = "yes"
+vim.opt.softtabstop = 4
 vim.opt.spelllang = { "en", "da" }
+vim.opt.tabstop = 4
 vim.opt.undofile = true
 vim.opt.updatetime = 200
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
 
 -- FUNCTIONS --
 function toggle_background()
