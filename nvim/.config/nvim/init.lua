@@ -66,17 +66,17 @@ end)
 
 
 later(function()
-	add({ source = "nvim-treesitter/nvim-treesitter" })
-	require("nvim-treesitter.configs").setup({
-		ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
-		auto_install = true,
-		indent = {
-			enable = true,
-		},
-		highlight = {
-			enable = true,
-		},
-	})
+-- add({ source = "nvim-treesitter/nvim-treesitter" })
+	-- require("nvim-treesitter.configs").setup({
+	-- 	ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
+	-- 	auto_install = true,
+	-- 	indent = {
+	-- 		enable = true,
+	-- 	},
+	-- 	highlight = {
+	-- 		enable = true,
+	-- 	},
+	-- })
 
 	add({ source = "stevearc/oil.nvim" })
 	require("oil").setup({ skip_confirm_for_simple_edits = true, delete_to_trash = true })
@@ -97,7 +97,6 @@ later(function()
 end)
 
 --OPTIONS--
-vim.cmd.colorscheme("quiet")
 vim.g.mapleader = " "
 vim.g.termguicolors = true
 vim.opt.breakindent = true
@@ -120,14 +119,13 @@ vim.opt.tabstop = 4
 vim.opt.undofile = true
 vim.opt.updatetime = 200
 
--- FUNCTIONS --
-function toggle_background()
-	if vim.o.background == "dark" then
-		vim.o.background = "light"
-	else
-		vim.o.background = "dark"
-	end
-end
+
+vim.api.nvim_set_hl(0, "String", { link = "Normal"})
+vim.api.nvim_set_hl(0, "Statement", { link = "Normal"})
+vim.api.nvim_set_hl(0, "Special", { link = "Normal"})
+vim.api.nvim_set_hl(0, "PreProc", { link = "Normal"})
+vim.api.nvim_set_hl(0, "Identifier", { link = "Normal"})
+vim.api.nvim_set_hl(0, "Function", { link = "Normal"})
 
 --KEYMAPS--
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
@@ -142,7 +140,7 @@ vim.keymap.set("n", "<leader>dc", "<CMD>DepsClean<CR>", { desc = "Deps clean" })
 vim.keymap.set("n", "<leader>du", "<CMD>DepsUpdate<CR>", { desc = "Deps Update" })
 vim.keymap.set("n", "<leader>sd", "<CMD>Pick diagnostic<CR>", { desc = "Pick diagnostic" })
 vim.keymap.set("n", "<leader>sf", "<CMD>FzfLua files<CR>", { desc = "Pick files" })
-vim.keymap.set("n", "<leader>sb", "<CMD>FzfLua buffers<CR>", { desc = "Pick files" })
+vim.keymap.set("n", "<leader><leader>", "<CMD>FzfLua buffers<CR>", { desc = "Pick files" })
 vim.keymap.set("n", "<leader>w", "<CMD>write<CR>", { desc = "Pick files" })
 vim.keymap.set("n", "<leader>sg", "<CMD>FzfLua grep<CR>", { desc = "Pick grep" })
 vim.keymap.set("n", "<leader>ss", "<CMD>setlocal spell<CR>", { desc = "Set spell" })
@@ -165,3 +163,50 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 	end,
 })
+
+--STATUS LINE--
+local statusline = {
+  ' %t',
+  '%r',
+  '%m',
+  '%=',
+  '%{&filetype}',
+  ' %2p%%',
+  ' %3l:%-2c '
+}
+vim.o.statusline = table.concat(statusline, '')
+
+--COLORSCHEME--
+function toggle_background()
+	if vim.o.background == "dark" then
+		vim.o.background = "light"
+        colors()
+	else
+		vim.o.background = "dark"
+        colors()
+	end
+end
+
+function colors()
+
+    if vim.o.background == "dark" then
+        vim.api.nvim_set_hl(0, "Normal", {bg = "Grey0", fg = "NvimLightGrey2"})
+        vim.api.nvim_set_hl(0, "Visual", {bg = "NvimLightYellow", fg = "Grey0"})
+    end
+
+    if vim.o.background == "light" then
+        vim.api.nvim_set_hl(0, "Normal", {bg = "Grey99", fg = "NvimDarkGrey2"})
+        vim.api.nvim_set_hl(0, "Visual", {bg = "NvimDarkYellow", fg = "Grey99"})
+    end
+
+    vim.api.nvim_set_hl(0, "Function", { link = "Normal"})
+    vim.api.nvim_set_hl(0, "Identifier", { link = "Normal"})
+    vim.api.nvim_set_hl(0, "PreProc", { link = "Normal"})
+    vim.api.nvim_set_hl(0, "Special", { link = "Normal"})
+    vim.api.nvim_set_hl(0, "Statement", { link = "Normal"})
+    vim.api.nvim_set_hl(0, "String", { link = "Normal"})
+    vim.api.nvim_set_hl(0, "Title", { link = "Normal"})
+
+end
+
+colors()
