@@ -21,7 +21,6 @@ require("mini.deps").setup({ path = { package = path_package } })
 local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
 
 now(function()
-
 	add({ source = "neovim/nvim-lspconfig" })
 
 	--PYTHON--
@@ -61,12 +60,10 @@ now(function()
 			tf = "terraform",
 		},
 	})
-
 end)
 
-
 later(function()
--- add({ source = "nvim-treesitter/nvim-treesitter" })
+	-- add({ source = "nvim-treesitter/nvim-treesitter" })
 	-- require("nvim-treesitter.configs").setup({
 	-- 	ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
 	-- 	auto_install = true,
@@ -119,13 +116,12 @@ vim.opt.tabstop = 4
 vim.opt.undofile = true
 vim.opt.updatetime = 200
 
-
-vim.api.nvim_set_hl(0, "String", { link = "Normal"})
-vim.api.nvim_set_hl(0, "Statement", { link = "Normal"})
-vim.api.nvim_set_hl(0, "Special", { link = "Normal"})
-vim.api.nvim_set_hl(0, "PreProc", { link = "Normal"})
-vim.api.nvim_set_hl(0, "Identifier", { link = "Normal"})
-vim.api.nvim_set_hl(0, "Function", { link = "Normal"})
+vim.api.nvim_set_hl(0, "String", { link = "Normal" })
+vim.api.nvim_set_hl(0, "Statement", { link = "Normal" })
+vim.api.nvim_set_hl(0, "Special", { link = "Normal" })
+vim.api.nvim_set_hl(0, "PreProc", { link = "Normal" })
+vim.api.nvim_set_hl(0, "Identifier", { link = "Normal" })
+vim.api.nvim_set_hl(0, "Function", { link = "Normal" })
 
 --KEYMAPS--
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
@@ -166,47 +162,45 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 --STATUS LINE--
 local statusline = {
-  ' %t',
-  '%r',
-  '%m',
-  '%=',
-  '%{&filetype}',
-  ' %2p%%',
-  ' %3l:%-2c '
+	" %t",
+	"%r",
+	"%m",
+	"%=",
+	"%{&filetype}",
+	" %2p%%",
+	" %3l:%-2c ",
 }
-vim.o.statusline = table.concat(statusline, '')
+vim.o.statusline = table.concat(statusline, "")
 
 --COLORSCHEME--
 function toggle_background()
 	if vim.o.background == "dark" then
 		vim.o.background = "light"
-        colors()
+		colors()
 	else
 		vim.o.background = "dark"
-        colors()
+		colors()
 	end
 end
 
 function colors()
+	if vim.o.background == "dark" then
+		vim.api.nvim_set_hl(0, "Normal", { bg = "Grey0", fg = "NvimLightGrey2" })
+		vim.api.nvim_set_hl(0, "Visual", { bg = "NvimLightYellow", fg = "Grey0" })
+	end
 
-    if vim.o.background == "dark" then
-        vim.api.nvim_set_hl(0, "Normal", {bg = "Grey0", fg = "NvimLightGrey2"})
-        vim.api.nvim_set_hl(0, "Visual", {bg = "NvimLightYellow", fg = "Grey0"})
-    end
+	if vim.o.background == "light" then
+		vim.api.nvim_set_hl(0, "Normal", { bg = "Grey99", fg = "NvimDarkGrey2" })
+		vim.api.nvim_set_hl(0, "Visual", { bg = "NvimDarkYellow", fg = "Grey99" })
+	end
 
-    if vim.o.background == "light" then
-        vim.api.nvim_set_hl(0, "Normal", {bg = "Grey99", fg = "NvimDarkGrey2"})
-        vim.api.nvim_set_hl(0, "Visual", {bg = "NvimDarkYellow", fg = "Grey99"})
-    end
-
-    vim.api.nvim_set_hl(0, "Function", { link = "Normal"})
-    vim.api.nvim_set_hl(0, "Identifier", { link = "Normal"})
-    vim.api.nvim_set_hl(0, "PreProc", { link = "Normal"})
-    vim.api.nvim_set_hl(0, "Special", { link = "Normal"})
-    vim.api.nvim_set_hl(0, "Statement", { link = "Normal"})
-    vim.api.nvim_set_hl(0, "String", { link = "Normal"})
-    vim.api.nvim_set_hl(0, "Title", { link = "Normal"})
-
+	vim.api.nvim_set_hl(0, "Function", { link = "Normal" })
+	vim.api.nvim_set_hl(0, "Identifier", { link = "Normal" })
+	vim.api.nvim_set_hl(0, "PreProc", { link = "Normal" })
+	vim.api.nvim_set_hl(0, "Special", { link = "Normal" })
+	vim.api.nvim_set_hl(0, "Statement", { link = "Normal" })
+	vim.api.nvim_set_hl(0, "String", { link = "Normal" })
+	vim.api.nvim_set_hl(0, "Title", { link = "Normal" })
 end
 
 colors()
