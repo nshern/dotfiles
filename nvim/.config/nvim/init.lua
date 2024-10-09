@@ -21,7 +21,18 @@ require("mini.deps").setup({ path = { package = path_package } })
 local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
 
 now(function()
+    add({ source = "williamboman/mason.nvim"})
+    add({ source = "williamboman/mason-lspconfig.nvim"})
 	add({ source = "neovim/nvim-lspconfig" })
+
+
+    require("mason").setup()
+    require("mason-lspconfig").setup {
+        ensure_installed = { "lua_ls", "marksman", "pyright", "omnisharp", "ruff", "taplo"},
+    }
+
+    --CSHARP--
+	require("lspconfig").omnisharp.setup({})
 
 	--PYTHON--
 	require("lspconfig").pyright.setup({})
