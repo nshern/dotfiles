@@ -2,18 +2,18 @@
 local path_package = vim.fn.stdpath("data") .. "/site/"
 local mini_path = path_package .. "pack/deps/start/mini.nvim"
 if not vim.loop.fs_stat(mini_path) then
-	vim.cmd('echo "Installing `mini.nvim`" | redraw')
+    vim.cmd('echo "Installing `mini.nvim`" | redraw')
 
-	local clone_cmd = {
-		"git",
-		"clone",
-		"--filter=blob:none",
-		"https://github.com/echasnovski/mini.nvim",
-		mini_path,
-	}
-	vim.fn.system(clone_cmd)
-	vim.cmd("packadd mini.nvim | helptags ALL")
-	vim.cmd('echo "Installed `mini.nvim`" | redraw')
+    local clone_cmd = {
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/echasnovski/mini.nvim",
+        mini_path,
+    }
+    vim.fn.system(clone_cmd)
+    vim.cmd("packadd mini.nvim | helptags ALL")
+    vim.cmd('echo "Installed `mini.nvim`" | redraw')
 end
 require("mini.deps").setup({ path = { package = path_package } })
 
@@ -21,90 +21,105 @@ require("mini.deps").setup({ path = { package = path_package } })
 local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
 
 now(function()
-    add({ source = "williamboman/mason.nvim"})
-    add({ source = "williamboman/mason-lspconfig.nvim"})
-	add({ source = "neovim/nvim-lspconfig" })
+    add({ source = "nvim-treesitter/nvim-treesitter" })
+    require("nvim-treesitter.configs").setup({
+        ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
+        auto_install = true,
+        indent = {
+            enable = true,
+        },
+        highlight = {
+            enable = true,
+        },
+    })
 
+    add({ source = "stevearc/oil.nvim" })
+    require("oil").setup({ skip_confirm_for_simple_edits = true, delete_to_trash = true })
+    require("mini.completion").setup({
+        mappings = {
+            force_twostep = "<C-t>",
+            force_fallback = "<C-f>",
+        },
+        window = {
+            info = { border = "rounded" },
+            signature = { border = "rounded" },
+        },
+    })
 
+    add({ source = "ibhagwan/fzf-lua" })
+    require("fzf-lua").setup({ defaults = { file_icons = false } })
+
+    add({ source = "williamboman/mason.nvim" })
+    add({ source = "williamboman/mason-lspconfig.nvim" })
+    add({ source = "neovim/nvim-lspconfig" })
+    add({ source = "stevearc/conform.nvim" })
+
+    --LSP--
     require("mason").setup()
-    require("mason-lspconfig").setup {
-        ensure_installed = { "lua_ls", "marksman", "pyright", "omnisharp", "ruff", "taplo"},
-    }
+    require("mason-lspconfig").setup({
+        ensure_installed = { "lua_ls", "marksman", "pyright", "omnisharp", "ruff", "taplo" },
+    })
+
+    --FORMATTER--
+    require("conform").setup({
+        formatters_by_ft = {
+            lua = { "stylua" },
+            python = { "isort", "black" },
+            csharp = { "csharpier" },
+        },
+
+        format_on_save = {
+            timeout_ms = 500,
+            lsp_format = "fallback",
+        },
+    })
 
     --CSHARP--
-	require("lspconfig").omnisharp.setup({})
+    require("lspconfig").omnisharp.setup({})
 
-	--PYTHON--
-	require("lspconfig").pyright.setup({})
-	require("lspconfig").ruff.setup({})
+    --PYTHON--
+    require("lspconfig").pyright.setup({})
+    require("lspconfig").ruff.setup({})
 
-	--MARKDOWN--
-	require("lspconfig").marksman.setup({})
+    --MARKDOWN--
+    require("lspconfig").marksman.setup({})
 
-	--TOML--
-	require("lspconfig").taplo.setup({})
+    --TOML--
+    require("lspconfig").taplo.setup({})
 
-	--LUA--
-	require("lspconfig").lua_ls.setup({
-		settings = {
-			Lua = {
-				diagnostics = {
-					disable = { "lowercase-global", "undefined-global" },
-				},
-			},
-		},
-	})
+    --LUA--
+    require("lspconfig").lua_ls.setup({
+        settings = {
+            Lua = {
+                diagnostics = {
+                    disable = { "lowercase-global", "undefined-global" },
+                },
+            },
+        },
+    })
 
-	--TERRAFORM--
-	require("lspconfig").terraformls.setup({})
+    --TERRAFORM--
+    require("lspconfig").terraformls.setup({})
 
-	vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-		pattern = { "*.tf", "*.tfvars" },
-		callback = function()
-			vim.lsp.buf.format()
-		end,
-	})
+    vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+        pattern = { "*.tf", "*.tfvars" },
+        callback = function()
+            vim.lsp.buf.format()
+        end,
+    })
 
-	-- override file detection https://github.com/neovim/neovim/blob/a064ed622927b4c5e30165abbe54db841359c71f/runtime/lua/vim/filetype/detect.lua#L1473
-	vim.filetype.add({
-		extension = {
-			tf = "terraform",
-		},
-	})
+    -- override file detection https://github.com/neovim/neovim/blob/a064ed622927b4c5e30165abbe54db841359c71f/runtime/lua/vim/filetype/detect.lua#L1473
+    vim.filetype.add({
+        extension = {
+            tf = "terraform",
+        },
+    })
 end)
-
-later(function()
-	-- add({ source = "nvim-treesitter/nvim-treesitter" })
-	-- require("nvim-treesitter.configs").setup({
-	-- 	ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
-	-- 	auto_install = true,
-	-- 	indent = {
-	-- 		enable = true,
-	-- 	},
-	-- 	highlight = {
-	-- 		enable = true,
-	-- 	},
-	-- })
-
-	add({ source = "stevearc/oil.nvim" })
-	require("oil").setup({ skip_confirm_for_simple_edits = true, delete_to_trash = true })
-	-- require("mini.tabline").setup()
-	require("mini.completion").setup({
-		mappings = {
-			force_twostep = "<C-t>",
-			force_fallback = "<C-f>",
-		},
-		window = {
-			info = { border = "rounded" },
-			signature = { border = "rounded" },
-		},
-	})
-
-	add({ source = "ibhagwan/fzf-lua" })
-	require("fzf-lua").setup({ defaults = { file_icons = false } })
-end)
+--
+later(function() end)
 
 --OPTIONS--
+vim.cmd.colorscheme("quiet")
 vim.g.mapleader = " "
 vim.g.termguicolors = true
 vim.opt.breakindent = true
@@ -127,14 +142,7 @@ vim.opt.tabstop = 4
 vim.opt.undofile = true
 vim.opt.updatetime = 200
 
-vim.api.nvim_set_hl(0, "String", { link = "Normal" })
-vim.api.nvim_set_hl(0, "Statement", { link = "Normal" })
-vim.api.nvim_set_hl(0, "Special", { link = "Normal" })
-vim.api.nvim_set_hl(0, "PreProc", { link = "Normal" })
-vim.api.nvim_set_hl(0, "Identifier", { link = "Normal" })
-vim.api.nvim_set_hl(0, "Function", { link = "Normal" })
-
---KEYMAPS--
+-- --KEYMAPS--
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 vim.keymap.set("n", "<Esc>", "<CMD>nohlsearch<CR>")
 vim.keymap.set("n", "<S-h>", "<CMD>bp<CR>", { desc = "Jump to previous buffer" })
@@ -153,65 +161,42 @@ vim.keymap.set("n", "<leader>sg", "<CMD>FzfLua grep<CR>", { desc = "Pick grep" }
 vim.keymap.set("n", "<leader>ss", "<CMD>setlocal spell<CR>", { desc = "Set spell" })
 vim.keymap.set("n", "<leader>tb", [[:lua ToggleBackground()<CR>]], { noremap = true, silent = true })
 vim.keymap.set("n", "gD", "<CMD>lua vim.lsp.buf.declaration()<CR>")
+vim.keymap.set("n", "<leader>gq", "ggVGgq<C-o><C-o>", { desc = "format" })
 vim.keymap.set("n", "gd", "<CMD>lua vim.lsp.buf.definition()<CR>")
 vim.keymap.set("n", "gl", "<CMDcd %p:h<CR>")
 vim.keymap.set("n", "gr", "<CMD>lua vim.lsp.buf.references()<CR>")
-vim.keymap.set("n", "gra", "<CMD>lua vim.lsp.buf.code_action()<CR>")
-vim.keymap.set("n", "gre", "<CMD>lua vim.lsp.buf.rename()<CR>")
+vim.keymap.set("n", "<leader>ca", "<CMD>lua vim.lsp.buf.code_action()<CR>")
+vim.keymap.set("n", "<leader>re", "<CMD>lua vim.lsp.buf.rename()<CR>")
 vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>tb", ":lua toggle_background()<CR>", { noremap = true, silent = true })
 
-vim.api.nvim_create_autocmd("LspAttach", {
-	callback = function(args)
-		local client = vim.lsp.get_client_by_id(args.data.client_id)
-		if client then
-			client.server_capabilities.semanticTokensProvider = nil
-		end
-	end,
-})
+-- vim.api.nvim_create_autocmd("LspAttach", {
+-- 	callback = function(args)
+-- 		local client = vim.lsp.get_client_by_id(args.data.client_id)
+-- 		if client then
+-- 			client.server_capabilities.semanticTokensProvider = nil
+-- 		end
+-- 	end,
+-- })
 
 --STATUS LINE--
 local statusline = {
-	" %t",
-	"%r",
-	"%m",
-	"%=",
-	"%{&filetype}",
-	" %2p%%",
-	" %3l:%-2c ",
+    " %t",
+    "%r",
+    "%m",
+    "%=",
+    "%{&filetype}",
+    " %2p%%",
+    " %3l:%-2c ",
 }
 vim.o.statusline = table.concat(statusline, "")
 
 --COLORSCHEME--
 function toggle_background()
-	if vim.o.background == "dark" then
-		vim.o.background = "light"
-		colors()
-	else
-		vim.o.background = "dark"
-		colors()
-	end
+    if vim.o.background == "dark" then
+        vim.o.background = "light"
+    else
+        vim.o.background = "dark"
+    end
 end
-
-function colors()
-	if vim.o.background == "dark" then
-		vim.api.nvim_set_hl(0, "Normal", { bg = "Grey0", fg = "NvimLightGrey2" })
-		vim.api.nvim_set_hl(0, "Visual", { bg = "NvimLightYellow", fg = "Grey0" })
-	end
-
-	if vim.o.background == "light" then
-		vim.api.nvim_set_hl(0, "Normal", { bg = "Grey99", fg = "NvimDarkGrey2" })
-		vim.api.nvim_set_hl(0, "Visual", { bg = "NvimDarkYellow", fg = "Grey99" })
-	end
-
-	vim.api.nvim_set_hl(0, "Function", { link = "Normal" })
-	vim.api.nvim_set_hl(0, "Identifier", { link = "Normal" })
-	vim.api.nvim_set_hl(0, "PreProc", { link = "Normal" })
-	vim.api.nvim_set_hl(0, "Special", { link = "Normal" })
-	vim.api.nvim_set_hl(0, "Statement", { link = "Normal" })
-	vim.api.nvim_set_hl(0, "String", { link = "Normal" })
-	vim.api.nvim_set_hl(0, "Title", { link = "Normal" })
-end
-
-colors()
