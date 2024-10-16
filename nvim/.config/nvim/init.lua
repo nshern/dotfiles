@@ -21,6 +21,19 @@ require("mini.deps").setup({ path = { package = path_package } })
 local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
 
 now(function()
+    local hipatterns = require('mini.hipatterns')
+    hipatterns.setup({
+        highlighters = {
+            -- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
+            fixme     = { pattern = '%f[%w]()FIXME()%f[%W]', group = 'MiniHipatternsFixme' },
+            hack      = { pattern = '%f[%w]()HACK()%f[%W]', group = 'MiniHipatternsHack' },
+            todo      = { pattern = '%f[%w]()TODO()%f[%W]', group = 'MiniHipatternsTodo' },
+            note      = { pattern = '%f[%w]()NOTE()%f[%W]', group = 'MiniHipatternsNote' },
+
+            -- Highlight hex color strings (`#rrggbb`) using that color
+            hex_color = hipatterns.gen_highlighter.hex_color(),
+        },
+    })
     add({ source = "nvim-treesitter/nvim-treesitter" })
     require("nvim-treesitter.configs").setup({
         ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
@@ -119,7 +132,7 @@ end)
 later(function() end)
 
 --OPTIONS--
-vim.cmd.colorscheme("quiet")
+vim.cmd.colorscheme("quietus")
 vim.g.mapleader = " "
 vim.g.termguicolors = true
 vim.opt.breakindent = true
