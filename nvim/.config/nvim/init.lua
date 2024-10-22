@@ -21,19 +21,6 @@ require("mini.deps").setup({ path = { package = path_package } })
 local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
 
 now(function()
-    local hipatterns = require('mini.hipatterns')
-    hipatterns.setup({
-        highlighters = {
-            -- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
-            fixme     = { pattern = '%f[%w]()FIXME()%f[%W]', group = 'MiniHipatternsFixme' },
-            hack      = { pattern = '%f[%w]()HACK()%f[%W]', group = 'MiniHipatternsHack' },
-            todo      = { pattern = '%f[%w]()TODO()%f[%W]', group = 'MiniHipatternsTodo' },
-            note      = { pattern = '%f[%w]()NOTE()%f[%W]', group = 'MiniHipatternsNote' },
-
-            -- Highlight hex color strings (`#rrggbb`) using that color
-            hex_color = hipatterns.gen_highlighter.hex_color(),
-        },
-    })
     add({ source = "nvim-treesitter/nvim-treesitter" })
     require("nvim-treesitter.configs").setup({
         ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
@@ -79,6 +66,7 @@ now(function()
             lua = { "stylua" },
             python = { "isort", "black" },
             csharp = { "csharpier" },
+            markdown = { "prettier" },
         },
 
         format_on_save = {
@@ -132,7 +120,7 @@ end)
 later(function() end)
 
 --OPTIONS--
-vim.cmd.colorscheme("quietus")
+vim.cmd.colorscheme("carbonquiet")
 vim.g.mapleader = " "
 vim.g.termguicolors = true
 vim.opt.breakindent = true
@@ -213,3 +201,13 @@ function toggle_background()
         vim.o.background = "dark"
     end
 end
+
+--AUTOCOMMANDS--
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
+    callback = function()
+        vim.opt_local.textwidth = 79
+        vim.opt_local.colorcolumn = "80"
+        vim.opt_local.spell = true
+    end
+})

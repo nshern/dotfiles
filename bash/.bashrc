@@ -26,7 +26,7 @@ alias gs='git status'
 alias lg="lazygit"
 alias ll="ls -l -t -r --color=auto"
 alias ls="ls --color=auto"
-alias megapush='git add -A && git commit -m "." && git push'
+alias fullsend='git add -A && git commit -m "." && git push'
 alias nb="newsboat"
 alias pause='asciiquarium'
 alias py="python"
