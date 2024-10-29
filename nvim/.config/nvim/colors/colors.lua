@@ -1,7 +1,7 @@
 if vim.g.colors_name ~= nil then
     vim.cmd 'highlight clear'
 end
-vim.g.colors_name = 'carbonquiet'
+vim.g.colors_name = 'colors'
 
 local hi = vim.api.nvim_set_hl
 
@@ -139,7 +139,10 @@ if vim.o.background == "dark" then
     hi(0, 'Added', { fg = palette.green[40] })
     hi(0, 'Changed', { fg = palette.teal[40] })
     hi(0, 'ColorColumn', { bg = palette.gray[100] })
+    hi(0, 'Type', { link = Normal })
+    hi(0, 'Operator', { link = Normal })
     hi(0, 'Comment', { fg = palette.gray[60], bold = true })
+    hi(0, '@string.documentation.python', { fg = palette.green[50] })
     hi(0, 'Conceal', { fg = palette.gray[100] })
     hi(0, 'Constant', { link = Normal })
     hi(0, 'CurSearch', { fg = palette.black, bg = palette.yellow[40] })
@@ -191,26 +194,29 @@ end
 if vim.o.background == "light" then
     -- {{{
     hi(0, '@variable', { link = Normal })
-    hi(0, 'Added', { fg = palette.green[40] })
-    hi(0, 'Changed', { fg = palette.teal[40] })
+    hi(0, 'Added', { fg = palette.green[70] })
+    hi(0, 'Changed', { fg = palette.teal[70] })
     hi(0, 'ColorColumn', { bg = palette.gray[100] })
-    hi(0, 'Comment', { fg = palette.gray[60], bold = true })
+    hi(0, 'Type', { link = Normal })
+    hi(0, 'Operator', { link = Normal })
+    hi(0, 'Comment', { fg = palette.cyan[50] })
+    hi(0, '@string.documentation.python', { fg = palette.green[50] })
     hi(0, 'Conceal', { fg = palette.gray[100] })
     hi(0, 'Constant', { link = Normal })
-    hi(0, 'CurSearch', { fg = palette.black, bg = palette.yellow[40] })
+    hi(0, 'CurSearch', { fg = palette.white, bg = palette.yellow[70] })
     hi(0, 'CursorColumn', { bg = palette.gray[80] })
     hi(0, 'CursorLine', { bg = palette.gray[80] })
     hi(0, 'Delimiter', { link = Normal })
     hi(0, 'DiagnosticError', { fg = palette.red[50] })
-    hi(0, 'DiagnosticHint', { fg = palette.blue[40] })
-    hi(0, 'DiagnosticInfo', { fg = palette.teal[40] })
-    hi(0, 'DiagnosticOk', { fg = palette.green[40] })
+    hi(0, 'DiagnosticHint', { fg = palette.blue[70] })
+    hi(0, 'DiagnosticInfo', { fg = palette.teal[70] })
+    hi(0, 'DiagnosticOk', { fg = palette.green[70] })
     hi(0, 'DiagnosticUnderlineError', { sp = palette.red[50], underline = 1 })
-    hi(0, 'DiagnosticUnderlineHint', { sp = palette.blue[40], underline = 1 })
-    hi(0, 'DiagnosticUnderlineInfo', { sp = palette.teal[40], underline = 1 })
-    hi(0, 'DiagnosticUnderlineOk', { sp = palette.green[40], underline = 1 })
-    hi(0, 'DiagnosticUnderlineWarn', { sp = palette.yellow[30], underline = 1 })
-    hi(0, 'DiagnosticWarn', { fg = palette.yellow[30] })
+    hi(0, 'DiagnosticUnderlineHint', { sp = palette.blue[70], underline = 1 })
+    hi(0, 'DiagnosticUnderlineInfo', { sp = palette.teal[70], underline = 1 })
+    hi(0, 'DiagnosticUnderlineOk', { sp = palette.green[70], underline = 1 })
+    hi(0, 'DiagnosticUnderlineWarn', { sp = palette.yellow[70], underline = 1 })
+    hi(0, 'DiagnosticWarn', { fg = palette.yellow[70] })
     hi(0, 'DiffAdd', { fg = palette.white, bg = palette.green[70] })
     hi(0, 'DiffChange', { bg = palette.gray[100], fg = palette.white })
     hi(0, 'DiffDelete', { bg = palette.gray[100], fg = palette.white })
@@ -219,14 +225,14 @@ if vim.o.background == "light" then
     hi(0, 'Function', { link = Normal })
     hi(0, 'Identifier', { link = Normal })
     hi(0, 'LineNr', { fg = palette.gray[70] })
-    hi(0, 'ModeMsg', { fg = palette.green[40] })
-    hi(0, 'MoreMsg', { fg = palette.cyan[40] })
+    hi(0, 'ModeMsg', { fg = palette.green[70] })
+    hi(0, 'MoreMsg', { fg = palette.cyan[70] })
     hi(0, 'NonText', { fg = palette.gray[70] })
-    hi(0, 'Normal', { fg = palette.black, bg = palette.white })
-    hi(0, 'Question', { fg = palette.cyan[40] })
+    hi(0, 'Normal', { bg = palette.white, fg = palette.black })
+    hi(0, 'Question', { fg = palette.cyan[70] })
     hi(0, 'QuickFixLine', { fg = palette.teal[40] })
     hi(0, 'Removed', { fg = palette.red[50] })
-    hi(0, 'Search', { bg = palette.yellow[70], fg = palette.white })
+    hi(0, 'Search', { bg = palette.yellow[30], fg = palette.white })
     hi(0, 'Special', { link = Normal })
     hi(0, 'SpecialKey', { fg = palette.gray[70] })
     hi(0, 'SpellBad', { sp = palette.red[50], undercurl = 1 })
@@ -237,7 +243,8 @@ if vim.o.background == "light" then
     hi(0, 'StatusLine', { bg = palette.gray[90], fg = palette.white })
     hi(0, 'String', { link = Normal })
     hi(0, 'Title', { link = Normal })
-    hi(0, 'Visual', { bg = palette.yellow[40], fg = palette.black })
-    hi(0, 'WarningMsg', { fg = palette.yellow[30] })
+    hi(0, 'Visual', { bg = palette.yellow[70], fg = palette.black })
+    hi(0, 'WarningMsg', { fg = palette.yellow[70] })
 end
+
 -- }}}

@@ -29,7 +29,7 @@ alias ls="ls --color=auto"
 alias fullsend='git add -A && git commit -m "." && git push'
 alias nb="newsboat"
 alias pause='asciiquarium'
-alias py="python"
+alias py="python3"
 alias st='tmux source-file ~/.tmux.conf'
 alias tf='terraform'
 alias todo='vim ~/dropbox/notes/todo.md'

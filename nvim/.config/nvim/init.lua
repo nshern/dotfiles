@@ -67,6 +67,7 @@ now(function()
             python = { "isort", "black" },
             csharp = { "csharpier" },
             markdown = { "prettier" },
+            go = { "gofmt" }
         },
 
         format_on_save = {
@@ -77,6 +78,9 @@ now(function()
 
     --CSHARP--
     require("lspconfig").omnisharp.setup({})
+
+    --GO--
+    require("lspconfig").gopls.setup({})
 
     --PYTHON--
     require("lspconfig").pyright.setup({})
@@ -120,7 +124,7 @@ end)
 later(function() end)
 
 --OPTIONS--
-vim.cmd.colorscheme("carbonquiet")
+vim.cmd.colorscheme("colors")
 vim.g.mapleader = " "
 vim.g.termguicolors = true
 vim.opt.breakindent = true
