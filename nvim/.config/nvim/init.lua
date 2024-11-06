@@ -124,7 +124,7 @@ end)
 later(function() end)
 
 --OPTIONS--
-vim.cmd.colorscheme("colors")
+vim.cmd.colorscheme("blackboard")
 vim.g.mapleader = " "
 vim.g.termguicolors = true
 vim.opt.breakindent = true
@@ -210,8 +210,8 @@ end
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "markdown",
     callback = function()
-        vim.opt_local.textwidth = 79
-        vim.opt_local.colorcolumn = "80"
+        vim.opt_local.textwidth = 120
+        vim.opt_local.colorcolumn = "121"
         vim.opt_local.spell = true
     end
 })

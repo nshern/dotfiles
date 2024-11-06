@@ -1,7 +1,7 @@
 if vim.g.colors_name ~= nil then
     vim.cmd 'highlight clear'
 end
-vim.g.colors_name = 'colors'
+vim.g.colors_name = 'carbon'
 
 local hi = vim.api.nvim_set_hl
 
@@ -142,11 +142,10 @@ if vim.o.background == "dark" then
     hi(0, 'Type', { link = Normal })
     hi(0, 'Operator', { link = Normal })
     hi(0, 'Comment', { fg = palette.gray[60], bold = true })
-    hi(0, '@string.documentation.python', { fg = palette.green[50] })
     hi(0, 'Conceal', { fg = palette.gray[100] })
     hi(0, 'Constant', { link = Normal })
-    hi(0, 'CurSearch', { fg = palette.black, bg = palette.yellow[40] })
     hi(0, 'CursorColumn', { bg = palette.gray[80] })
+    hi(0, 'CurSearch', { fg = palette.black, bg = palette.yellow[40] })
     hi(0, 'CursorLine', { bg = palette.gray[80] })
     hi(0, 'Delimiter', { link = Normal })
     hi(0, 'DiagnosticError', { fg = palette.red[50] })
@@ -170,7 +169,7 @@ if vim.o.background == "dark" then
     hi(0, 'ModeMsg', { fg = palette.green[40] })
     hi(0, 'MoreMsg', { fg = palette.cyan[40] })
     hi(0, 'NonText', { fg = palette.gray[70] })
-    hi(0, 'Normal', { fg = palette.gray[20] })
+    hi(0, 'Normal', { fg = palette.gray[20], bg = palette.gray[100] })
     hi(0, 'Question', { fg = palette.cyan[40] })
     hi(0, 'QuickFixLine', { fg = palette.teal[40] })
     hi(0, 'Removed', { fg = palette.red[50] })
@@ -199,11 +198,11 @@ if vim.o.background == "light" then
     hi(0, 'ColorColumn', { bg = palette.gray[100] })
     hi(0, 'Type', { link = Normal })
     hi(0, 'Operator', { link = Normal })
-    hi(0, 'Comment', { fg = palette.cyan[50] })
+    hi(0, 'Comment', { fg = palette.red[50], bold = true })
     hi(0, '@string.documentation.python', { fg = palette.green[50] })
     hi(0, 'Conceal', { fg = palette.gray[100] })
     hi(0, 'Constant', { link = Normal })
-    hi(0, 'CurSearch', { fg = palette.white, bg = palette.yellow[70] })
+    hi(0, 'CurSearch', { fg = palette.black, bg = palette.yellow[40] })
     hi(0, 'CursorColumn', { bg = palette.gray[80] })
     hi(0, 'CursorLine', { bg = palette.gray[80] })
     hi(0, 'Delimiter', { link = Normal })
@@ -232,7 +231,7 @@ if vim.o.background == "light" then
     hi(0, 'Question', { fg = palette.cyan[70] })
     hi(0, 'QuickFixLine', { fg = palette.teal[40] })
     hi(0, 'Removed', { fg = palette.red[50] })
-    hi(0, 'Search', { bg = palette.yellow[30], fg = palette.white })
+    hi(0, 'Search', { bg = palette.yellow[70], fg = palette.white })
     hi(0, 'Special', { link = Normal })
     hi(0, 'SpecialKey', { fg = palette.gray[70] })
     hi(0, 'SpellBad', { sp = palette.red[50], undercurl = 1 })
@@ -243,7 +242,7 @@ if vim.o.background == "light" then
     hi(0, 'StatusLine', { bg = palette.gray[90], fg = palette.white })
     hi(0, 'String', { link = Normal })
     hi(0, 'Title', { link = Normal })
-    hi(0, 'Visual', { bg = palette.yellow[70], fg = palette.black })
+    hi(0, 'Visual', { bg = palette.blue[70], fg = palette.white })
     hi(0, 'WarningMsg', { fg = palette.yellow[70] })
 end
 

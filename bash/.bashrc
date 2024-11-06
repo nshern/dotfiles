@@ -24,8 +24,8 @@ alias ghme='gh issue list --assignee @me'
 alias glol='git log --oneline'
 alias gs='git status'
 alias lg="lazygit"
-alias ll="ls -l -t -r --color=auto"
-alias ls="ls --color=auto"
+alias ls="ls -F"
+alias ll="ls -l -t -r -F --color=auto"
 alias fullsend='git add -A && git commit -m "." && git push'
 alias nb="newsboat"
 alias pause='asciiquarium'
@@ -41,4 +41,4 @@ alias work='vim ~/dropbox/notes/work.md'
 
 eval "$(fzf --bash)"
 
-PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1='\[\e[94m\]\w\n\[\e[96m\]$\[\e[0m\] \[\e[95;1m\]${PS1_CMD1}\[\e[0m\] '
+PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1='\[\e[39m\]\w\n\[\e[39m\]$\[\e[0m\] \[\e[39;1m\]${PS1_CMD1}\[\e[0m\] '

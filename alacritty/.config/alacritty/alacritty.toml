@@ -7,39 +7,33 @@ size = 18
 [font.normal]
 family = "Berkeley Mono"
 
-
 [colors.normal]
 black = '#000000'
-red = '#fa4d56'
-green = '#24a148'
-yellow = '#b28600'
-blue = '#1192e8'
-magenta = '#a56eff'
-cyan = '#009d9a'
-white = '#c6c6c6'
-
-[colors.bright]
-black = '#525252'
 red = '#ff8389'
 green = '#42be65'
 yellow = '#d2a106'
-blue = '#33b1ff'
+blue = "#33b1ff"
 magenta = '#be95ff'
 cyan = '#08bdba'
+white = '#c6c6c6'
+
+[colors.bright]
+black = '#6f6f6f'
+red = '#ffb3b8'
+green = '#6fdc8c'
+yellow = '#f1c21b'
+blue = "#82cfff"
+magenta = '#d4bbff'
+cyan = '#3ddbd9'
 white = '#ffffff'
 
 [colors.primary]
-background = '#000000'
-foreground = '#e0e0e0'
-
-[colors.selection]
-background = '#4f5258'
-text = '#e0e2ea'
+background = '#022b30'
+foreground = '#c6c6c6'
 
 [window]
 decorations = "none"
 startup_mode = "Maximized"
-# opacity = 0.7
 
 [window.padding]
 x = 7
