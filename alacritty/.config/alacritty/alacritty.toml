@@ -7,32 +7,29 @@ size = 18
 [font.normal]
 family = "Berkeley Mono"
 
-[colors]
-cursor = { text = "#000000", cursor = "#33ff33" }
+[colors.primary]
+background = "#14161b"
+foreground = "#E0E2EA"
 
 [colors.normal]
-black = '#000000'
-red = '#ff8389'
-green = '#42be65'
-yellow = '#d2a106'
-blue = "#33b1ff"
-magenta = '#be95ff'
-cyan = '#08bdba'
-white = '#c6c6c6'
+black = "#2c2e33"
+red = "#FFC0B9"
+green = "#B4F6C0"
+yellow = "#FCE094"
+blue = "#A6DBFF"
+magenta = "#FFCAFF"
+cyan = "#8CF8F7"
+white = "#C4C6CD"
 
 [colors.bright]
-black = '#6f6f6f'
-red = '#ffb3b8'
-green = '#6fdc8c'
-yellow = '#f1c21b'
-blue = "#82cfff"
-magenta = '#d4bbff'
-cyan = '#3ddbd9'
-white = '#ffffff'
-
-[colors.primary]
-background = '#022b30'
-foreground = '#c6c6c6'
+black = "#4f5258"
+red = "#FFC0B9"
+green = "#B4F6C0"
+yellow = "#FCE094"
+blue = "#A6DBFF"
+magenta = "#FFCAFF"
+cyan = "#8CF8F7"
+white = "#9b9ea4"
 
 [window]
 decorations = "none"

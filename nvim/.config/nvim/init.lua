@@ -125,7 +125,6 @@ end)
 later(function() end)
 
 --OPTIONS--
-vim.cmd.colorscheme("teal")
 vim.g.mapleader = " "
 vim.g.termguicolors = true
 vim.opt.breakindent = true
@@ -147,6 +146,28 @@ vim.opt.spelllang = { "en", "da" }
 vim.opt.tabstop = 4
 vim.opt.undofile = true
 vim.opt.updatetime = 200
+
+-- COLORS --
+local hi = vim.api.nvim_set_hl
+
+hi(0, '@variable', { link = Normal })
+hi(0, 'Constant', { link = Normal })
+hi(0, 'Delimiter', { link = Normal })
+hi(0, 'Function', { link = Normal })
+hi(0, 'Identifier', { link = Normal })
+hi(0, 'Operator', { link = Normal })
+hi(0, 'Special', { link = Normal })
+hi(0, 'Statement', { link = Normal })
+hi(0, 'String', { link = Normal })
+hi(0, 'Type', { link = Normal })
+
+if vim.o.background == "dark" then
+    hi(0, 'Visual', { bg = "NvimLightYellow", fg = "NvimDarkGrey1" })
+end
+
+if vim.o.background == "light" then
+    hi(0, 'Visual', { bg = "NvimDarkYellow", fg = "NvimLightGrey1" })
+end
 
 -- --KEYMAPS--
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
@@ -216,3 +237,9 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.opt_local.spell = true
     end
 })
+
+-- Creating a custom command
+vim.cmd('command! ReloadConfig source $MYVIMRC')
+
+-- Creating a key mapping
+vim.api.nvim_set_keymap('n', '<leader>r', ':luafile $MYVIMRC<CR>', { noremap = true, silent = true })
