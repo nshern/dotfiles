@@ -21,6 +21,7 @@ require("mini.deps").setup({ path = { package = path_package } })
 local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
 
 now(function()
+    add({ source = "catppuccin/nvim" })
     add({ source = "nvim-treesitter/nvim-treesitter" })
     require("nvim-treesitter.configs").setup({
         ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
@@ -124,7 +125,7 @@ end)
 later(function() end)
 
 --OPTIONS--
-vim.cmd.colorscheme("blackboard")
+vim.cmd.colorscheme("teal")
 vim.g.mapleader = " "
 vim.g.termguicolors = true
 vim.opt.breakindent = true
