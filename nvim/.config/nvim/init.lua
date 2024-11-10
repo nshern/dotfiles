@@ -46,16 +46,8 @@ now(function()
 		},
 	})
 
-	add({ source = "ibhagwan/fzf-lua" })
-	require("fzf-lua").setup({ defaults = { file_icons = false } })
-
 	add({ source = "neovim/nvim-lspconfig" })
 	add({ source = "stevearc/conform.nvim" })
-
-	--LSP--
-	require("lspconfig").gopls.setup({})
-	require("lspconfig").pyright.setup({})
-	require("lspconfig").lua_ls.setup({})
 
 	--FORMATTER--
 	require("conform").setup({
@@ -73,23 +65,13 @@ now(function()
 		},
 	})
 
-	--CSHARP--
-	require("lspconfig").omnisharp.setup({})
-
-	--GO--
+	--LSP--
 	require("lspconfig").gopls.setup({})
-
-	--PYTHON--
 	require("lspconfig").pyright.setup({})
 	require("lspconfig").ruff.setup({})
-
-	--MARKDOWN--
 	require("lspconfig").marksman.setup({})
-
-	--TOML--
 	require("lspconfig").taplo.setup({})
-
-	--LUA--
+	require("lspconfig").terraformls.setup({})
 	require("lspconfig").lua_ls.setup({
 		settings = {
 			Lua = {
@@ -99,9 +81,6 @@ now(function()
 			},
 		},
 	})
-
-	--TERRAFORM--
-	require("lspconfig").terraformls.setup({})
 
 	vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 		pattern = { "*.tf", "*.tfvars" },
@@ -118,9 +97,13 @@ now(function()
 	})
 end)
 --
-later(function() end)
+later(function()
+	add({ source = "ibhagwan/fzf-lua" })
+	require("fzf-lua").setup({ defaults = { file_icons = false } })
+end)
 
 --OPTIONS--
+vim.cmd.colorscheme("carbon_quiet")
 vim.g.mapleader = " "
 vim.g.termguicolors = true
 vim.opt.breakindent = true
@@ -142,28 +125,6 @@ vim.opt.spelllang = { "en", "da" }
 vim.opt.tabstop = 4
 vim.opt.undofile = true
 vim.opt.updatetime = 200
-
--- COLORS --
-local hi = vim.api.nvim_set_hl
-
-hi(0, "@variable", { link = Normal })
-hi(0, "Constant", { link = Normal })
-hi(0, "Delimiter", { link = Normal })
-hi(0, "Function", { link = Normal })
-hi(0, "Identifier", { link = Normal })
-hi(0, "Operator", { link = Normal })
-hi(0, "Special", { link = Normal })
-hi(0, "Statement", { link = Normal })
-hi(0, "String", { link = Normal })
-hi(0, "Type", { link = Normal })
-
-if vim.o.background == "dark" then
-	hi(0, "Visual", { bg = "NvimLightYellow", fg = "NvimDarkGrey1" })
-end
-
-if vim.o.background == "light" then
-	hi(0, "Visual", { bg = "NvimDarkYellow", fg = "NvimLightGrey1" })
-end
 
 -- --KEYMAPS--
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
@@ -229,7 +190,6 @@ vim.api.nvim_create_autocmd("FileType", {
 	pattern = "markdown",
 	callback = function()
 		vim.opt_local.textwidth = 120
-		vim.opt_local.colorcolumn = "121"
 		vim.opt_local.spell = true
 	end,
 })

@@ -7,30 +7,32 @@ size = 18
 [font.normal]
 family = "Berkeley Mono"
 
-[colors.primary]
-background = "#14161b"
-foreground = "#E0E2EA"
-
-[colors.normal]
-black = "#2c2e33"
-red = "#FFC0B9"
-green = "#B4F6C0"
-yellow = "#FCE094"
-blue = "#A6DBFF"
-magenta = "#FFCAFF"
-cyan = "#8CF8F7"
-white = "#C4C6CD"
-
-[colors.bright]
-black = "#4f5258"
-red = "#FFC0B9"
-green = "#B4F6C0"
-yellow = "#FCE094"
-blue = "#A6DBFF"
-magenta = "#FFCAFF"
-cyan = "#8CF8F7"
-white = "#9b9ea4"
-
+[general]
+import = ["carbon_dark.toml"]
+# [colors.primary
+# background = "#14161b"
+# foreground = "#E0E2EA"
+#
+# [colors.normal]
+# black = "#2c2e33"
+# red = "#FFC0B9"
+# green = "#B4F6C0"
+# yellow = "#FCE094"
+# blue = "#A6DBFF"
+# magenta = "#FFCAFF"
+# cyan = "#8CF8F7"
+# white = "#C4C6CD"
+#
+# [colors.bright]
+# black = "#4f5258"
+# red = "#FFC0B9"
+# green = "#B4F6C0"
+# yellow = "#FCE094"
+# blue = "#A6DBFF"
+# magenta = "#FFCAFF"
+# cyan = "#8CF8F7"
+# white = "#9b9ea4"
+#
 [window]
 decorations = "none"
 startup_mode = "Maximized"
