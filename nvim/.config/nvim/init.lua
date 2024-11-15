@@ -18,23 +18,13 @@ end
 require("mini.deps").setup({ path = { package = path_package } })
 
 --PLUGINS--
-local add, now, later = MiniDeps.add, MiniDeps.now, MiniDeps.later
+local add, now = MiniDeps.add, MiniDeps.now
 
 now(function()
-	add({ source = "nvim-treesitter/nvim-treesitter" })
-	require("nvim-treesitter.configs").setup({
-		ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
-		auto_install = true,
-		indent = {
-			enable = true,
-		},
-		highlight = {
-			enable = true,
-		},
-	})
+	require("mini.pick").setup()
+	require("mini.files").setup()
 
-	add({ source = "stevearc/oil.nvim" })
-	require("oil").setup({ skip_confirm_for_simple_edits = true, delete_to_trash = true })
+	require("mini.icons").setup({ style = "ascii" })
 	require("mini.completion").setup({
 		mappings = {
 			force_twostep = "<C-t>",
@@ -55,7 +45,6 @@ now(function()
 			lua = { "stylua" },
 			python = { "isort", "black" },
 			csharp = { "csharpier" },
-			markdown = { "prettier" },
 			go = { "gofmt" },
 		},
 
@@ -96,14 +85,13 @@ now(function()
 		},
 	})
 end)
---
-later(function()
-	add({ source = "ibhagwan/fzf-lua" })
-	require("fzf-lua").setup({ defaults = { file_icons = false } })
-end)
+
+--COLORSCHEME--
+vim.cmd.colorscheme("custom")
 
 --OPTIONS--
-vim.cmd.colorscheme("carbon_quiet")
+vim.g.netrw_banner = 0
+vim.g.netrw_liststyle = 3
 vim.g.mapleader = " "
 vim.g.termguicolors = true
 vim.opt.breakindent = true
@@ -119,6 +107,7 @@ vim.opt.relativenumber = true
 vim.opt.scrolloff = 3
 vim.opt.shiftwidth = 4
 vim.opt.showmode = false
+vim.opt.wrap = false
 vim.opt.signcolumn = "yes"
 vim.opt.softtabstop = 4
 vim.opt.spelllang = { "en", "da" }
@@ -127,18 +116,18 @@ vim.opt.undofile = true
 vim.opt.updatetime = 200
 
 -- --KEYMAPS--
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "-", "<CMD>lua MiniFiles.open()<CR>", { desc = "Open parent directory" })
 vim.keymap.set("n", "<Esc>", "<CMD>nohlsearch<CR>")
 vim.keymap.set("n", "<S-h>", "<CMD>bp<CR>", { desc = "Jump to previous buffer" })
 vim.keymap.set("n", "<S-l>", "<CMD>bn<CR>", { desc = "Jump to next buffer" })
 vim.keymap.set("n", "<leader>-", "<CMD>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>")
-vim.keymap.set("n", "<leader>ba", "<CMD>bufdo bd<CR>", { desc = "Delete all buffers" })
-vim.keymap.set("n", "<leader>bd", "<CMD>bd<CR>", { desc = "Delete current buffer" })
+vim.keymap.set("n", "<leader>q", "<CMD>bufdo bd<CR>", { desc = "Delete all buffers" })
+vim.keymap.set("n", "<C-c>", "<CMD>bd<CR>", { desc = "Delete current buffer" })
 vim.keymap.set("n", "<leader>d", "<CMD>lua vim.diagnostic.open_float()<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>dc", "<CMD>DepsClean<CR>", { desc = "Deps clean" })
 vim.keymap.set("n", "<leader>du", "<CMD>DepsUpdate<CR>", { desc = "Deps Update" })
 vim.keymap.set("n", "<leader>sd", "<CMD>Pick diagnostic<CR>", { desc = "Pick diagnostic" })
-vim.keymap.set("n", "<leader>sf", "<CMD>FzfLua files<CR>", { desc = "Pick files" })
+vim.keymap.set("n", "<leader>sf", "<CMD>Pick files<CR>", { desc = "Pick files" })
 vim.keymap.set("n", "<leader><leader>", "<CMD>FzfLua buffers<CR>", { desc = "Pick files" })
 vim.keymap.set("n", "<leader>w", "<CMD>write<CR>", { desc = "Pick files" })
 vim.keymap.set("n", "<leader>sg", "<CMD>FzfLua grep<CR>", { desc = "Pick grep" })
@@ -189,7 +178,10 @@ end
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "markdown",
 	callback = function()
-		vim.opt_local.textwidth = 120
+		vim.keymap.set("n", "<leader>w", ":w<CR>:silent! !prettier -w %<CR>", { noremap = true, silent = true })
+		-- vim.keymap.set("n", "j", "gj")
+		-- vim.keymap.set("n", "k", "gk")
+		vim.opt.wrap = true
 		vim.opt_local.spell = true
 	end,
 })

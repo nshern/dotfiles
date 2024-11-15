@@ -19,10 +19,10 @@ hi(0, "Type", { link = Normal })
 
 if vim.o.background == "dark" then
 	hi(0, "Visual", { bg = "NvimLightYellow", fg = "NvimDarkGrey1" })
-	hi(0, "Comment", { fg = "red" })
+	hi(0, "Comment", { fg = "red", bold = true })
 end
 
 if vim.o.background == "light" then
 	hi(0, "Visual", { bg = "NvimDarkYellow", fg = "NvimLightGrey1" })
-	hi(0, "Comment", { fg = "red" })
+	hi(0, "Comment", { fg = "red", bold = true })
 end

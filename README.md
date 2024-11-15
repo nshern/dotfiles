@@ -1,1 +1,1 @@
-lean and mean
+Lean and mean

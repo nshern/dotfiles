@@ -4,12 +4,12 @@ foreground = "#E0E2EA"
 
 [colors.normal]
 black = "#2c2e33"
-red = "#E5ADB9"
-green = "#A2DFC0"
-yellow = "#E3CA85"
-blue = "#95C5E5"
-magenta = "#E5B6E6"
-cyan = "#7EDFDE"
+red = "#FFC0B9"
+green = "#B4F6C0"
+yellow = "#FCE094"
+blue = "#A6DBFF"
+magenta = "#FFCAFF"
+cyan = "#8CF8F7"
 white = "#C4C6CD"
 
 [colors.bright]
