@@ -2,14 +2,13 @@
 TERM = "xterm-256color"
 
 [font]
-size = 18
+size = 11
 
 [font.normal]
 family = "Berkeley Mono"
 
 [general]
-import = ["nvim_light.toml"]
-
+import = ["quiet.toml"]
 
 [window]
 decorations = "none"

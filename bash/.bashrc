@@ -25,7 +25,7 @@ alias glol='git log --oneline'
 alias gs='git status'
 alias lg="lazygit"
 alias ls="ls -F"
-alias ll="ls -l -t -r -F"
+alias ll="ls -l -t -r -F --color=auto"
 alias fullsend='git add -A && git commit -m "." && git push'
 alias nb="newsboat"
 alias pause='asciiquarium'

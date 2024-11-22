@@ -21,21 +21,8 @@ require("mini.deps").setup({ path = { package = path_package } })
 local add, now = MiniDeps.add, MiniDeps.now
 
 now(function()
-	require("mini.pick").setup()
-	require("mini.files").setup()
-
-	require("mini.icons").setup({ style = "ascii" })
-	require("mini.completion").setup({
-		mappings = {
-			force_twostep = "<C-t>",
-			force_fallback = "<C-f>",
-		},
-		window = {
-			info = { border = "rounded" },
-			signature = { border = "rounded" },
-		},
-	})
-
+	add({ source = "junegunn/fzf" })
+	add({ source = "junegunn/fzf.vim" })
 	add({ source = "neovim/nvim-lspconfig" })
 	add({ source = "stevearc/conform.nvim" })
 
@@ -86,16 +73,15 @@ now(function()
 	})
 end)
 
---COLORSCHEME--
-vim.cmd.colorscheme("custom")
-
 --OPTIONS--
-vim.g.netrw_banner = 0
-vim.g.netrw_liststyle = 3
+vim.cmd.colorscheme("quiet")
+vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = "#0087d7" })
+vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { sp = "#0087d7", undercurl = 1 })
 vim.g.mapleader = " "
-vim.g.termguicolors = true
+vim.g.netrw_banner = 0
 vim.opt.breakindent = true
 vim.opt.clipboard = "unnamedplus"
+vim.opt.completeopt = "menu,menuone,noinsert,preview"
 vim.opt.expandtab = true
 vim.opt.foldmethod = "marker"
 vim.opt.hlsearch = true
@@ -107,30 +93,33 @@ vim.opt.relativenumber = true
 vim.opt.scrolloff = 3
 vim.opt.shiftwidth = 4
 vim.opt.showmode = false
-vim.opt.wrap = false
 vim.opt.signcolumn = "yes"
 vim.opt.softtabstop = 4
 vim.opt.spelllang = { "en", "da" }
 vim.opt.tabstop = 4
 vim.opt.undofile = true
 vim.opt.updatetime = 200
+vim.opt.wrap = false
 
 -- --KEYMAPS--
-vim.keymap.set("n", "-", "<CMD>lua MiniFiles.open()<CR>", { desc = "Open parent directory" })
+vim.keymap.set("i", "<C-l>", "<C-X><C-O>")
+vim.keymap.set("n", "-", "<CMD>Ex<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "<leader>-", "<CMD>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>")
 vim.keymap.set("n", "<Esc>", "<CMD>nohlsearch<CR>")
 vim.keymap.set("n", "<S-h>", "<CMD>bp<CR>", { desc = "Jump to previous buffer" })
 vim.keymap.set("n", "<S-l>", "<CMD>bn<CR>", { desc = "Jump to next buffer" })
-vim.keymap.set("n", "<leader>-", "<CMD>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>")
 vim.keymap.set("n", "<leader>q", "<CMD>bufdo bd<CR>", { desc = "Delete all buffers" })
+vim.keymap.set("n", "<leader>bd", "<CMD>bd<CR>", { desc = "Delete current buffer" })
 vim.keymap.set("n", "<C-c>", "<CMD>bd<CR>", { desc = "Delete current buffer" })
 vim.keymap.set("n", "<leader>d", "<CMD>lua vim.diagnostic.open_float()<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>dc", "<CMD>DepsClean<CR>", { desc = "Deps clean" })
 vim.keymap.set("n", "<leader>du", "<CMD>DepsUpdate<CR>", { desc = "Deps Update" })
 vim.keymap.set("n", "<leader>sd", "<CMD>Pick diagnostic<CR>", { desc = "Pick diagnostic" })
-vim.keymap.set("n", "<leader>sf", "<CMD>Pick files<CR>", { desc = "Pick files" })
-vim.keymap.set("n", "<leader><leader>", "<CMD>FzfLua buffers<CR>", { desc = "Pick files" })
+vim.keymap.set("n", "<leader>sf", "<CMD>Files<CR>", { desc = "Pick files" })
 vim.keymap.set("n", "<leader>w", "<CMD>write<CR>", { desc = "Pick files" })
-vim.keymap.set("n", "<leader>sg", "<CMD>FzfLua grep<CR>", { desc = "Pick grep" })
+vim.keymap.set("n", "<leader>m", "<CMD>Marks<CR>", { desc = "Pick files" })
+vim.keymap.set("n", "<leader>b", "<CMD>Buffers<CR>", { desc = "Pick files" })
+vim.keymap.set("n", "<leader>g", "<CMD>Rg<CR>", { desc = "Pick grep" })
 vim.keymap.set("n", "<leader>ss", "<CMD>setlocal spell<CR>", { desc = "Set spell" })
 vim.keymap.set("n", "<leader>tb", [[:lua ToggleBackground()<CR>]], { noremap = true, silent = true })
 vim.keymap.set("n", "gD", "<CMD>lua vim.lsp.buf.declaration()<CR>")
