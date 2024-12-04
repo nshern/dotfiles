@@ -1,3 +1,6 @@
+-- TODO:
+-- Look into installing packages without a package manager?
+
 --BOOTSTRAP--
 local path_package = vim.fn.stdpath("data") .. "/site/"
 local mini_path = path_package .. "pack/deps/start/mini.nvim"
@@ -21,8 +24,7 @@ require("mini.deps").setup({ path = { package = path_package } })
 local add, now = MiniDeps.add, MiniDeps.now
 
 now(function()
-	add({ source = "junegunn/fzf" })
-	add({ source = "junegunn/fzf.vim" })
+	add({ source = "ibhagwan/fzf-lua" })
 	add({ source = "neovim/nvim-lspconfig" })
 	add({ source = "stevearc/conform.nvim" })
 
@@ -30,7 +32,7 @@ now(function()
 	require("conform").setup({
 		formatters_by_ft = {
 			lua = { "stylua" },
-			python = { "isort", "black" },
+			python = { "isort", "ruff_format" },
 			csharp = { "csharpier" },
 			go = { "gofmt" },
 		},
@@ -73,15 +75,25 @@ now(function()
 	})
 end)
 
---OPTIONS--
+--COLORS--
 vim.cmd.colorscheme("quiet")
+vim.opt.background = "light"
 vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = "#0087d7" })
-vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { sp = "#0087d7", undercurl = 1 })
+vim.api.nvim_set_hl(0, "Title", { bold = true })
+vim.api.nvim_set_hl(0, "markdownH1Delimiter", { fg = "#d7005f", bold = true })
+vim.api.nvim_set_hl(0, "markdownH2Delimiter", { fg = "#00af5f", bold = true })
+vim.api.nvim_set_hl(0, "markdownH3Delimiter", { fg = "#d78700", bold = true })
+vim.api.nvim_set_hl(0, "markdownH4Delimiter", { fg = "#0087d7", bold = true })
+vim.api.nvim_set_hl(0, "markdownH5Delimiter", { fg = "#d787d7", bold = true })
+vim.api.nvim_set_hl(0, "markdownH6Delimiter", { fg = "#00afaf", bold = true })
+
+--OPTIONS--
 vim.g.mapleader = " "
+vim.opt.cursorline = true
 vim.g.netrw_banner = 0
 vim.opt.breakindent = true
 vim.opt.clipboard = "unnamedplus"
-vim.opt.completeopt = "menu,menuone,noinsert,preview"
+vim.opt.completeopt = "menu,menuone,preview"
 vim.opt.expandtab = true
 vim.opt.foldmethod = "marker"
 vim.opt.hlsearch = true
@@ -102,7 +114,8 @@ vim.opt.updatetime = 200
 vim.opt.wrap = false
 
 -- --KEYMAPS--
-vim.keymap.set("i", "<C-l>", "<C-X><C-O>")
+-- vim.keymap.set("i", "<C-o>", "<C-X><C-O>")
+vim.keymap.set("i", "<C-n>", "<C-X><C-O>", { noremap = true })
 vim.keymap.set("n", "-", "<CMD>Ex<CR>", { desc = "Open parent directory" })
 vim.keymap.set("n", "<leader>-", "<CMD>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>")
 vim.keymap.set("n", "<Esc>", "<CMD>nohlsearch<CR>")
@@ -115,13 +128,12 @@ vim.keymap.set("n", "<leader>d", "<CMD>lua vim.diagnostic.open_float()<CR>", { n
 vim.keymap.set("n", "<leader>dc", "<CMD>DepsClean<CR>", { desc = "Deps clean" })
 vim.keymap.set("n", "<leader>du", "<CMD>DepsUpdate<CR>", { desc = "Deps Update" })
 vim.keymap.set("n", "<leader>sd", "<CMD>Pick diagnostic<CR>", { desc = "Pick diagnostic" })
-vim.keymap.set("n", "<leader>sf", "<CMD>Files<CR>", { desc = "Pick files" })
+vim.keymap.set("n", "<leader>sf", "<CMD>FzfLua files<CR>", { desc = "Pick files" })
 vim.keymap.set("n", "<leader>w", "<CMD>write<CR>", { desc = "Pick files" })
-vim.keymap.set("n", "<leader>m", "<CMD>Marks<CR>", { desc = "Pick files" })
-vim.keymap.set("n", "<leader>b", "<CMD>Buffers<CR>", { desc = "Pick files" })
-vim.keymap.set("n", "<leader>g", "<CMD>Rg<CR>", { desc = "Pick grep" })
+vim.keymap.set("n", "<leader>sm", "<CMD>FzfLua marks<CR>", { desc = "Pick files" })
+vim.keymap.set("n", "<leader><leader>", "<CMD>FzfLua buffers<CR>", { desc = "Pick files" })
+vim.keymap.set("n", "<leader>sg", "<CMD>FzfLua grep<CR>", { desc = "Pick grep" })
 vim.keymap.set("n", "<leader>ss", "<CMD>setlocal spell<CR>", { desc = "Set spell" })
-vim.keymap.set("n", "<leader>tb", [[:lua ToggleBackground()<CR>]], { noremap = true, silent = true })
 vim.keymap.set("n", "gD", "<CMD>lua vim.lsp.buf.declaration()<CR>")
 vim.keymap.set("n", "<leader>gq", "ggVGgq<C-o><C-o>", { desc = "format" })
 vim.keymap.set("n", "gd", "<CMD>lua vim.lsp.buf.definition()<CR>")
@@ -171,7 +183,14 @@ vim.api.nvim_create_autocmd("FileType", {
 		-- vim.keymap.set("n", "j", "gj")
 		-- vim.keymap.set("n", "k", "gk")
 		vim.opt.wrap = true
-		vim.opt_local.spell = true
+		-- vim.opt_local.spell = true
+	end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "python",
+	callback = function()
+		vim.opt.colorcolumn = "89"
 	end,
 })
 

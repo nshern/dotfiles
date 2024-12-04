@@ -12,7 +12,6 @@ magenta = "#d787d7"
 cyan = "#00afaf"
 white = "#dadada"
 
-
 [colors.bright]
 black = "#707070"
 red = "#ff005f"

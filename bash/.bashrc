@@ -25,18 +25,18 @@ alias glol='git log --oneline'
 alias gs='git status'
 alias lg="lazygit"
 alias ls="ls -F"
-alias ll="ls -l -t -r -F --color=auto"
+alias ll="ls -l -t -r -F"
 alias fullsend='git add -A && git commit -m "." && git push'
 alias nb="newsboat"
-alias pause='asciiquarium'
 alias py="python3"
 alias st='tmux source-file ~/.tmux.conf'
 alias tf='terraform'
 alias todo='vim ~/dropbox/notes/todo.md'
 alias trans='python ~/.scripts/wezterm-transparent.py'
 alias venv='source .venv/bin/activate'
+alias v="nvim"
 alias vim="nvim"
-alias vimconf='vim ~/.config/nvim/init.lua'
+alias vimconf='nvim ~/.config/nvim/init.lua'
 alias work='vim ~/dropbox/notes/work.md'
 
 eval "$(fzf --bash)"
