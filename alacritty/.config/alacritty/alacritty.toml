@@ -6,14 +6,9 @@ size = 11
 
 [font.normal]
 family = "Berkeley Mono"
-# family = "Departure Mono"
-# family = "IBM Plex Mono"
 
 [general]
-import = ["quiet_dark.toml"]
-# import = ["green.toml"]
-# import = ["amber.toml"]
-# import = ["quiet_light.toml"]
+import = ["dark.toml"]
 
 [window]
 decorations = "none"

@@ -1,6 +1,3 @@
--- TODO:
--- Look into installing packages without a package manager?
-
 --BOOTSTRAP--
 local path_package = vim.fn.stdpath("data") .. "/site/"
 local mini_path = path_package .. "pack/deps/start/mini.nvim"
@@ -36,7 +33,6 @@ now(function()
 			csharp = { "csharpier" },
 			go = { "gofmt" },
 		},
-
 		format_on_save = {
 			timeout_ms = 500,
 			lsp_format = "fallback",
@@ -77,9 +73,17 @@ end)
 
 --COLORS--
 vim.cmd.colorscheme("quiet")
-vim.opt.background = "light"
+-- vim.api.nvim_set_hl(0, "@variable", { link = Normal })
+-- vim.api.nvim_set_hl(0, "Constant", { link = Normal })
+-- vim.api.nvim_set_hl(0, "Delimiter", { link = Normal })
 vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = "#0087d7" })
-vim.api.nvim_set_hl(0, "Title", { bold = true })
+-- vim.api.nvim_set_hl(0, "Function", { link = Normal })
+-- vim.api.nvim_set_hl(0, "Identifier", { link = Normal })
+-- vim.api.nvim_set_hl(0, "Normal", {})
+-- vim.api.nvim_set_hl(0, "Operator", { link = Normal })
+-- vim.api.nvim_set_hl(0, "Special", { link = Normal })
+-- vim.api.nvim_set_hl(0, "Statement", { link = Normal })
+-- vim.api.nvim_set_hl(0, "String", { link = Normal })
 vim.api.nvim_set_hl(0, "markdownH1Delimiter", { fg = "#d7005f", bold = true })
 vim.api.nvim_set_hl(0, "markdownH2Delimiter", { fg = "#00af5f", bold = true })
 vim.api.nvim_set_hl(0, "markdownH3Delimiter", { fg = "#d78700", bold = true })
@@ -89,7 +93,7 @@ vim.api.nvim_set_hl(0, "markdownH6Delimiter", { fg = "#00afaf", bold = true })
 
 --OPTIONS--
 vim.g.mapleader = " "
-vim.opt.cursorline = true
+-- vim.opt.cursorline = true
 vim.g.netrw_banner = 0
 vim.opt.breakindent = true
 vim.opt.clipboard = "unnamedplus"
@@ -180,6 +184,7 @@ vim.api.nvim_create_autocmd("FileType", {
 	pattern = "markdown",
 	callback = function()
 		vim.keymap.set("n", "<leader>w", ":w<CR>:silent! !prettier -w %<CR>", { noremap = true, silent = true })
+		vim.keymap.set("n", "<leader>d", ":r !date<CR>", { noremap = true, silent = true })
 		-- vim.keymap.set("n", "j", "gj")
 		-- vim.keymap.set("n", "k", "gk")
 		vim.opt.wrap = true

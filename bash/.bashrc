@@ -14,6 +14,11 @@ source "/Users/nshern/env.sh"
 HISTSIZE=-1
 HISTFILESIZE=-1
 
+alias index='cd ~/Vault && nvim index.md'
+alias daily='cd ~/Vault && nvim daily.md'
+alias monthly='cd ~/Vault && nvim monthly.md'
+alias collections='cd ~/Vault && nvim collections.md'
+alias scratch='cd ~/Vault && nvim scratch.md'
 alias bm='python ~/.scripts/bookmark.py'
 alias brewup='brew update && brew upgrade'
 alias c='clear'
@@ -34,11 +39,11 @@ alias tf='terraform'
 alias todo='vim ~/dropbox/notes/todo.md'
 alias trans='python ~/.scripts/wezterm-transparent.py'
 alias venv='source .venv/bin/activate'
-alias v="nvim"
 alias vim="nvim"
 alias vimconf='nvim ~/.config/nvim/init.lua'
 alias work='vim ~/dropbox/notes/work.md'
 
 eval "$(fzf --bash)"
 
-PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1='\[\e[39m\]\w\n\[\e[39m\]$\[\e[0m\] \[\e[39;1m\]${PS1_CMD1}\[\e[0m\] '
+PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'
+PS1='\[\e[39m\]\w\n\[\e[32m\]λ\[\e[0m\] \[\e[39;1m\]${PS1_CMD1}\[\e[0m\] '
