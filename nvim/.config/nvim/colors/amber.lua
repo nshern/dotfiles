@@ -1,16 +1,16 @@
 vim.cmd.highlight("clear")
 vim.g.colors_name = "amber"
 
-local hi = function(name, val)
-	-- Force links
-	val.force = true
-
-	-- Make sure that `cterm` attribute is not populated from `gui`
-	val.cterm = val.cterm or {}
-
-	-- Define global highlight
-	vim.api.nvim_set_hl(0, name, val)
-end
+-- local hi = function(name, val)
+-- 	-- Force links
+-- 	val.force = true
+--
+-- 	-- Make sure that `cterm` attribute is not populated from `gui`
+-- 	val.cterm = val.cterm or {}
+--
+-- 	-- Define global highlight
+-- 	vim.api.nvim_set_hl(0, name, val)
+-- end
 
 vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = "#0087d7" })
 vim.api.nvim_set_hl(0, "Title", { bold = true })

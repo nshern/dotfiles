@@ -14,7 +14,9 @@ source "/Users/nshern/env.sh"
 HISTSIZE=-1
 HISTFILESIZE=-1
 
+
 alias index='cd ~/Vault && nvim index.md'
+alias vault='cd ~/Vault && nvim'
 alias daily='cd ~/Vault && nvim daily.md'
 alias monthly='cd ~/Vault && nvim monthly.md'
 alias collections='cd ~/Vault && nvim collections.md'
@@ -46,4 +48,4 @@ alias work='vim ~/dropbox/notes/work.md'
 eval "$(fzf --bash)"
 
 PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'
-PS1='\[\e[39m\]\w\n\[\e[32m\]λ\[\e[0m\] \[\e[39;1m\]${PS1_CMD1}\[\e[0m\] '
+PS1='\[\e[39m\]\w\n\[\e[38;2;47;235;0m\]λ\[\e[0m\] \[\e[39;1m\]${PS1_CMD1}\[\e[0m\] '

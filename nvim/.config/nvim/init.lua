@@ -73,23 +73,7 @@ end)
 
 --COLORS--
 vim.cmd.colorscheme("quiet")
--- vim.api.nvim_set_hl(0, "@variable", { link = Normal })
--- vim.api.nvim_set_hl(0, "Constant", { link = Normal })
--- vim.api.nvim_set_hl(0, "Delimiter", { link = Normal })
 vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = "#0087d7" })
--- vim.api.nvim_set_hl(0, "Function", { link = Normal })
--- vim.api.nvim_set_hl(0, "Identifier", { link = Normal })
--- vim.api.nvim_set_hl(0, "Normal", {})
--- vim.api.nvim_set_hl(0, "Operator", { link = Normal })
--- vim.api.nvim_set_hl(0, "Special", { link = Normal })
--- vim.api.nvim_set_hl(0, "Statement", { link = Normal })
--- vim.api.nvim_set_hl(0, "String", { link = Normal })
-vim.api.nvim_set_hl(0, "markdownH1Delimiter", { fg = "#d7005f", bold = true })
-vim.api.nvim_set_hl(0, "markdownH2Delimiter", { fg = "#00af5f", bold = true })
-vim.api.nvim_set_hl(0, "markdownH3Delimiter", { fg = "#d78700", bold = true })
-vim.api.nvim_set_hl(0, "markdownH4Delimiter", { fg = "#0087d7", bold = true })
-vim.api.nvim_set_hl(0, "markdownH5Delimiter", { fg = "#d787d7", bold = true })
-vim.api.nvim_set_hl(0, "markdownH6Delimiter", { fg = "#00afaf", bold = true })
 
 --OPTIONS--
 vim.g.mapleader = " "
@@ -97,7 +81,7 @@ vim.g.mapleader = " "
 vim.g.netrw_banner = 0
 vim.opt.breakindent = true
 vim.opt.clipboard = "unnamedplus"
-vim.opt.completeopt = "menu,menuone,preview"
+vim.opt.completeopt = "menu,menuone,popup"
 vim.opt.expandtab = true
 vim.opt.foldmethod = "marker"
 vim.opt.hlsearch = true
@@ -115,10 +99,10 @@ vim.opt.spelllang = { "en", "da" }
 vim.opt.tabstop = 4
 vim.opt.undofile = true
 vim.opt.updatetime = 200
-vim.opt.wrap = false
+-- vim.opt.wrap = false
+vim.opt.pumheight = 10
 
 -- --KEYMAPS--
--- vim.keymap.set("i", "<C-o>", "<C-X><C-O>")
 vim.keymap.set("i", "<C-n>", "<C-X><C-O>", { noremap = true })
 vim.keymap.set("n", "-", "<CMD>Ex<CR>", { desc = "Open parent directory" })
 vim.keymap.set("n", "<leader>-", "<CMD>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>")
@@ -180,6 +164,28 @@ function toggle_background()
 end
 
 --AUTOCOMMANDS--
+--
+-- vim.api.nvim_create_autocmd("CompleteDone", {
+-- 	callback = function()
+-- 		-- Check if any preview window exists and close it
+-- 		for _, win in ipairs(vim.api.nvim_list_wins()) do
+-- 			if
+-- 				vim.api.nvim_win_get_config(win).relative == "" and vim.api.nvim_win_get_option(win, "previewwindow")
+-- 			then
+-- 				vim.cmd("pclose")
+-- 			end
+-- 		end
+-- 	end,
+-- })
+--
+-- vim.api.nvim_create_autocmd("BufWinEnter", {
+-- 	callback = function()
+-- 		if vim.api.nvim_win_get_option(0, "previewwindow") then
+-- 			vim.wo.wrap = true
+-- 		end
+-- 	end,
+-- })
+--
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "markdown",
 	callback = function()
