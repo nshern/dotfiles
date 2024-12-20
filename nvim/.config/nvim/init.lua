@@ -72,7 +72,7 @@ now(function()
 end)
 
 --COLORS--
-vim.cmd.colorscheme("quiet")
+vim.cmd.colorscheme("carbon")
 vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = "#0087d7" })
 
 --OPTIONS--
