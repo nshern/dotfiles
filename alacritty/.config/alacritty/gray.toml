@@ -1,6 +1,6 @@
 [colors.primary]
 foreground = "#c6c6c6"
-background = "#161616"
+background = "#262626"
 
 [colors.normal]
 black = "#000000"
@@ -8,8 +8,8 @@ red = "#fa4d56"
 green = "#24a148"
 yellow = "#b28600"
 blue = "#4589ff"
-magenta = "#ee5396"
-cyan = "#1192e8"
+magenta = "#a56eff"
+cyan = "#009d9a"
 white = "#c6c6c6"
 
 [colors.bright]
@@ -18,6 +18,6 @@ red = "#ff8389"
 green = "#42be65"
 yellow = "#d2a106"
 blue = "#78a9ff"
-magenta = "#ff7eb6"
-cyan = "#33b1ff"
+magenta = "#be95ff"
+cyan = "#08bdba"
 white = "#ffffff"

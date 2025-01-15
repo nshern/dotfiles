@@ -14,7 +14,6 @@ source "/Users/nshern/env.sh"
 HISTSIZE=-1
 HISTFILESIZE=-1
 
-
 alias index='cd ~/Vault && nvim index.md'
 alias vault='cd ~/Vault && nvim'
 alias daily='cd ~/Vault && nvim daily.md'
@@ -32,7 +31,7 @@ alias glol='git log --oneline'
 alias gs='git status'
 alias lg="lazygit"
 alias ls="ls -F"
-alias ll="ls -l -t -r -F"
+alias ll="ls -l -t -r -F --color=auto"
 alias fullsend='git add -A && git commit -m "." && git push'
 alias nb="newsboat"
 alias py="python3"
@@ -48,4 +47,4 @@ alias work='vim ~/dropbox/notes/work.md'
 eval "$(fzf --bash)"
 
 PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'
-PS1='\[\e[39m\]\w\n\[\e[38;2;47;235;0m\]λ\[\e[0m\] \[\e[39;1m\]${PS1_CMD1}\[\e[0m\] '
+PS1='\[\e[39m\]\w\n\[\e[39;0m\]$\[\e[0m\] \[\e[39;1m\]${PS1_CMD1}\[\e[0m\] '

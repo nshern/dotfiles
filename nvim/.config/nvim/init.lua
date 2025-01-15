@@ -71,14 +71,11 @@ now(function()
 	})
 end)
 
---COLORS--
-vim.cmd.colorscheme("carbon")
-vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = "#0087d7" })
-
 --OPTIONS--
+vim.cmd.colorscheme("black")
 vim.g.mapleader = " "
--- vim.opt.cursorline = true
 vim.g.netrw_banner = 0
+vim.opt.cursorline = true
 vim.opt.breakindent = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.completeopt = "menu,menuone,popup"
@@ -99,7 +96,6 @@ vim.opt.spelllang = { "en", "da" }
 vim.opt.tabstop = 4
 vim.opt.undofile = true
 vim.opt.updatetime = 200
--- vim.opt.wrap = false
 vim.opt.pumheight = 10
 
 -- --KEYMAPS--
@@ -115,7 +111,7 @@ vim.keymap.set("n", "<C-c>", "<CMD>bd<CR>", { desc = "Delete current buffer" })
 vim.keymap.set("n", "<leader>d", "<CMD>lua vim.diagnostic.open_float()<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>dc", "<CMD>DepsClean<CR>", { desc = "Deps clean" })
 vim.keymap.set("n", "<leader>du", "<CMD>DepsUpdate<CR>", { desc = "Deps Update" })
-vim.keymap.set("n", "<leader>sd", "<CMD>Pick diagnostic<CR>", { desc = "Pick diagnostic" })
+vim.keymap.set("n", "<leader>sd", "<CMD>FzfLua diagnostics_document<CR>", { desc = "Fzf diagnostic" })
 vim.keymap.set("n", "<leader>sf", "<CMD>FzfLua files<CR>", { desc = "Pick files" })
 vim.keymap.set("n", "<leader>w", "<CMD>write<CR>", { desc = "Pick files" })
 vim.keymap.set("n", "<leader>sm", "<CMD>FzfLua marks<CR>", { desc = "Pick files" })

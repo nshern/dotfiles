@@ -2,13 +2,14 @@
 TERM = "xterm-256color"
 
 [font]
-size = 11
+size = 25
 
 [font.normal]
 family = "Berkeley Mono"
 
 [general]
-import = ["carbon.toml"]
+import = ["black.toml"]
+# import = ["pike_dark.toml"]
 
 [window]
 decorations = "none"
