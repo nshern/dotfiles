@@ -9,11 +9,14 @@ export PATH="/Users/nshern/.pyenv/shims:$PATH"
 export PATH=$PATH:$HOME/go/bin
 export EDITOR='nvim'
 
+
 source "/Users/nshern/env.sh"
 
 HISTSIZE=-1
 HISTFILESIZE=-1
 
+alias journal='tmux a -t journal'
+alias work='tmux a -t work'
 alias index='cd ~/Vault && nvim index.md'
 alias vault='cd ~/Vault && nvim'
 alias daily='cd ~/Vault && nvim daily.md'
@@ -30,7 +33,7 @@ alias ghme='gh issue list --assignee @me'
 alias glol='git log --oneline'
 alias gs='git status'
 alias lg="lazygit"
-alias ls="ls -F"
+alias ls="ls -F --color=auto"
 alias ll="ls -l -t -r -F --color=auto"
 alias fullsend='git add -A && git commit -m "." && git push'
 alias nb="newsboat"
@@ -41,10 +44,10 @@ alias todo='vim ~/dropbox/notes/todo.md'
 alias trans='python ~/.scripts/wezterm-transparent.py'
 alias venv='source .venv/bin/activate'
 alias vim="nvim"
-alias vimconf='nvim ~/.config/nvim/init.lua'
-alias work='vim ~/dropbox/notes/work.md'
+alias vimconf='cd ~/.config/nvim && nvim ~/.config/nvim/init.lua'
 
 eval "$(fzf --bash)"
 
 PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'
 PS1='\[\e[39m\]\w\n\[\e[39;0m\]$\[\e[0m\] \[\e[39;1m\]${PS1_CMD1}\[\e[0m\] '
+. "$HOME/.cargo/env"
