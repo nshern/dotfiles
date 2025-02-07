@@ -44,16 +44,6 @@ vim.keymap.set("n", "<leader>w", "<CMD>write<CR>", { desc = "Write" })
 vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 
-vim.cmd([[autocmd FileType go nnoremap <buffer> <leader>w :write<CR>:silent !gofmt -w %<CR>]])
-
--- vim.cmd([[autocmd FileType markdown nnoremap <buffer> <leader>w :write<CR>:silent !prettier -w %<CR>]])
-
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "python",
-	callback = function()
-		vim.opt.colorcolumn = "89"
-	end,
-})
 
 vim.api.nvim_create_autocmd('LspAttach', {
   desc = 'LSP actions',

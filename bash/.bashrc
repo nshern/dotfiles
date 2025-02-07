@@ -15,8 +15,10 @@ source "/Users/nshern/env.sh"
 HISTSIZE=-1
 HISTFILESIZE=-1
 
+alias study='tmux a -t study'
 alias journal='tmux a -t journal'
 alias work='tmux a -t work'
+alias news='tmux a -t news'
 alias index='cd ~/Vault && nvim index.md'
 alias vault='cd ~/Vault && nvim'
 alias daily='cd ~/Vault && nvim daily.md'
