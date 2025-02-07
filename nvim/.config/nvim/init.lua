@@ -1,8 +1,7 @@
--- require("bootstrap")
 require("options")
 require("keymaps")
--- require("plugins")
 require("formatters")
+require("lsp")
 
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "python",
@@ -10,3 +9,4 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt.colorcolumn = "89"
 	end,
 })
+
