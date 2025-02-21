@@ -7,7 +7,9 @@ export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export PATH="/Users/nshern/worldbanc/private/bin:$PATH"
 export PATH="/Users/nshern/.pyenv/shims:$PATH"
 export PATH=$PATH:$HOME/go/bin
+export CONFIG_DIR="/Users/nshern/.config"
 export EDITOR='nvim'
+export CONFIG='~/.config/'
 
 
 source "/Users/nshern/env.sh"
@@ -15,10 +17,6 @@ source "/Users/nshern/env.sh"
 HISTSIZE=-1
 HISTFILESIZE=-1
 
-alias study='tmux a -t study'
-alias journal='tmux a -t journal'
-alias work='tmux a -t work'
-alias news='tmux a -t news'
 alias index='cd ~/Vault && nvim index.md'
 alias vault='cd ~/Vault && nvim'
 alias daily='cd ~/Vault && nvim daily.md'
