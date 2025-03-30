@@ -17,26 +17,33 @@ if not vim.loop.fs_stat(mini_path) then
 end
 require("mini.deps").setup({ path = { package = path_package } })
 
+
 -- PLUGINS
 MiniDeps.add({ source = "neovim/nvim-lspconfig" })
-MiniDeps.add({ source = "nshern/pike.nvim.git" })
+MiniDeps.add({ source = "nvim-treesitter/nvim-treesitter" })
 
 MiniDeps.now(function()
-    require("mini.completion").setup({ lsp_completion = { source_func = "omnifunc" } })
-    require('mini.files').setup({ content = {} })
+    require 'nvim-treesitter.configs'.setup({
+        ensure_installed = { "c_sharp", "python" },
+        highlight = { enable = true },
+        autoinstall = true
+    })
+    -- require("mini.completion").setup({ lsp_completion = { source_func = "omnifunc" } })
+    require("mini.cursorword").setup()
+    require("mini.git").setup()
+    require("mini.ai").setup()
     require("mini.icons").setup({})
     require("mini.jump").setup()
-
-    Mvim_starter_custom = function()
-        return {
-            { name = "Recent Files", action = function() require("mini.extra").pickers.oldfiles() end, section = "Search" },
-        }
-    end
-
     require("mini.jump2d").setup()
     require("mini.pick").setup({ content = { prefix = function() end } })
     require("mini.surround").setup()
+    require("mini.tabline").setup()
+    require('mini.files').setup({ content = {} })
+    require('mini.statusline').setup()
+
+    -- require("lspconfig").basedpyright.setup({})
     require("lspconfig").pyright.setup({})
+    require 'lspconfig'.csharp_ls.setup { cmd = { "/Users/nshern/.dotnet/tools/csharp-ls" }, }
     require("lspconfig").gopls.setup({})
     require("lspconfig").ruff.setup({})
     require("lspconfig").bashls.setup({})
@@ -53,6 +60,19 @@ MiniDeps.now(function()
     })
 end)
 
+MiniDeps.now(function()
+    require("mini.starter").setup({
+        query_updaters = 'abcdefghijklmnopqrstuvwxyz0123456789_.',
+        autoopen = true,
+        items = {
+            require("mini.starter").sections.recent_files(5, true, false),
+        },
+        footer = "",
+        header = [[
+        ]]
+    })
+end)
+
 MiniDeps.later(function()
     local hipatterns = require("mini.hipatterns")
 
@@ -64,6 +84,7 @@ MiniDeps.later(function()
             hack = { pattern = "%f[%w]()HACK()%f[%W]", group = "MiniHipatternsHack" },
             todo = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
             note = { pattern = "%f[%w]()NOTE()%f[%W]", group = "MiniHipatternsNote" },
+            event = { pattern = "%f[%w]()EVENT()%f[%W]", group = "MiniHipatternsHack" },
 
             -- Highlight hex color strings (`#rrggbb`) using that color
             hex_color = hipatterns.gen_highlighter.hex_color(),
@@ -73,19 +94,17 @@ MiniDeps.later(function()
     require("mini.diff").setup({
         view = {
             style = "sign",
-            signs = { add = "+", change = "~", delete = "-" },
+            signs = { add = "+", change = "~", delete = "" },
         },
     })
 end)
 
-
 -- OPTIONS
-vim.cmd.colorscheme("pike_test")
 vim.g.mapleader = " "
 vim.g.netrw_banner = 0
 vim.opt.breakindent = true
 vim.opt.clipboard = "unnamedplus"
-vim.opt.cursorline = false
+vim.opt.cursorline = true
 vim.opt.expandtab = true
 vim.opt.foldmethod = "marker"
 vim.opt.hlsearch = true
@@ -123,40 +142,56 @@ vim.keymap.set("n", "<leader>w", "<CMD>write<CR>", { desc = "Write" })
 vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 
--- LSP
-vim.api.nvim_create_autocmd("LspAttach", {
-    desc = "LSP actions",
-    callback = function(event)
-        local opts = { buffer = event.buf }
+--- mini.git
+vim.keymap.set("n", "<leader>gsc", "<cmd>lua MiniGit.show_at_cursor()<CR>", { desc = "Show Git related data at cursor" })
+vim.keymap.set("n", "<leader>gsr", "<cmd>lua MiniGit.show_range_history()<CR>",
+    { desc = "Shows how certain line range evolve" })
+vim.keymap.set("n", "<leader>gsd", "<cmd>lua MiniGit.show_diff_source()<CR>",
+    { desc = "Shows file state as it was at diff entry" })
 
-        -- Display documentation of the symbol under the cursor
-        vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
+--- lsp
+-- vim.api.nvim_create_autocmd("lspattach", {
+--     desc = "lsp actions",
+--     callback = function(event)
+--         local opts = { buffer = event.buf }
+--
+--         -- display documentation of the symbol under the cursor
+--         vim.keymap.set("n", "k", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
+--
+--         -- jump to the definition
+--         vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", opts)
+--
+--         -- format current file
+--         vim.keymap.set({ "n", "x" }, "gq", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
+--
+--         -- displays a function's signature information
+--         vim.keymap.set("i", "<c-s>", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
+--
+--         -- jump to declaration
+--         vim.keymap.set("n", "<leader>ld", "<cmd>lua vim.lsp.buf.declaration()<cr>", opts)
+--
+--         -- lists all the implementations for the symbol under the cursor
+--         vim.keymap.set("n", "<leader>li", "<cmd>lua vim.lsp.buf.implementation()<cr>", opts)
+--
+--         -- jumps to the definition of the type symbol
+--         vim.keymap.set("n", "<leader>lt", "<cmd>lua vim.lsp.buf.type_definition()<cr>", opts)
+--
+--         -- lists all the references
+--         vim.keymap.set("n", "<leader>lr", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
+--
+--         -- renames all references to the symbol under the cursor
+--         vim.keymap.set("n", "<leader>ln", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
+--
+--         -- selects a code action available at the current cursor position
+--         vim.keymap.set("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
+--     end,
+-- })
 
-        -- Jump to the definition
-        vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", opts)
-
-        -- Format current file
-        vim.keymap.set({ "n", "x" }, "gq", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
-
-        -- Displays a function's signature information
-        vim.keymap.set("i", "<C-s>", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
-
-        -- Jump to declaration
-        vim.keymap.set("n", "<leader>ld", "<cmd>lua vim.lsp.buf.declaration()<cr>", opts)
-
-        -- Lists all the implementations for the symbol under the cursor
-        vim.keymap.set("n", "<leader>li", "<cmd>lua vim.lsp.buf.implementation()<cr>", opts)
-
-        -- Jumps to the definition of the type symbol
-        vim.keymap.set("n", "<leader>lt", "<cmd>lua vim.lsp.buf.type_definition()<cr>", opts)
-
-        -- Lists all the references
-        vim.keymap.set("n", "<leader>lr", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
-
-        -- Renames all references to the symbol under the cursor
-        vim.keymap.set("n", "<leader>ln", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
-
-        -- Selects a code action available at the current cursor position
-        vim.keymap.set("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
-    end,
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function(ev)
+    local client = vim.lsp.get_client_by_id(ev.data.client_id)
+    if client:supports_method('textDocument/completion') then
+      vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+    end
+  end,
 })
