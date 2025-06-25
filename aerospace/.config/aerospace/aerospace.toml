@@ -57,12 +57,12 @@ automatically-unhide-macos-hidden-apps = false
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-    inner.horizontal = 0
-    inner.vertical =   0
-    outer.left =       0
-    outer.bottom =     0
-    outer.top =       10 
-    outer.right =      0
+    inner.horizontal = 10 
+    inner.vertical =   10 
+    outer.left =        10
+    outer.bottom =      10 
+    outer.top =         10
+    outer.right =       10 
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -133,7 +133,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-b = 'workspace B'
     alt-c = 'workspace C'
     alt-d = 'workspace D'
-    alt-e = 'workspace E'
+    # alt-e = 'workspace E'
     alt-g = 'workspace G'
     alt-i = 'workspace I'
     alt-m = 'workspace M'
@@ -165,7 +165,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-b = 'move-node-to-workspace B'
     alt-shift-c = 'move-node-to-workspace C'
     alt-shift-d = 'move-node-to-workspace D'
-    alt-shift-e = 'move-node-to-workspace E'
+    # alt-shift-e = 'move-node-to-workspace E'
     # alt-shift-f = 'move-node-to-workspace F'
     alt-shift-g = 'move-node-to-workspace G'
     alt-shift-i = 'move-node-to-workspace I'
@@ -217,12 +217,8 @@ automatically-unhide-macos-hidden-apps = false
     run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
-    if.app-id = 'org.mozilla.firefox'
-    run = 'move-node-to-workspace W' # mnemonics W - Web browser
-
-[[on-window-detected]]
-    if.app-id = 'com.apple.Preview'
-    run = 'move-node-to-workspace P' # mnemonics P - Preview/PDF
+    if.app-id = 'app.zen-browser.zen'
+    run = 'move-node-to-workspace 2' 
 
 [[on-window-detected]]
     if.app-id = 'com.microsoft.teams2'

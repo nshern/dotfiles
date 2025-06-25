@@ -6,18 +6,23 @@ bind 'set completion-ignore-case on'
 source "/Users/nshern/.env.sh"
 source "/Users/nshern/.bash_completion"
 
+export PATH="/Users/nshern/.local/bin:$PATH"
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-export PATH="/Users/nshern/worldbanc/private/bin:$PATH"
-export PATH="/Users/nshern/.pyenv/shims:$PATH"
+# export PATH="/Users/nshern/.pyenv/shims:$PATH"
 export PATH=$PATH:$HOME/go/bin
 export CONFIG_DIR="/Users/nshern/.config"
 export EDITOR='nvim'
 export CONFIG='~/.config/'
+export TERM=xterm-256color
 
 HISTSIZE=-1
 HISTFILESIZE=-1
 
+alias code='claude'
+alias v='vim'
 alias cd='z'
+alias docker_rm_all='docker rm -f $(docker ps -aq)'
+alias ollama_rm_all="ollama list | awk 'NR>1 {print $1}' | xargs -n1 ollama rm"
 alias index='cd ~/Vault && nvim index.md'
 alias vault='cd ~/Vault && nvim'
 alias daily='cd ~/Vault && nvim daily.md'
