@@ -4,7 +4,7 @@ vim.g.mapleader = " "
 vim.g.netrw_banner = 0
 vim.opt.breakindent = true
 vim.opt.clipboard = "unnamedplus"
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 vim.opt.expandtab = true
 vim.opt.foldmethod = "marker"
 vim.o.foldmarker = "{{{,}}}"
@@ -25,3 +25,4 @@ vim.opt.tabstop = 4
 vim.opt.undofile = true
 vim.opt.updatetime = 200
 vim.opt.autoread = true
+

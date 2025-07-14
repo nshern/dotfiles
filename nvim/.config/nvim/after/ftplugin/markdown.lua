@@ -1,5 +1,5 @@
 -- vim.opt_local.conceallevel = 2  -- fully hide the concealed text
-vim.o.spell = true
+vim.o.spell = false
 vim.o.spelllang = "en"
 vim.opt.colorcolumn = "80"
 

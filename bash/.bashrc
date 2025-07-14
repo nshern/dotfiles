@@ -18,7 +18,6 @@ export TERM=xterm-256color
 HISTSIZE=-1
 HISTFILESIZE=-1
 
-alias code='claude'
 alias v='vim'
 alias cd='z'
 alias docker_rm_all='docker rm -f $(docker ps -aq)'
@@ -39,8 +38,8 @@ alias ghme='gh issue list --assignee @me'
 alias glol='git log --oneline'
 alias gs='git status'
 alias lg="lazygit"
-alias ls="ls -F --color=auto"
-alias ll="ls -l -t -r -F --color=auto"
+alias ls="ls -F"
+alias ll="ls -l -t -r -F"
 alias fullsend='git add -A && git commit -m "." && git push'
 alias py="python3"
 alias st='tmux source-file ~/.tmux.conf'
@@ -59,3 +58,6 @@ PS1='\[\e[39m\]\w\n\[\e[39;0m\]$\[\e[0m\] \[\e[39;1m\]${PS1_CMD1}\[\e[0m\] '
 
 eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
+alias breath='zenta now --quick'
+alias breathe='zenta now'
+alias reflect='zenta reflect'

@@ -10,4 +10,4 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 -- enable configured language servers
 -- you can find server configurations from lsp/*.lua files
-vim.lsp.enable({ 'marksman', 'luals', 'ruff', 'pyright' })
+vim.lsp.enable({ 'marksman', 'luals', 'ruff', 'pyright', 'gopls' })

@@ -5,7 +5,7 @@ if not vim.loop.fs_stat(mini_path) then
     vim.cmd('echo "Installing `mini.nvim`" | redraw')
 
     local clone_cmd = {
-        "git",
+       "git",
         "clone",
         "--filter=blob:none",
         "https://github.com/echasnovski/mini.nvim",
@@ -19,10 +19,8 @@ end
 require("mini.deps").setup({ path = { package = path_package } })
 
 
-MiniDeps.add({ source = "nvim-treesitter/nvim-treesitter" })
+MiniDeps.add({ source = "nvim-treesitter/nvim-treesitter", })
 MiniDeps.add({ source = "github/copilot.vim" })
-MiniDeps.add({ source = "catppuccin/nvim", name = "catppuccin" })
-MiniDeps.add({ source = "rose-pine/neovim", name = "rose-pine" })
 
 vim.g.copilot_enabled = false
 vim.g.copilot_filetypes = {
@@ -33,10 +31,6 @@ vim.g.copilot_no_tab_map = true
 
 -- PLUGINS
 MiniDeps.now(function()
-    require("rose-pine").setup({
-        dark_variant = "moon"
-    })
-
     require("mini.cursorword").setup()
     require("mini.git").setup()
     require("mini.extra").setup()

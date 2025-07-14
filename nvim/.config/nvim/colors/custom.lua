@@ -1,39 +1,41 @@
-vim.cmd("hi clear")
-if vim.fn.exists("syntax_on") == 1 then
-    vim.cmd("syntax reset")
+vim.opt.termguicolors = false
+vim.cmd('hi clear')
+vim.cmd('syntax reset')
+vim.g.colors_name = 'custom'
+
+local blanks = {
+    'String',
+    'Constant',
+    'Function',
+    'Identifier',
+    'Special'
+}
+
+for _, blank in pairs(blanks) do
+    vim.api.nvim_set_hl(0, blank, { link = Normal })
 end
 
-vim.g.colors_name = "custom"
-
-local background = vim.o.background
-
-local match_paren_bg = background == "light" and "LightMagenta" or "DarkMagenta"
-
-vim.api.nvim_set_hl(0, "Normal", {})
-
--- Markdown
-if background == "light" then
-    vim.api.nvim_set_hl(0, "@markup.heading.1.markdown", { bg = 'NvimLightBlue', fg = 'NvimDarkBlue', bold = true })
-    vim.api.nvim_set_hl(0, "@markup.heading.2.markdown", { bg = 'NvimLightYellow', fg = 'NvimDarkYellow', bold = true })
-    vim.api.nvim_set_hl(0, "@markup.heading.3.markdown", { bg = 'NvimLightGreen', fg = 'NvimDarkGreen', bold = true })
-    vim.api.nvim_set_hl(0, "@markup.heading.4.markdown", { bg = 'NvimLightMagenta', fg = 'NvimDarkMagenta', bold = true })
-    vim.api.nvim_set_hl(0, "@markup.heading.5.markdown", { bg = 'NvimLightCyan', fg = 'NvimDarkCyan', bold = true })
-    vim.api.nvim_set_hl(0, "@markup.strong.markdown_inline", { fg = "NvimDarkMagenta", bold = True })
-    vim.api.nvim_set_hl(0, "SpellBad", { fg = "NvimDarkRed", bold = True, underline = true})
-else
-    vim.api.nvim_set_hl(0, "@markup.heading.1.markdown", { bg = 'NvimDarkBlue', fg = 'NvimLightBlue', bold = true })
-    vim.api.nvim_set_hl(0, "@markup.heading.2.markdown", { bg = 'NvimDarkYellow', fg = 'NvimLightYellow', bold = true })
-    vim.api.nvim_set_hl(0, "@markup.heading.3.markdown", { bg = 'NvimDarkGreen', fg = 'NvimLightGreen', bold = true })
-    vim.api.nvim_set_hl(0, "@markup.heading.4.markdown", { bg = 'NvimDarkMagenta', fg = 'NvimLightMagenta', bold = true })
-    vim.api.nvim_set_hl(0, "@markup.heading.5.markdown", { bg = 'NvimDarkCyan', fg = 'NvimLightCyan', bold = true })
-    vim.api.nvim_set_hl(0, "@markup.strong.markdown_inline", { fg = "NvimLightMagenta", bold = True })
-    vim.api.nvim_set_hl(0, "SpellBad", { fg = "NvimLightRed", bold = True, underline = true})
-end
+vim.api.nvim_set_hl(0, 'LineNr', { ctermfg = 8 })
+vim.api.nvim_set_hl(0, 'CurrentLineNr', { ctermfg = 8 })
+vim.api.nvim_set_hl(0, 'Comment', { ctermfg = 8})
+vim.api.nvim_set_hl(0, 'Visual', { ctermbg = 3, ctermfg = 0 })
+vim.api.nvim_set_hl(0, "MatchParen", { ctermbg = 5, bold = true })
+vim.api.nvim_set_hl(0, "@markup.heading.1.markdown", { ctermbg = 8, ctermfg= 15, bold = true })
+vim.api.nvim_set_hl(0, "@markup.heading.2.markdown", { ctermbg = 8, ctermfg= 15, bold = true })
+vim.api.nvim_set_hl(0, "@markup.heading.3.markdown", { ctermbg = 8, ctermfg= 15, bold = true })
+vim.api.nvim_set_hl(0, "@markup.heading.4.markdown", { ctermbg = 8, ctermfg= 15, bold = true })
+vim.api.nvim_set_hl(0, "@markup.heading.5.markdown", { ctermbg = 8, ctermfg= 15, bold = true })
+vim.api.nvim_set_hl(0, 'CursorLine', { underline = true, sp = 8 })
+vim.api.nvim_set_hl(0, 'CursorLineNr', { ctermfg = 8, bold = true })
+vim.api.nvim_set_hl(0, 'ColorColumn', { ctermbg = 8 })
 vim.api.nvim_set_hl(0, "@lsp.type.class.markdown", { link = "DiagnosticWarn" })
 vim.api.nvim_set_hl(0, "@keyword.directive.markdown", { link = "String" })
 vim.api.nvim_set_hl(0, "@markup.link.label.markdown_inline", { link = "Identifier" })
 
-vim.api.nvim_set_hl(0, "MatchParen", { bg = match_paren_bg, bold = true })
-
--- UI
-vim.api.nvim_set_hl(0, "MiniTablineCurrent", { underline = true })
+vim.api.nvim_set_hl(0, "MiniPickMatchRanges", { ctermbg = 3, ctermfg = 0  })
+vim.api.nvim_set_hl(0, "MiniIconsAzure", { link = "MiniIconsBlue" })
+vim.api.nvim_set_hl(0, "MiniFilesBorderModified", { ctermbg = 0, ctermfg=11  })
+vim.api.nvim_set_hl(0, "StatusLine", { ctermbg = 7, ctermfg=0, bold = true})
+vim.api.nvim_set_hl(0, "TabLineSel", { ctermbg =7, ctermfg=0, bold = true, underline = true})
+vim.api.nvim_set_hl(0, "MiniTabLineHidden", { ctermbg = 8, ctermfg=0})
+vim.api.nvim_set_hl(0, "MiniTabLineModifiedCurrent", { ctermbg = 3, ctermfg=0})
