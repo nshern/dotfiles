@@ -11,8 +11,8 @@ local blanks = {
     'Special'
 }
 
-for _, blank in pairs(blanks) do
-    vim.api.nvim_set_hl(0, blank, { link = Normal })
+for _, blank in ipairs(blanks) do
+    vim.api.nvim_set_hl(0, blank, { link = normal })
 end
 
 vim.api.nvim_set_hl(0, 'LineNr', { ctermfg = 8 })
@@ -25,7 +25,7 @@ vim.api.nvim_set_hl(0, "@markup.heading.2.markdown", { ctermbg = 8, ctermfg= 15,
 vim.api.nvim_set_hl(0, "@markup.heading.3.markdown", { ctermbg = 8, ctermfg= 15, bold = true })
 vim.api.nvim_set_hl(0, "@markup.heading.4.markdown", { ctermbg = 8, ctermfg= 15, bold = true })
 vim.api.nvim_set_hl(0, "@markup.heading.5.markdown", { ctermbg = 8, ctermfg= 15, bold = true })
-vim.api.nvim_set_hl(0, 'CursorLine', { underline = true, sp = 8 })
+vim.api.nvim_set_hl(0, 'CursorLine', { underline = true})
 vim.api.nvim_set_hl(0, 'CursorLineNr', { ctermfg = 8, bold = true })
 vim.api.nvim_set_hl(0, 'ColorColumn', { ctermbg = 8 })
 vim.api.nvim_set_hl(0, "@lsp.type.class.markdown", { link = "DiagnosticWarn" })

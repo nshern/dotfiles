@@ -23,6 +23,7 @@ vim.opt.softtabstop = 4
 vim.opt.spelllang = { "en", "da" }
 vim.opt.tabstop = 4
 vim.opt.undofile = true
-vim.opt.updatetime = 200
 vim.opt.autoread = true
+vim.opt.updatetime = 300
+
 

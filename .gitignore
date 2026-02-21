@@ -6,3 +6,4 @@ alacritty/.config/alacritty/.DS_Store
 fish/.config/fish/fish_variables
 newsboat/.config/newsboat/bookmarks.txt
 spell/
+ghostty/.config/ghostty/.repro

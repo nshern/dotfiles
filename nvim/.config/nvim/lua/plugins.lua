@@ -22,7 +22,7 @@ require("mini.deps").setup({ path = { package = path_package } })
 MiniDeps.add({ source = "nvim-treesitter/nvim-treesitter", })
 MiniDeps.add({ source = "github/copilot.vim" })
 
-vim.g.copilot_enabled = false
+vim.g.copilot_enabled = true
 vim.g.copilot_filetypes = {
     markdown = false
 }
@@ -31,6 +31,7 @@ vim.g.copilot_no_tab_map = true
 
 -- PLUGINS
 MiniDeps.now(function()
+    require("mini.bufremove").setup()
     require("mini.cursorword").setup()
     require("mini.git").setup()
     require("mini.extra").setup()

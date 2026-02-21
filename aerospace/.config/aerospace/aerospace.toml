@@ -59,10 +59,10 @@ automatically-unhide-macos-hidden-apps = false
 [gaps]
     inner.horizontal = 10 
     inner.vertical =   10 
-    outer.left =        10
-    outer.bottom =      10 
-    outer.top =         10
-    outer.right =       10 
+    outer.left =        3 
+    outer.right =       3 
+    outer.bottom =      3 
+    outer.top =        10 
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -231,6 +231,10 @@ automatically-unhide-macos-hidden-apps = false
 [[on-window-detected]]
     if.app-id = 'org.whispersystems.signal-desktop'
     run = 'move-node-to-workspace S' # mnemonics S - Signal
+
+[[on-window-detected]]
+    if.app-id = 'com.spotify.client'
+    run = 'move-node-to-workspace Y' # mnemonics S - Signal
 
 [[on-window-detected]]
     if.app-id = 'com.qobuz.desktop'
