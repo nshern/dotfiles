@@ -32,21 +32,26 @@ add({
 	{ src = "https://github.com/nvim-mini/mini.nvim" },
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master" },
 	{ src = "https://github.com/stevearc/conform.nvim" },
+	{ src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
 })
 
-vim.cmd.colorscheme("miniwinter")
+vim.cmd.colorscheme("custom")
 
 require("mini.bracketed").setup({})
 require("mini.completion").setup({})
 require("mini.cursorword").setup({})
-require("mini.diff").setup({})
+require("mini.diff").setup({
+	view = {
+		style = "sign",
+		signs = { add = "█", change = "▒", delete = "" },
+	},
+})
 require("mini.extra").setup({})
 require("mini.files").setup({})
 require("mini.git").setup({})
 require("mini.icons").setup({})
 require("mini.jump2d").setup({})
 require("mini.pick").setup({})
-require("mini.statusline").setup({})
 require("mini.surround").setup({})
 require("mini.tabline").setup({})
 
@@ -100,6 +105,7 @@ require("conform").setup({
 		-- Conform will run multiple formatters sequentially
 		python = { "ruff_organize_imports", "ruff_format" },
 		-- You can customize some of the format options for the filetype (:help conform.format)
+		go = { "gofmt" },
 		rust = { "rustfmt", lsp_format = "fallback" },
 		-- Conform will run the first available formatter
 		javascript = { "prettierd", "prettier", stop_after_first = true },
@@ -251,6 +257,7 @@ vim.lsp.enable({
 	"rust_analyzer",
 	"turtle_ls",
 	"jsonls",
+	"gopls",
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
