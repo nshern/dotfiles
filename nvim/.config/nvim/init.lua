@@ -32,11 +32,11 @@ add({
 	{ src = "https://github.com/nvim-mini/mini.nvim" },
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master" },
 	{ src = "https://github.com/stevearc/conform.nvim" },
-	{ src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
 })
 
 vim.cmd.colorscheme("custom")
 
+require("mini.ai").setup({})
 require("mini.bracketed").setup({})
 require("mini.completion").setup({})
 require("mini.cursorword").setup({})
@@ -109,6 +109,7 @@ require("conform").setup({
 		rust = { "rustfmt", lsp_format = "fallback" },
 		-- Conform will run the first available formatter
 		javascript = { "prettierd", "prettier", stop_after_first = true },
+		markdown = { "prettierd", "prettier", stop_after_first = true },
 	},
 })
 

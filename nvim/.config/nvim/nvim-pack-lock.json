@@ -1,15 +1,11 @@
 {
   "plugins": {
-    "catppuccin": {
-      "rev": "0a5de4da015a175f416d6ef1eda84661623e0500",
-      "src": "https://github.com/catppuccin/nvim"
-    },
     "conform.nvim": {
       "rev": "40dcec5555f960b0a04340d76eabdf4efe78599d",
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "mini.nvim": {
-      "rev": "0098de999048af0539183d625c52d733318a441b",
+      "rev": "cad365c212fb1e332cb93fa8f72697125799d00a",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "nvim-lspconfig": {
