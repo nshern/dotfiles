@@ -9,5 +9,5 @@ macos-option-as-alt=false
 window-save-state = always
 theme = Aardvark Blue
 # theme = miniwinter
-theme = dark:custom-dark,light:catppuccin latte
+theme = custom-dark
 

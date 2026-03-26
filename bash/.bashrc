@@ -16,6 +16,7 @@ export PATH="$HOME/.dotnet:$PATH"
 export PATH="$HOME/roslyn_ls$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
 export MANPAGER='nvim +Man!'
+export DATABRICKS_CONFIG_PROFILE=adb-7405610130826527
 
 HISTSIZE=-1
 HISTFILESIZE=-1

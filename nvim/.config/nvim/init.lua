@@ -32,10 +32,12 @@ add({
 	{ src = "https://github.com/nvim-mini/mini.nvim" },
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master" },
 	{ src = "https://github.com/stevearc/conform.nvim" },
+	{ src = "https://github.com/stevearc/oil.nvim" },
 })
 
 vim.cmd.colorscheme("custom")
 
+require("oil").setup({})
 require("mini.ai").setup({})
 require("mini.bracketed").setup({})
 require("mini.completion").setup({})
@@ -187,6 +189,8 @@ local nmap_leader = function(suffix, rhs, desc)
 	vim.keymap.set("n", "<Leader>" .. suffix, rhs, { desc = desc })
 end
 
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
 nmap_leader("b", "", "+Buffer")
 nmap_leader("e", "", "+Explore/Edit")
 nmap_leader("f", "", "+Find")
@@ -221,6 +225,9 @@ nmap_leader("fR", '<Cmd>Pick lsp scope="references"<CR>', "References (LSP)")
 nmap_leader("fS", '<Cmd>Pick lsp scope="document_symbol"<CR>', "Symbols document")
 nmap_leader("fv", '<Cmd>Pick visit_paths cwd=""<CR>', "Visit paths (all)")
 nmap_leader("fV", "<Cmd>Pick visit_paths<CR>", "Visit paths (cwd)")
+
+vim.keymap.set("n", "<S-l>", ":bn<CR>")
+vim.keymap.set("n", "<S-h>", ":bp<CR>")
 
 -- GIT
 local git_log_cmd = [[Git log --pretty=format:\%h\ \%as\ │\ \%s --topo-order]]
