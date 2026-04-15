@@ -7,6 +7,7 @@ vim.o.clipboard = "unnamedplus"
 -- vim.o.completeopt = "fuzzy,menuone,noselect"
 vim.o.expandtab = true
 vim.o.ignorecase = true
+vim.o.termguicolors = true -- custom colorscheme defines RGB-only highlights
 vim.o.cursorline = true
 vim.o.mouse = ""
 vim.o.number = true
@@ -30,15 +31,43 @@ local add = vim.pack.add
 add({
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
 	{ src = "https://github.com/nvim-mini/mini.nvim" },
-	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master" },
 	{ src = "https://github.com/stevearc/conform.nvim" },
-	{ src = "https://github.com/stevearc/oil.nvim" },
+	{ src = "https://github.com/romus204/tree-sitter-manager.nvim" },
+	{ src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
 })
 
-vim.cmd.colorscheme("custom")
+require("catppuccin").setup({
+	no_italic = true,
+	custom_highlights = function(colors)
+		return {
+			["@markup.heading.1.markdown"] = { bg = colors.lavender, fg = colors.base, bold = true },
+			["@markup.raw.block.markdown"] = { fg = colors.teal, bg = colors.surface0 },
+		}
+	end,
+})
 
-require("oil").setup({})
+vim.cmd.colorscheme("catppuccin")
+
+require("tree-sitter-manager").setup({
+	ensure_installed = {
+		"bash",
+		"c_sharp",
+		"css",
+		"dockerfile",
+		"go",
+		"html",
+		"json",
+		"lua",
+		"markdown",
+		"mermaid",
+		"python",
+		"turtle",
+		"javascript",
+	},
+})
+
 require("mini.ai").setup({})
+require("mini.basics").setup({})
 require("mini.bracketed").setup({})
 require("mini.completion").setup({})
 require("mini.cursorword").setup({})
@@ -80,7 +109,6 @@ require("mini.clue").setup({
 		{ mode = { "n", "x" }, keys = "'" }, -- Marks
 		{ mode = { "n", "x" }, keys = "`" },
 		{ mode = { "n", "x" }, keys = '"' }, -- Registers
-		{ mode = { "i", "c" }, keys = "<C-r>" },
 		{ mode = "n", keys = "<C-w>" }, -- Window commands
 		{ mode = { "n", "x" }, keys = "s" }, -- `s` key (mini.surround, etc.)
 		{ mode = { "n", "x" }, keys = "z" }, -- `z` key
@@ -109,9 +137,10 @@ require("conform").setup({
 		-- You can customize some of the format options for the filetype (:help conform.format)
 		go = { "gofmt" },
 		rust = { "rustfmt", lsp_format = "fallback" },
+		json = { "prettier" },
 		-- Conform will run the first available formatter
-		javascript = { "prettierd", "prettier", stop_after_first = true },
-		markdown = { "prettierd", "prettier", stop_after_first = true },
+		javascript = { "prettier", stop_after_first = true },
+		-- markdown = { "prettierd", "prettier", stop_after_first = true },
 	},
 })
 
@@ -122,37 +151,11 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	end,
 })
 
-require("nvim-treesitter.configs").setup({
-	auto_install = true,
-	ensure_installed = {
-		"c",
-		"bash",
-		"bicep",
-		"c_sharp",
-		"lua",
-		"markdown",
-		"markdown_inline",
-		"python",
-		"query",
-		"turtle",
-		"vim",
-		"vimdoc",
-		"rust",
-	},
-	highlight = {
-		enable = true,
-		disable = { "c" },
-		additional_vim_regex_highlighting = false,
-	},
-})
-
 vim.filetype.add({
 	extension = {
 		trig = "trig",
 	},
 })
-
-vim.treesitter.language.register("turtle", "trig")
 
 vim.api.nvim_create_autocmd("FileType", {
 
@@ -189,8 +192,6 @@ local nmap_leader = function(suffix, rhs, desc)
 	vim.keymap.set("n", "<Leader>" .. suffix, rhs, { desc = desc })
 end
 
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-
 nmap_leader("b", "", "+Buffer")
 nmap_leader("e", "", "+Explore/Edit")
 nmap_leader("f", "", "+Find")
@@ -213,6 +214,7 @@ nmap_leader("fd", '<Cmd>Pick diagnostic scope="all"<CR>', "Diagnostic workspace"
 nmap_leader("fD", '<Cmd>Pick diagnostic scope="current"<CR>', "Diagnostic buffer")
 nmap_leader("ff", "<Cmd>Pick files<CR>", "Files")
 nmap_leader("fg", "<Cmd>Pick grep_live<CR>", "Grep live")
+nmap_leader("fk", "<Cmd>Pick keymaps<CR>", "Keymaps")
 nmap_leader("fG", '<Cmd>Pick grep pattern="<cword>"<CR>', "Grep current word")
 nmap_leader("fh", "<Cmd>Pick help<CR>", "Help tags")
 nmap_leader("fH", "<Cmd>Pick hl_groups<CR>", "Highlight groups")
@@ -245,7 +247,7 @@ nmap_leader("go", "<Cmd>lua MiniDiff.toggle_overlay()<CR>", "Toggle overlay")
 nmap_leader("gs", "<Cmd>lua MiniGit.show_at_cursor()<CR>", "Show at cursor")
 
 vim.keymap.set("n", "<Esc>", "<CMD>nohlsearch<CR>")
-vim.keymap.set({ "n" }, "grd", "<CMD>lua vim.lsp.buf.declaration()<CR>")
+vim.keymap.set({ "n" }, "grd", "<CMD>lua vim.lsp.buf.declaration()<CR>", { desc = "vim.lsp.buf.declaration()" })
 
 nmap_leader("q", ":quit<CR>", "Quit")
 nmap_leader("r", ":restart<CR>", "Restart")

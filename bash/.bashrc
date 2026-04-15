@@ -22,7 +22,6 @@ HISTSIZE=-1
 HISTFILESIZE=-1
 
 alias cd='z'
-alias cat='bat'
 alias docker_rm_all='docker rm -f $(docker ps -aq)'
 alias ollama_rm_all="ollama list | awk 'NR>1 {print $1}' | xargs -n1 ollama rm"
 alias collections='cd ~/Vault && nvim collections.md'
