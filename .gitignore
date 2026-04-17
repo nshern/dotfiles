@@ -7,3 +7,5 @@ fish/.config/fish/fish_variables
 newsboat/.config/newsboat/bookmarks.txt
 spell/
 ghostty/.config/ghostty/.repro
+/nvim/.config/nvim/nvim.log
+/nvim/.config/nvim/nvim-pack-lock.json

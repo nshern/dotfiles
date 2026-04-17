@@ -36,10 +36,14 @@ add({
 	{ src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
 })
 
+local latte = require("catppuccin.palettes").get_palette("latte")
+
 require("catppuccin").setup({
-	no_italic = true,
 	custom_highlights = function(colors)
 		return {
+			["@module"] = { style = {}, italic = false },
+			["Conditional"] = { style = {}, italic = false },
+			-- ["@markup.heading.1.markdown"] = { bg = colors.lavender, fg = colors.base, bold = true },
 			["@markup.heading.1.markdown"] = { bg = colors.lavender, fg = colors.base, bold = true },
 			["@markup.raw.block.markdown"] = { fg = colors.teal, bg = colors.surface0 },
 		}
