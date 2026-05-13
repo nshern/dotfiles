@@ -1,0 +1,1 @@
+/Users/nshern/Code/quiet2.nvim/colors/quiet2.nvim.lua

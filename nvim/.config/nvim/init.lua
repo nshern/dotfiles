@@ -1,20 +1,18 @@
 -- NOTE: OPTIONS
+--
 vim.diagnostic.config({ virtual_text = false })
 vim.g.mapleader = " "
 vim.o.autocomplete = false
 vim.o.clipboard = "unnamedplus"
--- vim.o.complete = ".,w,b"
--- vim.o.completeopt = "fuzzy,menuone,noselect"
 vim.o.expandtab = true
 vim.o.ignorecase = true
-vim.o.termguicolors = true -- custom colorscheme defines RGB-only highlights
+vim.o.termguicolors = true
 vim.o.cursorline = true
 vim.o.mouse = ""
 vim.o.number = true
 vim.o.pumheight = 7
 vim.o.relativenumber = true
 vim.o.shiftwidth = 4
-vim.o.signcolumn = "yes"
 vim.o.smartcase = true
 vim.o.softtabstop = 4
 vim.o.splitbelow = true
@@ -33,28 +31,18 @@ add({
 	{ src = "https://github.com/nvim-mini/mini.nvim" },
 	{ src = "https://github.com/stevearc/conform.nvim" },
 	{ src = "https://github.com/romus204/tree-sitter-manager.nvim" },
+	{ src = "https://github.com/hat0uma/csvview.nvim.git" },
 	{ src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
-})
-
-local latte = require("catppuccin.palettes").get_palette("latte")
-
-require("catppuccin").setup({
-	custom_highlights = function(colors)
-		return {
-			["@module"] = { style = {}, italic = false },
-			["Conditional"] = { style = {}, italic = false },
-			-- ["@markup.heading.1.markdown"] = { bg = colors.lavender, fg = colors.base, bold = true },
-			["@markup.heading.1.markdown"] = { bg = colors.lavender, fg = colors.base, bold = true },
-			["@markup.raw.block.markdown"] = { fg = colors.teal, bg = colors.surface0 },
-		}
-	end,
 })
 
 vim.cmd.colorscheme("catppuccin")
 
+require("csvview").setup()
+
 require("tree-sitter-manager").setup({
 	ensure_installed = {
 		"bash",
+		"bicep",
 		"c_sharp",
 		"css",
 		"dockerfile",
@@ -75,12 +63,13 @@ require("mini.basics").setup({})
 require("mini.bracketed").setup({})
 require("mini.completion").setup({})
 require("mini.cursorword").setup({})
-require("mini.diff").setup({
-	view = {
-		style = "sign",
-		signs = { add = "█", change = "▒", delete = "" },
-	},
-})
+require("mini.diff").setup({})
+-- require("mini.diff").setup({
+-- 	view = {
+-- 		style = "sign",
+-- 		signs = { add = "█", change = "▒", delete = "" },
+-- 	},
+-- })
 require("mini.extra").setup({})
 require("mini.files").setup({})
 require("mini.git").setup({})
@@ -88,6 +77,7 @@ require("mini.icons").setup({})
 require("mini.jump2d").setup({})
 require("mini.pick").setup({})
 require("mini.surround").setup({})
+require("mini.sessions").setup({})
 require("mini.tabline").setup({})
 
 require("mini.clue").setup({
@@ -133,6 +123,14 @@ hipatterns.setup({
 	},
 })
 
+require("mini.starter").setup({
+	autoopen = true,
+	items = {
+		require("mini.starter").sections.recent_files(5, true, false),
+		require("mini.starter").sections.recent_files(5, false, false),
+	},
+})
+
 require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
@@ -143,7 +141,6 @@ require("conform").setup({
 		rust = { "rustfmt", lsp_format = "fallback" },
 		json = { "prettier" },
 		-- Conform will run the first available formatter
-		javascript = { "prettier", stop_after_first = true },
 		-- markdown = { "prettierd", "prettier", stop_after_first = true },
 	},
 })

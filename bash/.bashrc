@@ -8,13 +8,11 @@ source "/Users/nshern/.bash_completion"
 export PATH="/Users/nshern/.local/bin:$PATH"
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export PATH=$PATH:$HOME/go/bin
-export CONFIG_DIR="/Users/nshern/.config"
+export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR='nvim'
-export CONFIG='~/.config/'
 export TERM=xterm-256color
 export PATH="$HOME/.dotnet:$PATH"
 export PATH="$HOME/roslyn_ls$PATH"
-export XDG_CONFIG_HOME="$HOME/.config"
 export MANPAGER='nvim +Man!'
 export DATABRICKS_CONFIG_PROFILE=adb-7405610130826527
 
